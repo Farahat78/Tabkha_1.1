@@ -73,9 +73,29 @@ namespace Tabkha_1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap for_web_2020_05_04T145441_475 {
+            get {
+                object obj = ResourceManager.GetObject("for-web-2020-05-04T145441.475", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_7139_jpg {
             get {
                 object obj = ResourceManager.GetObject("IMG_7139.jpg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Max_R_Headshot__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Max-R_Headshot (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
