@@ -42,7 +42,6 @@
             this.pnl_profile = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btn_view_profile = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -72,6 +71,8 @@
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_profile = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -79,10 +80,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.pnl_profile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.pnl_urorder.SuspendLayout();
             this.pnl_card.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -235,9 +236,9 @@
             // 
             this.pnl_profile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnl_profile.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_profile.Controls.Add(this.img_profile);
             this.pnl_profile.Controls.Add(this.btn_view_profile);
             this.pnl_profile.Controls.Add(this.lbl_username);
-            this.pnl_profile.Controls.Add(this.guna2CirclePictureBox2);
             this.pnl_profile.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_profile.Location = new System.Drawing.Point(866, 52);
             this.pnl_profile.Name = "pnl_profile";
@@ -268,18 +269,6 @@
             this.lbl_username.Size = new System.Drawing.Size(132, 19);
             this.lbl_username.TabIndex = 6;
             this.lbl_username.Text = "Ahmed Farahat";
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(211, 11);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 0;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2Elipse1
             // 
@@ -531,6 +520,21 @@
             this.guna2Elipse12.BorderRadius = 40;
             this.guna2Elipse12.TargetControl = this.btn_view_profile;
             // 
+            // img_profile
+            // 
+            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_profile.Location = new System.Drawing.Point(203, 13);
+            this.img_profile.Name = "img_profile";
+            this.img_profile.Size = new System.Drawing.Size(71, 71);
+            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_profile.TabIndex = 5;
+            this.img_profile.TabStop = false;
+            // 
+            // guna2Elipse13
+            // 
+            this.guna2Elipse13.BorderRadius = 70;
+            this.guna2Elipse13.TargetControl = this.img_profile;
+            // 
             // Form1
             // 
             this.AutoScroll = true;
@@ -552,12 +556,12 @@
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.pnl_profile.ResumeLayout(false);
             this.pnl_profile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.pnl_urorder.ResumeLayout(false);
             this.pnl_urorder.PerformLayout();
             this.pnl_card.ResumeLayout(false);
             this.pnl_card.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,7 +600,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_card;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label11;
@@ -613,6 +616,8 @@
         private System.Windows.Forms.Button btn_view_profile;
         private System.Windows.Forms.Button btn_order;
         private System.Windows.Forms.Button btn_checkout;
+        private System.Windows.Forms.PictureBox img_profile;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
     }
 }
 
