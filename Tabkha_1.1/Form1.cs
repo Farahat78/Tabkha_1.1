@@ -28,6 +28,7 @@ namespace Tabkha_1._1
             btndessert.BackColor = Color.FromArgb(236, 172, 124);
             btn_main.BackColor = Color.FromArgb(236, 172, 124);
             btn_soup.BackColor = Color.FromArgb(236, 172, 124);
+            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
         }
 
         private void btndessert_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace Tabkha_1._1
             btndessert.BackColor = Color.FromArgb(204, 82, 48);
             btn_main.BackColor = Color.FromArgb(236, 172, 124);
             btn_soup.BackColor = Color.FromArgb(236, 172, 124);
+            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
         }
 
         private void btn_main_Click(object sender, EventArgs e)
@@ -44,6 +46,7 @@ namespace Tabkha_1._1
             btndessert.BackColor = Color.FromArgb(236, 172, 124);
             btn_main.BackColor = Color.FromArgb(204, 82, 48);
             btn_soup.BackColor = Color.FromArgb(236, 172, 124);
+            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
         }
 
         private void btn_soup_Click(object sender, EventArgs e)
@@ -52,6 +55,7 @@ namespace Tabkha_1._1
             btndessert.BackColor = Color.FromArgb(236, 172, 124);
             btn_main.BackColor = Color.FromArgb(236, 172, 124);
             btn_soup.BackColor = Color.FromArgb(204, 82, 48);
+            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -74,6 +78,16 @@ namespace Tabkha_1._1
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_salad_Click(object sender, EventArgs e)
+        {
+            btn_apptizer.BackColor = Color.FromArgb(236, 172, 124);
+            btndessert.BackColor = Color.FromArgb(236, 172, 124);
+            btn_main.BackColor = Color.FromArgb(236, 172, 124);
+            btn_soup.BackColor = Color.FromArgb(236, 172, 124);
+            btn_salad.BackColor = Color.FromArgb(204, 82, 48);
+
         }
     }
 }

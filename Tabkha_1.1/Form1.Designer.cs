@@ -31,15 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btn_salad = new System.Windows.Forms.Button();
             this.btn_soup = new System.Windows.Forms.Button();
             this.btn_main = new System.Windows.Forms.Button();
             this.btn_apptizer = new System.Windows.Forms.Button();
             this.btndessert = new System.Windows.Forms.Button();
             this.pnl_profile = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.img_profile = new System.Windows.Forms.PictureBox();
             this.btn_view_profile = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -67,29 +69,29 @@
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.img_product = new System.Windows.Forms.PictureBox();
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.img_profile = new System.Windows.Forms.PictureBox();
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse14 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.pnl_profile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
             this.pnl_urorder.SuspendLayout();
             this.pnl_card.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Controls.Add(this.pictureBox3);
-            this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.img_logo);
             this.guna2GradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -115,19 +117,19 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // guna2CirclePictureBox1
+            // img_logo
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(-1, -3);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(85, 47);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 6;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.img_logo.BackColor = System.Drawing.Color.Transparent;
+            this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
+            this.img_logo.ImageRotate = 0F;
+            this.img_logo.Location = new System.Drawing.Point(-1, -3);
+            this.img_logo.Name = "img_logo";
+            this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.img_logo.Size = new System.Drawing.Size(85, 47);
+            this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_logo.TabIndex = 6;
+            this.img_logo.TabStop = false;
+            this.img_logo.UseTransparentBackground = true;
             // 
             // pictureBox2
             // 
@@ -161,6 +163,7 @@
             // 
             this.guna2ShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel2.Controls.Add(this.btn_salad);
             this.guna2ShadowPanel2.Controls.Add(this.btn_soup);
             this.guna2ShadowPanel2.Controls.Add(this.btn_main);
             this.guna2ShadowPanel2.Controls.Add(this.btn_apptizer);
@@ -171,6 +174,21 @@
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(850, 75);
             this.guna2ShadowPanel2.TabIndex = 1;
+            // 
+            // btn_salad
+            // 
+            this.btn_salad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            this.btn_salad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salad.FlatAppearance.BorderSize = 0;
+            this.btn_salad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salad.ForeColor = System.Drawing.Color.White;
+            this.btn_salad.Location = new System.Drawing.Point(638, 16);
+            this.btn_salad.Name = "btn_salad";
+            this.btn_salad.Size = new System.Drawing.Size(146, 43);
+            this.btn_salad.TabIndex = 9;
+            this.btn_salad.Text = "Salad";
+            this.btn_salad.UseVisualStyleBackColor = false;
+            this.btn_salad.Click += new System.EventHandler(this.btn_salad_Click);
             // 
             // btn_soup
             // 
@@ -245,6 +263,16 @@
             this.pnl_profile.ShadowColor = System.Drawing.Color.Black;
             this.pnl_profile.Size = new System.Drawing.Size(291, 130);
             this.pnl_profile.TabIndex = 2;
+            // 
+            // img_profile
+            // 
+            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_profile.Location = new System.Drawing.Point(203, 13);
+            this.img_profile.Name = "img_profile";
+            this.img_profile.Size = new System.Drawing.Size(71, 71);
+            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_profile.TabIndex = 5;
+            this.img_profile.TabStop = false;
             // 
             // btn_view_profile
             // 
@@ -457,7 +485,7 @@
             this.pnl_card.Controls.Add(this.guna2RatingStar1);
             this.pnl_card.Controls.Add(this.label11);
             this.pnl_card.Controls.Add(this.label10);
-            this.pnl_card.Controls.Add(this.pictureBox4);
+            this.pnl_card.Controls.Add(this.img_product);
             this.pnl_card.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_card.Location = new System.Drawing.Point(601, 139);
             this.pnl_card.Name = "pnl_card";
@@ -493,17 +521,18 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "appitizer3 (450 gm)";
             // 
-            // pictureBox4
+            // img_product
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.img_product.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(236, 159);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.img_product.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
+            this.img_product.Location = new System.Drawing.Point(3, 0);
+            this.img_product.Name = "img_product";
+            this.img_product.Size = new System.Drawing.Size(236, 159);
+            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_product.TabIndex = 0;
+            this.img_product.TabStop = false;
             // 
             // guna2Elipse10
             // 
@@ -520,20 +549,15 @@
             this.guna2Elipse12.BorderRadius = 40;
             this.guna2Elipse12.TargetControl = this.btn_view_profile;
             // 
-            // img_profile
-            // 
-            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.img_profile.Location = new System.Drawing.Point(203, 13);
-            this.img_profile.Name = "img_profile";
-            this.img_profile.Size = new System.Drawing.Size(71, 71);
-            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_profile.TabIndex = 5;
-            this.img_profile.TabStop = false;
-            // 
             // guna2Elipse13
             // 
             this.guna2Elipse13.BorderRadius = 70;
             this.guna2Elipse13.TargetControl = this.img_profile;
+            // 
+            // guna2Elipse14
+            // 
+            this.guna2Elipse14.BorderRadius = 50;
+            this.guna2Elipse14.TargetControl = this.btn_salad;
             // 
             // Form1
             // 
@@ -550,18 +574,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.pnl_profile.ResumeLayout(false);
             this.pnl_profile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
             this.pnl_urorder.ResumeLayout(false);
             this.pnl_urorder.PerformLayout();
             this.pnl_card.ResumeLayout(false);
             this.pnl_card.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_product)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -577,7 +601,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_profile;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox img_logo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -601,7 +625,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_card;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox img_product;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
@@ -618,6 +642,8 @@
         private System.Windows.Forms.Button btn_checkout;
         private System.Windows.Forms.PictureBox img_profile;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
+        private System.Windows.Forms.Button btn_salad;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse14;
     }
 }
 
