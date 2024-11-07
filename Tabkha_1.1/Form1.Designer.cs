@@ -75,6 +75,7 @@
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse14 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
@@ -559,10 +560,23 @@
             this.guna2Elipse14.BorderRadius = 50;
             this.guna2Elipse14.TargetControl = this.btn_salad;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(186, 304);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 57);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1169, 696);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnl_card);
             this.Controls.Add(this.pnl_urorder);
             this.Controls.Add(this.pnl_profile);
@@ -644,6 +658,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
         private System.Windows.Forms.Button btn_salad;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse14;
+        private System.Windows.Forms.Button button1;
     }
 }
 
