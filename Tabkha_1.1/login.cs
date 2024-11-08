@@ -26,5 +26,10 @@ namespace Tabkha_1._1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
