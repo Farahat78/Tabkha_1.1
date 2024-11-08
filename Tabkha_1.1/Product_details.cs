@@ -22,18 +22,6 @@ namespace Tabkha_1._1
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void img_maximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
         private void img_close_Click(object sender, EventArgs e)
         {
             this.Close();
