@@ -90,5 +90,11 @@ namespace Tabkha_1._1
             product.Show();
 
         }
+
+        private void img_product_Click(object sender, EventArgs e)
+        {
+            Product_details product = new Product_details();
+            product.Show();
+        }
     }
 }

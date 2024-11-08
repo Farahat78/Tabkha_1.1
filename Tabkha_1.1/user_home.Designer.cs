@@ -493,6 +493,7 @@
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_product.TabIndex = 0;
             this.img_product.TabStop = false;
+            this.img_product.Click += new System.EventHandler(this.img_product_Click);
             // 
             // img_minimize
             // 
