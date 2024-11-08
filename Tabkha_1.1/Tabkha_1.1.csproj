@@ -104,6 +104,9 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="place_order.resx">
+      <DependentUpon>place_order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product_details.resx">
       <DependentUpon>Product_details.cs</DependentUpon>
     </EmbeddedResource>
