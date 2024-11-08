@@ -72,6 +72,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="place_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="place_order.Designer.cs">
+      <DependentUpon>place_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product_details.cs">
       <SubType>Form</SubType>
     </Compile>
