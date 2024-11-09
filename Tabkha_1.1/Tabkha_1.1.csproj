@@ -60,12 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cart.Designer.cs">
-      <DependentUpon>Cart.cs</DependentUpon>
-    </Compile>
     <Compile Include="customer profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +98,6 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cart.resx">
-      <DependentUpon>Cart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="customer profile.resx">
       <DependentUpon>customer profile.cs</DependentUpon>
     </EmbeddedResource>
