@@ -96,5 +96,11 @@ namespace Tabkha_1._1
             Product_details product = new Product_details();
             product.Show();
         }
+
+        private void btn_placeorder_Click(object sender, EventArgs e)
+        {
+            place_order order = new place_order();
+            order.Show();
+        }
     }
 }

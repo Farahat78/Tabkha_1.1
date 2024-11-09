@@ -73,6 +73,16 @@ namespace Tabkha_1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cross {
+            get {
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap for_web_2020_05_04T145441_475 {
             get {
                 object obj = ResourceManager.GetObject("for-web-2020-05-04T145441.475", resourceCulture);

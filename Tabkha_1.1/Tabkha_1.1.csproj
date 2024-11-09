@@ -104,6 +104,9 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="place_order.resx">
+      <DependentUpon>place_order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product_details.resx">
       <DependentUpon>Product_details.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\for-web-2020-05-04T145441.475.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
