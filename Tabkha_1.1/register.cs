@@ -35,13 +35,20 @@ namespace Tabkha_1._1
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            txt_email.Text = "Email";
-            txt_password.Text = "Password";
-            txt_phone.Text = "Phone Number";
-            txt_username.Text = "UserName";
+            txt_email.Text = "";
+            txt_password.Text = "";
+            txt_phone.Text = "";
+            txt_username.Text = "U";
             radio_btn_female.Checked = false;
             radio_btn_male.Checked = false;
 
+        }
+
+        private void btn_signUp_Click(object sender, EventArgs e)
+        {
+            user_home user_Home = new user_home();
+            user_Home.Show();
+            this.Hide();
         }
     }
 }

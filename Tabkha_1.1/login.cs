@@ -31,5 +31,12 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void btn_signIn_Click(object sender, EventArgs e)
+        {
+            user_home user_Home = new user_home();
+            user_Home.Show();
+            this.Hide();
+        }
     }
 }
