@@ -31,8 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_details));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.img_minimize = new System.Windows.Forms.PictureBox();
+            this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_product = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.img_product = new System.Windows.Forms.PictureBox();
             this.lbl_product_description = new System.Windows.Forms.Label();
             this.lbl_product_name = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
@@ -69,18 +73,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.btn_submib = new System.Windows.Forms.Button();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.img_product = new System.Windows.Forms.PictureBox();
-            this.img_minimize = new System.Windows.Forms.PictureBox();
-            this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.img_close = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
-            this.pnl_product.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
+            this.pnl_product.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -97,6 +97,48 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1143, 40);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
+            // img_minimize
+            // 
+            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
+            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
+            this.img_minimize.Location = new System.Drawing.Point(1041, 5);
+            this.img_minimize.Name = "img_minimize";
+            this.img_minimize.Size = new System.Drawing.Size(40, 28);
+            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_minimize.TabIndex = 5;
+            this.img_minimize.TabStop = false;
+            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click);
+            // 
+            // img_logo
+            // 
+            this.img_logo.BackColor = System.Drawing.Color.Transparent;
+            this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
+            this.img_logo.ImageRotate = 0F;
+            this.img_logo.Location = new System.Drawing.Point(-1, -3);
+            this.img_logo.Name = "img_logo";
+            this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.img_logo.Size = new System.Drawing.Size(85, 47);
+            this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_logo.TabIndex = 6;
+            this.img_logo.TabStop = false;
+            this.img_logo.UseTransparentBackground = true;
+            // 
+            // img_close
+            // 
+            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_close.BackColor = System.Drawing.Color.Transparent;
+            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
+            this.img_close.Location = new System.Drawing.Point(1093, 5);
+            this.img_close.Name = "img_close";
+            this.img_close.Size = new System.Drawing.Size(38, 31);
+            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_close.TabIndex = 3;
+            this.img_close.TabStop = false;
+            this.img_close.Click += new System.EventHandler(this.img_close_Click);
+            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
@@ -112,6 +154,16 @@
             this.pnl_product.ShadowColor = System.Drawing.Color.Black;
             this.pnl_product.Size = new System.Drawing.Size(346, 388);
             this.pnl_product.TabIndex = 2;
+            // 
+            // img_product
+            // 
+            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
+            this.img_product.Location = new System.Drawing.Point(0, 0);
+            this.img_product.Name = "img_product";
+            this.img_product.Size = new System.Drawing.Size(346, 388);
+            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.img_product.TabIndex = 0;
+            this.img_product.TabStop = false;
             // 
             // lbl_product_description
             // 
@@ -473,58 +525,6 @@
             this.guna2Elipse4.BorderRadius = 50;
             this.guna2Elipse4.TargetControl = this.btn_submib;
             // 
-            // img_product
-            // 
-            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
-            this.img_product.Location = new System.Drawing.Point(0, 0);
-            this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(346, 388);
-            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.img_product.TabIndex = 0;
-            this.img_product.TabStop = false;
-            // 
-            // img_minimize
-            // 
-            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1041, 5);
-            this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 28);
-            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_minimize.TabIndex = 5;
-            this.img_minimize.TabStop = false;
-            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click);
-            // 
-            // img_logo
-            // 
-            this.img_logo.BackColor = System.Drawing.Color.Transparent;
-            this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
-            this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(-1, -3);
-            this.img_logo.Name = "img_logo";
-            this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(85, 47);
-            this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_logo.TabIndex = 6;
-            this.img_logo.TabStop = false;
-            this.img_logo.UseTransparentBackground = true;
-            // 
-            // img_close
-            // 
-            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_close.BackColor = System.Drawing.Color.Transparent;
-            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1093, 5);
-            this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 31);
-            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_close.TabIndex = 3;
-            this.img_close.TabStop = false;
-            this.img_close.Click += new System.EventHandler(this.img_close_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -583,12 +583,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_details";
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.pnl_product.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_product)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
+            this.pnl_product.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_product)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -104,6 +104,9 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customer profile.resx">
       <DependentUpon>customer profile.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\for-web-2020-05-04T145441.475.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
