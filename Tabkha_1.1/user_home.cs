@@ -39,51 +39,6 @@ namespace Tabkha_1._1
             Application.Exit();
         }
 
-        private void btn_apptizer_Click(object sender, EventArgs e)
-        {
-            btn_apptizer.BackColor = Color.FromArgb(204, 82, 48);
-            btndessert.BackColor = Color.FromArgb(236, 172, 124);
-            btn_main.BackColor = Color.FromArgb(236, 172, 124);
-            btn_soup.BackColor = Color.FromArgb(236, 172, 124);
-            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
-        }
-
-        private void btndessert_Click(object sender, EventArgs e)
-        {
-            btn_apptizer.BackColor = Color.FromArgb(236, 172, 124);
-            btndessert.BackColor = Color.FromArgb(204, 82, 48);
-            btn_main.BackColor = Color.FromArgb(236, 172, 124);
-            btn_soup.BackColor = Color.FromArgb(236, 172, 124);
-            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
-        }
-
-        private void btn_main_Click(object sender, EventArgs e)
-        {
-            btn_apptizer.BackColor = Color.FromArgb(236, 172, 124);
-            btndessert.BackColor = Color.FromArgb(236, 172, 124);
-            btn_main.BackColor = Color.FromArgb(204, 82, 48);
-            btn_soup.BackColor = Color.FromArgb(236, 172, 124);
-            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
-        }
-
-        private void btn_soup_Click(object sender, EventArgs e)
-        {
-            btn_apptizer.BackColor = Color.FromArgb(236, 172, 124);
-            btndessert.BackColor = Color.FromArgb(236, 172, 124);
-            btn_main.BackColor = Color.FromArgb(236, 172, 124);
-            btn_soup.BackColor = Color.FromArgb(204, 82, 48);
-            btn_salad.BackColor = Color.FromArgb(236, 172, 124);
-        }
-
-        private void btn_salad_Click(object sender, EventArgs e)
-        {
-            btn_apptizer.BackColor = Color.FromArgb(236, 172, 124);
-            btndessert.BackColor = Color.FromArgb(236, 172, 124);
-            btn_main.BackColor = Color.FromArgb(236, 172, 124);
-            btn_soup.BackColor = Color.FromArgb(236, 172, 124);
-            btn_salad.BackColor = Color.FromArgb(204, 82, 48);
-        }
-
         private void btn_order_Click(object sender, EventArgs e)
         {
             Product_details product = new Product_details();
