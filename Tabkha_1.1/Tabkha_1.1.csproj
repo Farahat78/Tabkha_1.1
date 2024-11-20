@@ -60,6 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="custom Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="customer profile.cs">
       <SubType>Form</SubType>
     </Compile>
