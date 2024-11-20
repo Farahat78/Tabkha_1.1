@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tabkha_1._1
 {
-    public partial class Customer_Profile : Form
+    public partial class Customer_Profile: Form
     {
         public Customer_Profile()
         {
