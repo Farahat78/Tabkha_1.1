@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Profile.Designer.cs">
+      <DependentUpon>Customer Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
