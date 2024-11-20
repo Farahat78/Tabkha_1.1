@@ -36,7 +36,6 @@
             this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.GShadowPanel_user = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -122,25 +121,12 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 30;
-            this.guna2Elipse2.TargetControl = this.GShadowPanel_user;
-            // 
-            // GShadowPanel_user
-            // 
-            this.GShadowPanel_user.BackColor = System.Drawing.Color.Transparent;
-            this.GShadowPanel_user.Dock = System.Windows.Forms.DockStyle.Left;
-            this.GShadowPanel_user.FillColor = System.Drawing.Color.White;
-            this.GShadowPanel_user.Location = new System.Drawing.Point(0, 42);
-            this.GShadowPanel_user.Name = "GShadowPanel_user";
-            this.GShadowPanel_user.ShadowColor = System.Drawing.Color.Black;
-            this.GShadowPanel_user.Size = new System.Drawing.Size(321, 654);
-            this.GShadowPanel_user.TabIndex = 7;
             // 
             // customer_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 696);
-            this.Controls.Add(this.GShadowPanel_user);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "customer_profile";
@@ -163,6 +149,5 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel GShadowPanel_user;
     }
 }
