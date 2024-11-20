@@ -128,5 +128,10 @@ namespace Tabkha_1._1
                 this.WindowState = FormWindowState.Maximized;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

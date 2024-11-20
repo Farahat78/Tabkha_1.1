@@ -30,9 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
             this.login_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lbl_bdate = new System.Windows.Forms.Label();
+            this.lbl_phoneNumber = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
             this.radio_btn_female = new System.Windows.Forms.RadioButton();
             this.radio_btn_male = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -48,18 +54,12 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbl_username = new System.Windows.Forms.Label();
-            this.lbl_password = new System.Windows.Forms.Label();
-            this.lbl_email = new System.Windows.Forms.Label();
-            this.lbl_phoneNumber = new System.Windows.Forms.Label();
-            this.lbl_bdate = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.login_card.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -75,6 +75,20 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1147, 42);
             this.guna2GradientPanel1.TabIndex = 13;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 14;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
             // img_minimize
             // 
@@ -130,6 +144,51 @@
             this.login_card.Size = new System.Drawing.Size(451, 572);
             this.login_card.TabIndex = 12;
             this.login_card.Paint += new System.Windows.Forms.PaintEventHandler(this.login_card_Paint);
+            // 
+            // lbl_bdate
+            // 
+            this.lbl_bdate.AutoSize = true;
+            this.lbl_bdate.Location = new System.Drawing.Point(101, 351);
+            this.lbl_bdate.Name = "lbl_bdate";
+            this.lbl_bdate.Size = new System.Drawing.Size(81, 20);
+            this.lbl_bdate.TabIndex = 15;
+            this.lbl_bdate.Text = "Birth Date";
+            // 
+            // lbl_phoneNumber
+            // 
+            this.lbl_phoneNumber.AutoSize = true;
+            this.lbl_phoneNumber.Location = new System.Drawing.Point(101, 292);
+            this.lbl_phoneNumber.Name = "lbl_phoneNumber";
+            this.lbl_phoneNumber.Size = new System.Drawing.Size(115, 20);
+            this.lbl_phoneNumber.TabIndex = 15;
+            this.lbl_phoneNumber.Text = "Phone Number";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(102, 237);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(48, 20);
+            this.lbl_email.TabIndex = 15;
+            this.lbl_email.Text = "Email";
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(101, 181);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(78, 20);
+            this.lbl_password.TabIndex = 15;
+            this.lbl_password.Text = "Password";
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Location = new System.Drawing.Point(101, 122);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(85, 20);
+            this.lbl_username.TabIndex = 14;
+            this.lbl_username.Text = "UserName";
             // 
             // radio_btn_female
             // 
@@ -262,65 +321,6 @@
             this.guna2Elipse4.BorderRadius = 20;
             this.guna2Elipse4.TargetControl = this.btn_clear;
             // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.Location = new System.Drawing.Point(101, 122);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(85, 20);
-            this.lbl_username.TabIndex = 14;
-            this.lbl_username.Text = "UserName";
-            // 
-            // lbl_password
-            // 
-            this.lbl_password.AutoSize = true;
-            this.lbl_password.Location = new System.Drawing.Point(101, 181);
-            this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(78, 20);
-            this.lbl_password.TabIndex = 15;
-            this.lbl_password.Text = "Password";
-            // 
-            // lbl_email
-            // 
-            this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(102, 237);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(48, 20);
-            this.lbl_email.TabIndex = 15;
-            this.lbl_email.Text = "Email";
-            // 
-            // lbl_phoneNumber
-            // 
-            this.lbl_phoneNumber.AutoSize = true;
-            this.lbl_phoneNumber.Location = new System.Drawing.Point(101, 292);
-            this.lbl_phoneNumber.Name = "lbl_phoneNumber";
-            this.lbl_phoneNumber.Size = new System.Drawing.Size(115, 20);
-            this.lbl_phoneNumber.TabIndex = 15;
-            this.lbl_phoneNumber.Text = "Phone Number";
-            // 
-            // lbl_bdate
-            // 
-            this.lbl_bdate.AutoSize = true;
-            this.lbl_bdate.Location = new System.Drawing.Point(101, 348);
-            this.lbl_bdate.Name = "lbl_bdate";
-            this.lbl_bdate.Size = new System.Drawing.Size(81, 20);
-            this.lbl_bdate.TabIndex = 15;
-            this.lbl_bdate.Text = "Birth Date";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 14;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -332,13 +332,13 @@
             this.Name = "register";
             this.Text = "register";
             this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
             this.login_card.ResumeLayout(false);
             this.login_card.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

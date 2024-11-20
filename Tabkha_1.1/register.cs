@@ -38,7 +38,7 @@ namespace Tabkha_1._1
             txt_email.Text = "";
             txt_password.Text = "";
             txt_phone.Text = "";
-            txt_username.Text = "U";
+            txt_username.Text = "";
             radio_btn_female.Checked = false;
             radio_btn_male.Checked = false;
 
