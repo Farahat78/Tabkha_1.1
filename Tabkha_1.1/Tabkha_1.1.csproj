@@ -60,7 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer Profile.cs">
+    <Compile Include="custom Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customer profile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer Profile.Designer.cs">
@@ -91,6 +94,12 @@
     </Compile>
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload.Designer.cs">
+      <DependentUpon>Upload.cs</DependentUpon>
     </Compile>
     <Compile Include="user_home.cs">
       <SubType>Form</SubType>
@@ -157,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

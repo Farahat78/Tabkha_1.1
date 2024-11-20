@@ -94,7 +94,7 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1143, 42);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1142, 39);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // img_minimize
@@ -103,7 +103,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1041, 5);
+            this.img_minimize.Location = new System.Drawing.Point(1040, 4);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 29);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,10 +116,10 @@
             this.img_logo.BackColor = System.Drawing.Color.Transparent;
             this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(-1, -3);
+            this.img_logo.Location = new System.Drawing.Point(-2, -3);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(85, 49);
+            this.img_logo.Size = new System.Drawing.Size(86, 47);
             this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
@@ -131,7 +131,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1093, 5);
+            this.img_close.Location = new System.Drawing.Point(1093, 4);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 33);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,10 +149,10 @@
             this.pnl_product.BackColor = System.Drawing.Color.Transparent;
             this.pnl_product.Controls.Add(this.img_product);
             this.pnl_product.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_product.Location = new System.Drawing.Point(12, 45);
+            this.pnl_product.Location = new System.Drawing.Point(12, 42);
             this.pnl_product.Name = "pnl_product";
             this.pnl_product.ShadowColor = System.Drawing.Color.Black;
-            this.pnl_product.Size = new System.Drawing.Size(346, 408);
+            this.pnl_product.Size = new System.Drawing.Size(346, 387);
             this.pnl_product.TabIndex = 2;
             // 
             // img_product
@@ -160,7 +160,7 @@
             this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
             this.img_product.Location = new System.Drawing.Point(0, 0);
             this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(346, 408);
+            this.img_product.Size = new System.Drawing.Size(346, 387);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.img_product.TabIndex = 0;
             this.img_product.TabStop = false;
@@ -171,7 +171,7 @@
             this.lbl_product_description.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_product_description.Location = new System.Drawing.Point(364, 60);
             this.lbl_product_description.Name = "lbl_product_description";
-            this.lbl_product_description.Size = new System.Drawing.Size(749, 117);
+            this.lbl_product_description.Size = new System.Drawing.Size(748, 111);
             this.lbl_product_description.TabIndex = 3;
             this.lbl_product_description.Text = resources.GetString("lbl_product_description.Text");
             // 
@@ -179,7 +179,7 @@
             // 
             this.lbl_product_name.AutoSize = true;
             this.lbl_product_name.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_product_name.Location = new System.Drawing.Point(115, 468);
+            this.lbl_product_name.Location = new System.Drawing.Point(116, 444);
             this.lbl_product_name.Name = "lbl_product_name";
             this.lbl_product_name.Size = new System.Drawing.Size(158, 34);
             this.lbl_product_name.TabIndex = 4;
@@ -189,7 +189,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(389, 283);
+            this.lbl1.Location = new System.Drawing.Point(388, 269);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(162, 18);
             this.lbl1.TabIndex = 5;
@@ -246,7 +246,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(397, 325);
+            this.label1.Location = new System.Drawing.Point(398, 308);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 18);
             this.label1.TabIndex = 14;
@@ -265,7 +265,7 @@
             this.lbl_available.AutoSize = true;
             this.lbl_available.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_available.ForeColor = System.Drawing.Color.Red;
-            this.lbl_available.Location = new System.Drawing.Point(377, 517);
+            this.lbl_available.Location = new System.Drawing.Point(376, 491);
             this.lbl_available.Name = "lbl_available";
             this.lbl_available.Size = new System.Drawing.Size(115, 19);
             this.lbl_available.TabIndex = 16;
@@ -276,14 +276,14 @@
             this.num_quantity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.num_quantity.Location = new System.Drawing.Point(867, 281);
             this.num_quantity.Name = "num_quantity";
-            this.num_quantity.Size = new System.Drawing.Size(89, 26);
+            this.num_quantity.Size = new System.Drawing.Size(88, 27);
             this.num_quantity.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(767, 284);
+            this.label4.Location = new System.Drawing.Point(766, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 18);
             this.label4.TabIndex = 18;
@@ -303,7 +303,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(363, 258);
+            this.label6.Location = new System.Drawing.Point(363, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(720, 20);
             this.label6.TabIndex = 20;
@@ -324,7 +324,7 @@
             // 
             this.lbl_price.AutoSize = true;
             this.lbl_price.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_price.Location = new System.Drawing.Point(419, 207);
+            this.lbl_price.Location = new System.Drawing.Point(418, 197);
             this.lbl_price.Name = "lbl_price";
             this.lbl_price.Size = new System.Drawing.Size(82, 49);
             this.lbl_price.TabIndex = 22;
@@ -332,7 +332,7 @@
             // 
             // str_rating
             // 
-            this.str_rating.Location = new System.Drawing.Point(372, 448);
+            this.str_rating.Location = new System.Drawing.Point(372, 425);
             this.str_rating.Name = "str_rating";
             this.str_rating.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.str_rating.Size = new System.Drawing.Size(120, 29);
@@ -344,7 +344,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(372, 552);
+            this.label9.Location = new System.Drawing.Point(372, 525);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 18);
             this.label9.TabIndex = 24;
@@ -377,7 +377,7 @@
             // 
             this.lbl_nutrition.AutoSize = true;
             this.lbl_nutrition.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nutrition.Location = new System.Drawing.Point(863, 325);
+            this.lbl_nutrition.Location = new System.Drawing.Point(862, 308);
             this.lbl_nutrition.Name = "lbl_nutrition";
             this.lbl_nutrition.Size = new System.Drawing.Size(67, 22);
             this.lbl_nutrition.TabIndex = 27;
@@ -443,7 +443,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(24, 735);
+            this.label13.Location = new System.Drawing.Point(24, 699);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(162, 34);
             this.label13.TabIndex = 33;
@@ -453,7 +453,7 @@
             // 
             this.label14.AutoEllipsis = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(223, 793);
+            this.label14.Location = new System.Drawing.Point(224, 753);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(840, 117);
             this.label14.TabIndex = 34;
@@ -464,7 +464,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 793);
+            this.label15.Location = new System.Drawing.Point(26, 753);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(192, 26);
             this.label15.TabIndex = 35;
@@ -482,7 +482,7 @@
             // 
             // guna2RatingStar1
             // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(121, 674);
+            this.guna2RatingStar1.Location = new System.Drawing.Point(122, 640);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2RatingStar1.Size = new System.Drawing.Size(120, 29);
@@ -500,7 +500,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(25, 934);
+            this.label17.Location = new System.Drawing.Point(26, 887);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(168, 26);
             this.label17.TabIndex = 39;
@@ -530,7 +530,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(371, 484);
+            this.label3.Location = new System.Drawing.Point(370, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 19);
             this.label3.TabIndex = 41;
@@ -541,7 +541,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1169, 733);
+            this.ClientSize = new System.Drawing.Size(1168, 696);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_submib);
             this.Controls.Add(this.label17);
