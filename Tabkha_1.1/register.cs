@@ -37,18 +37,36 @@ namespace Tabkha_1._1
         {
             txt_email.Text = "";
             txt_password.Text = "";
+            txt_confirmPassword.Text = "";
             txt_phone.Text = "";
             txt_username.Text = "";
             radio_btn_female.Checked = false;
             radio_btn_male.Checked = false;
+            dateTimePicker1.ResetText();
 
         }
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            user_home user_Home = new user_home();
-            user_Home.Show();
-            this.Hide();
+            if (txt_confirmPassword.Text != txt_password.Text)
+            {
+                MessageBox.Show("Review password");
+            }
+            else if (txt_username.Text == ""
+                || txt_password.Text == ""
+                || txt_email.Text == "")
+            { MessageBox.Show("Required Fields Empty"); }
+            else
+            {
+                user_home user_Home = new user_home();
+                user_Home.Show();
+                this.Hide();
+            }
+        }
+
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -17,9 +17,50 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private void login_card_Paint(object sender, PaintEventArgs e)
+        private void btn_signUp_Click(object sender, EventArgs e)
         {
+            if (txt_confirmPassword.Text!=txt_password.Text)
+            {
+                MessageBox.Show("Review password");
+            }
+            else if (txt_username.Text=="" 
+                ||txt_password.Text == "" 
+                ||txt_email.Text==""
+                || txt_confirmPassword.Text==""
+                || txtbox_phoneNumber.Text==""
+                ||txtbox_licenseNumber.Text==""
+                || txtbox_businesssName.Text=="")
+            { MessageBox.Show("Required Fields Empty"); }
+            else
+            {
+                user_home user_Home = new user_home();
+            user_Home.Show();
+            this.Hide();
+            }
+        }
 
+        private void btn_clear_Click_1(object sender, EventArgs e)
+        {
+            txt_username.Text = "";
+            txt_password.Text = "";
+            txt_email.Text = "";
+            txt_confirmPassword.Text = "";
+            txtbox_phoneNumber.Text = "";
+            txtbox_licenseNumber.Text = "";
+            txtbox_businesssName.Text = "";
+            radio_btn_female.Checked = false;
+            radio_btn_male.Checked = false;
+            dateTimePicker1.ResetText();
+        }
+
+        private void img_minimize_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void img_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
