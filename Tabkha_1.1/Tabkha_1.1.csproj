@@ -81,6 +81,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner Register.Designer.cs">
+      <DependentUpon>Owner Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="place_order.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner Register.resx">
+      <DependentUpon>Owner Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="place_order.resx">
       <DependentUpon>place_order.cs</DependentUpon>
