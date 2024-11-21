@@ -77,7 +77,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_previousOrder = new System.Windows.Forms.Button();
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -98,7 +97,6 @@
             this.pnl_edit.SuspendLayout();
             this.pnl_order.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -616,11 +614,6 @@
             this.guna2Elipse7.BorderRadius = 15;
             this.guna2Elipse7.TargetControl = this.btn_previousOrder;
             // 
-            // gridLayout1
-            // 
-            this.gridLayout1.Columns = 0;
-            this.gridLayout1.Rows = 1;
-            // 
             // Customer_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -661,7 +654,6 @@
             this.pnl_order.ResumeLayout(false);
             this.pnl_order.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,6 +708,5 @@
         private System.Windows.Forms.Button btn_previousOrder;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
-        private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
     }
 }
