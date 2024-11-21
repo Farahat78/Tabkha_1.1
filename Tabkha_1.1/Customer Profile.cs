@@ -16,9 +16,9 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
             pnl_show.Hide();
-            btn_edit2.Hide();
-            btn_edit3.Hide();
-            btn_edit4.Hide();
+            btn_editEmail.Hide();
+            btn_editBdate.Hide();
+            btn_editPnumber.Hide();
             btn_editName.Hide();
         }
 
@@ -38,18 +38,22 @@ namespace Tabkha_1._1
 
         private void rbtn_profile_Click(object sender, EventArgs e)
         {
-            btn_edit2.Hide();
-            btn_edit3.Hide();
-            btn_edit4.Hide();
+            pnl_order.Hide();
+            pnl_edit.Show();
+            btn_editEmail.Hide();
+            btn_editBdate.Hide();
+            btn_editPnumber.Hide();
             btn_editName.Hide();
             lbl_data.Text = "Profile";
         }
 
         private void rbtn_manageProfile_Click(object sender, EventArgs e)
         {
-            btn_edit2.Show();
-            btn_edit3.Show();
-            btn_edit4.Show();
+            pnl_order.Hide();
+            pnl_edit.Show();
+            btn_editEmail.Show();
+            btn_editBdate.Show();
+            btn_editPnumber.Show();
             btn_editName.Show();
             lbl_data.Text = "Manage Your Profile";
         }
@@ -69,6 +73,43 @@ namespace Tabkha_1._1
             login login = new login();
             login.Show();
             this.Hide();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtn_orderData_CheckedChanged(object sender, EventArgs e)
+        {
+         
+            
+        }
+
+        private void pnl_order_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rbtn_orderData_Click(object sender, EventArgs e)
+        {
+            lbl_data.Text = "Your Order data";
+            pnl_order.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_preiousOrder_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

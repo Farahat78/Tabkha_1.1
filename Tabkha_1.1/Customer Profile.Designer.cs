@@ -44,19 +44,6 @@
             this.pnl_show = new System.Windows.Forms.Panel();
             this.img_show = new System.Windows.Forms.PictureBox();
             this.Gpnl_general = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pnl_edit = new System.Windows.Forms.Panel();
-            this.btn_edit2 = new System.Windows.Forms.Button();
-            this.btn_edit3 = new System.Windows.Forms.Button();
-            this.btn_edit4 = new System.Windows.Forms.Button();
-            this.btn_editName = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.pnl_top = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_data = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,6 +59,25 @@
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_Bdate = new System.Windows.Forms.Label();
+            this.lbl_Pnumber = new System.Windows.Forms.Label();
+            this.txtbox_Pnumber = new System.Windows.Forms.TextBox();
+            this.txtbox_email = new System.Windows.Forms.TextBox();
+            this.txtbox_Bdate = new System.Windows.Forms.TextBox();
+            this.txtbox_name = new System.Windows.Forms.TextBox();
+            this.btn_editName = new System.Windows.Forms.Button();
+            this.btn_editPnumber = new System.Windows.Forms.Button();
+            this.btn_editBdate = new System.Windows.Forms.Button();
+            this.btn_editEmail = new System.Windows.Forms.Button();
+            this.pnl_edit = new System.Windows.Forms.Panel();
+            this.pnl_order = new System.Windows.Forms.Panel();
+            this.progressBarAdv1 = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_previousOrder = new System.Windows.Forms.Button();
+            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -82,7 +88,6 @@
             this.pnl_show.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_show)).BeginInit();
             this.Gpnl_general.SuspendLayout();
-            this.pnl_edit.SuspendLayout();
             this.pnl_top.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -90,6 +95,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_hide)).BeginInit();
+            this.pnl_edit.SuspendLayout();
+            this.pnl_order.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -103,7 +112,7 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1147, 42);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1169, 42);
             this.guna2GradientPanel1.TabIndex = 12;
             // 
             // guna2CirclePictureBox1
@@ -126,7 +135,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1051, 7);
+            this.img_minimize.Location = new System.Drawing.Point(1073, 7);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 29);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,7 +149,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1097, 5);
+            this.img_close.Location = new System.Drawing.Point(1119, 5);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 33);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,12 +170,13 @@
             this.Gpnl_choices.Location = new System.Drawing.Point(0, 42);
             this.Gpnl_choices.Name = "Gpnl_choices";
             this.Gpnl_choices.ShadowColor = System.Drawing.Color.Black;
-            this.Gpnl_choices.Size = new System.Drawing.Size(200, 598);
+            this.Gpnl_choices.Size = new System.Drawing.Size(200, 654);
             this.Gpnl_choices.TabIndex = 68;
             // 
             // btn_logOut
             // 
             this.btn_logOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logOut.Location = new System.Drawing.Point(45, 494);
             this.btn_logOut.Name = "btn_logOut";
             this.btn_logOut.Size = new System.Drawing.Size(101, 41);
@@ -196,6 +206,8 @@
             this.rbtn_orderData.TabStop = true;
             this.rbtn_orderData.Text = "View Order Data";
             this.rbtn_orderData.UseVisualStyleBackColor = true;
+            this.rbtn_orderData.CheckedChanged += new System.EventHandler(this.rbtn_orderData_CheckedChanged);
+            this.rbtn_orderData.Click += new System.EventHandler(this.rbtn_orderData_Click);
             // 
             // rbtn_manageProfile
             // 
@@ -228,7 +240,7 @@
             this.pnl_hide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_hide.Location = new System.Drawing.Point(200, 42);
             this.pnl_hide.Name = "pnl_hide";
-            this.pnl_hide.Size = new System.Drawing.Size(39, 598);
+            this.pnl_hide.Size = new System.Drawing.Size(39, 654);
             this.pnl_hide.TabIndex = 70;
             // 
             // pictureBox1
@@ -237,7 +249,7 @@
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.left_chevron;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 598);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 654);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -250,7 +262,7 @@
             this.pnl_show.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_show.Location = new System.Drawing.Point(239, 42);
             this.pnl_show.Name = "pnl_show";
-            this.pnl_show.Size = new System.Drawing.Size(39, 598);
+            this.pnl_show.Size = new System.Drawing.Size(39, 654);
             this.pnl_show.TabIndex = 71;
             // 
             // img_show
@@ -260,7 +272,7 @@
             this.img_show.Image = global::Tabkha_1._1.Properties.Resources.chevron;
             this.img_show.Location = new System.Drawing.Point(0, 0);
             this.img_show.Name = "img_show";
-            this.img_show.Size = new System.Drawing.Size(39, 598);
+            this.img_show.Size = new System.Drawing.Size(39, 654);
             this.img_show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_show.TabIndex = 63;
             this.img_show.TabStop = false;
@@ -277,137 +289,8 @@
             this.Gpnl_general.Location = new System.Drawing.Point(278, 42);
             this.Gpnl_general.Name = "Gpnl_general";
             this.Gpnl_general.ShadowColor = System.Drawing.Color.Black;
-            this.Gpnl_general.Size = new System.Drawing.Size(869, 598);
+            this.Gpnl_general.Size = new System.Drawing.Size(891, 654);
             this.Gpnl_general.TabIndex = 72;
-            // 
-            // pnl_edit
-            // 
-            this.pnl_edit.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_edit.Controls.Add(this.btn_edit2);
-            this.pnl_edit.Controls.Add(this.btn_edit3);
-            this.pnl_edit.Controls.Add(this.btn_edit4);
-            this.pnl_edit.Controls.Add(this.btn_editName);
-            this.pnl_edit.Controls.Add(this.textBox5);
-            this.pnl_edit.Controls.Add(this.textBox6);
-            this.pnl_edit.Controls.Add(this.textBox7);
-            this.pnl_edit.Controls.Add(this.textBox8);
-            this.pnl_edit.Controls.Add(this.label1);
-            this.pnl_edit.Controls.Add(this.label7);
-            this.pnl_edit.Controls.Add(this.label8);
-            this.pnl_edit.Controls.Add(this.label9);
-            this.pnl_edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_edit.Location = new System.Drawing.Point(0, 91);
-            this.pnl_edit.Name = "pnl_edit";
-            this.pnl_edit.Size = new System.Drawing.Size(869, 437);
-            this.pnl_edit.TabIndex = 20;
-            // 
-            // btn_edit2
-            // 
-            this.btn_edit2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_edit2.Location = new System.Drawing.Point(654, 194);
-            this.btn_edit2.Name = "btn_edit2";
-            this.btn_edit2.Size = new System.Drawing.Size(86, 27);
-            this.btn_edit2.TabIndex = 30;
-            this.btn_edit2.Text = "Edit";
-            this.btn_edit2.UseVisualStyleBackColor = false;
-            // 
-            // btn_edit3
-            // 
-            this.btn_edit3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_edit3.Location = new System.Drawing.Point(654, 250);
-            this.btn_edit3.Name = "btn_edit3";
-            this.btn_edit3.Size = new System.Drawing.Size(86, 27);
-            this.btn_edit3.TabIndex = 29;
-            this.btn_edit3.Text = "Edit";
-            this.btn_edit3.UseVisualStyleBackColor = false;
-            // 
-            // btn_edit4
-            // 
-            this.btn_edit4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_edit4.Location = new System.Drawing.Point(654, 311);
-            this.btn_edit4.Name = "btn_edit4";
-            this.btn_edit4.Size = new System.Drawing.Size(86, 27);
-            this.btn_edit4.TabIndex = 28;
-            this.btn_edit4.Text = "Edit";
-            this.btn_edit4.UseVisualStyleBackColor = false;
-            // 
-            // btn_editName
-            // 
-            this.btn_editName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_editName.Location = new System.Drawing.Point(654, 130);
-            this.btn_editName.Name = "btn_editName";
-            this.btn_editName.Size = new System.Drawing.Size(86, 27);
-            this.btn_editName.TabIndex = 26;
-            this.btn_editName.Text = "Edit";
-            this.btn_editName.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(226, 131);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(396, 26);
-            this.textBox5.TabIndex = 25;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(226, 251);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(396, 26);
-            this.textBox6.TabIndex = 24;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(226, 191);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(396, 26);
-            this.textBox7.TabIndex = 23;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(226, 315);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(396, 26);
-            this.textBox8.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(129, 318);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "label1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(129, 257);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(129, 197);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(129, 134);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Name";
             // 
             // pnl_top
             // 
@@ -418,7 +301,7 @@
             this.pnl_top.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(869, 91);
+            this.pnl_top.Size = new System.Drawing.Size(891, 91);
             this.pnl_top.TabIndex = 19;
             // 
             // lbl_data
@@ -442,9 +325,9 @@
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 528);
+            this.panel2.Location = new System.Drawing.Point(0, 584);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(869, 70);
+            this.panel2.Size = new System.Drawing.Size(891, 70);
             this.panel2.TabIndex = 10;
             // 
             // pictureBox4
@@ -503,34 +386,34 @@
             this.img_hide.Dock = System.Windows.Forms.DockStyle.Fill;
             this.img_hide.Location = new System.Drawing.Point(200, 42);
             this.img_hide.Name = "img_hide";
-            this.img_hide.Size = new System.Drawing.Size(947, 598);
+            this.img_hide.Size = new System.Drawing.Size(969, 654);
             this.img_hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_hide.TabIndex = 69;
             this.img_hide.TabStop = false;
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this.btn_edit2;
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.btn_editEmail;
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 30;
-            this.guna2Elipse2.TargetControl = this.btn_edit3;
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this.btn_editBdate;
             // 
             // guna2Elipse3
             // 
-            this.guna2Elipse3.BorderRadius = 30;
-            this.guna2Elipse3.TargetControl = this.btn_edit4;
+            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.TargetControl = this.btn_editPnumber;
             // 
             // guna2Elipse4
             // 
-            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.BorderRadius = 15;
             this.guna2Elipse4.TargetControl = this.btn_editName;
             // 
             // guna2Elipse5
             // 
-            this.guna2Elipse5.BorderRadius = 30;
+            this.guna2Elipse5.BorderRadius = 15;
             this.guna2Elipse5.TargetControl = this.btn_logOut;
             // 
             // guna2Elipse6
@@ -538,11 +421,211 @@
             this.guna2Elipse6.BorderRadius = 10;
             this.guna2Elipse6.TargetControl = this.pnl_top;
             // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.BackColor = System.Drawing.Color.White;
+            this.lbl_name.Location = new System.Drawing.Point(99, 136);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(51, 20);
+            this.lbl_name.TabIndex = 18;
+            this.lbl_name.Text = "Name";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.BackColor = System.Drawing.Color.White;
+            this.lbl_email.Location = new System.Drawing.Point(99, 197);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(48, 20);
+            this.lbl_email.TabIndex = 19;
+            this.lbl_email.Text = "Email";
+            // 
+            // lbl_Bdate
+            // 
+            this.lbl_Bdate.AutoSize = true;
+            this.lbl_Bdate.BackColor = System.Drawing.Color.White;
+            this.lbl_Bdate.Location = new System.Drawing.Point(99, 257);
+            this.lbl_Bdate.Name = "lbl_Bdate";
+            this.lbl_Bdate.Size = new System.Drawing.Size(99, 20);
+            this.lbl_Bdate.TabIndex = 20;
+            this.lbl_Bdate.Text = "Date of Birth";
+            // 
+            // lbl_Pnumber
+            // 
+            this.lbl_Pnumber.AutoSize = true;
+            this.lbl_Pnumber.BackColor = System.Drawing.Color.White;
+            this.lbl_Pnumber.Location = new System.Drawing.Point(99, 318);
+            this.lbl_Pnumber.Name = "lbl_Pnumber";
+            this.lbl_Pnumber.Size = new System.Drawing.Size(115, 20);
+            this.lbl_Pnumber.TabIndex = 21;
+            this.lbl_Pnumber.Text = "Phone Number";
+            // 
+            // txtbox_Pnumber
+            // 
+            this.txtbox_Pnumber.Location = new System.Drawing.Point(226, 315);
+            this.txtbox_Pnumber.Name = "txtbox_Pnumber";
+            this.txtbox_Pnumber.Size = new System.Drawing.Size(396, 26);
+            this.txtbox_Pnumber.TabIndex = 22;
+            // 
+            // txtbox_email
+            // 
+            this.txtbox_email.Location = new System.Drawing.Point(226, 191);
+            this.txtbox_email.Name = "txtbox_email";
+            this.txtbox_email.Size = new System.Drawing.Size(396, 26);
+            this.txtbox_email.TabIndex = 23;
+            // 
+            // txtbox_Bdate
+            // 
+            this.txtbox_Bdate.Location = new System.Drawing.Point(226, 251);
+            this.txtbox_Bdate.Name = "txtbox_Bdate";
+            this.txtbox_Bdate.Size = new System.Drawing.Size(396, 26);
+            this.txtbox_Bdate.TabIndex = 24;
+            // 
+            // txtbox_name
+            // 
+            this.txtbox_name.Location = new System.Drawing.Point(226, 130);
+            this.txtbox_name.Name = "txtbox_name";
+            this.txtbox_name.Size = new System.Drawing.Size(396, 26);
+            this.txtbox_name.TabIndex = 25;
+            this.txtbox_name.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // btn_editName
+            // 
+            this.btn_editName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_editName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editName.Location = new System.Drawing.Point(654, 130);
+            this.btn_editName.Name = "btn_editName";
+            this.btn_editName.Size = new System.Drawing.Size(86, 27);
+            this.btn_editName.TabIndex = 26;
+            this.btn_editName.Text = "Edit";
+            this.btn_editName.UseVisualStyleBackColor = false;
+            // 
+            // btn_editPnumber
+            // 
+            this.btn_editPnumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_editPnumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editPnumber.Location = new System.Drawing.Point(654, 311);
+            this.btn_editPnumber.Name = "btn_editPnumber";
+            this.btn_editPnumber.Size = new System.Drawing.Size(86, 27);
+            this.btn_editPnumber.TabIndex = 28;
+            this.btn_editPnumber.Text = "Edit";
+            this.btn_editPnumber.UseVisualStyleBackColor = false;
+            // 
+            // btn_editBdate
+            // 
+            this.btn_editBdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_editBdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editBdate.Location = new System.Drawing.Point(654, 250);
+            this.btn_editBdate.Name = "btn_editBdate";
+            this.btn_editBdate.Size = new System.Drawing.Size(86, 27);
+            this.btn_editBdate.TabIndex = 29;
+            this.btn_editBdate.Text = "Edit";
+            this.btn_editBdate.UseVisualStyleBackColor = false;
+            // 
+            // btn_editEmail
+            // 
+            this.btn_editEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_editEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editEmail.Location = new System.Drawing.Point(654, 194);
+            this.btn_editEmail.Name = "btn_editEmail";
+            this.btn_editEmail.Size = new System.Drawing.Size(86, 27);
+            this.btn_editEmail.TabIndex = 30;
+            this.btn_editEmail.Text = "Edit";
+            this.btn_editEmail.UseVisualStyleBackColor = false;
+            // 
+            // pnl_edit
+            // 
+            this.pnl_edit.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_edit.Controls.Add(this.pnl_order);
+            this.pnl_edit.Controls.Add(this.btn_editEmail);
+            this.pnl_edit.Controls.Add(this.btn_editBdate);
+            this.pnl_edit.Controls.Add(this.btn_editPnumber);
+            this.pnl_edit.Controls.Add(this.btn_editName);
+            this.pnl_edit.Controls.Add(this.txtbox_name);
+            this.pnl_edit.Controls.Add(this.txtbox_Bdate);
+            this.pnl_edit.Controls.Add(this.txtbox_email);
+            this.pnl_edit.Controls.Add(this.txtbox_Pnumber);
+            this.pnl_edit.Controls.Add(this.lbl_Pnumber);
+            this.pnl_edit.Controls.Add(this.lbl_Bdate);
+            this.pnl_edit.Controls.Add(this.lbl_email);
+            this.pnl_edit.Controls.Add(this.lbl_name);
+            this.pnl_edit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_edit.Location = new System.Drawing.Point(0, 91);
+            this.pnl_edit.Name = "pnl_edit";
+            this.pnl_edit.Size = new System.Drawing.Size(891, 493);
+            this.pnl_edit.TabIndex = 20;
+            // 
+            // pnl_order
+            // 
+            this.pnl_order.Controls.Add(this.btn_previousOrder);
+            this.pnl_order.Controls.Add(this.label1);
+            this.pnl_order.Controls.Add(this.progressBarAdv1);
+            this.pnl_order.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_order.Location = new System.Drawing.Point(0, 0);
+            this.pnl_order.Name = "pnl_order";
+            this.pnl_order.Size = new System.Drawing.Size(891, 493);
+            this.pnl_order.TabIndex = 31;
+            this.pnl_order.Click += new System.EventHandler(this.pnl_order_Click);
+            // 
+            // progressBarAdv1
+            // 
+            this.progressBarAdv1.BackMultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.progressBarAdv1.BackSegments = false;
+            this.progressBarAdv1.CustomText = null;
+            this.progressBarAdv1.CustomWaitingRender = false;
+            this.progressBarAdv1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.progressBarAdv1.ForegroundImage = null;
+            this.progressBarAdv1.Location = new System.Drawing.Point(267, 106);
+            this.progressBarAdv1.MultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.progressBarAdv1.Name = "progressBarAdv1";
+            this.progressBarAdv1.SegmentWidth = 12;
+            this.progressBarAdv1.Size = new System.Drawing.Size(568, 23);
+            this.progressBarAdv1.TabIndex = 0;
+            this.progressBarAdv1.Text = "progressBarAdv1";
+            this.progressBarAdv1.Value = 0;
+            this.progressBarAdv1.WaitingGradientWidth = 400;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Order Status";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btn_previousOrder
+            // 
+            this.btn_previousOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_previousOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_previousOrder.Location = new System.Drawing.Point(37, 194);
+            this.btn_previousOrder.Name = "btn_previousOrder";
+            this.btn_previousOrder.Size = new System.Drawing.Size(285, 35);
+            this.btn_previousOrder.TabIndex = 2;
+            this.btn_previousOrder.Text = "view Previous Order";
+            this.btn_previousOrder.UseVisualStyleBackColor = false;
+            this.btn_previousOrder.Click += new System.EventHandler(this.btn_preiousOrder_Click);
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.BorderRadius = 15;
+            this.guna2Elipse7.TargetControl = this.btn_previousOrder;
+            // 
+            // gridLayout1
+            // 
+            this.gridLayout1.Columns = 0;
+            this.gridLayout1.Rows = 1;
+            // 
             // Customer_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 640);
+            this.ClientSize = new System.Drawing.Size(1169, 696);
             this.Controls.Add(this.Gpnl_general);
             this.Controls.Add(this.pnl_show);
             this.Controls.Add(this.pnl_hide);
@@ -564,8 +647,6 @@
             this.pnl_show.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.img_show)).EndInit();
             this.Gpnl_general.ResumeLayout(false);
-            this.pnl_edit.ResumeLayout(false);
-            this.pnl_edit.PerformLayout();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -575,6 +656,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_hide)).EndInit();
+            this.pnl_edit.ResumeLayout(false);
+            this.pnl_edit.PerformLayout();
+            this.pnl_order.ResumeLayout(false);
+            this.pnl_order.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,19 +684,6 @@
         private System.Windows.Forms.Panel pnl_show;
         private System.Windows.Forms.PictureBox img_show;
         private Guna.UI2.WinForms.Guna2ShadowPanel Gpnl_general;
-        private System.Windows.Forms.Panel pnl_edit;
-        private System.Windows.Forms.Button btn_edit2;
-        private System.Windows.Forms.Button btn_edit3;
-        private System.Windows.Forms.Button btn_edit4;
-        private System.Windows.Forms.Button btn_editName;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_top;
         private System.Windows.Forms.Label lbl_data;
         private System.Windows.Forms.Panel panel2;
@@ -624,5 +698,24 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.Panel pnl_edit;
+        private System.Windows.Forms.Button btn_editEmail;
+        private System.Windows.Forms.Button btn_editBdate;
+        private System.Windows.Forms.Button btn_editPnumber;
+        private System.Windows.Forms.Button btn_editName;
+        private System.Windows.Forms.TextBox txtbox_name;
+        private System.Windows.Forms.TextBox txtbox_Bdate;
+        private System.Windows.Forms.TextBox txtbox_email;
+        private System.Windows.Forms.TextBox txtbox_Pnumber;
+        private System.Windows.Forms.Label lbl_Pnumber;
+        private System.Windows.Forms.Label lbl_Bdate;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Panel pnl_order;
+        private Syncfusion.Windows.Forms.Tools.ProgressBarAdv progressBarAdv1;
+        private System.Windows.Forms.Button btn_previousOrder;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
+        private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
     }
 }
