@@ -38,5 +38,12 @@ namespace Tabkha_1._1
             user_Home.Show();
             this.Hide();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            register register = new register();
+            register.Show();
+            this.Hide();
+        }
     }
 }

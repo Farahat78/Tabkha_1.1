@@ -173,5 +173,17 @@
   <ItemGroup>
     <None Include="Resources\restaurant.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\chevron.png" />
+    <Content Include="Resources\envelope.png" />
+    <None Include="Resources\envelope1.png" />
+    <Content Include="Resources\facebook.png" />
+    <None Include="Resources\whatsapp1.png" />
+    <None Include="Resources\facebook1.png" />
+    <Content Include="Resources\left-chevron.png" />
+    <Content Include="Resources\twitter %281%29.png" />
+    <None Include="Resources\twitter %281%291.png" />
+    <Content Include="Resources\whatsapp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
