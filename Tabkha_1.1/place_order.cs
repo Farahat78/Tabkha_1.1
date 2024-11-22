@@ -55,5 +55,10 @@ namespace Tabkha_1._1
         {
             this.Close();
         }
+
+        private void img_logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

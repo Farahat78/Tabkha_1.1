@@ -192,6 +192,7 @@
     <None Include="Resources\restaurant.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\arrow.png" />
     <Content Include="Resources\chevron.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
