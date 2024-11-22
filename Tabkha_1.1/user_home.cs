@@ -31,7 +31,7 @@ namespace Tabkha_1._1
             if (check_breakfast.Checked || check_bakery.Checked || check_lunch.Checked || check_dessert.Checked || check_drinks.Checked)
             {
                 btn_apply.Enabled = true;
-                btn_apply.BackColor = Color.FromArgb(204, 82, 48); // اللون الأساسي للزر
+                btn_apply.BackColor = Color.FromArgb(204, 82, 48);
             }
             else
             {

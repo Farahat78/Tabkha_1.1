@@ -45,7 +45,6 @@
             this.check_bakery = new System.Windows.Forms.CheckBox();
             this.check_breakfast = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_search = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -59,6 +58,7 @@
             this.lbl_resname = new System.Windows.Forms.Label();
             this.img_reslogo = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_search = new Tabkha_1._1.CustomTextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -172,6 +172,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.txt_search);
             this.guna2ShadowPanel1.Controls.Add(this.btn_apply);
             this.guna2ShadowPanel1.Controls.Add(this.check_drinks);
             this.guna2ShadowPanel1.Controls.Add(this.check_dessert);
@@ -179,7 +180,6 @@
             this.guna2ShadowPanel1.Controls.Add(this.check_bakery);
             this.guna2ShadowPanel1.Controls.Add(this.check_breakfast);
             this.guna2ShadowPanel1.Controls.Add(this.label4);
-            this.guna2ShadowPanel1.Controls.Add(this.txt_search);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(13, 141);
@@ -198,7 +198,6 @@
             this.btn_apply.TabIndex = 15;
             this.btn_apply.Text = "Apply";
             this.btn_apply.UseVisualStyleBackColor = false;
-            this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
             // 
             // check_drinks
             // 
@@ -266,18 +265,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "CUISINES";
             // 
-            // txt_search
-            // 
-            this.txt_search.ForeColor = System.Drawing.Color.Gray;
-            this.txt_search.Location = new System.Drawing.Point(22, 23);
-            this.txt_search.Multiline = true;
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(245, 46);
-            this.txt_search.TabIndex = 7;
-            this.txt_search.Text = "Search Restaurants";
-            this.txt_search.Enter += new System.EventHandler(this.txt_search_Enter);
-            this.txt_search.Leave += new System.EventHandler(this.txt_search_Leave);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -290,7 +277,7 @@
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 50;
+            this.guna2Elipse2.BorderRadius = 40;
             this.guna2Elipse2.TargetControl = this.txt_search;
             // 
             // guna2Elipse3
@@ -412,6 +399,17 @@
             this.label6.Text = "_________________________________________________________________________________" +
     "________";
             // 
+            // txt_search
+            // 
+            this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_search.Location = new System.Drawing.Point(22, 19);
+            this.txt_search.Multiline = true;
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(235, 43);
+            this.txt_search.TabIndex = 9;
+            this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_search.WatermarkText = "    Search Restaurants";
+            // 
             // user_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -451,7 +449,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Button btn_apply;
@@ -471,5 +468,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbl_deliveryprice;
         private System.Windows.Forms.Label label5;
+        private CustomTextBox txt_search;
     }
 }
