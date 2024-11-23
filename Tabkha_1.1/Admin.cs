@@ -16,7 +16,13 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-
+        private void ChangeColor(Button btn,Button btn2, Button btn3, Button btn4)
+        {
+            btn.BackColor = Color.White;
+            btn2.BackColor = Color.Transparent;
+            btn3.BackColor = Color.Transparent;
+            btn4.BackColor = Color.Transparent;
+        }
         private void LoadFormIntoPanel(Form form)
         {
             guna2ShadowPanel1.Controls.Clear();
@@ -35,15 +41,21 @@ namespace Tabkha_1._1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void btn_chefs_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new ManageChef());
+            ChangeColor(btn_chefs,btn_dashboard,btn_delivery,btn_users);
         }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new login());
+            ChangeColor(btn_users, btn_dashboard, btn_delivery, btn_chefs);
         }
     }
 }
