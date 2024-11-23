@@ -60,5 +60,10 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
