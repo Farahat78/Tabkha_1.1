@@ -62,7 +62,7 @@ namespace Tabkha_1._1
             {
                 // Confirm deletion
                 DialogResult result = MessageBox.Show(
-                    "Are you sure you want to delete this chef?",
+                    "Are you sure you want to delete this User?",
                     "Confirm Deletion",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning
@@ -76,7 +76,7 @@ namespace Tabkha_1._1
             }
             else
             {
-                MessageBox.Show("Please select a chef to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
