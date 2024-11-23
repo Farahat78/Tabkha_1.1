@@ -10,55 +10,55 @@ using System.Windows.Forms;
 
 namespace Tabkha_1._1
 {
-    public partial class ManageChefForm : Form
+    public partial class ManageUser : Form
     {
-        public ManageChefForm()
+        public ManageUser()
         {
             InitializeComponent();
         }
 
-        private DataTable chefsTable;
+        private DataTable usersTable;
 
         private void ManageChefsForm_Load(object sender, EventArgs e)
         {
-            chefsTable = new DataTable();
-            chefsTable.Columns.Add("Chef ID", typeof(int));
-            chefsTable.Columns.Add("Name", typeof(string));
-            chefsTable.Columns.Add("Specialty", typeof(string));
+            usersTable = new DataTable();
+            usersTable.Columns.Add("User ID", typeof(int));
+            usersTable.Columns.Add("Name", typeof(string));
+            usersTable.Columns.Add("Email", typeof(string));
 
-            dgv_chefs.DataSource = chefsTable;
+            dgv_users.DataSource = usersTable;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            AddEditChef detailsForm = new AddEditChef();
+            AddEditUser detailsForm = new AddEditUser();
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
-                dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Specialty);
+                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email);
             }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (dgv_chefs.CurrentRow != null)
+            if (dgv_users.CurrentRow != null)
             {
                 AddEditChef detailsForm = new AddEditChef
                 {
-                    ChefName = dgv_chefs.CurrentRow.Cells["nme"].Value.ToString(),
-                    Specialty = dgv_chefs.CurrentRow.Cells["specialty"].Value.ToString()
+                    ChefName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
+                    Specialty = dgv_users.CurrentRow.Cells["email"].Value.ToString()
                 };
 
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
-                    dgv_chefs.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
-                    dgv_chefs.CurrentRow.Cells["specialty"].Value = detailsForm.Specialty;
+                    dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
+                    dgv_users.CurrentRow.Cells["email"].Value = detailsForm.Specialty;
                 }
             }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (dgv_chefs.CurrentRow != null)
+            if (dgv_users.CurrentRow != null)
             {
                 // Confirm deletion
                 DialogResult result = MessageBox.Show(
@@ -71,7 +71,7 @@ namespace Tabkha_1._1
                 if (result == DialogResult.Yes)
                 {
                     // Remove the selected row
-                    dgv_chefs.Rows.Remove(dgv_chefs.CurrentRow);
+                    dgv_users.Rows.Remove(dgv_users.CurrentRow);
                 }
             }
             else

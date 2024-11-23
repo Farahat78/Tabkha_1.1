@@ -48,13 +48,13 @@ namespace Tabkha_1._1
 
         private void btn_chefs_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new ManageChef());
+            LoadFormIntoPanel(new ManageChefForm());
             ChangeColor(btn_chefs,btn_dashboard,btn_delivery,btn_users);
         }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new login());
+            LoadFormIntoPanel(new ManageUser());
             ChangeColor(btn_users, btn_dashboard, btn_delivery, btn_chefs);
         }
 
