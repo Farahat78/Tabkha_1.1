@@ -87,6 +87,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageChef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageChef.Designer.cs">
+      <DependentUpon>ManageChef.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageChef.resx">
+      <DependentUpon>ManageChef.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner Register.resx">
       <DependentUpon>Owner Register.cs</DependentUpon>
@@ -202,7 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow.png" />
+    <None Include="Resources\chef-hat.png" />
     <Content Include="Resources\chevron.png" />
+    <None Include="Resources\dashboard.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
     <Content Include="Resources\facebook.png" />
