@@ -30,12 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_chefs = new System.Windows.Forms.DataGridView();
-            this.chefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,30 +65,6 @@
             this.dgv_chefs.RowTemplate.Height = 24;
             this.dgv_chefs.Size = new System.Drawing.Size(800, 227);
             this.dgv_chefs.TabIndex = 0;
-            // 
-            // chefID
-            // 
-            this.chefID.HeaderText = "Chef ID";
-            this.chefID.MinimumWidth = 6;
-            this.chefID.Name = "chefID";
-            this.chefID.ReadOnly = true;
-            this.chefID.Width = 125;
-            // 
-            // nme
-            // 
-            this.nme.HeaderText = "Name";
-            this.nme.MinimumWidth = 6;
-            this.nme.Name = "nme";
-            this.nme.ReadOnly = true;
-            this.nme.Width = 125;
-            // 
-            // specialty
-            // 
-            this.specialty.HeaderText = "Specialty";
-            this.specialty.MinimumWidth = 6;
-            this.specialty.Name = "specialty";
-            this.specialty.ReadOnly = true;
-            this.specialty.Width = 125;
             // 
             // btn_add
             // 
@@ -120,6 +96,30 @@
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
+            // specialty
+            // 
+            this.specialty.HeaderText = "Specialty";
+            this.specialty.MinimumWidth = 6;
+            this.specialty.Name = "specialty";
+            this.specialty.ReadOnly = true;
+            this.specialty.Width = 125;
+            // 
+            // nme
+            // 
+            this.nme.HeaderText = "Name";
+            this.nme.MinimumWidth = 6;
+            this.nme.Name = "nme";
+            this.nme.ReadOnly = true;
+            this.nme.Width = 125;
+            // 
+            // chefID
+            // 
+            this.chefID.HeaderText = "Chef ID";
+            this.chefID.MinimumWidth = 6;
+            this.chefID.Name = "chefID";
+            this.chefID.ReadOnly = true;
+            this.chefID.Width = 125;
+            // 
             // ManageChefForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,11 +141,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_chefs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chefID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chefID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
     }
 }
