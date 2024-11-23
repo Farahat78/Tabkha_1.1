@@ -43,6 +43,10 @@
             this.btn_chefs = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
             this.btn_delivery = new System.Windows.Forms.Button();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -205,7 +209,7 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(0, 66);
+            this.btn_chefs.Location = new System.Drawing.Point(0, 86);
             this.btn_chefs.Name = "btn_chefs";
             this.btn_chefs.Size = new System.Drawing.Size(276, 54);
             this.btn_chefs.TabIndex = 3;
@@ -222,7 +226,7 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 126);
+            this.btn_users.Location = new System.Drawing.Point(0, 174);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(276, 54);
             this.btn_users.TabIndex = 4;
@@ -239,13 +243,34 @@
             this.btn_delivery.FlatAppearance.BorderSize = 0;
             this.btn_delivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delivery.Location = new System.Drawing.Point(0, 186);
+            this.btn_delivery.Location = new System.Drawing.Point(0, 258);
             this.btn_delivery.Name = "btn_delivery";
             this.btn_delivery.Size = new System.Drawing.Size(276, 54);
             this.btn_delivery.TabIndex = 5;
             this.btn_delivery.Text = "Manage Delivery";
             this.btn_delivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_delivery.UseVisualStyleBackColor = false;
+            this.btn_delivery.Click += new System.EventHandler(this.btn_delivery_Click);
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 50;
+            this.guna2Elipse2.TargetControl = this.btn_chefs;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 50;
+            this.guna2Elipse3.TargetControl = this.btn_dashboard;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 50;
+            this.guna2Elipse4.TargetControl = this.btn_delivery;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 50;
+            this.guna2Elipse5.TargetControl = this.btn_users;
             // 
             // Admin
             // 
@@ -287,5 +312,9 @@
         private System.Windows.Forms.Button btn_chefs;
         private System.Windows.Forms.Button btn_delivery;
         private System.Windows.Forms.Button btn_users;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
     }
 }

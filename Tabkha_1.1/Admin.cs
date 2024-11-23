@@ -43,7 +43,7 @@ namespace Tabkha_1._1
         }
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            
+            ChangeColor(btn_dashboard, btn_chefs, btn_delivery, btn_users);
         }
 
         private void btn_chefs_Click(object sender, EventArgs e)
@@ -56,6 +56,11 @@ namespace Tabkha_1._1
         {
             LoadFormIntoPanel(new login());
             ChangeColor(btn_users, btn_dashboard, btn_delivery, btn_chefs);
+        }
+
+        private void btn_delivery_Click(object sender, EventArgs e)
+        {
+            ChangeColor(btn_delivery, btn_dashboard, btn_chefs, btn_users);
         }
     }
 }
