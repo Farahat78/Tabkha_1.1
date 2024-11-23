@@ -40,7 +40,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(587, 121);
+            this.btn_edit.Location = new System.Drawing.Point(290, 396);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(177, 23);
             this.btn_edit.TabIndex = 4;
@@ -50,7 +50,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(587, 77);
+            this.btn_add.Location = new System.Drawing.Point(47, 396);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(177, 23);
             this.btn_add.TabIndex = 3;
@@ -60,6 +60,7 @@
             // 
             // dgv_users
             // 
+            this.dgv_users.AllowUserToAddRows = false;
             this.dgv_users.BackgroundColor = System.Drawing.Color.White;
             this.dgv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -67,13 +68,13 @@
             this.userID,
             this.nme,
             this.email});
-            this.dgv_users.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_users.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgv_users.Location = new System.Drawing.Point(0, 0);
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.ReadOnly = true;
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.Height = 24;
-            this.dgv_users.Size = new System.Drawing.Size(573, 450);
+            this.dgv_users.Size = new System.Drawing.Size(800, 361);
             this.dgv_users.TabIndex = 5;
             // 
             // userID
@@ -102,7 +103,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(587, 175);
+            this.btn_delete.Location = new System.Drawing.Point(558, 396);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(177, 23);
             this.btn_delete.TabIndex = 6;

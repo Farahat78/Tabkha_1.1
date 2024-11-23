@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_chefs = new System.Windows.Forms.DataGridView();
             this.chefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,20 +41,29 @@
             // 
             // dgv_chefs
             // 
+            this.dgv_chefs.AllowUserToAddRows = false;
             this.dgv_chefs.BackgroundColor = System.Drawing.Color.White;
             this.dgv_chefs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_chefs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_chefs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_chefs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chefID,
             this.nme,
             this.specialty});
-            this.dgv_chefs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_chefs.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgv_chefs.Location = new System.Drawing.Point(0, 0);
             this.dgv_chefs.Name = "dgv_chefs";
             this.dgv_chefs.ReadOnly = true;
             this.dgv_chefs.RowHeadersWidth = 51;
             this.dgv_chefs.RowTemplate.Height = 24;
-            this.dgv_chefs.Size = new System.Drawing.Size(573, 450);
+            this.dgv_chefs.Size = new System.Drawing.Size(800, 227);
             this.dgv_chefs.TabIndex = 0;
             // 
             // chefID
@@ -82,7 +92,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(580, 29);
+            this.btn_add.Location = new System.Drawing.Point(41, 400);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(177, 23);
             this.btn_add.TabIndex = 1;
@@ -92,7 +102,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(580, 73);
+            this.btn_edit.Location = new System.Drawing.Point(276, 400);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(177, 23);
             this.btn_edit.TabIndex = 2;
@@ -102,7 +112,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(580, 130);
+            this.btn_delete.Location = new System.Drawing.Point(528, 400);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(177, 23);
             this.btn_delete.TabIndex = 7;

@@ -25,10 +25,10 @@ namespace Tabkha_1._1
         }
         private void LoadFormIntoPanel(Form form)
         {
-            guna2ShadowPanel1.Controls.Clear();
+            guna2GradientPanel3.Controls.Clear();
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
-            guna2ShadowPanel1.Controls.Add(form);
+            guna2GradientPanel3.Controls.Add(form);
             form.Show();
         }
 
