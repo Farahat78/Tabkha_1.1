@@ -38,25 +38,14 @@ namespace Tabkha_1._1
 
         private void rbtn_profile_Click(object sender, EventArgs e)
         {
-            pnl_order.Hide();
-            pnl_edit.Show();
-            btn_editEmail.Hide();
-            btn_editBdate.Hide();
-            btn_editPnumber.Hide();
-            btn_editName.Hide();
-            lbl_data.Text = "Profile";
+            
         }
 
         private void rbtn_manageProfile_Click(object sender, EventArgs e)
         {
-            pnl_order.Hide();
-            pnl_edit.Show();
-            btn_editEmail.Show();
-            btn_editBdate.Show();
-            btn_editPnumber.Show();
-            btn_editName.Show();
-            lbl_data.Text = "Manage Your Profile";
+            
         }
+
 
         private void img_close_Click(object sender, EventArgs e)
         {
@@ -93,8 +82,7 @@ namespace Tabkha_1._1
 
         private void rbtn_orderData_Click(object sender, EventArgs e)
         {
-            lbl_data.Text = "Your Order data";
-            pnl_order.Show();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -110,6 +98,35 @@ namespace Tabkha_1._1
         private void btn_preiousOrder_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_viewProfile_Click(object sender, EventArgs e)
+        {
+            pnl_order.Hide();
+            pnl_edit.Show();
+            btn_editEmail.Hide();
+            btn_editBdate.Hide();
+            btn_editPnumber.Hide();
+            btn_editName.Hide();
+            lbl_data.Text = "Profile";
+
+        }
+
+        private void btn_manageProfile_Click(object sender, EventArgs e)
+        {
+            pnl_order.Hide();
+            pnl_edit.Show();
+            btn_editEmail.Show();
+            btn_editBdate.Show();
+            btn_editPnumber.Show();
+            btn_editName.Show();
+            lbl_data.Text = "Manage Your Profile";
+        }
+
+        private void btn_viewOrdersData_Click(object sender, EventArgs e)
+        {
+            lbl_data.Text = "Your Order data";
+            pnl_order.Show();
         }
     }
 }

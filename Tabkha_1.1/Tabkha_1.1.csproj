@@ -111,11 +111,11 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Oner Profile.cs">
+    <Compile Include="Owner_Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Oner Profile.Designer.cs">
-      <DependentUpon>Oner Profile.cs</DependentUpon>
+    <Compile Include="Owner_Profile.Designer.cs">
+      <DependentUpon>Owner_Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
@@ -178,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Profile.resx">
+      <DependentUpon>Owner_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner Register.resx">
       <DependentUpon>Owner Register.cs</DependentUpon>

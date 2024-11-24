@@ -39,10 +39,11 @@ namespace Tabkha_1._1
             txt_password.Text = "";
             txt_confirmPassword.Text = "";
             txt_phone.Text = "";
-            txt_username.Text = "";
-            radio_btn_female.Checked = false;
-            radio_btn_male.Checked = false;
-            dateTimePicker1.ResetText();
+            txt_lname.Text = "";
+            txtbox_address.Text = "";
+            txtbox_city.Text = "";
+            txtbox_fname.Text="";
+            
 
         }
 
@@ -52,9 +53,14 @@ namespace Tabkha_1._1
             {
                 MessageBox.Show("Review password");
             }
-            else if (txt_username.Text == ""
-                || txt_password.Text == ""
-                || txt_email.Text == "")
+            else if (txt_email.Text == ""
+           || txt_password.Text == ""
+           || txt_confirmPassword.Text == ""
+           || txt_phone.Text == ""
+           || txt_lname.Text == ""
+           || txtbox_address.Text == ""
+           || txtbox_city.Text == ""
+           || txtbox_fname.Text == "")
             { MessageBox.Show("Required Fields Empty"); }
             else
             {
@@ -67,6 +73,13 @@ namespace Tabkha_1._1
         private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_signIn_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
         }
     }
 }
