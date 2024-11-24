@@ -81,6 +81,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner Profile.Designer.cs">
+      <DependentUpon>Owner Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
     </Compile>
