@@ -111,6 +111,12 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oner Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oner Profile.Designer.cs">
+      <DependentUpon>Oner Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
     </Compile>
