@@ -70,7 +70,7 @@ namespace Tabkha_1._1
 
         }
 
-        private void btn_signIn_Click(object sender, EventArgs e)
+        private void lbl_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             login login = new login();
             login.Show();
