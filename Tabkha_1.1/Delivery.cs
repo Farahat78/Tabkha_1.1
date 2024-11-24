@@ -16,5 +16,20 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
+
+        private void img_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void img_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_View_order_Click(object sender, EventArgs e)
+        {
+            pnl_order_details.Visible = true;
+        }
     }
 }

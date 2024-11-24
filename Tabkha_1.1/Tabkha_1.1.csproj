@@ -60,6 +60,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForms\AddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AddEdit.Designer.cs">
+      <DependentUpon>AddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\AddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AddEditUser.Designer.cs">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -81,11 +99,17 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Owner Profile.cs">
+    <Compile Include="AdminForms\ManageChef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Owner Profile.Designer.cs">
-      <DependentUpon>Owner Profile.cs</DependentUpon>
+    <Compile Include="AdminForms\ManageChef.Designer.cs">
+      <DependentUpon>ManageChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\ManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ManageUser.Designer.cs">
+      <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
@@ -125,11 +149,29 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForms\AddEdit.resx">
+      <DependentUpon>AddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AddEditUser.resx">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer Profile.resx">
       <DependentUpon>customer profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delivery.resx">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ManageChef.resx">
+      <DependentUpon>ManageChef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ManageUser.resx">
+      <DependentUpon>ManageUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner Register.resx">
       <DependentUpon>Owner Register.cs</DependentUpon>
@@ -195,13 +237,17 @@
     <None Include="Resources\restaurant.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\chef-hat.png" />
     <Content Include="Resources\chevron.png" />
+    <None Include="Resources\dashboard.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
     <Content Include="Resources\facebook.png" />
     <None Include="Resources\whatsapp1.png" />
     <None Include="Resources\facebook1.png" />
     <Content Include="Resources\left-chevron.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Resources\twitter %281%29.png" />
     <None Include="Resources\twitter %281%291.png" />
     <Content Include="Resources\whatsapp.png" />
