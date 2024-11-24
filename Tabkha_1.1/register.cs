@@ -17,11 +17,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private void login_card_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
