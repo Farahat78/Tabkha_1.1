@@ -181,6 +181,7 @@
             this.txt_password.TabIndex = 18;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Enter password here";
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // lbl_password
             // 
@@ -250,6 +251,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEditUser";
             this.Text = "AddEditUser";
+            this.Load += new System.EventHandler(this.AddEditUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();

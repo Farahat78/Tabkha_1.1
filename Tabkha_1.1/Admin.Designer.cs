@@ -36,6 +36,7 @@
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_out = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
             this.btn_chefs = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btn_out = new System.Windows.Forms.Button();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -154,6 +154,23 @@
             this.guna2GradientPanel2.TabIndex = 3;
             this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.x);
             // 
+            // btn_out
+            // 
+            this.btn_out.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_out.BackColor = System.Drawing.Color.Transparent;
+            this.btn_out.FlatAppearance.BorderSize = 0;
+            this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_out.Location = new System.Drawing.Point(0, 268);
+            this.btn_out.Name = "btn_out";
+            this.btn_out.Size = new System.Drawing.Size(276, 33);
+            this.btn_out.TabIndex = 5;
+            this.btn_out.Text = "Log Out";
+            this.btn_out.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_out.UseVisualStyleBackColor = false;
+            this.btn_out.Click += new System.EventHandler(this.btn_out_Click);
+            // 
             // btn_users
             // 
             this.btn_users.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -236,23 +253,6 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(765, 452);
             this.guna2GradientPanel3.TabIndex = 4;
-            // 
-            // btn_out
-            // 
-            this.btn_out.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_out.BackColor = System.Drawing.Color.Transparent;
-            this.btn_out.FlatAppearance.BorderSize = 0;
-            this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(0, 268);
-            this.btn_out.Name = "btn_out";
-            this.btn_out.Size = new System.Drawing.Size(276, 33);
-            this.btn_out.TabIndex = 5;
-            this.btn_out.Text = "Log Out";
-            this.btn_out.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_out.UseVisualStyleBackColor = false;
-            this.btn_out.Click += new System.EventHandler(this.btn_out_Click);
             // 
             // guna2Elipse6
             // 

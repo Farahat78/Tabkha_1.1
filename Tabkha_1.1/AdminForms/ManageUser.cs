@@ -50,9 +50,10 @@ namespace Tabkha_1._1
                     UserName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
                     Email = dgv_users.CurrentRow.Cells["email"].Value.ToString(),
                     Phone = dgv_users.CurrentRow.Cells["number"].Value.ToString(),
-                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString()
+                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString(),
                 };
-
+                detailsForm.passwod_ReadOnly(dgv_users.CurrentRow != null);
+                detailsForm.change_save(dgv_users.CurrentRow != null);
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.UserName;
@@ -62,7 +63,6 @@ namespace Tabkha_1._1
                 }
             }
         }
-
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (dgv_users.CurrentRow != null)
@@ -85,6 +85,11 @@ namespace Tabkha_1._1
             {
                 MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ManageUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

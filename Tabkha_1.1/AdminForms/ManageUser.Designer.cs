@@ -48,7 +48,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(290, 396);
+            this.btn_edit.Location = new System.Drawing.Point(292, 415);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(177, 23);
             this.btn_edit.TabIndex = 4;
@@ -58,7 +58,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(47, 396);
+            this.btn_add.Location = new System.Drawing.Point(49, 415);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(177, 23);
             this.btn_add.TabIndex = 3;
@@ -137,7 +137,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(558, 396);
+            this.btn_delete.Location = new System.Drawing.Point(560, 415);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(177, 23);
             this.btn_delete.TabIndex = 6;
@@ -190,6 +190,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUser";
             this.Text = "ManageUser";
+            this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

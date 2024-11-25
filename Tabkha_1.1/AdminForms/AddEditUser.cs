@@ -81,5 +81,22 @@ namespace Tabkha_1._1
                 MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void AddEditUser_Load(object sender, EventArgs e)
+        {
+            
+        }
+        public void passwod_ReadOnly(bool x)
+        {
+            txt_password.ReadOnly = !txt_password.ReadOnly;
+        }
+        public void change_save(bool x)
+        {
+            btn_save.Text = "Edit";
+        }
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

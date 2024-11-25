@@ -24,6 +24,9 @@ namespace Tabkha_1._1
             chefsTable = new DataTable();
             chefsTable.Columns.Add("Chef ID", typeof(int));
             chefsTable.Columns.Add("Name", typeof(string));
+            chefsTable.Columns.Add("Email", typeof(string));
+            chefsTable.Columns.Add("Phone Number", typeof(int));
+            chefsTable.Columns.Add("Password", typeof(int));
             chefsTable.Columns.Add("Specialty", typeof(string));
 
             dgv_chefs.DataSource = chefsTable;
@@ -34,7 +37,7 @@ namespace Tabkha_1._1
             AddEditChef detailsForm = new AddEditChef();
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
-                dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Specialty);
+                dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Email, detailsForm.Phone, detailsForm.Password, detailsForm.Specialty);
             }
         }
 
@@ -45,12 +48,18 @@ namespace Tabkha_1._1
                 AddEditChef detailsForm = new AddEditChef
                 {
                     ChefName = dgv_chefs.CurrentRow.Cells["nme"].Value.ToString(),
+                    Email = dgv_chefs.CurrentRow.Cells["email"].Value.ToString(),
+                    Phone = dgv_chefs.CurrentRow.Cells["number"].Value.ToString(),
+                    Password = dgv_chefs.CurrentRow.Cells["Password"].Value.ToString(),
                     Specialty = dgv_chefs.CurrentRow.Cells["specialty"].Value.ToString()
                 };
-
+                detailsForm.passwod_ReadOnly(dgv_chefs.CurrentRow != null);
+                detailsForm.change_save(dgv_chefs.CurrentRow != null);
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_chefs.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
+                    dgv_chefs.CurrentRow.Cells["email"].Value = detailsForm.Email;
+                    dgv_chefs.CurrentRow.Cells["number"].Value = detailsForm.Phone;
                     dgv_chefs.CurrentRow.Cells["specialty"].Value = detailsForm.Specialty;
                 }
             }
