@@ -117,6 +117,12 @@
     <Compile Include="Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order.Designer.cs">
+      <DependentUpon>order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner_Profile.cs">
       <SubType>Form</SubType>
     </Compile>
