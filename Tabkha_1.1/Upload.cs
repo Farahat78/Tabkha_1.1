@@ -16,5 +16,10 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
+
+        private void Upload_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
