@@ -33,19 +33,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_businessName = new System.Windows.Forms.Label();
-            this.txtbox_phoneNumber = new System.Windows.Forms.TextBox();
-            this.txtbox_businesssName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
             this.btn_clear = new System.Windows.Forms.Button();
-            this.txt_confirmPassword = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_signIn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_password = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
@@ -55,15 +50,20 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.register_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lbl_lname = new System.Windows.Forms.Label();
-            this.txtbox_lname = new System.Windows.Forms.TextBox();
             this.lbl_bio = new System.Windows.Forms.Label();
-            this.txtbox_bio = new System.Windows.Forms.TextBox();
             this.lbl_confirmpassword = new System.Windows.Forms.Label();
             this.lbl_fname = new System.Windows.Forms.Label();
-            this.txt_fname = new System.Windows.Forms.TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txt_fname = new Tabkha_1._1.CustomTextBox();
+            this.txtbox_lname = new Tabkha_1._1.CustomTextBox();
+            this.txt_password = new Tabkha_1._1.CustomTextBox();
+            this.txt_confirmPassword = new Tabkha_1._1.CustomTextBox();
+            this.txtbox_phoneNumbertxtbox_phoneNumber = new Tabkha_1._1.CustomTextBox();
+            this.txt_emailtxt_email = new Tabkha_1._1.CustomTextBox();
+            this.txtbox_businesssName = new Tabkha_1._1.CustomTextBox();
+            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -75,9 +75,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(293, 293);
+            this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(225, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 20);
+            this.label4.Size = new System.Drawing.Size(125, 22);
             this.label4.TabIndex = 25;
             this.label4.Text = "Phone Number";
             // 
@@ -92,25 +93,12 @@
             // lbl_businessName
             // 
             this.lbl_businessName.AutoSize = true;
-            this.lbl_businessName.Location = new System.Drawing.Point(287, 446);
+            this.lbl_businessName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_businessName.Location = new System.Drawing.Point(224, 398);
             this.lbl_businessName.Name = "lbl_businessName";
-            this.lbl_businessName.Size = new System.Drawing.Size(120, 20);
+            this.lbl_businessName.Size = new System.Drawing.Size(123, 22);
             this.lbl_businessName.TabIndex = 23;
             this.lbl_businessName.Text = "Business Name";
-            // 
-            // txtbox_phoneNumber
-            // 
-            this.txtbox_phoneNumber.Location = new System.Drawing.Point(296, 322);
-            this.txtbox_phoneNumber.Name = "txtbox_phoneNumber";
-            this.txtbox_phoneNumber.Size = new System.Drawing.Size(249, 26);
-            this.txtbox_phoneNumber.TabIndex = 22;
-            // 
-            // txtbox_businesssName
-            // 
-            this.txtbox_businesssName.Location = new System.Drawing.Point(289, 471);
-            this.txtbox_businesssName.Name = "txtbox_businesssName";
-            this.txtbox_businesssName.Size = new System.Drawing.Size(247, 26);
-            this.txtbox_businesssName.TabIndex = 21;
             // 
             // label3
             // 
@@ -128,7 +116,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(261, 409);
+            this.label1.Location = new System.Drawing.Point(242, 357);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 19;
@@ -137,18 +125,20 @@
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(293, 354);
+            this.lbl_email.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_email.Location = new System.Drawing.Point(225, 212);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(48, 20);
+            this.lbl_email.Size = new System.Drawing.Size(51, 22);
             this.lbl_email.TabIndex = 15;
             this.lbl_email.Text = "Email";
             // 
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
-            this.lbl_password.Location = new System.Drawing.Point(293, 167);
+            this.lbl_password.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_password.Location = new System.Drawing.Point(225, 139);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(78, 20);
+            this.lbl_password.Size = new System.Drawing.Size(82, 22);
             this.lbl_password.TabIndex = 15;
             this.lbl_password.Text = "Password";
             // 
@@ -167,20 +157,6 @@
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = false;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click_1);
-            // 
-            // txt_confirmPassword
-            // 
-            this.txt_confirmPassword.Location = new System.Drawing.Point(297, 257);
-            this.txt_confirmPassword.Name = "txt_confirmPassword";
-            this.txt_confirmPassword.Size = new System.Drawing.Size(252, 26);
-            this.txt_confirmPassword.TabIndex = 15;
-            // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(299, 378);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(250, 26);
-            this.txt_email.TabIndex = 14;
             // 
             // guna2GradientPanel2
             // 
@@ -222,13 +198,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Sign Up";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txt_password
-            // 
-            this.txt_password.Location = new System.Drawing.Point(295, 195);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(249, 26);
-            this.txt_password.TabIndex = 13;
             // 
             // guna2GradientPanel1
             // 
@@ -315,15 +284,19 @@
             // 
             this.register_card.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.register_card.BackColor = System.Drawing.Color.Transparent;
-            this.register_card.Controls.Add(this.lbl_lname);
+            this.register_card.Controls.Add(this.customTextBox1);
+            this.register_card.Controls.Add(this.txtbox_businesssName);
+            this.register_card.Controls.Add(this.txt_emailtxt_email);
+            this.register_card.Controls.Add(this.txtbox_phoneNumbertxtbox_phoneNumber);
+            this.register_card.Controls.Add(this.txt_confirmPassword);
+            this.register_card.Controls.Add(this.txt_password);
             this.register_card.Controls.Add(this.txtbox_lname);
+            this.register_card.Controls.Add(this.txt_fname);
+            this.register_card.Controls.Add(this.lbl_lname);
             this.register_card.Controls.Add(this.label4);
             this.register_card.Controls.Add(this.lbl_bio);
             this.register_card.Controls.Add(this.label6);
             this.register_card.Controls.Add(this.lbl_businessName);
-            this.register_card.Controls.Add(this.txtbox_bio);
-            this.register_card.Controls.Add(this.txtbox_phoneNumber);
-            this.register_card.Controls.Add(this.txtbox_businesssName);
             this.register_card.Controls.Add(this.label3);
             this.register_card.Controls.Add(this.label1);
             this.register_card.Controls.Add(this.lbl_confirmpassword);
@@ -331,11 +304,7 @@
             this.register_card.Controls.Add(this.lbl_password);
             this.register_card.Controls.Add(this.lbl_fname);
             this.register_card.Controls.Add(this.btn_clear);
-            this.register_card.Controls.Add(this.txt_confirmPassword);
-            this.register_card.Controls.Add(this.txt_email);
             this.register_card.Controls.Add(this.guna2GradientPanel2);
-            this.register_card.Controls.Add(this.txt_password);
-            this.register_card.Controls.Add(this.txt_fname);
             this.register_card.Controls.Add(this.btn_signUp);
             this.register_card.FillColor = System.Drawing.Color.WhiteSmoke;
             this.register_card.Location = new System.Drawing.Point(219, 61);
@@ -348,59 +317,42 @@
             // lbl_lname
             // 
             this.lbl_lname.AutoSize = true;
-            this.lbl_lname.Location = new System.Drawing.Point(293, 107);
+            this.lbl_lname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_lname.Location = new System.Drawing.Point(387, 68);
             this.lbl_lname.Name = "lbl_lname";
-            this.lbl_lname.Size = new System.Drawing.Size(86, 20);
+            this.lbl_lname.Size = new System.Drawing.Size(89, 22);
             this.lbl_lname.TabIndex = 31;
             this.lbl_lname.Text = "Last Name";
-            // 
-            // txtbox_lname
-            // 
-            this.txtbox_lname.Location = new System.Drawing.Point(297, 133);
-            this.txtbox_lname.Name = "txtbox_lname";
-            this.txtbox_lname.Size = new System.Drawing.Size(247, 26);
-            this.txtbox_lname.TabIndex = 30;
             // 
             // lbl_bio
             // 
             this.lbl_bio.AutoSize = true;
-            this.lbl_bio.Location = new System.Drawing.Point(288, 504);
+            this.lbl_bio.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_bio.Location = new System.Drawing.Point(225, 469);
             this.lbl_bio.Name = "lbl_bio";
-            this.lbl_bio.Size = new System.Drawing.Size(32, 20);
+            this.lbl_bio.Size = new System.Drawing.Size(34, 22);
             this.lbl_bio.TabIndex = 26;
             this.lbl_bio.Text = "Bio";
-            // 
-            // txtbox_bio
-            // 
-            this.txtbox_bio.Location = new System.Drawing.Point(286, 528);
-            this.txtbox_bio.Name = "txtbox_bio";
-            this.txtbox_bio.Size = new System.Drawing.Size(250, 26);
-            this.txtbox_bio.TabIndex = 24;
             // 
             // lbl_confirmpassword
             // 
             this.lbl_confirmpassword.AutoSize = true;
-            this.lbl_confirmpassword.Location = new System.Drawing.Point(293, 229);
+            this.lbl_confirmpassword.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_confirmpassword.Location = new System.Drawing.Point(386, 144);
             this.lbl_confirmpassword.Name = "lbl_confirmpassword";
-            this.lbl_confirmpassword.Size = new System.Drawing.Size(145, 20);
+            this.lbl_confirmpassword.Size = new System.Drawing.Size(154, 22);
             this.lbl_confirmpassword.TabIndex = 15;
             this.lbl_confirmpassword.Text = "Confirm Passworsd";
             // 
             // lbl_fname
             // 
             this.lbl_fname.AutoSize = true;
-            this.lbl_fname.Location = new System.Drawing.Point(292, 50);
+            this.lbl_fname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_fname.Location = new System.Drawing.Point(224, 68);
             this.lbl_fname.Name = "lbl_fname";
-            this.lbl_fname.Size = new System.Drawing.Size(86, 20);
+            this.lbl_fname.Size = new System.Drawing.Size(90, 22);
             this.lbl_fname.TabIndex = 14;
             this.lbl_fname.Text = "First Name";
-            // 
-            // txt_fname
-            // 
-            this.txt_fname.Location = new System.Drawing.Point(294, 77);
-            this.txt_fname.Name = "txt_fname";
-            this.txt_fname.Size = new System.Drawing.Size(247, 26);
-            this.txt_fname.TabIndex = 12;
             // 
             // guna2Elipse2
             // 
@@ -415,6 +367,86 @@
             // guna2Elipse5
             // 
             this.guna2Elipse5.TargetControl = this.btn_signIn;
+            // 
+            // txt_fname
+            // 
+            this.txt_fname.Location = new System.Drawing.Point(229, 98);
+            this.txt_fname.Multiline = true;
+            this.txt_fname.Name = "txt_fname";
+            this.txt_fname.Size = new System.Drawing.Size(129, 35);
+            this.txt_fname.TabIndex = 18;
+            this.txt_fname.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_fname.WatermarkText = "First Name";
+            // 
+            // txtbox_lname
+            // 
+            this.txtbox_lname.Location = new System.Drawing.Point(390, 101);
+            this.txtbox_lname.Multiline = true;
+            this.txtbox_lname.Name = "txtbox_lname";
+            this.txtbox_lname.Size = new System.Drawing.Size(151, 35);
+            this.txtbox_lname.TabIndex = 32;
+            this.txtbox_lname.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_lname.WatermarkText = "Last Name";
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(229, 173);
+            this.txt_password.Multiline = true;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(129, 35);
+            this.txt_password.TabIndex = 33;
+            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_password.WatermarkText = "Password";
+            // 
+            // txt_confirmPassword
+            // 
+            this.txt_confirmPassword.Location = new System.Drawing.Point(391, 173);
+            this.txt_confirmPassword.Multiline = true;
+            this.txt_confirmPassword.Name = "txt_confirmPassword";
+            this.txt_confirmPassword.Size = new System.Drawing.Size(150, 35);
+            this.txt_confirmPassword.TabIndex = 34;
+            this.txt_confirmPassword.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_confirmPassword.WatermarkText = "Confirm Password";
+            // 
+            // txtbox_phoneNumbertxtbox_phoneNumber
+            // 
+            this.txtbox_phoneNumbertxtbox_phoneNumber.Location = new System.Drawing.Point(229, 311);
+            this.txtbox_phoneNumbertxtbox_phoneNumber.Multiline = true;
+            this.txtbox_phoneNumbertxtbox_phoneNumber.Name = "txtbox_phoneNumbertxtbox_phoneNumber";
+            this.txtbox_phoneNumbertxtbox_phoneNumber.Size = new System.Drawing.Size(312, 35);
+            this.txtbox_phoneNumbertxtbox_phoneNumber.TabIndex = 35;
+            this.txtbox_phoneNumbertxtbox_phoneNumber.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_phoneNumbertxtbox_phoneNumber.WatermarkText = "Enter text here";
+            // 
+            // txt_emailtxt_email
+            // 
+            this.txt_emailtxt_email.Location = new System.Drawing.Point(228, 237);
+            this.txt_emailtxt_email.Multiline = true;
+            this.txt_emailtxt_email.Name = "txt_emailtxt_email";
+            this.txt_emailtxt_email.Size = new System.Drawing.Size(313, 35);
+            this.txt_emailtxt_email.TabIndex = 36;
+            this.txt_emailtxt_email.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_emailtxt_email.WatermarkText = "Enter text here";
+            // 
+            // txtbox_businesssName
+            // 
+            this.txtbox_businesssName.Location = new System.Drawing.Point(229, 432);
+            this.txtbox_businesssName.Multiline = true;
+            this.txtbox_businesssName.Name = "txtbox_businesssName";
+            this.txtbox_businesssName.Size = new System.Drawing.Size(312, 35);
+            this.txtbox_businesssName.TabIndex = 37;
+            this.txtbox_businesssName.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_businesssName.WatermarkText = "Enter text here";
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.Location = new System.Drawing.Point(228, 505);
+            this.customTextBox1.Multiline = true;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Size = new System.Drawing.Size(313, 35);
+            this.customTextBox1.TabIndex = 38;
+            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
+            this.customTextBox1.WatermarkText = "Enter text here";
             // 
             // Owner_Register
             // 
@@ -444,17 +476,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_businessName;
-        private System.Windows.Forms.TextBox txtbox_phoneNumber;
-        private System.Windows.Forms.TextBox txtbox_businesssName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.Button btn_clear;
-        private System.Windows.Forms.TextBox txt_confirmPassword;
-        private System.Windows.Forms.TextBox txt_email;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.TextBox txt_password;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.PictureBox img_minimize;
@@ -467,12 +494,17 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_lname;
-        private System.Windows.Forms.TextBox txtbox_lname;
         private System.Windows.Forms.Label lbl_fname;
-        private System.Windows.Forms.TextBox txt_fname;
         private System.Windows.Forms.Label lbl_bio;
-        private System.Windows.Forms.TextBox txtbox_bio;
         private System.Windows.Forms.Button btn_signIn;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private CustomTextBox txt_fname;
+        private CustomTextBox txt_password;
+        private CustomTextBox txtbox_lname;
+        private CustomTextBox txt_confirmPassword;
+        private CustomTextBox txtbox_phoneNumbertxtbox_phoneNumber;
+        private CustomTextBox txt_emailtxt_email;
+        private CustomTextBox customTextBox1;
+        private CustomTextBox txtbox_businesssName;
     }
 }

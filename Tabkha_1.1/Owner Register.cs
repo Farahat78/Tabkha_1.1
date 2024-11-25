@@ -78,5 +78,15 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbox_businesssName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
