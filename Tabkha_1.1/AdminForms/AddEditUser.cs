@@ -44,9 +44,34 @@ namespace Tabkha_1._1
             set => txt_email.Text = value;
         }
 
+        public string Password
+        {
+            get => txt_password.Text;
+            set => txt_password.Text = value;
+        }
+
+        public string Phone
+        {
+            get => txt_phone.Text;
+            set => txt_phone.Text = value;
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_email.Text))
+            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_password.Text) && !string.IsNullOrWhiteSpace(txt_phone.Text))
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_save_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_password.Text) && !string.IsNullOrWhiteSpace(txt_phone.Text))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();

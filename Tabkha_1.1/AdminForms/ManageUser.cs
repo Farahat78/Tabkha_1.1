@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Tabkha_1._1
 {
     public partial class ManageUser : Form
@@ -25,6 +26,8 @@ namespace Tabkha_1._1
             usersTable.Columns.Add("User ID", typeof(int));
             usersTable.Columns.Add("Name", typeof(string));
             usersTable.Columns.Add("Email", typeof(string));
+            usersTable.Columns.Add("Phone Number", typeof(int));
+            usersTable.Columns.Add("Password", typeof(int));
 
             dgv_users.DataSource = usersTable;
         }
@@ -34,7 +37,7 @@ namespace Tabkha_1._1
             AddEditUser detailsForm = new AddEditUser();
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
-                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email);
+                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Password);
             }
         }
 
@@ -42,16 +45,20 @@ namespace Tabkha_1._1
         {
             if (dgv_users.CurrentRow != null)
             {
-                AddEditChef detailsForm = new AddEditChef
+                AddEditUser detailsForm = new AddEditUser
                 {
-                    ChefName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
-                    Specialty = dgv_users.CurrentRow.Cells["email"].Value.ToString()
+                    UserName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
+                    Email = dgv_users.CurrentRow.Cells["email"].Value.ToString(),
+                    Phone = dgv_users.CurrentRow.Cells["number"].Value.ToString(),
+                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString()
                 };
 
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
-                    dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
-                    dgv_users.CurrentRow.Cells["email"].Value = detailsForm.Specialty;
+                    dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.UserName;
+                    dgv_users.CurrentRow.Cells["email"].Value = detailsForm.Email;
+                    dgv_users.CurrentRow.Cells["number"].Value = detailsForm.Phone;
+                    
                 }
             }
         }
