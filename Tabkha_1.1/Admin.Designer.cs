@@ -168,7 +168,7 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(0, 268);
+            this.btn_out.Location = new System.Drawing.Point(13, 327);
             this.btn_out.Name = "btn_out";
             this.btn_out.Size = new System.Drawing.Size(276, 33);
             this.btn_out.TabIndex = 5;
