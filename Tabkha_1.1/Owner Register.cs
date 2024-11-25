@@ -23,12 +23,12 @@ namespace Tabkha_1._1
             {
                 MessageBox.Show("Review password");
             }
-            else if (txt_username.Text=="" 
+            else if (txt_fname.Text=="" 
                 ||txt_password.Text == "" 
                 ||txt_email.Text==""
                 || txt_confirmPassword.Text==""
                 || txtbox_phoneNumber.Text==""
-                ||txtbox_licenseNumber.Text==""
+                ||txtbox_bio.Text==""
                 || txtbox_businesssName.Text=="")
             { MessageBox.Show("Required Fields Empty"); }
             else
@@ -41,16 +41,15 @@ namespace Tabkha_1._1
 
         private void btn_clear_Click_1(object sender, EventArgs e)
         {
-            txt_username.Text = "";
+            txt_fname.Text = "";
+            txtbox_lname.Text = "";
             txt_password.Text = "";
             txt_email.Text = "";
             txt_confirmPassword.Text = "";
             txtbox_phoneNumber.Text = "";
-            txtbox_licenseNumber.Text = "";
+            txtbox_bio.Text = "";
             txtbox_businesssName.Text = "";
-            radio_btn_female.Checked = false;
-            radio_btn_male.Checked = false;
-            dateTimePicker1.ResetText();
+
         }
 
         private void img_minimize_Click_1(object sender, EventArgs e)
@@ -61,6 +60,23 @@ namespace Tabkha_1._1
         private void img_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void register_card_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_signIn_Click(object sender, EventArgs e)
+        {
+            login login  = new login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -111,6 +111,12 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Profile.Designer.cs">
+      <DependentUpon>Owner_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="View order details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View order details.Designer.cs">
+      <DependentUpon>View order details.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminForms\AddEdit.resx">
       <DependentUpon>AddEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Profile.resx">
+      <DependentUpon>Owner_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner Register.resx">
       <DependentUpon>Owner Register.cs</DependentUpon>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="user_home.resx">
       <DependentUpon>user_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View order details.resx">
+      <DependentUpon>View order details.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
