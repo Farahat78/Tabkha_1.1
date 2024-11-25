@@ -79,5 +79,10 @@ namespace Tabkha_1._1
                 MessageBox.Show("Please select a chef to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dgv_chefs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

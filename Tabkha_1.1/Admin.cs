@@ -43,24 +43,30 @@ namespace Tabkha_1._1
         }
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            ChangeColor(btn_dashboard, btn_chefs, btn_delivery, btn_users);
+            ChangeColor(btn_dashboard, btn_chefs, btn_users, btn_out);
+            guna2GradientPanel3.Controls.Clear();
         }
 
         private void btn_chefs_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new ManageChefForm());
-            ChangeColor(btn_chefs,btn_dashboard,btn_delivery,btn_users);
+            ChangeColor(btn_chefs,btn_dashboard,btn_users, btn_out);
         }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new ManageUser());
-            ChangeColor(btn_users, btn_dashboard, btn_delivery, btn_chefs);
+            ChangeColor(btn_users, btn_dashboard, btn_chefs, btn_out);
         }
 
-        private void btn_delivery_Click(object sender, EventArgs e)
+        private void x(object sender, PaintEventArgs e)
         {
-            ChangeColor(btn_delivery, btn_dashboard, btn_chefs, btn_users);
+            
+        }
+
+        private void btn_out_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
