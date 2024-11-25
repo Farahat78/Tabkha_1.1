@@ -43,33 +43,33 @@
             this.txt_confirmPassword = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_signIn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.img_minimize = new System.Windows.Forms.PictureBox();
+            this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_signUp = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.register_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_confirmpassword = new System.Windows.Forms.Label();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_fname = new System.Windows.Forms.TextBox();
-            this.lbl_fname = new System.Windows.Forms.Label();
             this.lbl_lname = new System.Windows.Forms.Label();
             this.txtbox_lname = new System.Windows.Forms.TextBox();
-            this.txtbox_bio = new System.Windows.Forms.TextBox();
             this.lbl_bio = new System.Windows.Forms.Label();
-            this.btn_signIn = new System.Windows.Forms.Button();
+            this.txtbox_bio = new System.Windows.Forms.TextBox();
+            this.lbl_confirmpassword = new System.Windows.Forms.Label();
+            this.lbl_fname = new System.Windows.Forms.Label();
+            this.txt_fname = new System.Windows.Forms.TextBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.img_minimize = new System.Windows.Forms.PictureBox();
-            this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            this.register_card.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
+            this.register_card.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -117,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(292, 18);
+            this.label3.Location = new System.Drawing.Point(242, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 25);
             this.label3.TabIndex = 20;
@@ -128,7 +128,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(290, 409);
+            this.label1.Location = new System.Drawing.Point(261, 409);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 19;
@@ -195,6 +195,34 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(192, 633);
             this.guna2GradientPanel2.TabIndex = 12;
             // 
+            // btn_signIn
+            // 
+            this.btn_signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_signIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_signIn.FlatAppearance.BorderSize = 0;
+            this.btn_signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signIn.ForeColor = System.Drawing.Color.White;
+            this.btn_signIn.Location = new System.Drawing.Point(52, 567);
+            this.btn_signIn.Name = "btn_signIn";
+            this.btn_signIn.Size = new System.Drawing.Size(104, 45);
+            this.btn_signIn.TabIndex = 12;
+            this.btn_signIn.Text = "Sign In";
+            this.btn_signIn.UseVisualStyleBackColor = false;
+            this.btn_signIn.Click += new System.EventHandler(this.btn_signIn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(14, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 46);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Sign Up";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(295, 195);
@@ -215,6 +243,48 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1169, 42);
             this.guna2GradientPanel1.TabIndex = 17;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 47);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 14;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
+            // img_minimize
+            // 
+            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
+            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
+            this.img_minimize.Location = new System.Drawing.Point(1073, 7);
+            this.img_minimize.Name = "img_minimize";
+            this.img_minimize.Size = new System.Drawing.Size(40, 29);
+            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_minimize.TabIndex = 5;
+            this.img_minimize.TabStop = false;
+            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click_1);
+            // 
+            // img_close
+            // 
+            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_close.BackColor = System.Drawing.Color.Transparent;
+            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
+            this.img_close.Location = new System.Drawing.Point(1119, 5);
+            this.img_close.Name = "img_close";
+            this.img_close.Size = new System.Drawing.Size(38, 33);
+            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_close.TabIndex = 3;
+            this.img_close.TabStop = false;
+            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // guna2Elipse3
             // 
@@ -275,53 +345,6 @@
             this.register_card.TabIndex = 16;
             this.register_card.Paint += new System.Windows.Forms.PaintEventHandler(this.register_card_Paint);
             // 
-            // lbl_confirmpassword
-            // 
-            this.lbl_confirmpassword.AutoSize = true;
-            this.lbl_confirmpassword.Location = new System.Drawing.Point(293, 229);
-            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
-            this.lbl_confirmpassword.Size = new System.Drawing.Size(145, 20);
-            this.lbl_confirmpassword.TabIndex = 15;
-            this.lbl_confirmpassword.Text = "Confirm Passworsd";
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.register_card;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 20;
-            this.guna2Elipse4.TargetControl = this.btn_clear;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 46);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Sign Up";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txt_fname
-            // 
-            this.txt_fname.Location = new System.Drawing.Point(294, 77);
-            this.txt_fname.Name = "txt_fname";
-            this.txt_fname.Size = new System.Drawing.Size(247, 26);
-            this.txt_fname.TabIndex = 12;
-            // 
-            // lbl_fname
-            // 
-            this.lbl_fname.AutoSize = true;
-            this.lbl_fname.Location = new System.Drawing.Point(292, 50);
-            this.lbl_fname.Name = "lbl_fname";
-            this.lbl_fname.Size = new System.Drawing.Size(86, 20);
-            this.lbl_fname.TabIndex = 14;
-            this.lbl_fname.Text = "First Name";
-            // 
             // lbl_lname
             // 
             this.lbl_lname.AutoSize = true;
@@ -338,13 +361,6 @@
             this.txtbox_lname.Size = new System.Drawing.Size(247, 26);
             this.txtbox_lname.TabIndex = 30;
             // 
-            // txtbox_bio
-            // 
-            this.txtbox_bio.Location = new System.Drawing.Point(286, 528);
-            this.txtbox_bio.Name = "txtbox_bio";
-            this.txtbox_bio.Size = new System.Drawing.Size(250, 26);
-            this.txtbox_bio.TabIndex = 24;
-            // 
             // lbl_bio
             // 
             this.lbl_bio.AutoSize = true;
@@ -354,67 +370,51 @@
             this.lbl_bio.TabIndex = 26;
             this.lbl_bio.Text = "Bio";
             // 
-            // btn_signIn
+            // txtbox_bio
             // 
-            this.btn_signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_signIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_signIn.FlatAppearance.BorderSize = 0;
-            this.btn_signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signIn.ForeColor = System.Drawing.Color.White;
-            this.btn_signIn.Location = new System.Drawing.Point(52, 567);
-            this.btn_signIn.Name = "btn_signIn";
-            this.btn_signIn.Size = new System.Drawing.Size(104, 45);
-            this.btn_signIn.TabIndex = 12;
-            this.btn_signIn.Text = "Sign In";
-            this.btn_signIn.UseVisualStyleBackColor = false;
-            this.btn_signIn.Click += new System.EventHandler(this.btn_signIn_Click);
+            this.txtbox_bio.Location = new System.Drawing.Point(286, 528);
+            this.txtbox_bio.Name = "txtbox_bio";
+            this.txtbox_bio.Size = new System.Drawing.Size(250, 26);
+            this.txtbox_bio.TabIndex = 24;
+            // 
+            // lbl_confirmpassword
+            // 
+            this.lbl_confirmpassword.AutoSize = true;
+            this.lbl_confirmpassword.Location = new System.Drawing.Point(293, 229);
+            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
+            this.lbl_confirmpassword.Size = new System.Drawing.Size(145, 20);
+            this.lbl_confirmpassword.TabIndex = 15;
+            this.lbl_confirmpassword.Text = "Confirm Passworsd";
+            // 
+            // lbl_fname
+            // 
+            this.lbl_fname.AutoSize = true;
+            this.lbl_fname.Location = new System.Drawing.Point(292, 50);
+            this.lbl_fname.Name = "lbl_fname";
+            this.lbl_fname.Size = new System.Drawing.Size(86, 20);
+            this.lbl_fname.TabIndex = 14;
+            this.lbl_fname.Text = "First Name";
+            // 
+            // txt_fname
+            // 
+            this.txt_fname.Location = new System.Drawing.Point(294, 77);
+            this.txt_fname.Name = "txt_fname";
+            this.txt_fname.Size = new System.Drawing.Size(247, 26);
+            this.txt_fname.TabIndex = 12;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.register_card;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 20;
+            this.guna2Elipse4.TargetControl = this.btn_clear;
             // 
             // guna2Elipse5
             // 
             this.guna2Elipse5.TargetControl = this.btn_signIn;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 47);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 14;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // img_minimize
-            // 
-            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
-            this.img_minimize.Location = new System.Drawing.Point(1073, 7);
-            this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 29);
-            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_minimize.TabIndex = 5;
-            this.img_minimize.TabStop = false;
-            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click_1);
-            // 
-            // img_close
-            // 
-            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_close.BackColor = System.Drawing.Color.Transparent;
-            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
-            this.img_close.Location = new System.Drawing.Point(1119, 5);
-            this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 33);
-            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_close.TabIndex = 3;
-            this.img_close.TabStop = false;
-            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // Owner_Register
             // 
@@ -429,11 +429,11 @@
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.register_card.ResumeLayout(false);
-            this.register_card.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
+            this.register_card.ResumeLayout(false);
+            this.register_card.PerformLayout();
             this.ResumeLayout(false);
 
         }

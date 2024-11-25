@@ -46,6 +46,7 @@
             this.Gpnl_general = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnl_edit = new System.Windows.Forms.Panel();
             this.pnl_order = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btn_previousOrder = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_editEmail = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -316,6 +316,13 @@
             this.pnl_order.Size = new System.Drawing.Size(891, 493);
             this.pnl_order.TabIndex = 31;
             this.pnl_order.Click += new System.EventHandler(this.pnl_order_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(214, 104);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(484, 29);
+            this.progressBar1.TabIndex = 3;
             // 
             // btn_previousOrder
             // 
@@ -602,13 +609,6 @@
             // 
             this.guna2Elipse10.BorderRadius = 15;
             this.guna2Elipse10.TargetControl = this.btn_viewOrdersData;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(214, 104);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(484, 29);
-            this.progressBar1.TabIndex = 3;
             // 
             // Customer_Profile
             // 
