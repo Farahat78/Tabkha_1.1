@@ -68,7 +68,7 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1041, 113);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1048, 113);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
             // guna2CirclePictureBox1
@@ -102,7 +102,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(951, 3);
+            this.img_minimize.Location = new System.Drawing.Point(958, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +130,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(998, 3);
+            this.img_close.Location = new System.Drawing.Point(1005, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +162,7 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(0, 243);
+            this.btn_out.Location = new System.Drawing.Point(0, 306);
             this.btn_out.Name = "btn_out";
             this.btn_out.Size = new System.Drawing.Size(276, 29);
             this.btn_out.TabIndex = 5;
@@ -179,7 +179,7 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 168);
+            this.btn_users.Location = new System.Drawing.Point(0, 210);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(276, 33);
             this.btn_users.TabIndex = 4;
@@ -196,7 +196,7 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(0, 86);
+            this.btn_chefs.Location = new System.Drawing.Point(0, 109);
             this.btn_chefs.Name = "btn_chefs";
             this.btn_chefs.Size = new System.Drawing.Size(276, 33);
             this.btn_chefs.TabIndex = 3;
@@ -251,7 +251,7 @@
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2GradientPanel3.Location = new System.Drawing.Point(276, 113);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(765, 452);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(772, 452);
             this.guna2GradientPanel3.TabIndex = 4;
             // 
             // guna2Elipse6

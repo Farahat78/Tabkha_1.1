@@ -34,62 +34,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgv_chefs = new System.Windows.Forms.DataGridView();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
+            this.dgv_chefs = new System.Windows.Forms.DataGridView();
             this.chefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgv_chefs
-            // 
-            this.dgv_chefs.AllowUserToAddRows = false;
-            this.dgv_chefs.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_chefs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_chefs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_chefs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_chefs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chefID,
-            this.nme,
-            this.email,
-            this.number,
-            this.password,
-            this.specialty});
-            this.dgv_chefs.EnableHeadersVisualStyles = false;
-            this.dgv_chefs.Location = new System.Drawing.Point(-6, 35);
-            this.dgv_chefs.Name = "dgv_chefs";
-            this.dgv_chefs.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_chefs.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_chefs.RowHeadersWidth = 51;
-            this.dgv_chefs.RowTemplate.Height = 24;
-            this.dgv_chefs.Size = new System.Drawing.Size(805, 374);
-            this.dgv_chefs.TabIndex = 0;
-            this.dgv_chefs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chefs_CellContentClick);
             // 
             // btn_add
             // 
@@ -152,6 +113,45 @@
             this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
             this.customTextBox1.WatermarkText = "Search";
             // 
+            // dgv_chefs
+            // 
+            this.dgv_chefs.AllowUserToAddRows = false;
+            this.dgv_chefs.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_chefs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_chefs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_chefs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_chefs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chefID,
+            this.nme,
+            this.email,
+            this.number,
+            this.specialty,
+            this.password});
+            this.dgv_chefs.EnableHeadersVisualStyles = false;
+            this.dgv_chefs.Location = new System.Drawing.Point(-6, 35);
+            this.dgv_chefs.Name = "dgv_chefs";
+            this.dgv_chefs.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_chefs.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_chefs.RowHeadersWidth = 51;
+            this.dgv_chefs.RowTemplate.Height = 24;
+            this.dgv_chefs.Size = new System.Drawing.Size(805, 374);
+            this.dgv_chefs.TabIndex = 0;
+            this.dgv_chefs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chefs_CellContentClick);
+            // 
             // chefID
             // 
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -190,14 +190,6 @@
             this.number.ReadOnly = true;
             this.number.Width = 125;
             // 
-            // password
-            // 
-            this.password.HeaderText = "Password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            this.password.Width = 125;
-            // 
             // specialty
             // 
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -207,6 +199,14 @@
             this.specialty.Name = "specialty";
             this.specialty.ReadOnly = true;
             this.specialty.Width = 125;
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            this.password.Width = 125;
             // 
             // ManageChefForm
             // 
@@ -222,28 +222,27 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageChefForm";
             this.Text = "Manage Chef";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgv_chefs;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_delete;
         private CustomTextBox customTextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgv_chefs;
         private System.Windows.Forms.DataGridViewTextBoxColumn chefID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nme;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }

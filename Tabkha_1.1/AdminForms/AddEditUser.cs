@@ -56,6 +56,12 @@ namespace Tabkha_1._1
             set => txt_phone.Text = value;
         }
 
+        public string Address
+        {
+            get => txt_address.Text;
+            set => txt_address.Text = value;
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_password.Text) && !string.IsNullOrWhiteSpace(txt_phone.Text))

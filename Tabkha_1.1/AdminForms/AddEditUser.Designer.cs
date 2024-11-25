@@ -45,6 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_address = new Tabkha_1._1.CustomTextBox();
+            this.lbl_address = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
@@ -53,7 +56,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(127, 220);
+            this.btn_save.Location = new System.Drawing.Point(130, 258);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(71, 41);
             this.btn_save.TabIndex = 14;
@@ -74,7 +77,7 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(28, 75);
+            this.lbl_name.Location = new System.Drawing.Point(28, 72);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(76, 16);
             this.lbl_name.TabIndex = 10;
@@ -86,7 +89,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(251, 3);
+            this.img_minimize.Location = new System.Drawing.Point(275, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +117,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(298, 3);
+            this.img_close.Location = new System.Drawing.Point(322, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,14 +136,14 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(341, 34);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(365, 34);
             this.guna2GradientPanel1.TabIndex = 9;
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(143, 100);
+            this.txt_email.Location = new System.Drawing.Point(143, 106);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(160, 22);
+            this.txt_email.Size = new System.Drawing.Size(178, 22);
             this.txt_email.TabIndex = 13;
             this.txt_email.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_email.WatermarkText = "Enter Email here";
@@ -148,18 +151,18 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(143, 72);
+            this.txt_name.Location = new System.Drawing.Point(143, 69);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(160, 22);
+            this.txt_name.Size = new System.Drawing.Size(178, 22);
             this.txt_name.TabIndex = 12;
             this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_name.WatermarkText = "Enter name here";
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(145, 131);
+            this.txt_phone.Location = new System.Drawing.Point(145, 143);
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(160, 22);
+            this.txt_phone.Size = new System.Drawing.Size(176, 22);
             this.txt_phone.TabIndex = 16;
             this.txt_phone.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_phone.WatermarkText = "Enter phone number here";
@@ -167,7 +170,7 @@
             // lbl_phone
             // 
             this.lbl_phone.AutoSize = true;
-            this.lbl_phone.Location = new System.Drawing.Point(28, 131);
+            this.lbl_phone.Location = new System.Drawing.Point(28, 143);
             this.lbl_phone.Name = "lbl_phone";
             this.lbl_phone.Size = new System.Drawing.Size(97, 16);
             this.lbl_phone.TabIndex = 15;
@@ -175,9 +178,9 @@
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(145, 159);
+            this.txt_password.Location = new System.Drawing.Point(143, 217);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(160, 22);
+            this.txt_password.Size = new System.Drawing.Size(178, 22);
             this.txt_password.TabIndex = 18;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Enter password here";
@@ -186,7 +189,7 @@
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
-            this.lbl_password.Location = new System.Drawing.Point(28, 159);
+            this.lbl_password.Location = new System.Drawing.Point(28, 217);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(67, 16);
             this.lbl_password.TabIndex = 17;
@@ -195,7 +198,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 78);
+            this.label1.Location = new System.Drawing.Point(127, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 16);
             this.label1.TabIndex = 19;
@@ -213,7 +216,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 131);
+            this.label3.Location = new System.Drawing.Point(127, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 16);
             this.label3.TabIndex = 21;
@@ -222,18 +225,48 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 162);
+            this.label4.Location = new System.Drawing.Point(125, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(10, 16);
             this.label4.TabIndex = 22;
             this.label4.Text = ":";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(125, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(10, 16);
+            this.label5.TabIndex = 25;
+            this.label5.Text = ":";
+            // 
+            // txt_address
+            // 
+            this.txt_address.Location = new System.Drawing.Point(143, 180);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(178, 22);
+            this.txt_address.TabIndex = 24;
+            this.txt_address.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_address.WatermarkText = "Enter address here";
+            // 
+            // lbl_address
+            // 
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.Location = new System.Drawing.Point(28, 180);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(58, 16);
+            this.lbl_address.TabIndex = 23;
+            this.lbl_address.Text = "Address";
             // 
             // AddEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(341, 273);
+            this.ClientSize = new System.Drawing.Size(365, 331);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_address);
+            this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -280,5 +313,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         public CustomTextBox txt_password;
+        private System.Windows.Forms.Label label5;
+        public CustomTextBox txt_address;
+        private System.Windows.Forms.Label lbl_address;
     }
 }
