@@ -15,11 +15,19 @@ namespace Tabkha_1._1
         public Customer_Profile()
         {
             InitializeComponent();
-            pnl_show.Hide();
-            btn_editEmail.Hide();
-            btn_editBdate.Hide();
-            btn_editPnumber.Hide();
-            btn_editName.Hide();
+            //pnl_show.Hide();
+            //btn_editEmail.Hide();
+            //btn_editBdate.Hide();
+            //btn_editPnumber.Hide();
+            //btn_editName.Hide();
+        }
+        public void LoadFormIntoPanel(Form Form)
+        {
+            panel1.Controls.Clear();
+            Form.TopLevel = false;
+            Form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Form);
+            Form.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -102,31 +110,34 @@ namespace Tabkha_1._1
 
         private void btn_viewProfile_Click(object sender, EventArgs e)
         {
-            pnl_order.Hide();
-            pnl_edit.Show();
-            btn_editEmail.Hide();
-            btn_editBdate.Hide();
-            btn_editPnumber.Hide();
-            btn_editName.Hide();
+         LoadFormIntoPanel(new Manage_Profile());     
+            //pnl_order.Hide();
+            //pnl_edit.Show();
+            //btn_editEmail.Hide();
+            //btn_editBdate.Hide();
+            //btn_editPnumber.Hide();
+            //btn_editName.Hide();
             lbl_data.Text = "Profile";
 
         }
 
         private void btn_manageProfile_Click(object sender, EventArgs e)
         {
-            pnl_order.Hide();
-            pnl_edit.Show();
-            btn_editEmail.Show();
-            btn_editBdate.Show();
-            btn_editPnumber.Show();
-            btn_editName.Show();
+            LoadFormIntoPanel(new Manage_Profile());
+            //pnl_order.Hide();
+            //pnl_edit.Show();
+            // btn_editEmail.Show();
+            //btn_editBdate.Show();
+            //btn_editPnumber.Show();
+            //btn_editName.Show();
             lbl_data.Text = "Manage Your Profile";
         }
 
         private void btn_viewOrdersData_Click(object sender, EventArgs e)
         {
+            LoadFormIntoPanel(new View_order_details());
             lbl_data.Text = "Your Order data";
-            pnl_order.Show();
+            //pnl_order.Show();
         }
     }
 }

@@ -39,19 +39,6 @@
             this.pnl_hide = new System.Windows.Forms.Panel();
             this.pnl_show = new System.Windows.Forms.Panel();
             this.Gpnl_general = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pnl_edit = new System.Windows.Forms.Panel();
-            this.btn_editEmail = new System.Windows.Forms.Button();
-            this.btn_editBdate = new System.Windows.Forms.Button();
-            this.btn_editPnumber = new System.Windows.Forms.Button();
-            this.btn_editName = new System.Windows.Forms.Button();
-            this.txtbox_name = new System.Windows.Forms.TextBox();
-            this.txtbox_Bdate = new System.Windows.Forms.TextBox();
-            this.txtbox_email = new System.Windows.Forms.TextBox();
-            this.txtbox_Pnumber = new System.Windows.Forms.TextBox();
-            this.lbl_Pnumber = new System.Windows.Forms.Label();
-            this.lbl_Bdate = new System.Windows.Forms.Label();
-            this.lbl_email = new System.Windows.Forms.Label();
-            this.lbl_name = new System.Windows.Forms.Label();
             this.pnl_top = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_data = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,12 +64,12 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel1.SuspendLayout();
             this.Gpnl_choices.SuspendLayout();
             this.pnl_hide.SuspendLayout();
             this.pnl_show.SuspendLayout();
             this.Gpnl_general.SuspendLayout();
-            this.pnl_edit.SuspendLayout();
             this.pnl_top.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -201,7 +188,7 @@
             // Gpnl_general
             // 
             this.Gpnl_general.BackColor = System.Drawing.Color.Gainsboro;
-            this.Gpnl_general.Controls.Add(this.pnl_edit);
+            this.Gpnl_general.Controls.Add(this.panel1);
             this.Gpnl_general.Controls.Add(this.pnl_top);
             this.Gpnl_general.Controls.Add(this.panel2);
             this.Gpnl_general.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -211,140 +198,6 @@
             this.Gpnl_general.ShadowColor = System.Drawing.Color.Black;
             this.Gpnl_general.Size = new System.Drawing.Size(891, 654);
             this.Gpnl_general.TabIndex = 72;
-            // 
-            // pnl_edit
-            // 
-            this.pnl_edit.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_edit.Controls.Add(this.btn_editEmail);
-            this.pnl_edit.Controls.Add(this.btn_editBdate);
-            this.pnl_edit.Controls.Add(this.btn_editPnumber);
-            this.pnl_edit.Controls.Add(this.btn_editName);
-            this.pnl_edit.Controls.Add(this.txtbox_name);
-            this.pnl_edit.Controls.Add(this.txtbox_Bdate);
-            this.pnl_edit.Controls.Add(this.txtbox_email);
-            this.pnl_edit.Controls.Add(this.txtbox_Pnumber);
-            this.pnl_edit.Controls.Add(this.lbl_Pnumber);
-            this.pnl_edit.Controls.Add(this.lbl_Bdate);
-            this.pnl_edit.Controls.Add(this.lbl_email);
-            this.pnl_edit.Controls.Add(this.lbl_name);
-            this.pnl_edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_edit.Location = new System.Drawing.Point(0, 91);
-            this.pnl_edit.Name = "pnl_edit";
-            this.pnl_edit.Size = new System.Drawing.Size(891, 493);
-            this.pnl_edit.TabIndex = 20;
-            // 
-            // btn_editEmail
-            // 
-            this.btn_editEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_editEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editEmail.Location = new System.Drawing.Point(654, 194);
-            this.btn_editEmail.Name = "btn_editEmail";
-            this.btn_editEmail.Size = new System.Drawing.Size(86, 27);
-            this.btn_editEmail.TabIndex = 30;
-            this.btn_editEmail.Text = "Edit";
-            this.btn_editEmail.UseVisualStyleBackColor = false;
-            // 
-            // btn_editBdate
-            // 
-            this.btn_editBdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_editBdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editBdate.Location = new System.Drawing.Point(654, 250);
-            this.btn_editBdate.Name = "btn_editBdate";
-            this.btn_editBdate.Size = new System.Drawing.Size(86, 27);
-            this.btn_editBdate.TabIndex = 29;
-            this.btn_editBdate.Text = "Edit";
-            this.btn_editBdate.UseVisualStyleBackColor = false;
-            // 
-            // btn_editPnumber
-            // 
-            this.btn_editPnumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_editPnumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editPnumber.Location = new System.Drawing.Point(654, 311);
-            this.btn_editPnumber.Name = "btn_editPnumber";
-            this.btn_editPnumber.Size = new System.Drawing.Size(86, 27);
-            this.btn_editPnumber.TabIndex = 28;
-            this.btn_editPnumber.Text = "Edit";
-            this.btn_editPnumber.UseVisualStyleBackColor = false;
-            // 
-            // btn_editName
-            // 
-            this.btn_editName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_editName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editName.Location = new System.Drawing.Point(654, 130);
-            this.btn_editName.Name = "btn_editName";
-            this.btn_editName.Size = new System.Drawing.Size(86, 27);
-            this.btn_editName.TabIndex = 26;
-            this.btn_editName.Text = "Edit";
-            this.btn_editName.UseVisualStyleBackColor = false;
-            // 
-            // txtbox_name
-            // 
-            this.txtbox_name.Location = new System.Drawing.Point(226, 130);
-            this.txtbox_name.Name = "txtbox_name";
-            this.txtbox_name.Size = new System.Drawing.Size(396, 26);
-            this.txtbox_name.TabIndex = 25;
-            this.txtbox_name.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // txtbox_Bdate
-            // 
-            this.txtbox_Bdate.Location = new System.Drawing.Point(226, 251);
-            this.txtbox_Bdate.Name = "txtbox_Bdate";
-            this.txtbox_Bdate.Size = new System.Drawing.Size(396, 26);
-            this.txtbox_Bdate.TabIndex = 24;
-            // 
-            // txtbox_email
-            // 
-            this.txtbox_email.Location = new System.Drawing.Point(226, 191);
-            this.txtbox_email.Name = "txtbox_email";
-            this.txtbox_email.Size = new System.Drawing.Size(396, 26);
-            this.txtbox_email.TabIndex = 23;
-            // 
-            // txtbox_Pnumber
-            // 
-            this.txtbox_Pnumber.Location = new System.Drawing.Point(226, 315);
-            this.txtbox_Pnumber.Name = "txtbox_Pnumber";
-            this.txtbox_Pnumber.Size = new System.Drawing.Size(396, 26);
-            this.txtbox_Pnumber.TabIndex = 22;
-            // 
-            // lbl_Pnumber
-            // 
-            this.lbl_Pnumber.AutoSize = true;
-            this.lbl_Pnumber.BackColor = System.Drawing.Color.White;
-            this.lbl_Pnumber.Location = new System.Drawing.Point(99, 318);
-            this.lbl_Pnumber.Name = "lbl_Pnumber";
-            this.lbl_Pnumber.Size = new System.Drawing.Size(115, 20);
-            this.lbl_Pnumber.TabIndex = 21;
-            this.lbl_Pnumber.Text = "Phone Number";
-            // 
-            // lbl_Bdate
-            // 
-            this.lbl_Bdate.AutoSize = true;
-            this.lbl_Bdate.BackColor = System.Drawing.Color.White;
-            this.lbl_Bdate.Location = new System.Drawing.Point(99, 257);
-            this.lbl_Bdate.Name = "lbl_Bdate";
-            this.lbl_Bdate.Size = new System.Drawing.Size(99, 20);
-            this.lbl_Bdate.TabIndex = 20;
-            this.lbl_Bdate.Text = "Date of Birth";
-            // 
-            // lbl_email
-            // 
-            this.lbl_email.AutoSize = true;
-            this.lbl_email.BackColor = System.Drawing.Color.White;
-            this.lbl_email.Location = new System.Drawing.Point(99, 197);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(48, 20);
-            this.lbl_email.TabIndex = 19;
-            this.lbl_email.Text = "Email";
-            // 
-            // lbl_name
-            // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.BackColor = System.Drawing.Color.White;
-            this.lbl_name.Location = new System.Drawing.Point(99, 136);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(51, 20);
-            this.lbl_name.TabIndex = 18;
-            this.lbl_name.Text = "Name";
             // 
             // pnl_top
             // 
@@ -397,22 +250,18 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this.btn_editEmail;
             // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
-            this.guna2Elipse2.TargetControl = this.btn_editBdate;
             // 
             // guna2Elipse3
             // 
             this.guna2Elipse3.BorderRadius = 15;
-            this.guna2Elipse3.TargetControl = this.btn_editPnumber;
             // 
             // guna2Elipse4
             // 
             this.guna2Elipse4.BorderRadius = 15;
-            this.guna2Elipse4.TargetControl = this.btn_editName;
             // 
             // guna2Elipse5
             // 
@@ -567,6 +416,15 @@
             this.img_close.TabStop = false;
             this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 91);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(891, 493);
+            this.panel1.TabIndex = 20;
+            // 
             // Customer_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -587,8 +445,6 @@
             this.pnl_hide.ResumeLayout(false);
             this.pnl_show.ResumeLayout(false);
             this.Gpnl_general.ResumeLayout(false);
-            this.pnl_edit.ResumeLayout(false);
-            this.pnl_edit.PerformLayout();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -635,19 +491,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
-        private System.Windows.Forms.Panel pnl_edit;
-        private System.Windows.Forms.Button btn_editEmail;
-        private System.Windows.Forms.Button btn_editBdate;
-        private System.Windows.Forms.Button btn_editPnumber;
-        private System.Windows.Forms.Button btn_editName;
-        private System.Windows.Forms.TextBox txtbox_name;
-        private System.Windows.Forms.TextBox txtbox_Bdate;
-        private System.Windows.Forms.TextBox txtbox_email;
-        private System.Windows.Forms.TextBox txtbox_Pnumber;
-        private System.Windows.Forms.Label lbl_Pnumber;
-        private System.Windows.Forms.Label lbl_Bdate;
-        private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.Label lbl_name;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private System.Windows.Forms.Button btn_viewOrdersData;
         private System.Windows.Forms.Button btn_manageProfile;
@@ -656,5 +499,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

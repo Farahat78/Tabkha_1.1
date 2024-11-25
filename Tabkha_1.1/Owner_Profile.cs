@@ -46,5 +46,29 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
+
+        private void btn_dessert_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_salad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_soup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_mainCourse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_appitizer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
