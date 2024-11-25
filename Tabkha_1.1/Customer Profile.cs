@@ -15,7 +15,7 @@ namespace Tabkha_1._1
         public Customer_Profile()
         {
             InitializeComponent();
-            //pnl_show.Hide();
+            pnl_show.Hide();
             //btn_editEmail.Hide();
             //btn_editBdate.Hide();
             //btn_editPnumber.Hide();
