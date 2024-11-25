@@ -31,24 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Profile));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.img_minimize = new System.Windows.Forms.PictureBox();
-            this.img_close = new System.Windows.Forms.PictureBox();
             this.Gpnl_choices = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btn_viewOrdersData = new System.Windows.Forms.Button();
             this.btn_manageProfile = new System.Windows.Forms.Button();
             this.btn_viewProfile = new System.Windows.Forms.Button();
             this.btn_logOut = new System.Windows.Forms.Button();
             this.pnl_hide = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_show = new System.Windows.Forms.Panel();
-            this.img_show = new System.Windows.Forms.PictureBox();
             this.Gpnl_general = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnl_edit = new System.Windows.Forms.Panel();
-            this.pnl_order = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.btn_previousOrder = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_editEmail = new System.Windows.Forms.Button();
             this.btn_editBdate = new System.Windows.Forms.Button();
             this.btn_editPnumber = new System.Windows.Forms.Button();
@@ -64,12 +55,7 @@
             this.pnl_top = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_data = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.img_hide = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -80,25 +66,35 @@
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.img_show = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.img_hide = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.img_minimize = new System.Windows.Forms.PictureBox();
+            this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.Gpnl_choices.SuspendLayout();
             this.pnl_hide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_show.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_show)).BeginInit();
             this.Gpnl_general.SuspendLayout();
             this.pnl_edit.SuspendLayout();
-            this.pnl_order.SuspendLayout();
             this.pnl_top.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_show)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -114,48 +110,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1169, 42);
             this.guna2GradientPanel1.TabIndex = 12;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(23, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 15;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // img_minimize
-            // 
-            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
-            this.img_minimize.Location = new System.Drawing.Point(1073, 7);
-            this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 29);
-            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_minimize.TabIndex = 5;
-            this.img_minimize.TabStop = false;
-            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click);
-            // 
-            // img_close
-            // 
-            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_close.BackColor = System.Drawing.Color.Transparent;
-            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
-            this.img_close.Location = new System.Drawing.Point(1119, 5);
-            this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 33);
-            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_close.TabIndex = 3;
-            this.img_close.TabStop = false;
-            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // Gpnl_choices
             // 
@@ -234,18 +188,6 @@
             this.pnl_hide.Size = new System.Drawing.Size(39, 654);
             this.pnl_hide.TabIndex = 70;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 654);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // pnl_show
             // 
             this.pnl_show.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -255,19 +197,6 @@
             this.pnl_show.Name = "pnl_show";
             this.pnl_show.Size = new System.Drawing.Size(39, 654);
             this.pnl_show.TabIndex = 71;
-            // 
-            // img_show
-            // 
-            this.img_show.BackColor = System.Drawing.Color.Transparent;
-            this.img_show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_show.Image = ((System.Drawing.Image)(resources.GetObject("img_show.Image")));
-            this.img_show.Location = new System.Drawing.Point(0, 0);
-            this.img_show.Name = "img_show";
-            this.img_show.Size = new System.Drawing.Size(39, 654);
-            this.img_show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_show.TabIndex = 63;
-            this.img_show.TabStop = false;
-            this.img_show.Click += new System.EventHandler(this.img_show_Click);
             // 
             // Gpnl_general
             // 
@@ -286,7 +215,6 @@
             // pnl_edit
             // 
             this.pnl_edit.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_edit.Controls.Add(this.pnl_order);
             this.pnl_edit.Controls.Add(this.btn_editEmail);
             this.pnl_edit.Controls.Add(this.btn_editBdate);
             this.pnl_edit.Controls.Add(this.btn_editPnumber);
@@ -304,49 +232,6 @@
             this.pnl_edit.Name = "pnl_edit";
             this.pnl_edit.Size = new System.Drawing.Size(891, 493);
             this.pnl_edit.TabIndex = 20;
-            // 
-            // pnl_order
-            // 
-            this.pnl_order.Controls.Add(this.progressBar1);
-            this.pnl_order.Controls.Add(this.btn_previousOrder);
-            this.pnl_order.Controls.Add(this.label1);
-            this.pnl_order.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_order.Location = new System.Drawing.Point(0, 0);
-            this.pnl_order.Name = "pnl_order";
-            this.pnl_order.Size = new System.Drawing.Size(891, 493);
-            this.pnl_order.TabIndex = 31;
-            this.pnl_order.Click += new System.EventHandler(this.pnl_order_Click);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(214, 104);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(484, 29);
-            this.progressBar1.TabIndex = 3;
-            // 
-            // btn_previousOrder
-            // 
-            this.btn_previousOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_previousOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_previousOrder.ForeColor = System.Drawing.Color.White;
-            this.btn_previousOrder.Location = new System.Drawing.Point(37, 194);
-            this.btn_previousOrder.Name = "btn_previousOrder";
-            this.btn_previousOrder.Size = new System.Drawing.Size(285, 35);
-            this.btn_previousOrder.TabIndex = 2;
-            this.btn_previousOrder.Text = "view Previous Order";
-            this.btn_previousOrder.UseVisualStyleBackColor = false;
-            this.btn_previousOrder.Click += new System.EventHandler(this.btn_preiousOrder_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Order Status";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_editEmail
             // 
@@ -499,6 +384,71 @@
             this.panel2.Size = new System.Drawing.Size(891, 70);
             this.panel2.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(190, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Contact Us";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.btn_editEmail;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this.btn_editBdate;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.TargetControl = this.btn_editPnumber;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.TargetControl = this.btn_editName;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 15;
+            this.guna2Elipse5.TargetControl = this.btn_logOut;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.BorderRadius = 10;
+            this.guna2Elipse6.TargetControl = this.pnl_top;
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.BorderRadius = 15;
+            // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.BorderRadius = 15;
+            this.guna2Elipse8.TargetControl = this.btn_viewProfile;
+            // 
+            // guna2Elipse9
+            // 
+            this.guna2Elipse9.BorderRadius = 15;
+            this.guna2Elipse9.TargetControl = this.btn_manageProfile;
+            // 
+            // guna2Elipse10
+            // 
+            this.guna2Elipse10.BorderRadius = 15;
+            this.guna2Elipse10.TargetControl = this.btn_viewOrdersData;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -539,15 +489,30 @@
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
-            // label6
+            // img_show
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(190, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Contact Us";
+            this.img_show.BackColor = System.Drawing.Color.Transparent;
+            this.img_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_show.Image = ((System.Drawing.Image)(resources.GetObject("img_show.Image")));
+            this.img_show.Location = new System.Drawing.Point(0, 0);
+            this.img_show.Name = "img_show";
+            this.img_show.Size = new System.Drawing.Size(39, 654);
+            this.img_show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_show.TabIndex = 63;
+            this.img_show.TabStop = false;
+            this.img_show.Click += new System.EventHandler(this.img_show_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 654);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // img_hide
             // 
@@ -560,55 +525,47 @@
             this.img_hide.TabIndex = 69;
             this.img_hide.TabStop = false;
             // 
-            // guna2Elipse1
+            // guna2CirclePictureBox1
             // 
-            this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this.btn_editEmail;
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(23, 0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 15;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
-            // guna2Elipse2
+            // img_minimize
             // 
-            this.guna2Elipse2.BorderRadius = 15;
-            this.guna2Elipse2.TargetControl = this.btn_editBdate;
+            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
+            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
+            this.img_minimize.Location = new System.Drawing.Point(1073, 7);
+            this.img_minimize.Name = "img_minimize";
+            this.img_minimize.Size = new System.Drawing.Size(40, 29);
+            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_minimize.TabIndex = 5;
+            this.img_minimize.TabStop = false;
+            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click);
             // 
-            // guna2Elipse3
+            // img_close
             // 
-            this.guna2Elipse3.BorderRadius = 15;
-            this.guna2Elipse3.TargetControl = this.btn_editPnumber;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 15;
-            this.guna2Elipse4.TargetControl = this.btn_editName;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 15;
-            this.guna2Elipse5.TargetControl = this.btn_logOut;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.BorderRadius = 10;
-            this.guna2Elipse6.TargetControl = this.pnl_top;
-            // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.BorderRadius = 15;
-            this.guna2Elipse7.TargetControl = this.btn_previousOrder;
-            // 
-            // guna2Elipse8
-            // 
-            this.guna2Elipse8.BorderRadius = 15;
-            this.guna2Elipse8.TargetControl = this.btn_viewProfile;
-            // 
-            // guna2Elipse9
-            // 
-            this.guna2Elipse9.BorderRadius = 15;
-            this.guna2Elipse9.TargetControl = this.btn_manageProfile;
-            // 
-            // guna2Elipse10
-            // 
-            this.guna2Elipse10.BorderRadius = 15;
-            this.guna2Elipse10.TargetControl = this.btn_viewOrdersData;
+            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_close.BackColor = System.Drawing.Color.Transparent;
+            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
+            this.img_close.Location = new System.Drawing.Point(1119, 5);
+            this.img_close.Name = "img_close";
+            this.img_close.Size = new System.Drawing.Size(38, 33);
+            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_close.TabIndex = 3;
+            this.img_close.TabStop = false;
+            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // Customer_Profile
             // 
@@ -626,19 +583,12 @@
             this.ShowInTaskbar = false;
             this.Text = "Customer_Profile";
             this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
             this.Gpnl_choices.ResumeLayout(false);
             this.pnl_hide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_show.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_show)).EndInit();
             this.Gpnl_general.ResumeLayout(false);
             this.pnl_edit.ResumeLayout(false);
             this.pnl_edit.PerformLayout();
-            this.pnl_order.ResumeLayout(false);
-            this.pnl_order.PerformLayout();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -647,7 +597,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_show)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -693,9 +648,6 @@
         private System.Windows.Forms.Label lbl_Bdate;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_name;
-        private System.Windows.Forms.Panel pnl_order;
-        private System.Windows.Forms.Button btn_previousOrder;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private System.Windows.Forms.Button btn_viewOrdersData;
         private System.Windows.Forms.Button btn_manageProfile;
@@ -703,6 +655,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
