@@ -35,10 +35,10 @@ namespace Tabkha_1._1
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditChef detailsForm = new AddEditChef();
+            detailsForm.change_add(true);
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
                 dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Email, detailsForm.Phone, detailsForm.Password, detailsForm.Specialty);
-                detailsForm.change_add(true);
             }
         }
 
