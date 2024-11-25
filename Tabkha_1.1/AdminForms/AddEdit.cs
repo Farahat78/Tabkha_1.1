@@ -39,6 +39,24 @@ namespace Tabkha_1._1
             set => txt_specialty.Text = value;
         }
 
+        public string Email
+        {
+            get => txt_email.Text;
+            set => txt_email.Text = value;
+        }
+
+        public string Password
+        {
+            get => txt_password.Text;
+            set => txt_password.Text = value;
+        }
+
+        public string Phone
+        {
+            get => txt_number.Text;
+            set => txt_number.Text = value;
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_specialty.Text))
@@ -51,8 +69,26 @@ namespace Tabkha_1._1
                 MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public void change_edit(bool x)
+        {
+            btn_save.Text = "Edit";
+        }
+        public void change_add(bool x)
+        {
+            btn_save.Text = "Add";
+        }
+
+        public void passwod_ReadOnly(bool x)
+        {
+            txt_password.ReadOnly = !txt_password.ReadOnly;
+        }
 
         private void txt_specialty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_number_TextChanged(object sender, EventArgs e)
         {
 
         }

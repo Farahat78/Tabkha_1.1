@@ -37,6 +37,17 @@
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txt_specialty = new Tabkha_1._1.CustomTextBox();
+            this.txt_number = new Tabkha_1._1.CustomTextBox();
+            this.txt_email = new Tabkha_1._1.CustomTextBox();
+            this.lbl_number = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.txt_password = new Tabkha_1._1.CustomTextBox();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -45,16 +56,16 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(153, 86);
+            this.txt_name.Location = new System.Drawing.Point(196, 89);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(134, 22);
+            this.txt_name.Size = new System.Drawing.Size(161, 22);
             this.txt_name.TabIndex = 6;
             this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_name.WatermarkText = "Enter name here";
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(141, 182);
+            this.btn_save.Location = new System.Drawing.Point(183, 292);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(71, 41);
             this.btn_save.TabIndex = 8;
@@ -65,7 +76,7 @@
             // lbl_specialty
             // 
             this.lbl_specialty.AutoSize = true;
-            this.lbl_specialty.Location = new System.Drawing.Point(73, 138);
+            this.lbl_specialty.Location = new System.Drawing.Point(73, 244);
             this.lbl_specialty.Name = "lbl_specialty";
             this.lbl_specialty.Size = new System.Drawing.Size(63, 16);
             this.lbl_specialty.TabIndex = 5;
@@ -74,7 +85,7 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(73, 89);
+            this.lbl_name.Location = new System.Drawing.Point(73, 95);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(74, 16);
             this.lbl_name.TabIndex = 4;
@@ -86,7 +97,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(298, 3);
+            this.img_close.Location = new System.Drawing.Point(360, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +125,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(251, 3);
+            this.img_minimize.Location = new System.Drawing.Point(313, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,25 +144,136 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(341, 34);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(403, 34);
             this.guna2GradientPanel1.TabIndex = 3;
             // 
             // txt_specialty
             // 
-            this.txt_specialty.Location = new System.Drawing.Point(153, 135);
+            this.txt_specialty.Location = new System.Drawing.Point(196, 238);
             this.txt_specialty.Name = "txt_specialty";
-            this.txt_specialty.Size = new System.Drawing.Size(134, 22);
+            this.txt_specialty.Size = new System.Drawing.Size(161, 22);
             this.txt_specialty.TabIndex = 7;
             this.txt_specialty.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_specialty.WatermarkText = "Enter specialty here";
             this.txt_specialty.TextChanged += new System.EventHandler(this.txt_specialty_TextChanged);
+            // 
+            // txt_number
+            // 
+            this.txt_number.Location = new System.Drawing.Point(196, 161);
+            this.txt_number.Name = "txt_number";
+            this.txt_number.Size = new System.Drawing.Size(161, 22);
+            this.txt_number.TabIndex = 12;
+            this.txt_number.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_number.WatermarkText = "Enter phone number here";
+            this.txt_number.TextChanged += new System.EventHandler(this.txt_number_TextChanged);
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(196, 124);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(161, 22);
+            this.txt_email.TabIndex = 11;
+            this.txt_email.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_email.WatermarkText = "Enter email here";
+            // 
+            // lbl_number
+            // 
+            this.lbl_number.AutoSize = true;
+            this.lbl_number.Location = new System.Drawing.Point(73, 167);
+            this.lbl_number.Name = "lbl_number";
+            this.lbl_number.Size = new System.Drawing.Size(97, 16);
+            this.lbl_number.TabIndex = 10;
+            this.lbl_number.Text = "Phone Number";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(73, 130);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(41, 16);
+            this.lbl_email.TabIndex = 9;
+            this.lbl_email.Text = "Email";
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(196, 200);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(161, 22);
+            this.txt_password.TabIndex = 14;
+            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_password.WatermarkText = "Enter password here";
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(73, 206);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(67, 16);
+            this.lbl_password.TabIndex = 13;
+            this.lbl_password.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(180, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = ":";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(10, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = ":";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(180, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(10, 16);
+            this.label3.TabIndex = 22;
+            this.label3.Text = ":";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(180, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(10, 16);
+            this.label4.TabIndex = 23;
+            this.label4.Text = ":";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(180, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(10, 16);
+            this.label5.TabIndex = 24;
+            this.label5.Text = ":";
             // 
             // AddEditChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(341, 273);
+            this.ClientSize = new System.Drawing.Size(403, 379);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.txt_number);
+            this.Controls.Add(this.txt_email);
+            this.Controls.Add(this.lbl_number);
+            this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txt_specialty);
             this.Controls.Add(this.txt_name);
@@ -181,5 +303,16 @@
         private System.Windows.Forms.PictureBox img_minimize;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private CustomTextBox txt_specialty;
+        private CustomTextBox txt_number;
+        private CustomTextBox txt_email;
+        private System.Windows.Forms.Label lbl_number;
+        private System.Windows.Forms.Label lbl_email;
+        private CustomTextBox txt_password;
+        private System.Windows.Forms.Label lbl_password;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

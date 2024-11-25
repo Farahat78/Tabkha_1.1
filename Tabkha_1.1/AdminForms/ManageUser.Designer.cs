@@ -32,15 +32,16 @@
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.dgv_users = new System.Windows.Forms.DataGridView();
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_delete = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.img_pic = new System.Windows.Forms.PictureBox();
             this.txt_search = new Tabkha_1._1.CustomTextBox();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pic)).BeginInit();
@@ -48,7 +49,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(290, 396);
+            this.btn_edit.Location = new System.Drawing.Point(292, 415);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(177, 23);
             this.btn_edit.TabIndex = 4;
@@ -58,7 +59,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(47, 396);
+            this.btn_add.Location = new System.Drawing.Point(49, 415);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(177, 23);
             this.btn_add.TabIndex = 3;
@@ -85,6 +86,7 @@
             this.nme,
             this.email,
             this.number,
+            this.address,
             this.password});
             this.dgv_users.EnableHeadersVisualStyles = false;
             this.dgv_users.Location = new System.Drawing.Point(-6, 35);
@@ -95,49 +97,9 @@
             this.dgv_users.Size = new System.Drawing.Size(806, 340);
             this.dgv_users.TabIndex = 5;
             // 
-            // userID
-            // 
-            this.userID.HeaderText = "User ID";
-            this.userID.MinimumWidth = 6;
-            this.userID.Name = "userID";
-            this.userID.ReadOnly = true;
-            this.userID.Width = 125;
-            // 
-            // nme
-            // 
-            this.nme.HeaderText = "Name";
-            this.nme.MinimumWidth = 6;
-            this.nme.Name = "nme";
-            this.nme.ReadOnly = true;
-            this.nme.Width = 125;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 125;
-            // 
-            // number
-            // 
-            this.number.HeaderText = "Phone Number";
-            this.number.MinimumWidth = 6;
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            this.number.Width = 125;
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            this.password.Width = 125;
-            // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(558, 396);
+            this.btn_delete.Location = new System.Drawing.Point(560, 415);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(177, 23);
             this.btn_delete.TabIndex = 6;
@@ -176,6 +138,54 @@
             this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_search.WatermarkText = "Search";
             // 
+            // userID
+            // 
+            this.userID.HeaderText = "User ID";
+            this.userID.MinimumWidth = 6;
+            this.userID.Name = "userID";
+            this.userID.ReadOnly = true;
+            this.userID.Width = 125;
+            // 
+            // nme
+            // 
+            this.nme.HeaderText = "Name";
+            this.nme.MinimumWidth = 6;
+            this.nme.Name = "nme";
+            this.nme.ReadOnly = true;
+            this.nme.Width = 125;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 125;
+            // 
+            // number
+            // 
+            this.number.HeaderText = "Phone Number";
+            this.number.MinimumWidth = 6;
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 125;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.Width = 125;
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            this.password.Width = 125;
+            // 
             // ManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +200,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUser";
             this.Text = "ManageUser";
+            this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -203,14 +214,15 @@
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridView dgv_users;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox img_pic;
         private CustomTextBox txt_search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }

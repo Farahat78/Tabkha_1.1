@@ -34,22 +34,84 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgv_chefs = new System.Windows.Forms.DataGridView();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
+            this.dgv_chefs = new System.Windows.Forms.DataGridView();
             this.chefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(54, 415);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(177, 23);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Text = "Add Chef";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(288, 415);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(177, 23);
+            this.btn_edit.TabIndex = 2;
+            this.btn_edit.Text = "Edit Chef";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(540, 415);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(177, 23);
+            this.btn_delete.TabIndex = 7;
+            this.btn_delete.Text = "Delete Chef";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.customTextBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(800, 39);
+            this.guna2Panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(283, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.Location = new System.Drawing.Point(318, 7);
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.customTextBox1.TabIndex = 8;
+            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
+            this.customTextBox1.WatermarkText = "Search";
             // 
             // dgv_chefs
             // 
@@ -68,8 +130,9 @@
             this.dgv_chefs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chefID,
             this.nme,
-            this.specialty,
+            this.email,
             this.number,
+            this.specialty,
             this.password});
             this.dgv_chefs.EnableHeadersVisualStyles = false;
             this.dgv_chefs.Location = new System.Drawing.Point(-6, 35);
@@ -88,36 +151,6 @@
             this.dgv_chefs.Size = new System.Drawing.Size(805, 374);
             this.dgv_chefs.TabIndex = 0;
             this.dgv_chefs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chefs_CellContentClick);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(41, 415);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(177, 23);
-            this.btn_add.TabIndex = 1;
-            this.btn_add.Text = "Add Chef";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.Location = new System.Drawing.Point(275, 415);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(177, 23);
-            this.btn_edit.TabIndex = 2;
-            this.btn_edit.Text = "Edit Chef";
-            this.btn_edit.UseVisualStyleBackColor = true;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(527, 415);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(177, 23);
-            this.btn_delete.TabIndex = 7;
-            this.btn_delete.Text = "Delete Chef";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // chefID
             // 
@@ -139,25 +172,33 @@
             this.nme.ReadOnly = true;
             this.nme.Width = 125;
             // 
-            // specialty
+            // email
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.specialty.DefaultCellStyle = dataGridViewCellStyle4;
-            this.specialty.HeaderText = "Specialty";
-            this.specialty.MinimumWidth = 6;
-            this.specialty.Name = "specialty";
-            this.specialty.ReadOnly = true;
-            this.specialty.Width = 125;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 125;
             // 
             // number
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.number.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.number.DefaultCellStyle = dataGridViewCellStyle4;
             this.number.HeaderText = "Phone Number";
             this.number.MinimumWidth = 6;
             this.number.Name = "number";
             this.number.ReadOnly = true;
             this.number.Width = 125;
+            // 
+            // specialty
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.specialty.DefaultCellStyle = dataGridViewCellStyle5;
+            this.specialty.HeaderText = "Specialty";
+            this.specialty.MinimumWidth = 6;
+            this.specialty.Name = "specialty";
+            this.specialty.ReadOnly = true;
+            this.specialty.Width = 125;
             // 
             // password
             // 
@@ -166,37 +207,6 @@
             this.password.Name = "password";
             this.password.ReadOnly = true;
             this.password.Width = 125;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Controls.Add(this.customTextBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 39);
-            this.guna2Panel1.TabIndex = 10;
-            // 
-            // customTextBox1
-            // 
-            this.customTextBox1.Location = new System.Drawing.Point(318, 7);
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.customTextBox1.TabIndex = 8;
-            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
-            this.customTextBox1.WatermarkText = "Search";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // ManageChefForm
             // 
@@ -212,27 +222,27 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageChefForm";
             this.Text = "Manage Chef";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgv_chefs;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chefID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private CustomTextBox customTextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgv_chefs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chefID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }

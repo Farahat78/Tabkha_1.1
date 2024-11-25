@@ -26,8 +26,9 @@ namespace Tabkha_1._1
             usersTable.Columns.Add("User ID", typeof(int));
             usersTable.Columns.Add("Name", typeof(string));
             usersTable.Columns.Add("Email", typeof(string));
-            usersTable.Columns.Add("Phone Number", typeof(int));
-            usersTable.Columns.Add("Password", typeof(int));
+            usersTable.Columns.Add("Phone Number", typeof(string));
+            usersTable.Columns.Add("Address", typeof(string));
+            usersTable.Columns.Add("Password", typeof(string));
 
             dgv_users.DataSource = usersTable;
         }
@@ -35,9 +36,10 @@ namespace Tabkha_1._1
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditUser detailsForm = new AddEditUser();
+            detailsForm.change_add(true);
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
-                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Password);
+                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Address, detailsForm.Password); 
             }
         }
 
@@ -50,19 +52,20 @@ namespace Tabkha_1._1
                     UserName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
                     Email = dgv_users.CurrentRow.Cells["email"].Value.ToString(),
                     Phone = dgv_users.CurrentRow.Cells["number"].Value.ToString(),
-                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString()
+                    Address = dgv_users.CurrentRow.Cells["address"].Value.ToString(),
+                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString(),
                 };
-
+                detailsForm.passwod_ReadOnly(dgv_users.CurrentRow != null);
+                detailsForm.change_edit(dgv_users.CurrentRow != null);
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.UserName;
                     dgv_users.CurrentRow.Cells["email"].Value = detailsForm.Email;
                     dgv_users.CurrentRow.Cells["number"].Value = detailsForm.Phone;
-                    
+                    dgv_users.CurrentRow.Cells["address"].Value = detailsForm.Address;
                 }
             }
         }
-
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (dgv_users.CurrentRow != null)
@@ -85,6 +88,11 @@ namespace Tabkha_1._1
             {
                 MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ManageUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
