@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_details));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
@@ -69,12 +73,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_submib = new System.Windows.Forms.Button();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
@@ -85,6 +91,10 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.label8);
+            this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.label11);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
             this.guna2GradientPanel1.Controls.Add(this.img_logo);
             this.guna2GradientPanel1.Controls.Add(this.img_close);
@@ -95,8 +105,57 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(762, 27);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1168, 134);
             this.guna2GradientPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(811, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 24);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Become a Cook";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(976, 77);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 9;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1029, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(101, 24);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "My Acount";
             // 
             // img_minimize
             // 
@@ -104,8 +163,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(694, 3);
-            this.img_minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.img_minimize.Location = new System.Drawing.Point(1040, 4);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(27, 19);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -118,11 +176,10 @@
             this.img_logo.BackColor = System.Drawing.Color.Transparent;
             this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(-1, -2);
-            this.img_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.img_logo.Location = new System.Drawing.Point(-2, -3);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(57, 32);
+            this.img_logo.Size = new System.Drawing.Size(86, 47);
             this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
@@ -134,8 +191,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(730, 3);
-            this.img_close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.img_close.Location = new System.Drawing.Point(1093, 4);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(25, 21);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,11 +209,10 @@
             this.pnl_product.BackColor = System.Drawing.Color.Transparent;
             this.pnl_product.Controls.Add(this.img_product);
             this.pnl_product.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_product.Location = new System.Drawing.Point(8, 29);
-            this.pnl_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_product.Location = new System.Drawing.Point(12, 42);
             this.pnl_product.Name = "pnl_product";
             this.pnl_product.ShadowColor = System.Drawing.Color.Black;
-            this.pnl_product.Size = new System.Drawing.Size(231, 265);
+            this.pnl_product.Size = new System.Drawing.Size(346, 387);
             this.pnl_product.TabIndex = 2;
             // 
             // img_product
@@ -166,7 +221,7 @@
             this.img_product.Location = new System.Drawing.Point(0, 0);
             this.img_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(231, 265);
+            this.img_product.Size = new System.Drawing.Size(346, 387);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.img_product.TabIndex = 0;
             this.img_product.TabStop = false;
@@ -175,10 +230,9 @@
             // 
             this.lbl_product_description.AutoEllipsis = true;
             this.lbl_product_description.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_product_description.Location = new System.Drawing.Point(243, 39);
-            this.lbl_product_description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_product_description.Location = new System.Drawing.Point(364, 57);
             this.lbl_product_description.Name = "lbl_product_description";
-            this.lbl_product_description.Size = new System.Drawing.Size(499, 76);
+            this.lbl_product_description.Size = new System.Drawing.Size(748, 111);
             this.lbl_product_description.TabIndex = 3;
             this.lbl_product_description.Text = resources.GetString("lbl_product_description.Text");
             // 
@@ -186,8 +240,7 @@
             // 
             this.lbl_product_name.AutoSize = true;
             this.lbl_product_name.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_product_name.Location = new System.Drawing.Point(77, 304);
-            this.lbl_product_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_product_name.Location = new System.Drawing.Point(116, 444);
             this.lbl_product_name.Name = "lbl_product_name";
             this.lbl_product_name.Size = new System.Drawing.Size(108, 23);
             this.lbl_product_name.TabIndex = 4;
@@ -197,8 +250,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(259, 184);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Location = new System.Drawing.Point(388, 269);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(121, 13);
             this.lbl1.TabIndex = 5;
@@ -207,8 +259,7 @@
             // lbl_preparationtime
             // 
             this.lbl_preparationtime.AutoSize = true;
-            this.lbl_preparationtime.Location = new System.Drawing.Point(362, 184);
-            this.lbl_preparationtime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_preparationtime.Location = new System.Drawing.Point(543, 269);
             this.lbl_preparationtime.Name = "lbl_preparationtime";
             this.lbl_preparationtime.Size = new System.Drawing.Size(58, 13);
             this.lbl_preparationtime.TabIndex = 6;
@@ -221,8 +272,7 @@
             this.btn_order.FlatAppearance.BorderSize = 0;
             this.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_order.ForeColor = System.Drawing.Color.White;
-            this.btn_order.Location = new System.Drawing.Point(245, 376);
-            this.btn_order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_order.Location = new System.Drawing.Point(368, 550);
             this.btn_order.Name = "btn_order";
             this.btn_order.Size = new System.Drawing.Size(108, 36);
             this.btn_order.TabIndex = 12;
@@ -236,8 +286,7 @@
             this.btn_addtocart.FlatAppearance.BorderSize = 0;
             this.btn_addtocart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addtocart.ForeColor = System.Drawing.Color.White;
-            this.btn_addtocart.Location = new System.Drawing.Point(364, 376);
-            this.btn_addtocart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_addtocart.Location = new System.Drawing.Point(546, 550);
             this.btn_addtocart.Name = "btn_addtocart";
             this.btn_addtocart.Size = new System.Drawing.Size(108, 36);
             this.btn_addtocart.TabIndex = 13;
@@ -258,8 +307,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(265, 211);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(398, 308);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 14;
@@ -267,8 +315,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(349, 211);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(524, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 84);
             this.label2.TabIndex = 15;
@@ -279,8 +326,7 @@
             this.lbl_available.AutoSize = true;
             this.lbl_available.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_available.ForeColor = System.Drawing.Color.Red;
-            this.lbl_available.Location = new System.Drawing.Point(251, 336);
-            this.lbl_available.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_available.Location = new System.Drawing.Point(376, 491);
             this.lbl_available.Name = "lbl_available";
             this.lbl_available.Size = new System.Drawing.Size(80, 15);
             this.lbl_available.TabIndex = 16;
@@ -289,8 +335,7 @@
             // num_quantity
             // 
             this.num_quantity.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.num_quantity.Location = new System.Drawing.Point(578, 183);
-            this.num_quantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.num_quantity.Location = new System.Drawing.Point(867, 267);
             this.num_quantity.Name = "num_quantity";
             this.num_quantity.Size = new System.Drawing.Size(59, 20);
             this.num_quantity.TabIndex = 17;
@@ -299,8 +344,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(511, 185);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(766, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 18;
@@ -310,8 +354,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(243, 109);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(364, 159);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(481, 13);
             this.label5.TabIndex = 19;
@@ -321,8 +364,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(242, 168);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(363, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(481, 13);
             this.label6.TabIndex = 20;
@@ -333,8 +375,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(250, 132);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(375, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 19);
             this.label7.TabIndex = 21;
@@ -344,8 +385,7 @@
             // 
             this.lbl_price.AutoSize = true;
             this.lbl_price.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_price.Location = new System.Drawing.Point(279, 135);
-            this.lbl_price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_price.Location = new System.Drawing.Point(418, 197);
             this.lbl_price.Name = "lbl_price";
             this.lbl_price.Size = new System.Drawing.Size(57, 33);
             this.lbl_price.TabIndex = 22;
@@ -353,8 +393,7 @@
             // 
             // str_rating
             // 
-            this.str_rating.Location = new System.Drawing.Point(248, 291);
-            this.str_rating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.str_rating.Location = new System.Drawing.Point(372, 425);
             this.str_rating.Name = "str_rating";
             this.str_rating.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.str_rating.Size = new System.Drawing.Size(80, 19);
@@ -366,8 +405,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(248, 359);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(372, 525);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 24;
@@ -379,8 +417,7 @@
             this.lnk_category.AutoSize = true;
             this.lnk_category.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_category.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.lnk_category.Location = new System.Drawing.Point(312, 359);
-            this.lnk_category.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnk_category.Location = new System.Drawing.Point(468, 525);
             this.lnk_category.Name = "lnk_category";
             this.lnk_category.Size = new System.Drawing.Size(66, 13);
             this.lnk_category.TabIndex = 25;
@@ -391,8 +428,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(511, 212);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(766, 310);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 26;
@@ -402,8 +438,7 @@
             // 
             this.lbl_nutrition.AutoSize = true;
             this.lbl_nutrition.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nutrition.Location = new System.Drawing.Point(575, 211);
-            this.lbl_nutrition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_nutrition.Location = new System.Drawing.Point(862, 308);
             this.lbl_nutrition.Name = "lbl_nutrition";
             this.lbl_nutrition.Size = new System.Drawing.Size(46, 14);
             this.lbl_nutrition.TabIndex = 27;
@@ -415,8 +450,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.linkLabel1.Location = new System.Drawing.Point(332, 295);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(498, 431);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(22, 13);
             this.linkLabel1.TabIndex = 28;
@@ -427,8 +461,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(511, 243);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(766, 355);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 13);
             this.label12.TabIndex = 29;
@@ -437,8 +470,7 @@
             // radio_wieght
             // 
             this.radio_wieght.AutoSize = true;
-            this.radio_wieght.Location = new System.Drawing.Point(578, 243);
-            this.radio_wieght.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_wieght.Location = new System.Drawing.Point(867, 355);
             this.radio_wieght.Name = "radio_wieght";
             this.radio_wieght.Size = new System.Drawing.Size(60, 17);
             this.radio_wieght.TabIndex = 30;
@@ -449,8 +481,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(577, 263);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Location = new System.Drawing.Point(866, 384);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(60, 17);
             this.radioButton2.TabIndex = 31;
@@ -461,8 +492,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(579, 283);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Location = new System.Drawing.Point(868, 414);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(46, 17);
             this.radioButton3.TabIndex = 32;
@@ -474,8 +504,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 478);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(24, 699);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 23);
             this.label13.TabIndex = 33;
@@ -485,8 +514,7 @@
             // 
             this.label14.AutoEllipsis = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(149, 515);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(224, 753);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(560, 76);
             this.label14.TabIndex = 34;
@@ -497,8 +525,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(17, 515);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(26, 753);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(129, 18);
             this.label15.TabIndex = 35;
@@ -508,8 +535,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(26, 438);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(39, 640);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 18);
             this.label16.TabIndex = 36;
@@ -517,8 +543,7 @@
             // 
             // guna2RatingStar1
             // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(81, 438);
-            this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2RatingStar1.Location = new System.Drawing.Point(122, 640);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2RatingStar1.Size = new System.Drawing.Size(80, 19);
@@ -526,19 +551,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 633);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(228, 925);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(497, 66);
+            this.textBox1.Size = new System.Drawing.Size(744, 95);
             this.textBox1.TabIndex = 38;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(17, 607);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(26, 887);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(114, 18);
             this.label17.TabIndex = 39;
@@ -551,8 +574,7 @@
             this.btn_submib.FlatAppearance.BorderSize = 0;
             this.btn_submib.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submib.ForeColor = System.Drawing.Color.White;
-            this.btn_submib.Location = new System.Drawing.Point(554, 702);
-            this.btn_submib.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_submib.Location = new System.Drawing.Point(831, 1026);
             this.btn_submib.Name = "btn_submib";
             this.btn_submib.Size = new System.Drawing.Size(94, 27);
             this.btn_submib.TabIndex = 40;
@@ -569,23 +591,31 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(247, 315);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(370, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 15);
             this.label3.TabIndex = 41;
             this.label3.Text = "Available Now";
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.Location = new System.Drawing.Point(200, 970);
+            this.customTextBox1.Multiline = true;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Size = new System.Drawing.Size(733, 119);
+            this.customTextBox1.TabIndex = 42;
+            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
+            this.customTextBox1.WatermarkText = "Write a comment";
             // 
             // Product_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(779, 476);
+            this.ClientSize = new System.Drawing.Size(1168, 696);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_submib);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -624,6 +654,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_details";
             this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
@@ -676,10 +709,14 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btn_submib;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private CustomTextBox customTextBox1;
     }
 }

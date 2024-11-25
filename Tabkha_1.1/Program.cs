@@ -8,15 +8,13 @@ namespace Tabkha_1._1
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new user_home());
+            Application.Run(new Admin());
         }
     }
 }
