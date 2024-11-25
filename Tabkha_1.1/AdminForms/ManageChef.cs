@@ -38,6 +38,7 @@ namespace Tabkha_1._1
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
                 dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Email, detailsForm.Phone, detailsForm.Password, detailsForm.Specialty);
+                detailsForm.change_add(true);
             }
         }
 
@@ -54,7 +55,7 @@ namespace Tabkha_1._1
                     Specialty = dgv_chefs.CurrentRow.Cells["specialty"].Value.ToString()
                 };
                 detailsForm.passwod_ReadOnly(dgv_chefs.CurrentRow != null);
-                detailsForm.change_save(dgv_chefs.CurrentRow != null);
+                detailsForm.change_edit(dgv_chefs.CurrentRow != null);
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_chefs.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;

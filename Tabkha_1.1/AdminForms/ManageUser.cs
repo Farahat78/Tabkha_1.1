@@ -35,9 +35,10 @@ namespace Tabkha_1._1
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditUser detailsForm = new AddEditUser();
+            detailsForm.change_add(true);
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
-                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Password);
+                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Password); 
             }
         }
 
@@ -53,7 +54,7 @@ namespace Tabkha_1._1
                     Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString(),
                 };
                 detailsForm.passwod_ReadOnly(dgv_users.CurrentRow != null);
-                detailsForm.change_save(dgv_users.CurrentRow != null);
+                detailsForm.change_edit(dgv_users.CurrentRow != null);
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.UserName;

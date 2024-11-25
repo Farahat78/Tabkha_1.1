@@ -90,9 +90,13 @@ namespace Tabkha_1._1
         {
             txt_password.ReadOnly = !txt_password.ReadOnly;
         }
-        public void change_save(bool x)
+        public void change_edit(bool x)
         {
             btn_save.Text = "Edit";
+        }
+        public void change_add(bool x)
+        {
+            btn_save.Text = "Add";
         }
         private void txt_password_TextChanged(object sender, EventArgs e)
         {
