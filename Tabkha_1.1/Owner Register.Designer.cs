@@ -168,7 +168,6 @@
             // 
             // guna2GradientPanel2
             // 
-            
             this.guna2GradientPanel2.Controls.Add(this.btn_signIn);
             this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -245,7 +244,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
-            this.img_minimize.Location = new System.Drawing.Point(954, 6);
+            this.img_minimize.Location = new System.Drawing.Point(1075, 6);
             this.img_minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 28);
@@ -260,7 +259,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
-            this.img_close.Location = new System.Drawing.Point(995, 4);
+            this.img_close.Location = new System.Drawing.Point(1116, 4);
             this.img_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 31);

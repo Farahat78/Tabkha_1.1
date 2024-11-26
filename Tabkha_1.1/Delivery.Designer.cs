@@ -99,6 +99,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -112,6 +114,8 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.label11);
+            this.guna2GradientPanel1.Controls.Add(this.label9);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.lbl_my_acc);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
@@ -131,7 +135,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(992, 73);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(872, 77);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
@@ -145,7 +149,7 @@
             this.lbl_my_acc.AutoSize = true;
             this.lbl_my_acc.BackColor = System.Drawing.Color.Transparent;
             this.lbl_my_acc.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_my_acc.Location = new System.Drawing.Point(1045, 95);
+            this.lbl_my_acc.Location = new System.Drawing.Point(925, 99);
             this.lbl_my_acc.Name = "lbl_my_acc";
             this.lbl_my_acc.Size = new System.Drawing.Size(101, 24);
             this.lbl_my_acc.TabIndex = 7;
@@ -502,7 +506,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(5, 199);
+            this.label6.Location = new System.Drawing.Point(5, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(747, 19);
             this.label6.TabIndex = 17;
@@ -890,6 +894,28 @@
             this.guna2Elipse2.BorderRadius = 40;
             this.guna2Elipse2.TargetControl = this.txt_search_order;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1048, 99);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 24);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Log out";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(682, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(149, 24);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Accepted Orders";
+            // 
             // Delivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -990,5 +1016,7 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_accept;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
     }
 }
