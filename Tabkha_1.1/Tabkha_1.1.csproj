@@ -200,6 +200,9 @@
     <EmbeddedResource Include="Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="order.resx">
+      <DependentUpon>order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Owner_Profile.resx">
       <DependentUpon>Owner_Profile.cs</DependentUpon>
     </EmbeddedResource>

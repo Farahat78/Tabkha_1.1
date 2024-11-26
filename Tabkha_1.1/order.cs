@@ -16,5 +16,15 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
