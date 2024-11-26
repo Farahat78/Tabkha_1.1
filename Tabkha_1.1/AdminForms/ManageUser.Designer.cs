@@ -32,16 +32,16 @@
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.dgv_users = new System.Windows.Forms.DataGridView();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.img_pic = new System.Windows.Forms.PictureBox();
-            this.txt_search = new Tabkha_1._1.CustomTextBox();
             this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.img_pic = new System.Windows.Forms.PictureBox();
+            this.txt_search = new Tabkha_1._1.CustomTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pic)).BeginInit();
@@ -94,49 +94,8 @@
             this.dgv_users.ReadOnly = true;
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.Height = 24;
-            this.dgv_users.Size = new System.Drawing.Size(806, 340);
+            this.dgv_users.Size = new System.Drawing.Size(806, 374);
             this.dgv_users.TabIndex = 5;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(560, 415);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(177, 23);
-            this.btn_delete.TabIndex = 6;
-            this.btn_delete.Text = "Delete User";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.img_pic);
-            this.guna2Panel1.Controls.Add(this.txt_search);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 39);
-            this.guna2Panel1.TabIndex = 11;
-            // 
-            // img_pic
-            // 
-            this.img_pic.BackColor = System.Drawing.Color.Transparent;
-            this.img_pic.Image = global::Tabkha_1._1.Properties.Resources.search;
-            this.img_pic.Location = new System.Drawing.Point(283, 5);
-            this.img_pic.Name = "img_pic";
-            this.img_pic.Size = new System.Drawing.Size(29, 24);
-            this.img_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_pic.TabIndex = 9;
-            this.img_pic.TabStop = false;
-            // 
-            // txt_search
-            // 
-            this.txt_search.Location = new System.Drawing.Point(318, 7);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(100, 22);
-            this.txt_search.TabIndex = 8;
-            this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_search.WatermarkText = "Search";
             // 
             // userID
             // 
@@ -185,6 +144,47 @@
             this.password.Name = "password";
             this.password.ReadOnly = true;
             this.password.Width = 125;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(560, 415);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(177, 23);
+            this.btn_delete.TabIndex = 6;
+            this.btn_delete.Text = "Delete User";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.img_pic);
+            this.guna2Panel1.Controls.Add(this.txt_search);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(800, 39);
+            this.guna2Panel1.TabIndex = 11;
+            // 
+            // img_pic
+            // 
+            this.img_pic.BackColor = System.Drawing.Color.Transparent;
+            this.img_pic.Image = global::Tabkha_1._1.Properties.Resources.search;
+            this.img_pic.Location = new System.Drawing.Point(283, 5);
+            this.img_pic.Name = "img_pic";
+            this.img_pic.Size = new System.Drawing.Size(29, 24);
+            this.img_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_pic.TabIndex = 9;
+            this.img_pic.TabStop = false;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(318, 7);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(100, 22);
+            this.txt_search.TabIndex = 8;
+            this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_search.WatermarkText = "Search";
             // 
             // ManageUser
             // 

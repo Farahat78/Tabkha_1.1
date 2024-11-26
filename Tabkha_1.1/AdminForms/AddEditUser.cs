@@ -92,19 +92,24 @@ namespace Tabkha_1._1
         {
             
         }
-        public void passwod_ReadOnly(bool x)
+        public void passwod_ReadOnly()
         {
             txt_password.ReadOnly = !txt_password.ReadOnly;
         }
-        public void change_edit(bool x)
+        public void change_edit()
         {
             btn_save.Text = "Edit";
         }
-        public void change_add(bool x)
+        public void change_add()
         {
             btn_save.Text = "Add";
         }
         private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

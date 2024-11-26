@@ -67,9 +67,8 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1171, 134);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1044, 113);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
             // guna2CirclePictureBox1
@@ -77,11 +76,10 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(976, 77);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(868, 65);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 42);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 9;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -92,9 +90,9 @@
             this.lbl_account.AutoSize = true;
             this.lbl_account.BackColor = System.Drawing.Color.Transparent;
             this.lbl_account.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_account.Location = new System.Drawing.Point(1033, 101);
+            this.lbl_account.Location = new System.Drawing.Point(918, 85);
             this.lbl_account.Name = "lbl_account";
-            this.lbl_account.Size = new System.Drawing.Size(101, 24);
+            this.lbl_account.Size = new System.Drawing.Size(87, 21);
             this.lbl_account.TabIndex = 10;
             this.lbl_account.Text = "My Acount";
             // 
@@ -104,9 +102,9 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(951, 3);
+            this.img_minimize.Location = new System.Drawing.Point(956, 3);
             this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 28);
+            this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_minimize.TabIndex = 5;
             this.img_minimize.TabStop = false;
@@ -117,11 +115,10 @@
             this.img_logo.BackColor = System.Drawing.Color.Transparent;
             this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(24, 26);
-            this.img_logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_logo.Location = new System.Drawing.Point(21, 22);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(100, 100);
+            this.img_logo.Size = new System.Drawing.Size(89, 84);
             this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
@@ -135,7 +132,7 @@
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
             this.img_close.Location = new System.Drawing.Point(998, 3);
             this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 31);
+            this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_close.TabIndex = 3;
             this.img_close.TabStop = false;
@@ -151,10 +148,9 @@
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(217)))), ((int)(((byte)(188)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 134);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 113);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(310, 536);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(276, 452);
             this.guna2GradientPanel2.TabIndex = 3;
             this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.x);
             // 
@@ -166,9 +162,9 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(0, 243);
+            this.btn_out.Location = new System.Drawing.Point(0, 279);
             this.btn_out.Name = "btn_out";
-            this.btn_out.Size = new System.Drawing.Size(310, 33);
+            this.btn_out.Size = new System.Drawing.Size(276, 29);
             this.btn_out.TabIndex = 5;
             this.btn_out.Text = "Log Out";
             this.btn_out.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,9 +179,9 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 168);
+            this.btn_users.Location = new System.Drawing.Point(0, 189);
             this.btn_users.Name = "btn_users";
-            this.btn_users.Size = new System.Drawing.Size(310, 38);
+            this.btn_users.Size = new System.Drawing.Size(276, 33);
             this.btn_users.TabIndex = 4;
             this.btn_users.Text = "Manage Users";
             this.btn_users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,9 +196,9 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(0, 86);
+            this.btn_chefs.Location = new System.Drawing.Point(0, 105);
             this.btn_chefs.Name = "btn_chefs";
-            this.btn_chefs.Size = new System.Drawing.Size(310, 38);
+            this.btn_chefs.Size = new System.Drawing.Size(276, 33);
             this.btn_chefs.TabIndex = 3;
             this.btn_chefs.Text = "Manage Chefs";
             this.btn_chefs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -217,10 +213,9 @@
             this.btn_dashboard.FlatAppearance.BorderSize = 0;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(0, 7);
-            this.btn_dashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_dashboard.Location = new System.Drawing.Point(3, 21);
             this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(310, 38);
+            this.btn_dashboard.Size = new System.Drawing.Size(276, 33);
             this.btn_dashboard.TabIndex = 2;
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -254,10 +249,9 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(310, 134);
-            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(276, 113);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(765, 452);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(768, 452);
             this.guna2GradientPanel3.TabIndex = 4;
             // 
             // guna2Elipse6
@@ -267,15 +261,14 @@
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1169, 696);
+            this.ClientSize = new System.Drawing.Size(1039, 586);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Admin";
             this.Text = "Admin";
             this.guna2GradientPanel1.ResumeLayout(false);

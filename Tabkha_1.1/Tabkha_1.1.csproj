@@ -111,10 +111,10 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Profile.cs">
+    <Compile Include="Customer\Manage Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Profile.Designer.cs">
+    <Compile Include="Customer\Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="order.cs">
@@ -167,10 +167,10 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="View order details.cs">
+    <Compile Include="Customer\View order details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View order details.Designer.cs">
+    <Compile Include="Customer\View order details.Designer.cs">
       <DependentUpon>View order details.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AddEdit.resx">
@@ -197,7 +197,7 @@
     <EmbeddedResource Include="AdminForms\ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Profile.resx">
+    <EmbeddedResource Include="Customer\Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="order.resx">
@@ -234,7 +234,7 @@
     <EmbeddedResource Include="user_home.resx">
       <DependentUpon>user_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View order details.resx">
+    <EmbeddedResource Include="Customer\View order details.resx">
       <DependentUpon>View order details.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -18,10 +18,10 @@ namespace Tabkha_1._1
         }
         public void LoadFormIntoPanel(Form Form)
         {
-            panel1.Controls.Clear();
+            pnl_show.Controls.Clear();
             Form.TopLevel = false;
             Form.Dock = DockStyle.Fill;
-            panel1.Controls.Add(Form);
+            pnl_show.Controls.Add(Form);
             Form.Show();
         }
 
@@ -56,7 +56,9 @@ namespace Tabkha_1._1
 
         private void btn_viewProfile_Click(object sender, EventArgs e)
         {
-         LoadFormIntoPanel(new Manage_Profile());     
+            Manage_Profile view = new Manage_Profile();
+            view.edit_invisible();
+            LoadFormIntoPanel(view);     
             //pnl_order.Hide();
             //pnl_edit.Show();
             //btn_editEmail.Hide();

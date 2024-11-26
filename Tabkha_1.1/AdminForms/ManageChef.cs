@@ -35,7 +35,7 @@ namespace Tabkha_1._1
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditChef detailsForm = new AddEditChef();
-            detailsForm.change_add(true);
+            detailsForm.change_add();
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
                 dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Email, detailsForm.Phone, detailsForm.Specialty, detailsForm.Password);
@@ -54,8 +54,8 @@ namespace Tabkha_1._1
                     Password = dgv_chefs.CurrentRow.Cells["Password"].Value.ToString(),
                     Specialty = dgv_chefs.CurrentRow.Cells["specialty"].Value.ToString()
                 };
-                detailsForm.passwod_ReadOnly(dgv_chefs.CurrentRow != null);
-                detailsForm.change_edit(dgv_chefs.CurrentRow != null);
+                detailsForm.passwod_ReadOnly();
+                detailsForm.change_edit();
                 if (detailsForm.ShowDialog() == DialogResult.OK)
                 {
                     dgv_chefs.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
