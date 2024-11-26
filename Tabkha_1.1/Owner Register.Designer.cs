@@ -168,7 +168,7 @@
             // 
             // guna2GradientPanel2
             // 
-            this.guna2GradientPanel2.Controls.Add(this.lbl_disc);
+            
             this.guna2GradientPanel2.Controls.Add(this.btn_signIn);
             this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
