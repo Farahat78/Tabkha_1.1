@@ -103,7 +103,6 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1168, 134);
             this.guna2GradientPanel1.TabIndex = 1;
@@ -219,7 +218,6 @@
             // 
             this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
             this.img_product.Location = new System.Drawing.Point(0, 0);
-            this.img_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.img_product.Name = "img_product";
             this.img_product.Size = new System.Drawing.Size(346, 387);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -549,14 +547,6 @@
             this.guna2RatingStar1.Size = new System.Drawing.Size(80, 19);
             this.guna2RatingStar1.TabIndex = 37;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(228, 925);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(744, 95);
-            this.textBox1.TabIndex = 38;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -649,7 +639,6 @@
             this.Controls.Add(this.pnl_product);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Product_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_details";
