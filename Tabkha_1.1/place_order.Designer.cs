@@ -84,11 +84,8 @@
             this.btn_place_order = new System.Windows.Forms.Button();
             this.radio_credit = new System.Windows.Forms.RadioButton();
             this.radio_cash = new System.Windows.Forms.RadioButton();
-            this.txt_cvv = new System.Windows.Forms.TextBox();
-            this.txt_cardnum = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txt_expiry = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -264,7 +261,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(397, 263);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -285,7 +281,6 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(51, 20);
             this.numericUpDown1.TabIndex = 44;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label6
             // 
@@ -435,7 +430,6 @@
             this.pnl_up.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.pnl_up.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnl_up.Location = new System.Drawing.Point(0, 0);
-            this.pnl_up.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_up.Name = "pnl_up";
             this.pnl_up.Size = new System.Drawing.Size(779, 92);
             this.pnl_up.TabIndex = 2;
@@ -522,7 +516,6 @@
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
             this.img_logo.UseTransparentBackground = true;
-            this.img_logo.Click += new System.EventHandler(this.img_logo_Click);
             // 
             // img_close
             // 
@@ -700,7 +693,6 @@
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(141, 25);
             this.txt_fname.TabIndex = 53;
-            this.txt_fname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_fname_MouseClick);
             // 
             // label17
             // 
@@ -743,11 +735,8 @@
             this.pnl_payment_info.Controls.Add(this.btn_place_order);
             this.pnl_payment_info.Controls.Add(this.radio_credit);
             this.pnl_payment_info.Controls.Add(this.radio_cash);
-            this.pnl_payment_info.Controls.Add(this.txt_cvv);
-            this.pnl_payment_info.Controls.Add(this.txt_cardnum);
             this.pnl_payment_info.Controls.Add(this.label26);
             this.pnl_payment_info.Controls.Add(this.label25);
-            this.pnl_payment_info.Controls.Add(this.txt_expiry);
             this.pnl_payment_info.Controls.Add(this.label27);
             this.pnl_payment_info.Controls.Add(this.label23);
             this.pnl_payment_info.Controls.Add(this.label24);
@@ -800,28 +789,6 @@
             this.radio_cash.UseVisualStyleBackColor = true;
             this.radio_cash.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // txt_cvv
-            // 
-            this.txt_cvv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cvv.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_cvv.Location = new System.Drawing.Point(179, 122);
-            this.txt_cvv.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_cvv.Multiline = true;
-            this.txt_cvv.Name = "txt_cvv";
-            this.txt_cvv.Size = new System.Drawing.Size(141, 25);
-            this.txt_cvv.TabIndex = 67;
-            // 
-            // txt_cardnum
-            // 
-            this.txt_cardnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cardnum.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_cardnum.Location = new System.Drawing.Point(13, 66);
-            this.txt_cardnum.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_cardnum.Multiline = true;
-            this.txt_cardnum.Name = "txt_cardnum";
-            this.txt_cardnum.Size = new System.Drawing.Size(307, 25);
-            this.txt_cardnum.TabIndex = 65;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -843,17 +810,6 @@
             this.label25.Size = new System.Drawing.Size(55, 10);
             this.label25.TabIndex = 64;
             this.label25.Text = "Card Number*";
-            // 
-            // txt_expiry
-            // 
-            this.txt_expiry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_expiry.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_expiry.Location = new System.Drawing.Point(13, 122);
-            this.txt_expiry.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_expiry.Multiline = true;
-            this.txt_expiry.Name = "txt_expiry";
-            this.txt_expiry.Size = new System.Drawing.Size(141, 25);
-            this.txt_expiry.TabIndex = 65;
             // 
             // label27
             // 
@@ -914,7 +870,6 @@
             this.Controls.Add(this.pnl_up);
             this.Controls.Add(this.pnl_cart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "place_order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "place_order";
@@ -993,11 +948,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txt_cvv;
-        private System.Windows.Forms.TextBox txt_cardnum;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txt_expiry;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.RadioButton radio_credit;
         private System.Windows.Forms.RadioButton radio_cash;

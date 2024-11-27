@@ -17,26 +17,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private void Oner_Profile_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_dishName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -45,30 +25,6 @@ namespace Tabkha_1._1
         private void img_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btn_dessert_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btn_salad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_soup_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_mainCourse_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_appitizer_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
