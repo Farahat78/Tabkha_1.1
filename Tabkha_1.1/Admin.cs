@@ -12,6 +12,9 @@ namespace Tabkha_1._1
 {
     public partial class Admin : Form
     {
+
+        private bool isSidebarExpanded = true;
+
         public Admin()
         {
             InitializeComponent();
@@ -67,6 +70,27 @@ namespace Tabkha_1._1
         private void btn_out_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_toggleSideBar_Click(object sender, EventArgs e)
+        {
+            isSidebarExpanded = !isSidebarExpanded;
+            AdjustMainPanel();
+        }
+        private void AdjustMainPanel()
+        {
+            if (isSidebarExpanded)
+            {
+                guna2GradientPanel2.Width = 210;
+                guna2GradientPanel1.Location = new Point(guna2GradientPanel2.Width, guna2GradientPanel1.Location.Y);
+                guna2GradientPanel1.Width = this.Width - guna2GradientPanel2.Width;
+            }
+            else
+            {
+                guna2GradientPanel2.Width = 50; 
+                guna2GradientPanel1.Location = new Point(guna2GradientPanel2.Width, guna2GradientPanel1.Location.Y);
+                guna2GradientPanel1.Width = this.Width - guna2GradientPanel2.Width;
+            }
         }
     }
 }

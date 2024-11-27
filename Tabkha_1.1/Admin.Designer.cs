@@ -36,6 +36,7 @@
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_toggleSideBar = new System.Windows.Forms.Button();
             this.btn_out = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
             this.btn_chefs = new System.Windows.Forms.Button();
@@ -140,6 +141,7 @@
             // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.Controls.Add(this.btn_toggleSideBar);
             this.guna2GradientPanel2.Controls.Add(this.btn_out);
             this.guna2GradientPanel2.Controls.Add(this.btn_users);
             this.guna2GradientPanel2.Controls.Add(this.btn_chefs);
@@ -154,6 +156,19 @@
             this.guna2GradientPanel2.TabIndex = 3;
             this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.x);
             // 
+            // btn_toggleSideBar
+            // 
+            this.btn_toggleSideBar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_toggleSideBar.FlatAppearance.BorderSize = 0;
+            this.btn_toggleSideBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_toggleSideBar.Image = global::Tabkha_1._1.Properties.Resources.menu;
+            this.btn_toggleSideBar.Location = new System.Drawing.Point(0, -1);
+            this.btn_toggleSideBar.Name = "btn_toggleSideBar";
+            this.btn_toggleSideBar.Size = new System.Drawing.Size(64, 58);
+            this.btn_toggleSideBar.TabIndex = 6;
+            this.btn_toggleSideBar.UseVisualStyleBackColor = false;
+            this.btn_toggleSideBar.Click += new System.EventHandler(this.btn_toggleSideBar_Click);
+            // 
             // btn_out
             // 
             this.btn_out.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -162,9 +177,9 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(0, 279);
+            this.btn_out.Location = new System.Drawing.Point(67, 258);
             this.btn_out.Name = "btn_out";
-            this.btn_out.Size = new System.Drawing.Size(276, 29);
+            this.btn_out.Size = new System.Drawing.Size(209, 28);
             this.btn_out.TabIndex = 5;
             this.btn_out.Text = "Log Out";
             this.btn_out.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -179,9 +194,9 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 189);
+            this.btn_users.Location = new System.Drawing.Point(67, 168);
             this.btn_users.Name = "btn_users";
-            this.btn_users.Size = new System.Drawing.Size(276, 33);
+            this.btn_users.Size = new System.Drawing.Size(209, 32);
             this.btn_users.TabIndex = 4;
             this.btn_users.Text = "Manage Users";
             this.btn_users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,9 +211,9 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(0, 105);
+            this.btn_chefs.Location = new System.Drawing.Point(67, 84);
             this.btn_chefs.Name = "btn_chefs";
-            this.btn_chefs.Size = new System.Drawing.Size(276, 33);
+            this.btn_chefs.Size = new System.Drawing.Size(209, 32);
             this.btn_chefs.TabIndex = 3;
             this.btn_chefs.Text = "Manage Chefs";
             this.btn_chefs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -213,9 +228,9 @@
             this.btn_dashboard.FlatAppearance.BorderSize = 0;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(3, 21);
+            this.btn_dashboard.Location = new System.Drawing.Point(67, 3);
             this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(276, 33);
+            this.btn_dashboard.Size = new System.Drawing.Size(209, 32);
             this.btn_dashboard.TabIndex = 2;
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -302,5 +317,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Button btn_out;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.Button btn_toggleSideBar;
     }
 }
