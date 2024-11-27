@@ -24,10 +24,6 @@ namespace Tabkha_1._1
 
         public void edit_invisible()
         {
-            btn_editBdate.Visible = false;
-            btn_editEmail.Visible = false;
-            btn_editName.Visible = false;
-            btn_editPnumber.Visible = false;
             btn_edit_img.Visible = false;
         }
     }

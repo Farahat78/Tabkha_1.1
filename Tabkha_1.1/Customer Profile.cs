@@ -25,18 +25,6 @@ namespace Tabkha_1._1
             Form.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Gpnl_choices.Hide();
-            pnl_show.Show();
-        }
-
-        private void img_show_Click(object sender, EventArgs e)
-        {
-            Gpnl_choices.Show();
-            pnl_show.Hide();
-        }
-
         private void img_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -56,36 +44,18 @@ namespace Tabkha_1._1
 
         private void btn_viewProfile_Click(object sender, EventArgs e)
         {
-            Manage_Profile view = new Manage_Profile();
-            view.edit_invisible();
-            LoadFormIntoPanel(view);     
-            //pnl_order.Hide();
-            //pnl_edit.Show();
-            //btn_editEmail.Hide();
-            //btn_editBdate.Hide();
-            //btn_editPnumber.Hide();
-            //btn_editName.Hide();
             lbl_data.Text = "Profile";
-
         }
 
         private void btn_manageProfile_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new Manage_Profile());
-            //pnl_order.Hide();
-            //pnl_edit.Show();
-            // btn_editEmail.Show();
-            //btn_editBdate.Show();
-            //btn_editPnumber.Show();
-            //btn_editName.Show();
             lbl_data.Text = "Manage Your Profile";
         }
 
         private void btn_viewOrdersData_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new View_order_details());
-            lbl_data.Text = "Your Order data";
-            //pnl_order.Show();
         }
     }
 }
