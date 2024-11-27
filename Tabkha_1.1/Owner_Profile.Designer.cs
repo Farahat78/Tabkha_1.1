@@ -49,7 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
@@ -68,13 +67,15 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_profile = new System.Windows.Forms.PictureBox();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.pnl_menu.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.pnl_dish.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -142,7 +144,7 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.BorderRadius = 40;
             this.guna2Elipse1.TargetControl = this.btn_appitizer;
             // 
             // btn_appitizer
@@ -150,17 +152,16 @@
             this.btn_appitizer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_appitizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_appitizer.ForeColor = System.Drawing.Color.White;
-            this.btn_appitizer.Location = new System.Drawing.Point(32, 19);
+            this.btn_appitizer.Location = new System.Drawing.Point(28, 19);
             this.btn_appitizer.Name = "btn_appitizer";
-            this.btn_appitizer.Size = new System.Drawing.Size(99, 31);
+            this.btn_appitizer.Size = new System.Drawing.Size(140, 46);
             this.btn_appitizer.TabIndex = 5;
             this.btn_appitizer.Text = "Appitizer";
             this.btn_appitizer.UseVisualStyleBackColor = false;
-            this.btn_appitizer.Click += new System.EventHandler(this.btn_appitizer_Click);
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.BorderRadius = 40;
             this.guna2Elipse2.TargetControl = this.btn_mainCourse;
             // 
             // btn_mainCourse
@@ -168,17 +169,16 @@
             this.btn_mainCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_mainCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mainCourse.ForeColor = System.Drawing.Color.White;
-            this.btn_mainCourse.Location = new System.Drawing.Point(142, 19);
+            this.btn_mainCourse.Location = new System.Drawing.Point(187, 19);
             this.btn_mainCourse.Name = "btn_mainCourse";
-            this.btn_mainCourse.Size = new System.Drawing.Size(134, 31);
+            this.btn_mainCourse.Size = new System.Drawing.Size(140, 46);
             this.btn_mainCourse.TabIndex = 6;
             this.btn_mainCourse.Text = "Main Course";
             this.btn_mainCourse.UseVisualStyleBackColor = false;
-            this.btn_mainCourse.Click += new System.EventHandler(this.btn_mainCourse_Click);
             // 
             // guna2Elipse3
             // 
-            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.BorderRadius = 40;
             this.guna2Elipse3.TargetControl = this.btn_soup;
             // 
             // btn_soup
@@ -186,17 +186,16 @@
             this.btn_soup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_soup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_soup.ForeColor = System.Drawing.Color.White;
-            this.btn_soup.Location = new System.Drawing.Point(290, 19);
+            this.btn_soup.Location = new System.Drawing.Point(352, 19);
             this.btn_soup.Name = "btn_soup";
-            this.btn_soup.Size = new System.Drawing.Size(75, 31);
+            this.btn_soup.Size = new System.Drawing.Size(140, 46);
             this.btn_soup.TabIndex = 7;
             this.btn_soup.Text = "Soup";
             this.btn_soup.UseVisualStyleBackColor = false;
-            this.btn_soup.Click += new System.EventHandler(this.btn_soup_Click);
             // 
             // guna2Elipse4
             // 
-            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.BorderRadius = 40;
             this.guna2Elipse4.TargetControl = this.btn_salad;
             // 
             // btn_salad
@@ -204,13 +203,12 @@
             this.btn_salad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_salad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salad.ForeColor = System.Drawing.Color.White;
-            this.btn_salad.Location = new System.Drawing.Point(378, 19);
+            this.btn_salad.Location = new System.Drawing.Point(518, 19);
             this.btn_salad.Name = "btn_salad";
-            this.btn_salad.Size = new System.Drawing.Size(75, 31);
+            this.btn_salad.Size = new System.Drawing.Size(140, 46);
             this.btn_salad.TabIndex = 8;
             this.btn_salad.Text = "Salad";
             this.btn_salad.UseVisualStyleBackColor = false;
-            this.btn_salad.Click += new System.EventHandler(this.btn_salad_Click);
             // 
             // guna2Elipse5
             // 
@@ -226,10 +224,10 @@
             this.pnl_menu.Controls.Add(this.btn_mainCourse);
             this.pnl_menu.Controls.Add(this.btn_appitizer);
             this.pnl_menu.FillColor = System.Drawing.Color.White;
-            this.pnl_menu.Location = new System.Drawing.Point(32, 197);
+            this.pnl_menu.Location = new System.Drawing.Point(12, 197);
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.ShadowColor = System.Drawing.SystemColors.ControlText;
-            this.pnl_menu.Size = new System.Drawing.Size(621, 63);
+            this.pnl_menu.Size = new System.Drawing.Size(854, 86);
             this.pnl_menu.TabIndex = 24;
             // 
             // btn_dessert
@@ -237,21 +235,22 @@
             this.btn_dessert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_dessert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dessert.ForeColor = System.Drawing.Color.White;
-            this.btn_dessert.Location = new System.Drawing.Point(468, 19);
+            this.btn_dessert.Location = new System.Drawing.Point(685, 19);
             this.btn_dessert.Name = "btn_dessert";
-            this.btn_dessert.Size = new System.Drawing.Size(106, 31);
+            this.btn_dessert.Size = new System.Drawing.Size(140, 46);
             this.btn_dessert.TabIndex = 9;
             this.btn_dessert.Text = "Dessert";
             this.btn_dessert.UseVisualStyleBackColor = false;
-            this.btn_dessert.Click += new System.EventHandler(this.btn_dessert_Click);
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.btn_logout);
+            this.guna2ShadowPanel1.Controls.Add(this.img_profile);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
+            this.guna2ShadowPanel1.Controls.Add(this.btn_edit);
             this.guna2ShadowPanel1.Controls.Add(this.label2);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2CirclePictureBox2);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 40);
@@ -295,34 +294,22 @@
             this.label1.Size = new System.Drawing.Size(161, 36);
             this.label1.TabIndex = 20;
             this.label1.Text = "Om Khaled";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(32, 27);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(131, 111);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 19;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2Elipse6
             // 
-            this.guna2Elipse6.BorderRadius = 15;
+            this.guna2Elipse6.BorderRadius = 150;
+            this.guna2Elipse6.TargetControl = this.img_profile;
             // 
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(1061, 579);
+            this.btn_edit.Location = new System.Drawing.Point(476, 99);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(75, 31);
+            this.btn_edit.Size = new System.Drawing.Size(133, 39);
             this.btn_edit.TabIndex = 27;
-            this.btn_edit.Text = "Edit";
+            this.btn_edit.Text = "Edit Profile";
             this.btn_edit.UseVisualStyleBackColor = false;
             // 
             // btn_add
@@ -330,26 +317,26 @@
             this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(964, 577);
+            this.btn_add.Location = new System.Drawing.Point(871, 561);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 31);
+            this.btn_add.Size = new System.Drawing.Size(140, 46);
             this.btn_add.TabIndex = 26;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = false;
             // 
             // guna2Elipse7
             // 
-            this.guna2Elipse7.BorderRadius = 15;
+            this.guna2Elipse7.BorderRadius = 40;
             this.guna2Elipse7.TargetControl = this.btn_add;
             // 
             // guna2Elipse8
             // 
-            this.guna2Elipse8.BorderRadius = 15;
+            this.guna2Elipse8.BorderRadius = 40;
             this.guna2Elipse8.TargetControl = this.btn_edit;
             // 
             // guna2Elipse9
             // 
-            this.guna2Elipse9.BorderRadius = 15;
+            this.guna2Elipse9.BorderRadius = 40;
             this.guna2Elipse9.TargetControl = this.btn_dessert;
             // 
             // pnl_dish
@@ -360,7 +347,7 @@
             this.pnl_dish.Controls.Add(this.guna2RatingStar3);
             this.pnl_dish.Controls.Add(this.label8);
             this.pnl_dish.FillColor = System.Drawing.Color.White;
-            this.pnl_dish.Location = new System.Drawing.Point(46, 312);
+            this.pnl_dish.Location = new System.Drawing.Point(23, 289);
             this.pnl_dish.Name = "pnl_dish";
             this.pnl_dish.ShadowColor = System.Drawing.Color.Black;
             this.pnl_dish.Size = new System.Drawing.Size(213, 295);
@@ -478,6 +465,33 @@
             this.guna2Elipse10.BorderRadius = 20;
             this.guna2Elipse10.TargetControl = this.pnl_dish;
             // 
+            // img_profile
+            // 
+            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_profile.Location = new System.Drawing.Point(60, 22);
+            this.img_profile.Name = "img_profile";
+            this.img_profile.Size = new System.Drawing.Size(120, 120);
+            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_profile.TabIndex = 23;
+            this.img_profile.TabStop = false;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(615, 98);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(133, 39);
+            this.btn_logout.TabIndex = 28;
+            this.btn_logout.Text = "Log out";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            // 
+            // guna2Elipse11
+            // 
+            this.guna2Elipse11.BorderRadius = 40;
+            this.guna2Elipse11.TargetControl = this.btn_logout;
+            // 
             // Oner_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -485,7 +499,6 @@
             this.ClientSize = new System.Drawing.Size(1169, 661);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_dish);
-            this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.pnl_menu);
             this.Controls.Add(this.guna2ShadowPanel1);
@@ -494,7 +507,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Oner_Profile";
             this.Text = "Owner_Profile";
-            this.Load += new System.EventHandler(this.Oner_Profile_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
@@ -502,7 +514,6 @@
             this.pnl_menu.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.pnl_dish.ResumeLayout(false);
             this.pnl_dish.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -512,6 +523,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,7 +543,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_menu;
         private System.Windows.Forms.Button btn_salad;
         private System.Windows.Forms.Button btn_soup;
@@ -556,5 +567,8 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
+        private System.Windows.Forms.PictureBox img_profile;
+        private System.Windows.Forms.Button btn_logout;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse11;
     }
 }
