@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_ingredients = new Tabkha_1._1.CustomTextBox();
             this.btn_save = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_price = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_name = new Tabkha_1._1.CustomTextBox();
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_description = new Tabkha_1._1.CustomTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.n_quantity = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,7 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_uploadphoto = new System.Windows.Forms.Button();
-            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -75,22 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.BorderRadius = 20;
-            this.guna2Elipse6.TargetControl = this.txt_ingredients;
-            // 
-            // txt_ingredients
-            // 
-            this.txt_ingredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ingredients.Location = new System.Drawing.Point(414, 394);
-            this.txt_ingredients.Multiline = true;
-            this.txt_ingredients.Name = "txt_ingredients";
-            this.txt_ingredients.Size = new System.Drawing.Size(408, 93);
-            this.txt_ingredients.TabIndex = 52;
-            this.txt_ingredients.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_ingredients.WatermarkText = " ingredients";
             // 
             // btn_save
             // 
@@ -122,53 +98,10 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // txt_price
-            // 
-            this.txt_price.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_price.Location = new System.Drawing.Point(899, 452);
-            this.txt_price.Multiline = true;
-            this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(177, 39);
-            this.txt_price.TabIndex = 66;
-            this.txt_price.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_price.WatermarkText = "Enter text here";
-            // 
             // guna2Elipse3
             // 
             this.guna2Elipse3.BorderRadius = 20;
             this.guna2Elipse3.TargetControl = this.btn_save;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 20;
-            this.guna2Elipse4.TargetControl = this.txt_name;
-            // 
-            // txt_name
-            // 
-            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_name.Location = new System.Drawing.Point(414, 127);
-            this.txt_name.Multiline = true;
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(408, 39);
-            this.txt_name.TabIndex = 45;
-            this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_name.WatermarkText = "Name Your Food";
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 20;
-            this.guna2Elipse5.TargetControl = this.txt_description;
-            // 
-            // txt_description
-            // 
-            this.txt_description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_description.Location = new System.Drawing.Point(414, 207);
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(408, 93);
-            this.txt_description.TabIndex = 47;
-            this.txt_description.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_description.WatermarkText = "Description";
             // 
             // label11
             // 
@@ -258,11 +191,6 @@
             this.btn_uploadphoto.TabIndex = 43;
             this.btn_uploadphoto.Text = "Upload Photo";
             this.btn_uploadphoto.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.BorderRadius = 20;
-            this.guna2Elipse7.TargetControl = this.txt_price;
             // 
             // checkBox3
             // 
@@ -483,7 +411,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = """uploadnew""";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).EndInit();
