@@ -46,10 +46,5 @@ namespace Tabkha_1._1
         {
             readOnly();
         }
-
-        private void Manage_Profile_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
