@@ -39,19 +39,6 @@ namespace Tabkha_1._1
             }
         }
 
-        private void btn_clear_Click_1(object sender, EventArgs e)
-        {
-            txt_fname.Text = "";
-            txtbox_lname.Text = "";
-            txt_password.Text = "";
-            txt_email.Text = "";
-            txt_confirmPassword.Text = "";
-            txtbox_phoneNumber.Text = "";
-            txtbox_bio.Text = "";
-            txtbox_businesssName.Text = "";
-
-        }
-
         private void img_minimize_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -69,27 +56,11 @@ namespace Tabkha_1._1
 
         private void btn_signIn_Click(object sender, EventArgs e)
         {
-            login login  = new login();
             login.Show();
             this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbox_businesssName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_disc_Click(object sender, EventArgs e)
         {
 
         }
