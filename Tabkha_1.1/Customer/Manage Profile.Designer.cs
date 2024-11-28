@@ -29,37 +29,61 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.pnl_edit = new System.Windows.Forms.Panel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.img_customer_profile = new System.Windows.Forms.PictureBox();
+            this.btn_edit_img = new System.Windows.Forms.Button();
+            this.btn_editEmail = new System.Windows.Forms.Button();
+            this.btn_editBdate = new System.Windows.Forms.Button();
+            this.btn_editPnumber = new System.Windows.Forms.Button();
+            this.btn_editName = new System.Windows.Forms.Button();
+            this.txtbox_name = new System.Windows.Forms.TextBox();
+            this.txtbox_Bdate = new System.Windows.Forms.TextBox();
+            this.txtbox_email = new System.Windows.Forms.TextBox();
+            this.txtbox_Pnumber = new System.Windows.Forms.TextBox();
+            this.lbl_Pnumber = new System.Windows.Forms.Label();
+            this.lbl_Bdate = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.lbl_email = new System.Windows.Forms.Label();
-            this.lbl_Bdate = new System.Windows.Forms.Label();
-            this.lbl_Pnumber = new System.Windows.Forms.Label();
-            this.txtbox_Pnumber = new System.Windows.Forms.TextBox();
-            this.txtbox_email = new System.Windows.Forms.TextBox();
-            this.txtbox_Bdate = new System.Windows.Forms.TextBox();
-            this.txtbox_name = new System.Windows.Forms.TextBox();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_edit_img = new System.Windows.Forms.Button();
-            this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pnl_edit.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_customer_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 15;
+            this.pnl_edit.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_edit.Controls.Add(this.guna2ShadowPanel1);
+            this.pnl_edit.Controls.Add(this.btn_editEmail);
+            this.pnl_edit.Controls.Add(this.btn_editBdate);
+            this.pnl_edit.Controls.Add(this.btn_editPnumber);
+            this.pnl_edit.Controls.Add(this.btn_editName);
+            this.pnl_edit.Controls.Add(this.txtbox_name);
+            this.pnl_edit.Controls.Add(this.txtbox_Bdate);
+            this.pnl_edit.Controls.Add(this.txtbox_email);
+            this.pnl_edit.Controls.Add(this.txtbox_Pnumber);
+            this.pnl_edit.Controls.Add(this.lbl_Pnumber);
+            this.pnl_edit.Controls.Add(this.lbl_Bdate);
+            this.pnl_edit.Controls.Add(this.lbl_email);
+            this.pnl_edit.Controls.Add(this.lbl_name);
+            this.pnl_edit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_edit.Location = new System.Drawing.Point(0, 0);
+            this.pnl_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_edit.Name = "pnl_edit";
+            this.pnl_edit.Size = new System.Drawing.Size(800, 428);
+            this.pnl_edit.TabIndex = 21;
             // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
             // 
-            // guna2Elipse3
+            // btn_edit_img
             // 
             this.guna2Elipse3.BorderRadius = 15;
             // 
@@ -185,42 +209,46 @@
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click_1);
             // 
-            // btn_edit_img
+            // img_customer_profile
             // 
-            this.btn_edit_img.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_edit_img.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_img.ForeColor = System.Drawing.Color.White;
-            this.btn_edit_img.Location = new System.Drawing.Point(12, 11);
-            this.btn_edit_img.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_edit_img.Name = "btn_edit_img";
-            this.btn_edit_img.Size = new System.Drawing.Size(92, 30);
-            this.btn_edit_img.TabIndex = 41;
-            this.btn_edit_img.Text = "Upload";
-            this.btn_edit_img.UseVisualStyleBackColor = false;
-            this.btn_edit_img.Visible = false;
+            this.img_customer_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_customer_profile.Location = new System.Drawing.Point(327, 12);
+            this.img_customer_profile.Name = "img_customer_profile";
+            this.img_customer_profile.Size = new System.Drawing.Size(100, 100);
+            this.img_customer_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_customer_profile.TabIndex = 28;
+            this.img_customer_profile.TabStop = false;
             // 
-            // guna2Elipse9
+            // guna2Elipse6
             // 
             this.guna2Elipse9.BorderRadius = 20;
             this.guna2Elipse9.TargetControl = this.btn_edit_img;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(329, 409);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(143, 49);
+            this.btn_save.TabIndex = 32;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.BorderRadius = 20;
+            this.guna2Elipse7.TargetControl = this.btn_save;
             // 
             // Manage_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(711, 360);
-            this.Controls.Add(this.btn_edit_img);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.txtbox_name);
-            this.Controls.Add(this.txtbox_Bdate);
-            this.Controls.Add(this.txtbox_email);
-            this.Controls.Add(this.txtbox_Pnumber);
-            this.Controls.Add(this.lbl_Pnumber);
-            this.Controls.Add(this.lbl_Bdate);
-            this.Controls.Add(this.lbl_email);
-            this.Controls.Add(this.lbl_name);
+            this.ClientSize = new System.Drawing.Size(800, 428);
+            this.Controls.Add(this.pnl_edit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manage_Profile";
@@ -238,19 +266,5 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
-        private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Label lbl_name;
-        private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.Label lbl_Bdate;
-        private System.Windows.Forms.Label lbl_Pnumber;
-        private System.Windows.Forms.TextBox txtbox_Pnumber;
-        private System.Windows.Forms.TextBox txtbox_email;
-        private System.Windows.Forms.TextBox txtbox_Bdate;
-        private System.Windows.Forms.TextBox txtbox_name;
-        private System.Windows.Forms.Button btn_edit_img;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
     }
 }

@@ -117,11 +117,11 @@
     <Compile Include="Customer\Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="order.cs">
+    <Compile Include="orders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="order.Designer.cs">
-      <DependentUpon>order.cs</DependentUpon>
+    <Compile Include="orders.Designer.cs">
+      <DependentUpon>orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Owner_Profile.cs">
       <SubType>Form</SubType>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="Customer\Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="order.resx">
-      <DependentUpon>order.cs</DependentUpon>
+    <EmbeddedResource Include="orders.resx">
+      <DependentUpon>orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner_Profile.resx">
       <DependentUpon>Owner_Profile.cs</DependentUpon>

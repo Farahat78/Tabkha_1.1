@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Tabkha_1._1
 {
-    public partial class uploadnew : Form
+    public partial class orders : Form
     {
-        public uploadnew()
+        public orders()
         {
             InitializeComponent();
         }
 
-        private void img_minimize_Click(object sender, EventArgs e)
+        private void btn_View_order_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            pnl_order_details.Visible = true;
         }
 
         private void img_close_Click(object sender, EventArgs e)
@@ -27,11 +27,21 @@ namespace Tabkha_1._1
             this.Close();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void img_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lbl_myacc_Click(object sender, EventArgs e)
         {
             Owner_Profile owner_Profile = new Owner_Profile();
             owner_Profile.Show();
             this.Hide();
+        }
+
+        private void btn_acceptorder_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Order Accepted");
         }
     }
 }
