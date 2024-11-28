@@ -34,6 +34,12 @@ namespace Tabkha_1._1
             Form.Show();
         }
 
+        public void hideSome()
+        {
+            btn_orders.Visible = false;
+            
+        }
+
         private void img_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -74,7 +80,7 @@ namespace Tabkha_1._1
         {
             ChangeColor(btn_orders, btn_view);
             lbl_data.Text = "Previous Orders";
-            LoadFormIntoPanel(new View_order_details());
+            LoadFormIntoPanel(new uploadnew());
         }
 
         private void btn_toggleSideBar_Click(object sender, EventArgs e)

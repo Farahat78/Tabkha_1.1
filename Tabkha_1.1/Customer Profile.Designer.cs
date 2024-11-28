@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Profile));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbl_data = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
@@ -45,26 +46,25 @@
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_view = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lbl_data = new System.Windows.Forms.Label();
             this.pnl_sidebar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.img_customer_profile = new System.Windows.Forms.PictureBox();
-            this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbl_number = new System.Windows.Forms.Label();
-            this.lbl_age = new System.Windows.Forms.Label();
-            this.lbl_username = new System.Windows.Forms.Label();
             this.btn_toggleSideBar = new System.Windows.Forms.Button();
             this.btn_out = new System.Windows.Forms.Button();
             this.btn_orders = new System.Windows.Forms.Button();
-            this.btn_view = new System.Windows.Forms.Button();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lbl_number = new System.Windows.Forms.Label();
+            this.lbl_age = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.img_customer_profile = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -95,6 +95,17 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1039, 134);
             this.guna2GradientPanel1.TabIndex = 12;
+            // 
+            // lbl_data
+            // 
+            this.lbl_data.AutoSize = true;
+            this.lbl_data.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_data.Font = new System.Drawing.Font("Verdana", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_data.Location = new System.Drawing.Point(204, 66);
+            this.lbl_data.Name = "lbl_data";
+            this.lbl_data.Size = new System.Drawing.Size(179, 52);
+            this.lbl_data.TabIndex = 18;
+            this.lbl_data.Text = "profile";
             // 
             // guna2CirclePictureBox1
             // 
@@ -193,6 +204,23 @@
             this.guna2Elipse10.BorderRadius = 20;
             this.guna2Elipse10.TargetControl = this.btn_view;
             // 
+            // btn_view
+            // 
+            this.btn_view.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_view.BackColor = System.Drawing.Color.Transparent;
+            this.btn_view.FlatAppearance.BorderSize = 0;
+            this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view.Location = new System.Drawing.Point(67, 111);
+            this.btn_view.Name = "btn_view";
+            this.btn_view.Size = new System.Drawing.Size(133, 32);
+            this.btn_view.TabIndex = 7;
+            this.btn_view.Text = "View Details";
+            this.btn_view.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_view.UseVisualStyleBackColor = false;
+            this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -258,17 +286,6 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
-            // lbl_data
-            // 
-            this.lbl_data.AutoSize = true;
-            this.lbl_data.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_data.Font = new System.Drawing.Font("Verdana", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_data.Location = new System.Drawing.Point(204, 66);
-            this.lbl_data.Name = "lbl_data";
-            this.lbl_data.Size = new System.Drawing.Size(184, 53);
-            this.lbl_data.TabIndex = 18;
-            this.lbl_data.Text = "profile";
-            // 
             // pnl_sidebar
             // 
             this.pnl_sidebar.Controls.Add(this.btn_toggleSideBar);
@@ -283,90 +300,6 @@
             this.pnl_sidebar.Name = "pnl_sidebar";
             this.pnl_sidebar.Size = new System.Drawing.Size(200, 423);
             this.pnl_sidebar.TabIndex = 73;
-            // 
-            // guna2GradientPanel3
-            // 
-            this.guna2GradientPanel3.Controls.Add(this.pictureBox4);
-            this.guna2GradientPanel3.Controls.Add(this.pictureBox2);
-            this.guna2GradientPanel3.Controls.Add(this.label6);
-            this.guna2GradientPanel3.Controls.Add(this.pictureBox5);
-            this.guna2GradientPanel3.Controls.Add(this.pictureBox3);
-            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(217)))), ((int)(((byte)(188)))));
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(200, 504);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(839, 53);
-            this.guna2GradientPanel3.TabIndex = 74;
-            // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_number);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_age);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_username);
-            this.guna2ShadowPanel1.Controls.Add(this.img_customer_profile);
-            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(200, 134);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(839, 106);
-            this.guna2ShadowPanel1.TabIndex = 75;
-            // 
-            // img_customer_profile
-            // 
-            this.img_customer_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.img_customer_profile.Location = new System.Drawing.Point(13, 10);
-            this.img_customer_profile.Name = "img_customer_profile";
-            this.img_customer_profile.Size = new System.Drawing.Size(89, 84);
-            this.img_customer_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_customer_profile.TabIndex = 28;
-            this.img_customer_profile.TabStop = false;
-            // 
-            // guna2Elipse11
-            // 
-            this.guna2Elipse11.BorderRadius = 100;
-            this.guna2Elipse11.TargetControl = this.img_customer_profile;
-            // 
-            // guna2Elipse12
-            // 
-            this.guna2Elipse12.BorderRadius = 20;
-            this.guna2Elipse12.TargetControl = this.btn_out;
-            // 
-            // lbl_number
-            // 
-            this.lbl_number.AutoSize = true;
-            this.lbl_number.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_number.Location = new System.Drawing.Point(111, 60);
-            this.lbl_number.Name = "lbl_number";
-            this.lbl_number.Size = new System.Drawing.Size(103, 17);
-            this.lbl_number.TabIndex = 10;
-            this.lbl_number.Text = "Phone Number";
-            // 
-            // lbl_age
-            // 
-            this.lbl_age.AutoSize = true;
-            this.lbl_age.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.Location = new System.Drawing.Point(111, 43);
-            this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(33, 17);
-            this.lbl_age.TabIndex = 11;
-            this.lbl_age.Text = "Age";
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(111, 26);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(45, 17);
-            this.lbl_username.TabIndex = 12;
-            this.lbl_username.Text = "Name";
             // 
             // btn_toggleSideBar
             // 
@@ -415,22 +348,89 @@
             this.btn_orders.UseVisualStyleBackColor = false;
             this.btn_orders.Click += new System.EventHandler(this.btn_orders_Click);
             // 
-            // btn_view
+            // guna2GradientPanel3
             // 
-            this.btn_view.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_view.BackColor = System.Drawing.Color.Transparent;
-            this.btn_view.FlatAppearance.BorderSize = 0;
-            this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_view.Location = new System.Drawing.Point(67, 111);
-            this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(133, 32);
-            this.btn_view.TabIndex = 7;
-            this.btn_view.Text = "View Details";
-            this.btn_view.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_view.UseVisualStyleBackColor = false;
-            this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
+            this.guna2GradientPanel3.Controls.Add(this.pictureBox4);
+            this.guna2GradientPanel3.Controls.Add(this.pictureBox2);
+            this.guna2GradientPanel3.Controls.Add(this.label6);
+            this.guna2GradientPanel3.Controls.Add(this.pictureBox5);
+            this.guna2GradientPanel3.Controls.Add(this.pictureBox3);
+            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(217)))), ((int)(((byte)(188)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(200, 504);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(839, 53);
+            this.guna2GradientPanel3.TabIndex = 74;
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.lbl_number);
+            this.guna2ShadowPanel1.Controls.Add(this.lbl_age);
+            this.guna2ShadowPanel1.Controls.Add(this.lbl_username);
+            this.guna2ShadowPanel1.Controls.Add(this.img_customer_profile);
+            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(200, 134);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(839, 106);
+            this.guna2ShadowPanel1.TabIndex = 75;
+            // 
+            // lbl_number
+            // 
+            this.lbl_number.AutoSize = true;
+            this.lbl_number.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_number.Location = new System.Drawing.Point(111, 60);
+            this.lbl_number.Name = "lbl_number";
+            this.lbl_number.Size = new System.Drawing.Size(103, 17);
+            this.lbl_number.TabIndex = 10;
+            this.lbl_number.Text = "Phone Number";
+            // 
+            // lbl_age
+            // 
+            this.lbl_age.AutoSize = true;
+            this.lbl_age.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_age.Location = new System.Drawing.Point(111, 43);
+            this.lbl_age.Name = "lbl_age";
+            this.lbl_age.Size = new System.Drawing.Size(33, 17);
+            this.lbl_age.TabIndex = 11;
+            this.lbl_age.Text = "Age";
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(111, 26);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(45, 17);
+            this.lbl_username.TabIndex = 12;
+            this.lbl_username.Text = "Name";
+            // 
+            // img_customer_profile
+            // 
+            this.img_customer_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_customer_profile.Location = new System.Drawing.Point(13, 10);
+            this.img_customer_profile.Name = "img_customer_profile";
+            this.img_customer_profile.Size = new System.Drawing.Size(89, 84);
+            this.img_customer_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_customer_profile.TabIndex = 28;
+            this.img_customer_profile.TabStop = false;
+            // 
+            // guna2Elipse11
+            // 
+            this.guna2Elipse11.BorderRadius = 100;
+            this.guna2Elipse11.TargetControl = this.img_customer_profile;
+            // 
+            // guna2Elipse12
+            // 
+            this.guna2Elipse12.BorderRadius = 20;
+            this.guna2Elipse12.TargetControl = this.btn_out;
             // 
             // guna2Elipse13
             // 

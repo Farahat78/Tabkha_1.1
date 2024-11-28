@@ -35,5 +35,12 @@ namespace Tabkha_1._1
             owner_Register.Show();
             this.Hide();
         }
+
+        private void img_arrow_Click(object sender, EventArgs e)
+        {
+            Welcome w = new Welcome();
+            w.Show();
+            this.Hide();
+        }
     }
 }

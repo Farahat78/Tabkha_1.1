@@ -92,5 +92,12 @@ namespace Tabkha_1._1
                 guna2GradientPanel1.Width = this.Width - guna2GradientPanel2.Width;
             }
         }
+
+        private void lbl_account_Click(object sender, EventArgs e)
+        {
+            Customer_Profile adminProfile = new Customer_Profile();
+            adminProfile.Show();
+            this.Hide();
+        }
     }
 }

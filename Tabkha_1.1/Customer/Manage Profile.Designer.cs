@@ -148,7 +148,7 @@
             // Manage_Profile
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(661, 297);
+            this.ClientSize = new System.Drawing.Size(621, 194);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_Pnumber);
             this.Controls.Add(this.lbl_email);

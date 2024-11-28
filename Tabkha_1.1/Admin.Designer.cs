@@ -96,6 +96,7 @@
             this.lbl_account.Size = new System.Drawing.Size(87, 21);
             this.lbl_account.TabIndex = 10;
             this.lbl_account.Text = "My Acount";
+            this.lbl_account.Click += new System.EventHandler(this.lbl_account_Click);
             // 
             // img_minimize
             // 

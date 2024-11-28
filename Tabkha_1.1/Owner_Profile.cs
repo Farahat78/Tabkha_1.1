@@ -68,8 +68,10 @@ namespace Tabkha_1._1
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            Manage_Profile manage_Profile = new Manage_Profile();
-            manage_Profile.Show();
+            Customer_Profile ownerProfile = new Customer_Profile();
+            ownerProfile.hideSome();
+            ownerProfile.Show();
+            this.Hide();
         }
 
         private void btn_add_Click(object sender, EventArgs e)

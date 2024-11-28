@@ -12,6 +12,8 @@ namespace Tabkha_1._1
 {
     public partial class Owner_Register : Form
     {
+        login login = new login();
+
         public Owner_Register()
         {
             InitializeComponent();
@@ -33,9 +35,8 @@ namespace Tabkha_1._1
             { MessageBox.Show("Required Fields Empty"); }
             else
             {
-                user_home user_Home = new user_home();
-            user_Home.Show();
-            this.Hide();
+                login.Show();
+                this.Hide();
             }
         }
 
@@ -46,7 +47,7 @@ namespace Tabkha_1._1
 
         private void img_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
         }
 
         private void register_card_Paint(object sender, PaintEventArgs e)
