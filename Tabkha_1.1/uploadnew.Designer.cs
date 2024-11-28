@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_ingredients = new Tabkha_1._1.CustomTextBox();
             this.btn_save = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_price = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_name = new Tabkha_1._1.CustomTextBox();
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_description = new Tabkha_1._1.CustomTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.n_quantity = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,7 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_uploadphoto = new System.Windows.Forms.Button();
-            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -61,36 +53,32 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Name = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.img_product = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_price = new Tabkha_1._1.CustomTextBox();
+            this.txt_ingredients = new Tabkha_1._1.CustomTextBox();
+            this.txt_description = new Tabkha_1._1.CustomTextBox();
+            this.txt_name = new Tabkha_1._1.CustomTextBox();
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_preptime)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.BorderRadius = 20;
-            this.guna2Elipse6.TargetControl = this.txt_ingredients;
-            // 
-            // txt_ingredients
-            // 
-            this.txt_ingredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ingredients.Location = new System.Drawing.Point(414, 394);
-            this.txt_ingredients.Multiline = true;
-            this.txt_ingredients.Name = "txt_ingredients";
-            this.txt_ingredients.Size = new System.Drawing.Size(408, 93);
-            this.txt_ingredients.TabIndex = 52;
-            this.txt_ingredients.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_ingredients.WatermarkText = " ingredients";
             // 
             // btn_save
             // 
@@ -111,7 +99,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(1082, 463);
+            this.label13.Location = new System.Drawing.Point(1082, 487);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 19);
             this.label13.TabIndex = 67;
@@ -122,59 +110,16 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // txt_price
-            // 
-            this.txt_price.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_price.Location = new System.Drawing.Point(899, 452);
-            this.txt_price.Multiline = true;
-            this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(177, 39);
-            this.txt_price.TabIndex = 66;
-            this.txt_price.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_price.WatermarkText = "Enter text here";
-            // 
             // guna2Elipse3
             // 
             this.guna2Elipse3.BorderRadius = 20;
             this.guna2Elipse3.TargetControl = this.btn_save;
             // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 20;
-            this.guna2Elipse4.TargetControl = this.txt_name;
-            // 
-            // txt_name
-            // 
-            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_name.Location = new System.Drawing.Point(414, 127);
-            this.txt_name.Multiline = true;
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(408, 39);
-            this.txt_name.TabIndex = 45;
-            this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_name.WatermarkText = "Name Your Food";
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 20;
-            this.guna2Elipse5.TargetControl = this.txt_description;
-            // 
-            // txt_description
-            // 
-            this.txt_description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_description.Location = new System.Drawing.Point(414, 207);
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(408, 93);
-            this.txt_description.TabIndex = 47;
-            this.txt_description.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_description.WatermarkText = "Description";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(849, 429);
+            this.label11.Location = new System.Drawing.Point(849, 453);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 24);
             this.label11.TabIndex = 64;
@@ -182,7 +127,7 @@
             // 
             // n_quantity
             // 
-            this.n_quantity.Location = new System.Drawing.Point(929, 362);
+            this.n_quantity.Location = new System.Drawing.Point(929, 386);
             this.n_quantity.Name = "n_quantity";
             this.n_quantity.Size = new System.Drawing.Size(147, 27);
             this.n_quantity.TabIndex = 63;
@@ -191,7 +136,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(849, 333);
+            this.label10.Location = new System.Drawing.Point(849, 357);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(177, 24);
             this.label10.TabIndex = 62;
@@ -201,7 +146,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(844, 294);
+            this.label9.Location = new System.Drawing.Point(844, 318);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(315, 19);
             this.label9.TabIndex = 61;
@@ -216,7 +161,7 @@
             "dessert",
             "soup ",
             "salad"});
-            this.combo_category.Location = new System.Drawing.Point(929, 263);
+            this.combo_category.Location = new System.Drawing.Point(929, 287);
             this.combo_category.Name = "combo_category";
             this.combo_category.Size = new System.Drawing.Size(147, 27);
             this.combo_category.TabIndex = 60;
@@ -225,7 +170,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(844, 239);
+            this.label7.Location = new System.Drawing.Point(844, 263);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 24);
             this.label7.TabIndex = 58;
@@ -234,7 +179,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(835, 74);
+            this.panel1.Location = new System.Drawing.Point(835, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 430);
             this.panel1.TabIndex = 57;
@@ -252,22 +197,17 @@
             this.btn_uploadphoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_uploadphoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_uploadphoto.ForeColor = System.Drawing.Color.White;
-            this.btn_uploadphoto.Location = new System.Drawing.Point(117, 387);
+            this.btn_uploadphoto.Location = new System.Drawing.Point(117, 411);
             this.btn_uploadphoto.Name = "btn_uploadphoto";
             this.btn_uploadphoto.Size = new System.Drawing.Size(170, 43);
             this.btn_uploadphoto.TabIndex = 43;
             this.btn_uploadphoto.Text = "Upload Photo";
             this.btn_uploadphoto.UseVisualStyleBackColor = false;
             // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.BorderRadius = 20;
-            this.guna2Elipse7.TargetControl = this.txt_price;
-            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(963, 188);
+            this.checkBox3.Location = new System.Drawing.Point(963, 212);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(66, 23);
             this.checkBox3.TabIndex = 56;
@@ -277,7 +217,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(963, 158);
+            this.checkBox2.Location = new System.Drawing.Point(963, 182);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(90, 23);
             this.checkBox2.TabIndex = 55;
@@ -287,7 +227,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(963, 128);
+            this.checkBox1.Location = new System.Drawing.Point(963, 152);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(90, 23);
             this.checkBox1.TabIndex = 54;
@@ -298,7 +238,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(844, 96);
+            this.label6.Location = new System.Drawing.Point(844, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(171, 24);
             this.label6.TabIndex = 53;
@@ -308,7 +248,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(410, 363);
+            this.label5.Location = new System.Drawing.Point(410, 387);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 24);
             this.label5.TabIndex = 51;
@@ -318,7 +258,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(708, 323);
+            this.label4.Location = new System.Drawing.Point(708, 347);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 19);
             this.label4.TabIndex = 50;
@@ -326,7 +266,7 @@
             // 
             // n_preptime
             // 
-            this.n_preptime.Location = new System.Drawing.Point(580, 319);
+            this.n_preptime.Location = new System.Drawing.Point(580, 343);
             this.n_preptime.Name = "n_preptime";
             this.n_preptime.Size = new System.Drawing.Size(120, 27);
             this.n_preptime.TabIndex = 49;
@@ -335,7 +275,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(410, 320);
+            this.label3.Location = new System.Drawing.Point(410, 344);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 24);
             this.label3.TabIndex = 48;
@@ -345,7 +285,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(410, 175);
+            this.label2.Location = new System.Drawing.Point(410, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 46;
@@ -355,7 +295,7 @@
             // 
             this.Name.AutoSize = true;
             this.Name.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(410, 95);
+            this.Name.Location = new System.Drawing.Point(410, 119);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(70, 24);
             this.Name.TabIndex = 44;
@@ -363,6 +303,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
             this.guna2GradientPanel1.Controls.Add(this.img_close);
@@ -376,12 +317,26 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1198, 52);
             this.guna2GradientPanel1.TabIndex = 41;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 1);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(65, 1);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -425,7 +380,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(843, 199);
+            this.label8.Location = new System.Drawing.Point(843, 223);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(315, 19);
             this.label8.TabIndex = 59;
@@ -435,7 +390,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(844, 384);
+            this.label12.Location = new System.Drawing.Point(844, 408);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(315, 19);
             this.label12.TabIndex = 65;
@@ -443,17 +398,105 @@
             // 
             // img_product
             // 
-            this.img_product.Location = new System.Drawing.Point(13, 75);
+            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
+            this.img_product.Location = new System.Drawing.Point(13, 99);
             this.img_product.Name = "img_product";
             this.img_product.Size = new System.Drawing.Size(379, 301);
+            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_product.TabIndex = 42;
             this.img_product.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 29);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Upload New Item";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Gray;
+            this.label14.Location = new System.Drawing.Point(3, 73);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(1188, 19);
+            this.label14.TabIndex = 70;
+            this.label14.Text = "_________________________________________________________________________________" +
+    "__________________________________________________";
+            // 
+            // txt_price
+            // 
+            this.txt_price.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_price.Location = new System.Drawing.Point(899, 476);
+            this.txt_price.Multiline = true;
+            this.txt_price.Name = "txt_price";
+            this.txt_price.Size = new System.Drawing.Size(177, 39);
+            this.txt_price.TabIndex = 66;
+            this.txt_price.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_price.WatermarkText = "Enter text here";
+            // 
+            // txt_ingredients
+            // 
+            this.txt_ingredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_ingredients.Location = new System.Drawing.Point(414, 418);
+            this.txt_ingredients.Multiline = true;
+            this.txt_ingredients.Name = "txt_ingredients";
+            this.txt_ingredients.Size = new System.Drawing.Size(408, 93);
+            this.txt_ingredients.TabIndex = 52;
+            this.txt_ingredients.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_ingredients.WatermarkText = " ingredients";
+            // 
+            // txt_description
+            // 
+            this.txt_description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_description.Location = new System.Drawing.Point(414, 231);
+            this.txt_description.Multiline = true;
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(408, 93);
+            this.txt_description.TabIndex = 47;
+            this.txt_description.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_description.WatermarkText = "Description";
+            // 
+            // txt_name
+            // 
+            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name.Location = new System.Drawing.Point(414, 151);
+            this.txt_name.Multiline = true;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(408, 39);
+            this.txt_name.TabIndex = 45;
+            this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_name.WatermarkText = "Name Your Food";
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.BorderRadius = 20;
+            this.guna2Elipse6.TargetControl = this.txt_ingredients;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 20;
+            this.guna2Elipse4.TargetControl = this.txt_name;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 20;
+            this.guna2Elipse5.TargetControl = this.txt_description;
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.BorderRadius = 20;
+            this.guna2Elipse7.TargetControl = this.txt_price;
             // 
             // uploadnew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 648);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txt_price);
@@ -482,13 +525,14 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.label14);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = """uploadnew""";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_preptime)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
@@ -538,5 +582,8 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

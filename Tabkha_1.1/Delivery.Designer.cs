@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbl_my_acc = new System.Windows.Forms.Label();
             this.img_minimize = new System.Windows.Forms.PictureBox();
@@ -99,8 +101,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -129,6 +129,28 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1147, 134);
             this.guna2GradientPanel1.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(682, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(149, 24);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Accepted Orders";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1048, 99);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 24);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Log out";
             // 
             // guna2CirclePictureBox1
             // 
@@ -893,28 +915,6 @@
             // 
             this.guna2Elipse2.BorderRadius = 40;
             this.guna2Elipse2.TargetControl = this.txt_search_order;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1048, 99);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 24);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Log out";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(682, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(149, 24);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Accepted Orders";
             // 
             // Delivery
             // 
