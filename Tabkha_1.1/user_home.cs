@@ -45,5 +45,38 @@ namespace Tabkha_1._1
             btn_apply.Enabled = false;
             btn_apply.BackColor = Color.Gray;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+           place_order place_Order = new place_order();
+            place_Order.Show();
+            this.Hide();
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            Customer_Profile customer_Profile = new Customer_Profile();
+            customer_Profile.Show();
+            this.Hide();
+        }
+
+        private void lbl_logout_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+        }
+
+        private void lbl_resname_Click(object sender, EventArgs e)
+        {
+            Owner_Profile owner_Profile = new Owner_Profile();
+            owner_Profile.Show();
+            this.Hide();
+        }
     }
 }

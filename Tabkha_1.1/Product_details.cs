@@ -26,5 +26,19 @@ namespace Tabkha_1._1
         {
             this.Close();
         }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            place_order place_Order = new place_order();
+            place_Order.Show();
+            this.Hide();
+        }
+
+        private void img_back_Click(object sender, EventArgs e)
+        {
+            Owner_Profile owner_Profile = new Owner_Profile();
+            owner_Profile.Show();
+            this.Hide();
+        }
     }
 }

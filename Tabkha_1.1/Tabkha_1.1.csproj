@@ -117,6 +117,12 @@
     <Compile Include="Customer\Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="option for register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="option for register.Designer.cs">
+      <DependentUpon>option for register.cs</DependentUpon>
+    </Compile>
     <Compile Include="orders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="option for register.resx">
+      <DependentUpon>option for register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="orders.resx">
       <DependentUpon>orders.cs</DependentUpon>
