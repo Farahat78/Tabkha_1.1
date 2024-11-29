@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -298,16 +304,24 @@
     <None Include="Resources\chef-hat.png" />
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
+    <None Include="Resources\communication.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
     <Content Include="Resources\facebook.png" />
     <None Include="Resources\whatsapp1.png" />
     <None Include="Resources\facebook1.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\heart.png" />
     <Content Include="Resources\left-chevron.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\menu.png" />
+    <None Include="Resources\Screenshot 2024-11-29 182711.png" />
+    <None Include="Resources\Screenshot 2024-11-29 211928.png" />
+    <None Include="Resources\Screenshot 2024-11-29 213224.png" />
+    <None Include="Resources\phone-call.png" />
     <Content Include="Resources\twitter %281%29.png" />
     <None Include="Resources\twitter %281%291.png" />
+    <None Include="Resources\twitter.png" />
     <Content Include="Resources\whatsapp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
