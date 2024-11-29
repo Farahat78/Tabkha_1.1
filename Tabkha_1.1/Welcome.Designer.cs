@@ -750,8 +750,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1148, 374);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Enjoy the most delicious \r\nEgyptian home-cooked meals \r\neasily and quickly.\r\nHere" +
-    " you will find food that\r\ntastes like home.";
+            this.label2.Text = "\r\nEnjoy the most delicious \r\nEgyptian home-cooked meals \r\neasily and quickly.\r\nHe" +
+    "re you will find food that\r\ntastes like home.";
             // 
             // img_minimize
             // 
