@@ -24,8 +24,7 @@ namespace Tabkha_1._1
 
         private void img_close_Click(object sender, EventArgs e)
         {
-
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_clear_Click(object sender, EventArgs e)

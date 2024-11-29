@@ -110,7 +110,7 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1143, 134);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1169, 134);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // img_back
@@ -119,7 +119,7 @@
             this.img_back.BackColor = System.Drawing.Color.Transparent;
             this.img_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_back.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.img_back.Location = new System.Drawing.Point(-16, 3);
+            this.img_back.Location = new System.Drawing.Point(10, 3);
             this.img_back.Name = "img_back";
             this.img_back.Size = new System.Drawing.Size(38, 31);
             this.img_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(-631, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(-605, 41);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 45);
@@ -200,7 +200,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1101, 4);
+            this.img_close.Location = new System.Drawing.Point(1127, 4);
             this.img_close.Margin = new System.Windows.Forms.Padding(4);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 31);
@@ -215,7 +215,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1051, 7);
+            this.img_minimize.Location = new System.Drawing.Point(1077, 7);
             this.img_minimize.Margin = new System.Windows.Forms.Padding(4);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 28);
@@ -693,7 +693,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1169, 696);
+            this.ClientSize = new System.Drawing.Size(1195, 696);
             this.Controls.Add(this.btn_ratedone);
             this.Controls.Add(this.txt_addcomment);
             this.Controls.Add(this.label3);
