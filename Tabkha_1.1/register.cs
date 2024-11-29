@@ -17,11 +17,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private void login_card_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -29,25 +24,55 @@ namespace Tabkha_1._1
 
         private void img_close_Click(object sender, EventArgs e)
         {
-
-            Application.Exit();
+            this.Close();
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
             txt_email.Text = "";
             txt_password.Text = "";
+            txt_confirmPassword.Text = "";
             txt_phone.Text = "";
-            txt_username.Text = "U";
-            radio_btn_female.Checked = false;
-            radio_btn_male.Checked = false;
+            txt_lname.Text = "";
+            txtbox_address.Text = "";
+            txtbox_city.Text = "";
+            txtbox_fname.Text="";
+            
 
         }
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            user_home user_Home = new user_home();
-            user_Home.Show();
+            if (txt_confirmPassword.Text != txt_password.Text)
+            {
+                MessageBox.Show("Review password");
+            }
+            else if (txt_email.Text == ""
+           || txt_password.Text == ""
+           || txt_confirmPassword.Text == ""
+           || txt_phone.Text == ""
+           || txt_lname.Text == ""
+           || txtbox_address.Text == ""
+           || txtbox_city.Text == ""
+           || txtbox_fname.Text == "")
+            { MessageBox.Show("Required Fields Empty"); }
+            else
+            {
+                user_home user_Home = new user_home();
+                user_Home.Show();
+                this.Hide();
+            }
+        }
+
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            login login = new login();
+            login.Show();
             this.Hide();
         }
     }

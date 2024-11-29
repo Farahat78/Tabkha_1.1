@@ -55,5 +55,19 @@ namespace Tabkha_1._1
         {
             this.Close();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            user_home user_Home = new user_home();
+            user_Home.Show();
+            this.Hide();
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            Customer_Profile customer_Profile = new Customer_Profile();
+            customer_Profile.Show();
+            this.Hide();
+        }
     }
 }

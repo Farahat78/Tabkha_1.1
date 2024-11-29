@@ -34,9 +34,22 @@ namespace Tabkha_1._1
 
         private void btn_signIn_Click(object sender, EventArgs e)
         {
-            user_home user_Home = new user_home();
-            user_Home.Show();
-            this.Hide();
+            if (txt_password.Text == ""
+                || txt_username.Text == "")
+            { MessageBox.Show("Required Fields Empty"); }
+            else
+            {
+
+                user_home user_Home = new user_home();
+                user_Home.Show();
+                this.Hide();
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            option_for_register option = new option_for_register();
+            option.Show();
         }
     }
 }
