@@ -109,5 +109,12 @@ namespace Tabkha_1._1
         {
             this.Close();
         }
+
+        private void btn_comments_Click(object sender, EventArgs e)
+        {
+            ChangeColor(btn_orders, btn_view);
+            lbl_data.Text = "Comments ";
+            LoadFormIntoPanel(new comments());
+        }
     }
 }
