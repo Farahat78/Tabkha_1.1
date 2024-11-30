@@ -80,7 +80,7 @@ namespace Tabkha_1._1
         {
             ChangeColor(btn_orders, btn_view);
             lbl_data.Text = "Previous Orders";
-            LoadFormIntoPanel(new uploadnew());
+            LoadFormIntoPanel(new View_order_details());
         }
 
         private void btn_toggleSideBar_Click(object sender, EventArgs e)
