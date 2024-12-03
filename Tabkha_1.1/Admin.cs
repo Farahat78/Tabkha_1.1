@@ -96,6 +96,7 @@ namespace Tabkha_1._1
         private void lbl_account_Click(object sender, EventArgs e)
         {
             Customer_Profile adminProfile = new Customer_Profile();
+            adminProfile.orders = false;
             adminProfile.Show();
             this.Hide();
         }

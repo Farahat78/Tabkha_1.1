@@ -89,6 +89,12 @@ namespace Tabkha_1._1
             AdjustMainPanel();
         }
 
+        public bool orders
+        {
+            get => btn_orders.Visible;
+            set => btn_orders.Visible = value;
+        }
+
         private void AdjustMainPanel()
         {
             if (isSidebarExpanded)
