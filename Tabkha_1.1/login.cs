@@ -39,10 +39,10 @@ namespace Tabkha_1._1
             { MessageBox.Show("Required Fields Empty"); }
             else
             {
+                if(txt_username.Text == "" && txt_password.Text == "")
+                {
 
-                user_home user_Home = new user_home();
-                user_Home.Show();
-                this.Hide();
+                }
             }
         }
 
