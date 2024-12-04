@@ -18,21 +18,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private DataTable chefsTable;
-
-        private void ManageChefsForm_Load(object sender, EventArgs e)
-        {
-            chefsTable = new DataTable();
-            chefsTable.Columns.Add("Chef ID", typeof(int));
-            chefsTable.Columns.Add("Name", typeof(string));
-            chefsTable.Columns.Add("Email", typeof(string));
-            chefsTable.Columns.Add("Phone Number", typeof(int));
-            chefsTable.Columns.Add("Password", typeof(int));
-            chefsTable.Columns.Add("Specialty", typeof(string));
-
-            dgv_chefs.DataSource = chefsTable;
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditChef detailsForm = new AddEditChef();
