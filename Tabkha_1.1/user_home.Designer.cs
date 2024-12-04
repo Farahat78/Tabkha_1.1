@@ -31,8 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_logout = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.img_minimize = new System.Windows.Forms.PictureBox();
+            this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.txt_search = new Tabkha_1._1.CustomTextBox();
@@ -47,29 +52,24 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_restaurants = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_deliverytime = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_deliveryprice = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.lbl_description = new System.Windows.Forms.Label();
-            this.lbl_resname = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTemplate = new System.Windows.Forms.Panel();
+            this.lbl_bio = new System.Windows.Forms.Label();
+            this.lbl_phone = new System.Windows.Forms.Label();
             this.img_reslogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.img_minimize = new System.Windows.Forms.PictureBox();
-            this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.img_close = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_resname = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2ShadowPanel1.SuspendLayout();
-            this.pnl_restaurants.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
+            this.pnl_restaurants.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panelTemplate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -103,6 +103,20 @@
             this.lbl_logout.Text = "Log out";
             this.lbl_logout.Click += new System.EventHandler(this.lbl_logout_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -115,6 +129,21 @@
             this.label2.Text = "Cart";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(890, 73);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 7;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -126,6 +155,48 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "My Acount";
             this.label1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
+            // img_minimize
+            // 
+            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
+            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
+            this.img_minimize.Location = new System.Drawing.Point(1068, 5);
+            this.img_minimize.Name = "img_minimize";
+            this.img_minimize.Size = new System.Drawing.Size(40, 28);
+            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_minimize.TabIndex = 5;
+            this.img_minimize.TabStop = false;
+            this.img_minimize.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // img_logo
+            // 
+            this.img_logo.BackColor = System.Drawing.Color.Transparent;
+            this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
+            this.img_logo.ImageRotate = 0F;
+            this.img_logo.Location = new System.Drawing.Point(25, 26);
+            this.img_logo.Name = "img_logo";
+            this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.img_logo.Size = new System.Drawing.Size(100, 100);
+            this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_logo.TabIndex = 6;
+            this.img_logo.TabStop = false;
+            this.img_logo.UseTransparentBackground = true;
+            // 
+            // img_close
+            // 
+            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_close.BackColor = System.Drawing.Color.Transparent;
+            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
+            this.img_close.Location = new System.Drawing.Point(1119, 5);
+            this.img_close.Name = "img_close";
+            this.img_close.Size = new System.Drawing.Size(38, 31);
+            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_close.TabIndex = 3;
+            this.img_close.TabStop = false;
+            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // guna2Elipse1
             // 
@@ -165,6 +236,8 @@
             // btn_apply
             // 
             this.btn_apply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_apply.FlatAppearance.BorderSize = 0;
+            this.btn_apply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_apply.ForeColor = System.Drawing.Color.White;
             this.btn_apply.Location = new System.Drawing.Point(18, 317);
             this.btn_apply.Name = "btn_apply";
@@ -262,15 +335,7 @@
             // pnl_restaurants
             // 
             this.pnl_restaurants.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_restaurants.Controls.Add(this.lbl_deliverytime);
-            this.pnl_restaurants.Controls.Add(this.label8);
-            this.pnl_restaurants.Controls.Add(this.lbl_deliveryprice);
-            this.pnl_restaurants.Controls.Add(this.label5);
-            this.pnl_restaurants.Controls.Add(this.guna2RatingStar1);
-            this.pnl_restaurants.Controls.Add(this.lbl_description);
-            this.pnl_restaurants.Controls.Add(this.lbl_resname);
-            this.pnl_restaurants.Controls.Add(this.img_reslogo);
-            this.pnl_restaurants.Controls.Add(this.label6);
+            this.pnl_restaurants.Controls.Add(this.flowLayoutPanel1);
             this.pnl_restaurants.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_restaurants.Location = new System.Drawing.Point(309, 141);
             this.pnl_restaurants.Name = "pnl_restaurants";
@@ -278,96 +343,47 @@
             this.pnl_restaurants.Size = new System.Drawing.Size(848, 543);
             this.pnl_restaurants.TabIndex = 7;
             // 
-            // lbl_deliverytime
+            // flowLayoutPanel1
             // 
-            this.lbl_deliverytime.AutoSize = true;
-            this.lbl_deliverytime.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.lbl_deliverytime.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_deliverytime.Location = new System.Drawing.Point(291, 103);
-            this.lbl_deliverytime.Name = "lbl_deliverytime";
-            this.lbl_deliverytime.Size = new System.Drawing.Size(50, 17);
-            this.lbl_deliverytime.TabIndex = 5;
-            this.lbl_deliverytime.Text = "40 min";
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.panelTemplate);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(829, 524);
+            this.flowLayoutPanel1.TabIndex = 10;
             // 
-            // label8
+            // panelTemplate
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(246, 103);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Within:";
+            this.panelTemplate.Controls.Add(this.lbl_bio);
+            this.panelTemplate.Controls.Add(this.lbl_phone);
+            this.panelTemplate.Controls.Add(this.img_reslogo);
+            this.panelTemplate.Controls.Add(this.label6);
+            this.panelTemplate.Controls.Add(this.lbl_resname);
+            this.panelTemplate.Location = new System.Drawing.Point(3, 3);
+            this.panelTemplate.Name = "panelTemplate";
+            this.panelTemplate.Size = new System.Drawing.Size(826, 137);
+            this.panelTemplate.TabIndex = 9;
             // 
-            // lbl_deliveryprice
+            // lbl_bio
             // 
-            this.lbl_deliveryprice.AutoSize = true;
-            this.lbl_deliveryprice.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.lbl_deliveryprice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_deliveryprice.Location = new System.Drawing.Point(201, 103);
-            this.lbl_deliveryprice.Name = "lbl_deliveryprice";
-            this.lbl_deliveryprice.Size = new System.Drawing.Size(34, 17);
-            this.lbl_deliveryprice.TabIndex = 6;
-            this.lbl_deliveryprice.Text = "Free";
+            this.lbl_bio.Location = new System.Drawing.Point(129, 71);
+            this.lbl_bio.Name = "lbl_bio";
+            this.lbl_bio.Size = new System.Drawing.Size(677, 38);
+            this.lbl_bio.TabIndex = 10;
+            this.lbl_bio.Text = "Bio";
             // 
-            // label5
+            // lbl_phone
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(143, 102);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Delivery:";
-            // 
-            // guna2RatingStar1
-            // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(143, 79);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2RatingStar1.Size = new System.Drawing.Size(79, 20);
-            this.guna2RatingStar1.TabIndex = 3;
-            this.guna2RatingStar1.Value = 3.5F;
-            // 
-            // lbl_description
-            // 
-            this.lbl_description.AutoSize = true;
-            this.lbl_description.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.lbl_description.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_description.Location = new System.Drawing.Point(140, 58);
-            this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(139, 17);
-            this.lbl_description.TabIndex = 2;
-            this.lbl_description.Text = "bread, pastries, cakes";
-            // 
-            // lbl_resname
-            // 
-            this.lbl_resname.AutoSize = true;
-            this.lbl_resname.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_resname.Location = new System.Drawing.Point(133, 26);
-            this.lbl_resname.Name = "lbl_resname";
-            this.lbl_resname.Size = new System.Drawing.Size(149, 25);
-            this.lbl_resname.TabIndex = 1;
-            this.lbl_resname.Text = "Restaurant1";
-            this.lbl_resname.Click += new System.EventHandler(this.lbl_resname_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(17, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(810, 19);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "_________________________________________________________________________________" +
-    "________";
+            this.lbl_phone.Location = new System.Drawing.Point(120, 42);
+            this.lbl_phone.Name = "lbl_phone";
+            this.lbl_phone.Size = new System.Drawing.Size(247, 27);
+            this.lbl_phone.TabIndex = 9;
+            this.lbl_phone.Text = "01010104706";
             // 
             // img_reslogo
             // 
             this.img_reslogo.Image = global::Tabkha_1._1.Properties.Resources.restaurant;
-            this.img_reslogo.Location = new System.Drawing.Point(17, 19);
+            this.img_reslogo.Location = new System.Drawing.Point(3, 3);
             this.img_reslogo.Name = "img_reslogo";
             this.img_reslogo.Size = new System.Drawing.Size(110, 110);
             this.img_reslogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -375,76 +391,26 @@
             this.img_reslogo.TabStop = false;
             this.img_reslogo.Click += new System.EventHandler(this.lbl_resname_Click);
             // 
-            // pictureBox1
+            // label6
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label6.Location = new System.Drawing.Point(3, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(810, 19);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "_________________________________________________________________________________" +
+    "________";
             // 
-            // guna2CirclePictureBox1
+            // lbl_resname
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(890, 73);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 7;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
-            // 
-            // img_minimize
-            // 
-            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1068, 5);
-            this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 28);
-            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_minimize.TabIndex = 5;
-            this.img_minimize.TabStop = false;
-            this.img_minimize.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // img_logo
-            // 
-            this.img_logo.BackColor = System.Drawing.Color.Transparent;
-            this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
-            this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(25, 26);
-            this.img_logo.Name = "img_logo";
-            this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(100, 100);
-            this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_logo.TabIndex = 6;
-            this.img_logo.TabStop = false;
-            this.img_logo.UseTransparentBackground = true;
-            // 
-            // img_close
-            // 
-            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_close.BackColor = System.Drawing.Color.Transparent;
-            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1119, 5);
-            this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 31);
-            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_close.TabIndex = 3;
-            this.img_close.TabStop = false;
-            this.img_close.Click += new System.EventHandler(this.img_close_Click);
+            this.lbl_resname.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl_resname.Location = new System.Drawing.Point(119, 10);
+            this.lbl_resname.Name = "lbl_resname";
+            this.lbl_resname.Size = new System.Drawing.Size(387, 25);
+            this.lbl_resname.TabIndex = 1;
+            this.lbl_resname.Text = "Restaurant1";
+            this.lbl_resname.Click += new System.EventHandler(this.lbl_resname_Click);
             // 
             // user_home
             // 
@@ -461,16 +427,18 @@
             this.Load += new System.EventHandler(this.user_home_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
-            this.pnl_restaurants.ResumeLayout(false);
-            this.pnl_restaurants.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
+            this.pnl_restaurants.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelTemplate.ResumeLayout(false);
+            this.panelTemplate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,15 +466,13 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_restaurants;
         private System.Windows.Forms.PictureBox img_reslogo;
         private System.Windows.Forms.Label lbl_resname;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
-        private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbl_deliverytime;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbl_deliveryprice;
-        private System.Windows.Forms.Label label5;
         private CustomTextBox txt_search;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_logout;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelTemplate;
+        private System.Windows.Forms.Label lbl_bio;
+        private System.Windows.Forms.Label lbl_phone;
     }
 }

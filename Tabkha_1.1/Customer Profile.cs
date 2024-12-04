@@ -37,7 +37,7 @@ namespace Tabkha_1._1
         public void hideSome()
         {
             btn_orders.Visible = false;
-            
+            btn_comments.Visible = true;
         }
 
         private void img_close_Click(object sender, EventArgs e)
@@ -87,6 +87,12 @@ namespace Tabkha_1._1
         {
             isSidebarExpanded = !isSidebarExpanded;
             AdjustMainPanel();
+        }
+
+        public bool orders
+        {
+            get => btn_orders.Visible;
+            set => btn_orders.Visible = value;
         }
 
         private void AdjustMainPanel()

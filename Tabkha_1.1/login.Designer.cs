@@ -180,6 +180,7 @@
             this.L_lbl_forgetPass.TabIndex = 17;
             this.L_lbl_forgetPass.TabStop = true;
             this.L_lbl_forgetPass.Text = "Forget Password?";
+            this.L_lbl_forgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.L_lbl_forgetPass_LinkClicked);
             // 
             // chk_rememberMe
             // 

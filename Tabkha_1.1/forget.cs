@@ -11,38 +11,16 @@ using System.Windows.Forms;
 
 namespace Tabkha_1._1
 {
-    public static class globalvariables
+    public partial class forget : Form
     {
-        public static string global_email;
-    }
-
-    public partial class ForgetPassword :Form
-    {
-        public ForgetPassword()
+        public forget()
         {
             InitializeComponent();
         }
-
-        private void img_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void img_minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            login login = new login();
-            login.Show();
-            this.Hide();
-        }
         private int code = 147852;
-        private void btn_sendcode_Click(object sender, EventArgs e)
-        {
 
+        private void button1_Click(object sender, EventArgs e)
+        {
             string email = customTextBox1.Text;
             globalvariables.global_email = email;
             if (email == "")
@@ -74,21 +52,20 @@ namespace Tabkha_1._1
                     smtp.Send(mail);
                 }
             }
+
         }
-        private void btn_Confirm_Click(object sender, EventArgs e)
+
+        private void btn_Reset_Click(object sender, EventArgs e)
         {
             string text = customTextBox2.Text;
             if (text == code.ToString())
             {
-                ResetPassword resetPassword = new ResetPassword();
-                resetPassword.Show();
+                ResetPassword resetpassword = new ResetPassword();
+                resetpassword.Show();
                 this.Hide();
+                
+
             }
-
-
-
-
-
         }
     }
 }

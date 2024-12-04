@@ -20,7 +20,7 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
+        string connectionString = @"Data Source=Hossam;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -77,15 +77,14 @@ namespace Tabkha_1._1
                     try
                     {
                         connect.Open();
-                        string query = "INSERT INTO customers (customer_firstname,customer_lastname,customer_password,customer_confirmpassword,customer_phonen,customer_email,customer_city,customer_address)VALUES (@firstname,@lastname,@password,@confirmpassword,@phonenumber,@email,@city,@address);";
+                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address)VALUES (@name,@password,@email,@phonenumber,@city,@address);";
                         using (SqlCommand cmd = new SqlCommand(query, connect))
                         {
                             cmd.Parameters.AddWithValue("@firstname", First_Name);
                             cmd.Parameters.AddWithValue("@lastname", Last_Name);
                             cmd.Parameters.AddWithValue("@password", Password);
-                            cmd.Parameters.AddWithValue("@confirmpassword", Confirm_Password);
-                            cmd.Parameters.AddWithValue("@phonenumber", Phone_Number);
                             cmd.Parameters.AddWithValue("@email", Email);
+                            cmd.Parameters.AddWithValue("@phonenumber", Phone_Number);
                             cmd.Parameters.AddWithValue("@city", City);
                             cmd.Parameters.AddWithValue("@address", Address);
                             int rowaffected = cmd.ExecuteNonQuery();
@@ -100,17 +99,11 @@ namespace Tabkha_1._1
                             {
                                 MessageBox.Show("Register failed , try again");
                             }
-
-
                         }
                     }
                     catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
-
-
             }
-
-
         }
 
         private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
