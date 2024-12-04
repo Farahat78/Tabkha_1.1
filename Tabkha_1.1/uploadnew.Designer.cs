@@ -290,6 +290,7 @@
             this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 46;
             this.label2.Text = "Description:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Name
             // 
@@ -527,8 +528,10 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "uploadnew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
+            this.Load += new System.EventHandler(this.uploadnew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_preptime)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);

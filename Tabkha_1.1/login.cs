@@ -51,5 +51,10 @@ namespace Tabkha_1._1
             option_for_register option = new option_for_register();
             option.Show();
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

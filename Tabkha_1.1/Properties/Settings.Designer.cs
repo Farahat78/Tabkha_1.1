@@ -33,5 +33,16 @@ namespace Tabkha_1._1.Properties {
                 return ((string)(this["tabkhaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;E" +
+            "ncrypt=False")]
+        public string tabkha1ConnectionString {
+            get {
+                return ((string)(this["tabkha1ConnectionString"]));
+            }
+        }
     }
 }
