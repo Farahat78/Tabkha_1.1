@@ -84,8 +84,8 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            /*string connectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
-            string query = "";
+            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+            string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -115,21 +115,21 @@ namespace Tabkha_1._1
                     // 3. تخصيص البيانات داخل الكارد
                     // اسم المطعم
                     Label nameLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_resname");
-                    if (nameLabel != null) nameLabel.Text = reader["fullname"].ToString();
+                    if (nameLabel != null) nameLabel.Text = reader["Rname"].ToString();
 
                     // phone
                     Label phone = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_phone");
-                    if (phone != null) phone.Text= reader["cook_phonen"].ToString();
+                    if (phone != null) phone.Text= reader["Phone"].ToString();
 
                     Label categoryLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_bio");
                     if (categoryLabel != null)
-                        categoryLabel.Text = reader["cook_businessinfo"].ToString();
+                        categoryLabel.Text = reader["Bio"].ToString();
 
                     // الشعار (Logo)
                     try
                     {
                         PictureBox logoPictureBox = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_reslogo");
-                        string imagepath = reader[@"cook_image"].ToString();
+                        string imagepath = reader[@"ProFilePic"].ToString();
                         if (logoPictureBox != null) logoPictureBox.Image = Image.FromFile(imagepath);
                         logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     }
@@ -143,7 +143,7 @@ namespace Tabkha_1._1
                 }
 
                 reader.Close();
-            }*/
+            }
         }
         private Control CloneControl(Control control)
         {
