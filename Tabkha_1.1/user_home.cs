@@ -84,8 +84,8 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha_system;Integrated Security=True;Encrypt=False";
-            string query = "SELECT[cook_firstname]+' '+[cook_lastname]'fullname',[cook_phonen],[cook_businessinfo],[cook_image]FROM [tabkha_system].[dbo].[cook]";
+            /*string connectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+            string query = "";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -143,7 +143,7 @@ namespace Tabkha_1._1
                 }
 
                 reader.Close();
-            }
+            }*/
         }
         private Control CloneControl(Control control)
         {
