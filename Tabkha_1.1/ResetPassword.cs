@@ -13,6 +13,10 @@ namespace Tabkha_1._1
 {
     public partial class ResetPassword : Form
     {
+        public static class globalvariables
+        {
+            public static string global_email;
+        }
         public ResetPassword()
         {
             InitializeComponent();
@@ -31,7 +35,7 @@ namespace Tabkha_1._1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ForgetPassword forgetPassword = new ForgetPassword();
+            forget forgetPassword = new forget();
             forgetPassword.Show();
             this.Hide();
         }

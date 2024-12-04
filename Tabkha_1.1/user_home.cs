@@ -159,5 +159,36 @@ namespace Tabkha_1._1
             // نسخ الخصائص الأخرى حسب الحاجة
             return newControl;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txt_search.Text.Trim().ToLower(); // الحصول على النص المدخل
+            foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+            {
+                // ابحث عن العنصر المطلوب داخل الكارت
+                Label nameLabel = card.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_resname");
+
+                if (nameLabel != null && nameLabel.Text.ToLower().Contains(searchQuery))
+                {
+                    card.Visible = true; // إظهار الكارت إذا كان يطابق النص
+                }
+                else
+                {
+                    card.Visible = false; // إخفاء الكارت إذا لم يكن يطابق النص
+                }
+            }
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+            {
+                foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+                {
+                    panelTemplate.Visible= false;
+                    card.Visible = true; // إعادة إظهار جميع الكروت
+                }
+            }
+        }
     }
 }
