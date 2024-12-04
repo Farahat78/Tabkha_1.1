@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Owner_Register));
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbl_businessName = new System.Windows.Forms.Label();
+            this.lbl_restaurantName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
@@ -97,15 +97,15 @@
             this.label6.Size = new System.Drawing.Size(0, 16);
             this.label6.TabIndex = 27;
             // 
-            // lbl_businessName
+            // lbl_restaurantName
             // 
-            this.lbl_businessName.AutoSize = true;
-            this.lbl_businessName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_businessName.Location = new System.Drawing.Point(193, 317);
-            this.lbl_businessName.Name = "lbl_businessName";
-            this.lbl_businessName.Size = new System.Drawing.Size(102, 18);
-            this.lbl_businessName.TabIndex = 23;
-            this.lbl_businessName.Text = "Business Name";
+            this.lbl_restaurantName.AutoSize = true;
+            this.lbl_restaurantName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_restaurantName.Location = new System.Drawing.Point(193, 317);
+            this.lbl_restaurantName.Name = "lbl_restaurantName";
+            this.lbl_restaurantName.Size = new System.Drawing.Size(115, 18);
+            this.lbl_restaurantName.TabIndex = 23;
+            this.lbl_restaurantName.Text = "Restaurant Name";
             // 
             // label3
             // 
@@ -293,7 +293,7 @@
             this.register_card.Controls.Add(this.label4);
             this.register_card.Controls.Add(this.lbl_bio);
             this.register_card.Controls.Add(this.label6);
-            this.register_card.Controls.Add(this.lbl_businessName);
+            this.register_card.Controls.Add(this.lbl_restaurantName);
             this.register_card.Controls.Add(this.label3);
             this.register_card.Controls.Add(this.label1);
             this.register_card.Controls.Add(this.lbl_confirmpassword);
@@ -328,7 +328,7 @@
             this.txtbox_businesssName.Size = new System.Drawing.Size(314, 36);
             this.txtbox_businesssName.TabIndex = 1;
             this.txtbox_businesssName.WatermarkColor = System.Drawing.Color.Gray;
-            this.txtbox_businesssName.WatermarkText = "Business Name";
+            this.txtbox_businesssName.WatermarkText = "Restaurant Name";
             // 
             // txt_email
             // 
@@ -494,6 +494,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Owner_Register";
             this.Text = "Owner_Register";
+            this.Load += new System.EventHandler(this.Owner_Register_Load);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -511,7 +512,7 @@
         private System.Windows.Forms.PictureBox img_close;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbl_businessName;
+        private System.Windows.Forms.Label lbl_restaurantName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_email;
