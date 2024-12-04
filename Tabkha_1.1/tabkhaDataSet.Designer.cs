@@ -352,7 +352,7 @@ namespace Tabkha_1._1 {
             if ((initTable == true)) {
                 if ((this.tableadmin != null)) {
                     this.tableadmin.InitVars();
-                }
+        }
             }
             this.tablecook = ((cookDataTable)(base.Tables["cook"]));
             if ((initTable == true)) {
@@ -2674,8 +2674,8 @@ namespace Tabkha_1._1 {
                 }
                 xs.Add(dsSchema);
                 return type;
-            }
         }
+    }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
