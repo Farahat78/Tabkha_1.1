@@ -50,9 +50,9 @@ namespace Tabkha_1._1.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;E" +
             "ncrypt=False")]
-        public string tabkha1ConnectionString {
+        public string tabkha1ConnectionString1 {
             get {
-                return ((string)(this["tabkha1ConnectionString"]));
+                return ((string)(this["tabkha1ConnectionString1"]));
             }
         }
     }

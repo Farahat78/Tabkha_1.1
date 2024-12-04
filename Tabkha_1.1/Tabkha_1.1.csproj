@@ -195,16 +195,6 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabkha1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tabkha_systemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,17 +308,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tabkhaDataSet.xsc">
-      <DependentUpon>tabkhaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha_systemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tabkha_systemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tabkha_systemDataSet.xss">
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -338,9 +317,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\maximize.png" />
@@ -377,6 +353,7 @@
     <None Include="Resources\Screenshot 2024-11-29 211928.png" />
     <None Include="Resources\Screenshot 2024-11-29 213224.png" />
     <None Include="Resources\phone-call.png" />
+    <Content Include="Resources\minus.png" />
     <Content Include="Resources\twitter %281%29.png" />
     <None Include="Resources\twitter %281%291.png" />
     <None Include="Resources\twitter.png" />

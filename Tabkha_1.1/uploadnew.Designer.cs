@@ -528,7 +528,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "uploadnew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
             this.Load += new System.EventHandler(this.uploadnew_Load);
