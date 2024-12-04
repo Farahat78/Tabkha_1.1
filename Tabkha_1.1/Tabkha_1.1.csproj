@@ -89,7 +89,6 @@
     <Compile Include="comments.Designer.cs">
       <DependentUpon>comments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
     <Compile Include="custom Textbox.cs">
       <SubType>Component</SubType>
     </Compile>

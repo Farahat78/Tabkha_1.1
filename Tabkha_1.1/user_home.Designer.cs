@@ -40,6 +40,8 @@
             this.img_close = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txt_search = new Tabkha_1._1.CustomTextBox();
             this.btn_apply = new System.Windows.Forms.Button();
             this.check_drinks = new System.Windows.Forms.CheckBox();
             this.check_dessert = new System.Windows.Forms.CheckBox();
@@ -57,8 +59,6 @@
             this.img_reslogo = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_resname = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txt_search = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,11 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_restaurants.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -224,6 +224,31 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(289, 543);
             this.guna2ShadowPanel1.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.search;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // txt_search
+            // 
+            this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_search.Location = new System.Drawing.Point(58, 19);
+            this.txt_search.Multiline = true;
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(211, 43);
+            this.txt_search.TabIndex = 9;
+            this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_search.WatermarkText = "    Search Restaurants";
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // btn_apply
             // 
@@ -400,31 +425,6 @@
             this.lbl_resname.Text = "Restaurant1";
             this.lbl_resname.Click += new System.EventHandler(this.lbl_resname_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // txt_search
-            // 
-            this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_search.Location = new System.Drawing.Point(58, 19);
-            this.txt_search.Multiline = true;
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(211, 43);
-            this.txt_search.TabIndex = 9;
-            this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_search.WatermarkText = "    Search Restaurants";
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 40;
@@ -452,12 +452,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_restaurants.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panelTemplate.ResumeLayout(false);
             this.panelTemplate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_reslogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
