@@ -33,5 +33,16 @@ namespace Tabkha_1._1.Properties {
                 return ((string)(this["tabkha_systemConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=Fals" +
+            "e")]
+        public string tabkha1ConnectionString {
+            get {
+                return ((string)(this["tabkha1ConnectionString"]));
+            }
+        }
     }
 }

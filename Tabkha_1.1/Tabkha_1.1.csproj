@@ -199,6 +199,11 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabkha1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tabkha_systemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -320,6 +325,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tabkha1DataSet1.xsc">
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tabkha1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tabkha1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tabkha1DataSet1.xss">
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="tabkha_systemDataSet.xsc">
       <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
     </None>
