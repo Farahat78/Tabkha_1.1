@@ -29,20 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txt_name = new Tabkha_1._1.CustomTextBox();
             this.btn_save = new System.Windows.Forms.Button();
-            this.lbl_specialty = new System.Windows.Forms.Label();
+            this.lbl_Rname = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.img_close = new System.Windows.Forms.PictureBox();
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txt_specialty = new Tabkha_1._1.CustomTextBox();
-            this.txt_number = new Tabkha_1._1.CustomTextBox();
-            this.txt_email = new Tabkha_1._1.CustomTextBox();
             this.lbl_number = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
-            this.txt_password = new Tabkha_1._1.CustomTextBox();
             this.lbl_password = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +45,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.txt_Rname = new Tabkha_1._1.CustomTextBox();
+            this.txt_name = new Tabkha_1._1.CustomTextBox();
+            this.txt_password = new Tabkha_1._1.CustomTextBox();
+            this.txt_email = new Tabkha_1._1.CustomTextBox();
+            this.txt_number = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -63,15 +63,6 @@
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_name
-            // 
-            this.txt_name.Location = new System.Drawing.Point(152, 8);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(161, 22);
-            this.txt_name.TabIndex = 6;
-            this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_name.WatermarkText = "Enter name here";
-            // 
             // btn_save
             // 
             this.btn_save.Location = new System.Drawing.Point(124, 211);
@@ -82,15 +73,15 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // lbl_specialty
+            // lbl_Rname
             // 
-            this.lbl_specialty.AutoSize = true;
-            this.lbl_specialty.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_specialty.Location = new System.Drawing.Point(14, 163);
-            this.lbl_specialty.Name = "lbl_specialty";
-            this.lbl_specialty.Size = new System.Drawing.Size(64, 18);
-            this.lbl_specialty.TabIndex = 5;
-            this.lbl_specialty.Text = "Specialty";
+            this.lbl_Rname.AutoSize = true;
+            this.lbl_Rname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Rname.Location = new System.Drawing.Point(14, 163);
+            this.lbl_Rname.Name = "lbl_Rname";
+            this.lbl_Rname.Size = new System.Drawing.Size(115, 18);
+            this.lbl_Rname.TabIndex = 5;
+            this.lbl_Rname.Text = "Restaurant Name";
             // 
             // lbl_name
             // 
@@ -108,7 +99,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(295, 3);
+            this.img_close.Location = new System.Drawing.Point(302, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +127,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(248, 3);
+            this.img_minimize.Location = new System.Drawing.Point(255, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,37 +146,8 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(338, 34);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(345, 34);
             this.guna2GradientPanel1.TabIndex = 3;
-            // 
-            // txt_specialty
-            // 
-            this.txt_specialty.Location = new System.Drawing.Point(152, 157);
-            this.txt_specialty.Name = "txt_specialty";
-            this.txt_specialty.Size = new System.Drawing.Size(161, 22);
-            this.txt_specialty.TabIndex = 7;
-            this.txt_specialty.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_specialty.WatermarkText = "Enter specialty here";
-            this.txt_specialty.TextChanged += new System.EventHandler(this.txt_specialty_TextChanged);
-            // 
-            // txt_number
-            // 
-            this.txt_number.Location = new System.Drawing.Point(152, 80);
-            this.txt_number.Name = "txt_number";
-            this.txt_number.Size = new System.Drawing.Size(161, 22);
-            this.txt_number.TabIndex = 12;
-            this.txt_number.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_number.WatermarkText = "Enter phone number here";
-            this.txt_number.TextChanged += new System.EventHandler(this.txt_number_TextChanged);
-            // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(152, 43);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(161, 22);
-            this.txt_email.TabIndex = 11;
-            this.txt_email.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_email.WatermarkText = "Enter email here";
             // 
             // lbl_number
             // 
@@ -206,16 +168,6 @@
             this.lbl_email.Size = new System.Drawing.Size(42, 18);
             this.lbl_email.TabIndex = 9;
             this.lbl_email.Text = "Email";
-            // 
-            // txt_password
-            // 
-            this.txt_password.Location = new System.Drawing.Point(152, 119);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(161, 22);
-            this.txt_password.TabIndex = 14;
-            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_password.WatermarkText = "Enter password here";
-            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // lbl_password
             // 
@@ -280,11 +232,11 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.txt_specialty);
+            this.guna2ShadowPanel1.Controls.Add(this.txt_Rname);
             this.guna2ShadowPanel1.Controls.Add(this.label5);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_name);
             this.guna2ShadowPanel1.Controls.Add(this.label4);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_specialty);
+            this.guna2ShadowPanel1.Controls.Add(this.lbl_Rname);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.txt_name);
             this.guna2ShadowPanel1.Controls.Add(this.label2);
@@ -301,8 +253,53 @@
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 34);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(338, 274);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(345, 268);
             this.guna2ShadowPanel1.TabIndex = 25;
+            // 
+            // txt_Rname
+            // 
+            this.txt_Rname.Location = new System.Drawing.Point(152, 157);
+            this.txt_Rname.Name = "txt_Rname";
+            this.txt_Rname.Size = new System.Drawing.Size(177, 22);
+            this.txt_Rname.TabIndex = 7;
+            this.txt_Rname.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_Rname.WatermarkText = "Enter Restaurant Name here";
+            // 
+            // txt_name
+            // 
+            this.txt_name.Location = new System.Drawing.Point(152, 8);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(177, 22);
+            this.txt_name.TabIndex = 6;
+            this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_name.WatermarkText = "Enter name here";
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(152, 119);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(177, 22);
+            this.txt_password.TabIndex = 14;
+            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_password.WatermarkText = "Enter password here";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(152, 43);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(177, 22);
+            this.txt_email.TabIndex = 11;
+            this.txt_email.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_email.WatermarkText = "Enter email here";
+            // 
+            // txt_number
+            // 
+            this.txt_number.Location = new System.Drawing.Point(152, 80);
+            this.txt_number.Name = "txt_number";
+            this.txt_number.Size = new System.Drawing.Size(177, 22);
+            this.txt_number.TabIndex = 12;
+            this.txt_number.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_number.WatermarkText = "Enter phone number here";
             // 
             // guna2Elipse1
             // 
@@ -322,7 +319,7 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.txt_specialty;
+            this.guna2Elipse2.TargetControl = this.txt_Rname;
             // 
             // guna2Elipse5
             // 
@@ -339,12 +336,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(338, 308);
+            this.ClientSize = new System.Drawing.Size(345, 302);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEditChef";
             this.Text = "AddEdit";
+            this.Load += new System.EventHandler(this.AddEditChef_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
@@ -359,13 +357,13 @@
 
         private CustomTextBox txt_name;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Label lbl_specialty;
+        private System.Windows.Forms.Label lbl_Rname;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox img_close;
         private Guna.UI2.WinForms.Guna2CirclePictureBox img_logo;
         private System.Windows.Forms.PictureBox img_minimize;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private CustomTextBox txt_specialty;
+        private CustomTextBox txt_Rname;
         private CustomTextBox txt_number;
         private CustomTextBox txt_email;
         private System.Windows.Forms.Label lbl_number;

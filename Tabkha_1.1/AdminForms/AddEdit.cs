@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,35 +33,30 @@ namespace Tabkha_1._1
             get => txt_name.Text;
             set => txt_name.Text = value;
         }
+        public string Fname { get; set; }
 
-        public string Specialty
-        {
-            get => txt_specialty.Text;
-            set => txt_specialty.Text = value;
-        }
+        public string Lname { get; set; }
 
-        public string Email
-        {
-            get => txt_email.Text;
-            set => txt_email.Text = value;
-        }
+        public string Email { get; set; }
 
-        public string Password
-        {
-            get => txt_password.Text;
-            set => txt_password.Text = value;
-        }
+        public string Password { get; set; }
 
-        public string Phone
-        {
-            get => txt_number.Text;
-            set => txt_number.Text = value;
-        }
+        public string Phone { get; set; }
+
+        public string Rname { get; set; }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_specialty.Text))
+            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_Rname.Text))
             {
+                string[] Name = txt_name.Text.Split(' ');
+                Fname = Name.Length > 0 ? Name[0] : ""; ;
+                Lname = Name.Length > 1 ? string.Join(" ", Name.Skip(1)) : "";
+                Email = txt_email.Text;
+                Password = txt_password.Text;
+                Phone = txt_number.Text;
+                Rname = txt_Rname.Text;
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -83,19 +79,13 @@ namespace Tabkha_1._1
             txt_password.ReadOnly = !txt_password.ReadOnly;
         }
 
-        private void txt_specialty_TextChanged(object sender, EventArgs e)
+        private void AddEditChef_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void txt_number_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_password_TextChanged(object sender, EventArgs e)
-        {
-
+            txt_name.Text = ChefName;
+            txt_email.Text = Email;
+            txt_Rname.Text = Rname;
+            txt_number.Text = Phone;
+            txt_password.Text = Password;
         }
     }
 }
