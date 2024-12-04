@@ -14,7 +14,7 @@ namespace Tabkha_1._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Delivery());
+            Application.Run(new Admin());
         }
     }
 }

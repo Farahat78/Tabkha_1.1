@@ -195,16 +195,6 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabkha1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkha1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tabkhaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkhaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>

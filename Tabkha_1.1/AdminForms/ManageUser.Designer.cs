@@ -138,7 +138,7 @@
             this.Controls.Add(this.btn_add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUser";
-            this.Text = "ManageUser";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
