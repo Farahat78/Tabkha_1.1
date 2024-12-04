@@ -115,9 +115,13 @@
     <Compile Include="Delivery.Designer.cs">
       <DependentUpon>Delivery.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.cs">
+    <Compile Include="forget.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forget.Designer.cs">
+      <DependentUpon>forget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs" />
     <Compile Include="ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
@@ -195,6 +199,16 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabkha1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tabkha_systemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delivery.resx">
       <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forget.resx">
+      <DependentUpon>forget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
@@ -308,6 +325,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tabkha1DataSet1.xsc">
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tabkha1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tabkha1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tabkha1DataSet1.xss">
+      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tabkha_systemDataSet.xsc">
+      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tabkha_systemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tabkha_systemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tabkha_systemDataSet.xss">
+      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

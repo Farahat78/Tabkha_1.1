@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -44,6 +45,7 @@ namespace Tabkha_1._1
         {
             btn_apply.Enabled = false;
             btn_apply.BackColor = Color.Gray;
+            CreateCardsFromDatabase();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -77,6 +79,85 @@ namespace Tabkha_1._1
             Owner_Profile owner_Profile = new Owner_Profile();
             owner_Profile.Show();
             this.Hide();
+        }
+
+        private void CreateCardsFromDatabase()
+        {
+            // 1. اتصال بقاعدة البيانات
+            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha_system;Integrated Security=True;Encrypt=False";
+            string query = "SELECT[cook_firstname]+' '+[cook_lastname]'fullname',[cook_phonen],[cook_businessinfo],[cook_image]FROM [tabkha_system].[dbo].[cook]";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                // تأكد أن الكارد الأساسي مخفي
+                panelTemplate.Visible = false;
+
+                // 2. قراءة البيانات وإنشاء الكروت
+                while (reader.Read())
+                {
+                    // نسخ الكارد الأساسي
+                    Panel newCard = new Panel
+                    {
+                        Size = panelTemplate.Size,
+                        BackColor = panelTemplate.BackColor
+                    };
+
+                    foreach (Control control in panelTemplate.Controls)
+                    {
+                        Control clonedControl = CloneControl(control);
+                        newCard.Controls.Add(clonedControl);
+                    }
+
+                    // 3. تخصيص البيانات داخل الكارد
+                    // اسم المطعم
+                    Label nameLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_resname");
+                    if (nameLabel != null) nameLabel.Text = reader["fullname"].ToString();
+
+                    // phone
+                    Label phone = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_phone");
+                    if (phone != null) phone.Text= reader["cook_phonen"].ToString();
+
+                    Label categoryLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_bio");
+                    if (categoryLabel != null)
+                        categoryLabel.Text = reader["cook_businessinfo"].ToString();
+
+                    // الشعار (Logo)
+                    try
+                    {
+                        PictureBox logoPictureBox = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_reslogo");
+                        string imagepath = reader[@"cook_image"].ToString();
+                        if (logoPictureBox != null) logoPictureBox.Image = Image.FromFile(imagepath);
+                        logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error loading image: " + ex.Message);
+                    }
+
+                        // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
+                        flowLayoutPanel1.Controls.Add(newCard);
+                }
+
+                reader.Close();
+            }
+        }
+        private Control CloneControl(Control control)
+        {
+            Control newControl = (Control)Activator.CreateInstance(control.GetType());
+            newControl.Text = control.Text;
+            newControl.Size = control.Size;
+            newControl.Location = control.Location;
+            newControl.Font = control.Font;
+            newControl.BackColor = control.BackColor;
+            newControl.ForeColor = control.ForeColor;
+            newControl.Name = control.Name;
+
+            // نسخ الخصائص الأخرى حسب الحاجة
+            return newControl;
         }
     }
 }
