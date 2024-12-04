@@ -302,7 +302,6 @@
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
-            this.Load += new System.EventHandler(this.login_Load);
             this.login_card.ResumeLayout(false);
             this.login_card.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
