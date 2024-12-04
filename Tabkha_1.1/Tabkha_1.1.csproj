@@ -115,9 +115,13 @@
     <Compile Include="Delivery.Designer.cs">
       <DependentUpon>Delivery.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.cs">
+    <Compile Include="forget.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forget.Designer.cs">
+      <DependentUpon>forget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs" />
     <Compile Include="ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
@@ -236,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delivery.resx">
       <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forget.resx">
+      <DependentUpon>forget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
