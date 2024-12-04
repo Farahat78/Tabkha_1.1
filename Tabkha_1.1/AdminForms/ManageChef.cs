@@ -13,33 +13,58 @@ namespace Tabkha_1._1
 {
     public partial class ManageChefForm : Form
     {
+        Connection connect = new Connection();
+
+        private void LoadData()
+        {
+            string query = @"
+                SELECT 
+                       [ChefID]
+                      ,[Fname] +' '+ [Lname] AS [Chef Name]
+                      ,[Email] AS [Email]
+                      ,[Password] AS [Password]
+                      ,[Phone] AS [Phone Number]
+                      ,[Rname] AS [Restaurant Name]
+                  FROM [tabkha1].[dbo].[Chefs]";
+            using (SqlConnection conn = new SqlConnection(connect.connectionString))
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                dgv_chefs.DataSource = dataTable;
+            }
+        }
         public ManageChefForm()
         {
             InitializeComponent();
         }
 
-        private DataTable chefsTable;
-
-        private void ManageChefsForm_Load(object sender, EventArgs e)
-        {
-            chefsTable = new DataTable();
-            chefsTable.Columns.Add("Chef ID", typeof(int));
-            chefsTable.Columns.Add("Name", typeof(string));
-            chefsTable.Columns.Add("Email", typeof(string));
-            chefsTable.Columns.Add("Phone Number", typeof(int));
-            chefsTable.Columns.Add("Password", typeof(int));
-            chefsTable.Columns.Add("Specialty", typeof(string));
-
-            dgv_chefs.DataSource = chefsTable;
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
-            AddEditChef detailsForm = new AddEditChef();
-            detailsForm.change_add();
-            if (detailsForm.ShowDialog() == DialogResult.OK)
+            using (var form = new AddEditChef())
             {
-                dgv_chefs.Rows.Add(dgv_chefs.Rows.Count + 1, detailsForm.ChefName, detailsForm.Email, detailsForm.Phone, detailsForm.Specialty, detailsForm.Password);
+                form.change_add();
+                using (SqlConnection conn = new SqlConnection(connect.connectionString))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        string query = "INSERT INTO Chefs (Fname,Lname,Password,Email,Phone,Rname) VALUES (@Fname, @Lname, @Password, @Email, @Phone, @Rname)";
+                        using (var cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Fname", form.Fname);
+                            cmd.Parameters.AddWithValue("@Lname", form.Lname);
+                            cmd.Parameters.AddWithValue("@Password", form.Password);
+                            cmd.Parameters.AddWithValue("@Email", form.Email);
+                            cmd.Parameters.AddWithValue("@Phone", form.Phone);
+                            cmd.Parameters.AddWithValue("@Rname", form.Rname);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        LoadData();
+                    }
+                }
             }
         }
 
@@ -47,23 +72,48 @@ namespace Tabkha_1._1
         {
             if (dgv_chefs.CurrentRow != null)
             {
-                AddEditChef detailsForm = new AddEditChef
+                int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
+                DataGridViewRow row = dgv_chefs.Rows[rowIndex];
+
+                int id = Convert.ToInt32(row.Cells["ChefID"].Value);
+
+                using (var form = new AddEditChef())
                 {
-                    ChefName = dgv_chefs.CurrentRow.Cells["nme"].Value.ToString(),
-                    Email = dgv_chefs.CurrentRow.Cells["email"].Value.ToString(),
-                    Phone = dgv_chefs.CurrentRow.Cells["number"].Value.ToString(),
-                    Password = dgv_chefs.CurrentRow.Cells["Password"].Value.ToString(),
-                    Specialty = dgv_chefs.CurrentRow.Cells["specialty"].Value.ToString()
-                };
-                detailsForm.passwod_ReadOnly();
-                detailsForm.change_edit();
-                if (detailsForm.ShowDialog() == DialogResult.OK)
-                {
-                    dgv_chefs.CurrentRow.Cells["nme"].Value = detailsForm.ChefName;
-                    dgv_chefs.CurrentRow.Cells["email"].Value = detailsForm.Email;
-                    dgv_chefs.CurrentRow.Cells["number"].Value = detailsForm.Phone;
-                    dgv_chefs.CurrentRow.Cells["specialty"].Value = detailsForm.Specialty;
+                    form.passwod_ReadOnly();
+                    form.change_edit();
+                    form.ChefName = row.Cells["Chef Name"].Value.ToString();
+                    form.Password = row.Cells["Password"].Value.ToString();
+                    form.Rname = row.Cells["Restaurant Name"].Value.ToString();
+                    form.Phone = row.Cells["Phone Number"].Value.ToString();
+                    form.Email = row.Cells["Email"].Value.ToString();
+
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
+                    {
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            string query = "UPDATE Chefs SET Fname = @Fname, Lname = @Lname, Email = @Email, Phone = @Phone, Password = @Password, Rname = @Rname WHERE ChefID = @Id";
+                            using (var cmd = new SqlCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@Fname", form.Fname);
+                                cmd.Parameters.AddWithValue("@Lname", form.Lname);
+                                cmd.Parameters.AddWithValue("@Email", form.Email);
+                                cmd.Parameters.AddWithValue("@Phone", form.Phone);
+                                cmd.Parameters.AddWithValue("@Password", form.Password);
+                                cmd.Parameters.AddWithValue("@Rname", form.Rname);
+                                cmd.Parameters.AddWithValue("@Id", id);
+
+                                conn.Open();
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+                            }
+                            LoadData();
+                        }
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please select a cell to edit a user.");
             }
         }
 
@@ -73,7 +123,7 @@ namespace Tabkha_1._1
             {
                 // Confirm deletion
                 DialogResult result = MessageBox.Show(
-                    "Are you sure you want to delete this chef?",
+                    "Are you sure you want to delete this User?",
                     "Confirm Deletion",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning
@@ -81,13 +131,28 @@ namespace Tabkha_1._1
 
                 if (result == DialogResult.Yes)
                 {
-                    // Remove the selected row
-                    dgv_chefs.Rows.Remove(dgv_chefs.CurrentRow);
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
+                    {
+                        int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
+                        DataGridViewRow row = dgv_chefs.Rows[rowIndex];
+
+                        int id = Convert.ToInt32(row.Cells["ChefID"].Value);
+                        string query = "DELETE FROM Chefs WHERE ChefID = @Id";
+                        using (var cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Id", id);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        LoadData();
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Please select a chef to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,7 +163,7 @@ namespace Tabkha_1._1
 
         private void ManageChefForm_Load(object sender, EventArgs e)
         {
-            //display();
+            LoadData();
         }
     }
 }

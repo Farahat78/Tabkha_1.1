@@ -100,6 +100,7 @@
     <Compile Include="comments.Designer.cs">
       <DependentUpon>comments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="custom Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -120,10 +121,6 @@
     </Compile>
     <Compile Include="forget.Designer.cs">
       <DependentUpon>forget.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ForgetPassword.cs" />
-    <Compile Include="ForgetPassword.Designer.cs">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -254,9 +251,6 @@
     <EmbeddedResource Include="forget.resx">
       <DependentUpon>forget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgetPassword.resx">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,19 +319,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tabkha1DataSet1.xsc">
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tabkha1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tabkha1DataSet1.xss">
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha_systemDataSet.xsc">
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
+    <None Include="tabkhaDataSet.xsc">
+      <DependentUpon>tabkhaDataSet.xsd</DependentUpon>
     </None>
     <None Include="tabkha_systemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>

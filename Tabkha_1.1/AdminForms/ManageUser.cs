@@ -15,7 +15,7 @@ namespace Tabkha_1._1
 {
     public partial class ManageUser : Form
     {
-        string connectionString = "Data Source=Hossam;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        Connection connection = new Connection();
         public ManageUser()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace Tabkha_1._1
                     [City] AS [City],
                     [Password] AS [Password]
                 FROM [tabkha1].[dbo].[Users]";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connection.connectionString))
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
                 DataTable dataTable = new DataTable();
@@ -46,7 +46,7 @@ namespace Tabkha_1._1
             using (var form = new AddEditUser())
             {
                 form.change_add();
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connection.connectionString))
                 {
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -91,7 +91,7 @@ namespace Tabkha_1._1
                     form.Phone = row.Cells["Phone Number"].Value.ToString();
                     form.Email = row.Cells["Email"].Value.ToString();
                     
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(connection.connectionString))
                     {
                         if (form.ShowDialog() == DialogResult.OK)
                         {
@@ -135,7 +135,7 @@ namespace Tabkha_1._1
 
                 if (result == DialogResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(connection.connectionString))
                     {
                         int rowIndex = dgv_users.SelectedCells[0].RowIndex;
                         DataGridViewRow row = dgv_users.Rows[rowIndex];
