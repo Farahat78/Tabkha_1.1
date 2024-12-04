@@ -18,21 +18,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private DataTable usersTable;
-
-        private void ManageChefsForm_Load(object sender, EventArgs e)
-        {
-            usersTable = new DataTable();
-            usersTable.Columns.Add("User ID", typeof(int));
-            usersTable.Columns.Add("Name", typeof(string));
-            usersTable.Columns.Add("Email", typeof(string));
-            usersTable.Columns.Add("Phone Number", typeof(string));
-            usersTable.Columns.Add("Address", typeof(string));
-            usersTable.Columns.Add("Password", typeof(string));
-
-            dgv_users.DataSource = usersTable;
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddEditUser detailsForm = new AddEditUser();
@@ -92,7 +77,6 @@ namespace Tabkha_1._1
 
         private void ManageUser_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

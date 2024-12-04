@@ -83,9 +83,7 @@ namespace Tabkha_1._1
                             cmd.Parameters.AddWithValue("@firstname", First_Name);
                             cmd.Parameters.AddWithValue("@lastname", Last_Name);
                             cmd.Parameters.AddWithValue("@password", Password);
-                            cmd.Parameters.AddWithValue("@confirmpassword", Confirm_Password);
                             cmd.Parameters.AddWithValue("@phonenumber", Phone_Number);
-                            cmd.Parameters.AddWithValue("@email", Email);
                             cmd.Parameters.AddWithValue("@city", City);
                             cmd.Parameters.AddWithValue("@address", Address);
                             int rowaffected = cmd.ExecuteNonQuery();
@@ -100,17 +98,11 @@ namespace Tabkha_1._1
                             {
                                 MessageBox.Show("Register failed , try again");
                             }
-
-
                         }
                     }
                     catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
-
-
             }
-
-
         }
 
         private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
