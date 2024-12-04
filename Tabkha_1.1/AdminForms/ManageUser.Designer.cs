@@ -32,12 +32,6 @@
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.dgv_users = new System.Windows.Forms.DataGridView();
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_delete = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.img_pic = new System.Windows.Forms.PictureBox();
@@ -81,13 +75,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_users.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userID,
-            this.nme,
-            this.email,
-            this.number,
-            this.address,
-            this.password});
             this.dgv_users.EnableHeadersVisualStyles = false;
             this.dgv_users.Location = new System.Drawing.Point(-6, 35);
             this.dgv_users.Name = "dgv_users";
@@ -96,54 +83,6 @@
             this.dgv_users.RowTemplate.Height = 24;
             this.dgv_users.Size = new System.Drawing.Size(806, 374);
             this.dgv_users.TabIndex = 5;
-            // 
-            // userID
-            // 
-            this.userID.HeaderText = "User ID";
-            this.userID.MinimumWidth = 6;
-            this.userID.Name = "userID";
-            this.userID.ReadOnly = true;
-            this.userID.Width = 125;
-            // 
-            // nme
-            // 
-            this.nme.HeaderText = "Name";
-            this.nme.MinimumWidth = 6;
-            this.nme.Name = "nme";
-            this.nme.ReadOnly = true;
-            this.nme.Width = 125;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 125;
-            // 
-            // number
-            // 
-            this.number.HeaderText = "Phone Number";
-            this.number.MinimumWidth = 6;
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            this.number.Width = 125;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 125;
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            this.password.Width = 125;
             // 
             // btn_delete
             // 
@@ -218,11 +157,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox img_pic;
         private CustomTextBox txt_search;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }

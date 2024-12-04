@@ -178,7 +178,7 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(67, 258);
+            this.btn_out.Location = new System.Drawing.Point(67, 348);
             this.btn_out.Name = "btn_out";
             this.btn_out.Size = new System.Drawing.Size(209, 28);
             this.btn_out.TabIndex = 5;
@@ -195,7 +195,7 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(67, 168);
+            this.btn_users.Location = new System.Drawing.Point(67, 227);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(209, 32);
             this.btn_users.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(67, 84);
+            this.btn_chefs.Location = new System.Drawing.Point(67, 115);
             this.btn_chefs.Name = "btn_chefs";
             this.btn_chefs.Size = new System.Drawing.Size(209, 32);
             this.btn_chefs.TabIndex = 3;
