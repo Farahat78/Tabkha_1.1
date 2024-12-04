@@ -12,5 +12,4 @@ namespace Tabkha_1._1
         public static string Name { get; set; }
         public static string Pic { get; set; }
     }
-
 }
