@@ -70,16 +70,29 @@ namespace Tabkha_1._1
                         if (user_name.Contains('@') == true)
                         {
                             query = "select count(1) from customers where customer_email=@email and customer_password=@password";
+
                             using (SqlCommand cmd = new SqlCommand(query, conn))
                             {
-                                cmd.Parameters.AddWithValue("@email", user_name);
-                                cmd.Parameters.AddWithValue("@password", password);
-                                int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                if (rowaffected > 0)
+                                using (SqlDataReader reader = cmd.ExecuteReader())
                                 {
-                                    user_home user_Home = new user_home();
-                                    user_Home.Show();
-                                    this.Hide();
+                                    if (reader.Read())
+                                    {
+                                        // تخزين بيانات المستخدم في الجلسة
+                                        Session.Id = Convert.ToInt32(reader["customer_id"]);
+                                        Session.Email = reader["customer_email"].ToString();
+                                        Session.Name = user_name;
+                                        Session.Pic = reader["DishPic"].ToString();
+                                    }
+                                    cmd.Parameters.AddWithValue("@email", user_name);
+                                    cmd.Parameters.AddWithValue("@password", password);
+
+                                    int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
+                                    if (rowaffected > 0)
+                                    {
+                                        user_home user_Home = new user_home();
+                                        user_Home.Show();
+                                        this.Hide();
+                                    }
                                 }
                             }
                         }
@@ -91,21 +104,30 @@ namespace Tabkha_1._1
                                 cmd.Parameters.AddWithValue("@phone", user_name);
                                 cmd.Parameters.AddWithValue("@password", password);
                                 int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                if (rowaffected > 0)
+                                using (SqlDataReader reader = cmd.ExecuteReader())
                                 {
-                                    user_home user_Home = new user_home();
-                                    user_Home.Show();
-                                    this.Hide();
-                                }
-                                else
-                                {
-                                   
-                                    
-                                        MessageBox.Show("login failed , try again");
-                                    
-                                }
-                            }
+                                    if (reader.Read())
+                                    {
+                                        // تخزين بيانات المستخدم في الجلسة
+                                        Session.Id = Convert.ToInt32(reader["customer_id"]);
+                                        Session.Name = user_name;
+                                    }
+                                    if (rowaffected > 0)
+                                    {
+                                        user_home user_Home = new user_home();
+                                        user_Home.Show();
+                                        this.Hide();
+                                    }
+                                    else
+                                    {
 
+
+                                        MessageBox.Show("login failed , try again");
+
+                                    }
+                                }
+
+                            }
                         }
 
                     }
