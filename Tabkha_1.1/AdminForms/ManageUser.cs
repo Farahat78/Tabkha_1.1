@@ -32,7 +32,16 @@ namespace Tabkha_1._1
         {
             if (dgv_users.CurrentRow != null)
             {
-                AddEditUser detailsForm = new AddEditUser
+                    form.passwod_ReadOnly();
+                    form.change_edit();
+                    form.Nme = row.Cells["Name"].Value.ToString();
+                    form.Password = row.Cells["Password"].Value.ToString();
+                    form.Address = row.Cells["Address"].Value.ToString();
+                    form.City = row.Cells["City"].Value.ToString();
+                    form.Phone = row.Cells["Phone Number"].Value.ToString();
+                    form.Email = row.Cells["Email"].Value.ToString();
+                    
+                    using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     UserName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
                     Email = dgv_users.CurrentRow.Cells["email"].Value.ToString(),

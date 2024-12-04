@@ -75,19 +75,6 @@ namespace Tabkha_1._1
             }
         }
 
-        private void btn_save_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_password.Text) && !string.IsNullOrWhiteSpace(txt_phone.Text))
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void AddEditUser_Load(object sender, EventArgs e)
         {
             
