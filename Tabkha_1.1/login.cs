@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -25,7 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        Connection connect = new Connection();
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
                     {
                         conn.Open();
 
@@ -78,7 +79,7 @@ namespace Tabkha_1._1
                             Session.Id=userId.UserId;
                             Session.Role = "User";
                             Session.Name= userId.Name;
-
+                            Session.pic = userId.picpath;
 
 
                             user_home userHome = new user_home(); // صفحة المستخدم
@@ -96,7 +97,7 @@ namespace Tabkha_1._1
                             Session.Id = userId.UserId;
                             Session.Role = "Chef";
                             Session.Name = userId.Name;
-
+                            Session.pic = userId.picpath;
 
 
                             Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
@@ -113,6 +114,7 @@ namespace Tabkha_1._1
                             Session.Id = userId.UserId;
                             Session.Role = "Admin";
                             Session.Name = userId.Name;
+                            Session.pic = userId.picpath;
 
                             Admin adminPage = new Admin(); // صفحة المدير
                             adminPage.Show();
@@ -151,7 +153,7 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connect.connectionString))
             {
                 
                 
@@ -201,6 +203,8 @@ namespace Tabkha_1._1
         {
             public int UserId { get; set; } // المعرف الفريد
             public string Name { get; set; } // اسم المستخدم
+
+            public string picpath { get; set; }
         }
 
         private UserDetails GetUserDetailsFromTable(SqlConnection conn, string tableName, string idColumn, string nameColumn, string username, string password)
@@ -214,7 +218,7 @@ namespace Tabkha_1._1
             else
             {
                 // Query for tables with both Email and Phone columns
-                query = $"SELECT {idColumn},{nameColumn} FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
+                query = $"SELECT {idColumn},{nameColumn},[ProfilePic] FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
             }
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
@@ -228,7 +232,8 @@ namespace Tabkha_1._1
                         return new UserDetails
                         {
                             UserId = Convert.ToInt32(reader[idColumn]),
-                            Name = reader[nameColumn].ToString()
+                            Name = reader[nameColumn].ToString(),
+                            picpath = reader["ProfilePic"].ToString()
                         };
                     }
                 }
