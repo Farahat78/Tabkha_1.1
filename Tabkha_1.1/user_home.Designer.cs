@@ -34,7 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_account = new System.Windows.Forms.Label();
             this.img_minimize = new System.Windows.Forms.PictureBox();
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_close = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.Controls.Add(this.lbl_account);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
             this.guna2GradientPanel1.Controls.Add(this.img_logo);
             this.guna2GradientPanel1.Controls.Add(this.img_close);
@@ -146,17 +146,17 @@
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
-            // label1
+            // lbl_account
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(943, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "My Acount";
-            this.label1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            this.lbl_account.AutoSize = true;
+            this.lbl_account.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_account.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_account.Location = new System.Drawing.Point(943, 95);
+            this.lbl_account.Name = "lbl_account";
+            this.lbl_account.Size = new System.Drawing.Size(101, 24);
+            this.lbl_account.TabIndex = 7;
+            this.lbl_account.Text = "My Acount";
+            this.lbl_account.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // img_minimize
             // 
@@ -471,7 +471,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_account;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
