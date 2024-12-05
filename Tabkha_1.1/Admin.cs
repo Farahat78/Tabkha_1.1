@@ -106,7 +106,8 @@ namespace Tabkha_1._1
 
         private void Admin_Load(object sender, EventArgs e)
         {
-
+            lbl_account.Text = Session.Name;
+            guna2CirclePictureBox1.Image = Image.
         }
     }
 }
