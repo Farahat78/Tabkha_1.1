@@ -72,6 +72,10 @@ namespace Tabkha_1._1
 
         private void btn_out_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
+            login l = new login();
+            l.Show();
             this.Close();
         }
 
@@ -107,7 +111,14 @@ namespace Tabkha_1._1
         private void Admin_Load(object sender, EventArgs e)
         {
             lbl_account.Text = Session.Name;
-            guna2CirclePictureBox1.Image = Image.FromFile(Session.pic);
+            if (!string.IsNullOrEmpty(Session.pic))
+            {
+                guna2CirclePictureBox1.Image = Image.FromFile(Session.pic);
+            }
+            else
+            {
+                guna2CirclePictureBox1.Image = Properties.Resources.Max_R_Headshot__1_;
+            }
         }
     }
 }
