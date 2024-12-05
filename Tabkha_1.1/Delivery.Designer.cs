@@ -46,13 +46,10 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.lbl_order_price = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lbl_order_notes = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_order_name = new System.Windows.Forms.Label();
             this.lbl_order_quantity = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -231,13 +228,10 @@
             this.guna2ShadowPanel1.Controls.Add(this.label22);
             this.guna2ShadowPanel1.Controls.Add(this.label21);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_price);
-            this.guna2ShadowPanel1.Controls.Add(this.label19);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_order_notes);
             this.guna2ShadowPanel1.Controls.Add(this.label15);
             this.guna2ShadowPanel1.Controls.Add(this.label16);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_name);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_quantity);
-            this.guna2ShadowPanel1.Controls.Add(this.label17);
             this.guna2ShadowPanel1.Controls.Add(this.label12);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_Address);
             this.guna2ShadowPanel1.Controls.Add(this.label10);
@@ -344,26 +338,6 @@
             this.lbl_order_price.TabIndex = 41;
             this.lbl_order_price.Text = "300";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(378, 141);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(87, 18);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "One Spicy ";
-            // 
-            // lbl_order_notes
-            // 
-            this.lbl_order_notes.AutoSize = true;
-            this.lbl_order_notes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order_notes.Location = new System.Drawing.Point(376, 117);
-            this.lbl_order_notes.Name = "lbl_order_notes";
-            this.lbl_order_notes.Size = new System.Drawing.Size(91, 18);
-            this.lbl_order_notes.TabIndex = 39;
-            this.lbl_order_notes.Text = "No Tomato";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -403,16 +377,6 @@
             this.lbl_order_quantity.Size = new System.Drawing.Size(18, 18);
             this.lbl_order_quantity.TabIndex = 35;
             this.lbl_order_quantity.Text = "2";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(299, 115);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 18);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Notes :";
             // 
             // label12
             // 
@@ -970,13 +934,10 @@
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lbl_order_notes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lbl_order_name;
         private System.Windows.Forms.Label lbl_order_quantity;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;

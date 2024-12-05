@@ -43,6 +43,7 @@ namespace Tabkha_1._1
 
         private void user_home_Load(object sender, EventArgs e)
         {
+            lbl_account.Text = Session.Name;
             btn_apply.Enabled = false;
             btn_apply.BackColor = Color.Gray;
             CreateCardsFromDatabase();

@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -25,7 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        Connection connect = new Connection();
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -67,14 +68,20 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
                     {
                         conn.Open();
 
                         // تحقق من جدول Users
-                        if (CheckUserInTable(conn, "Users", user_name, password))
+                        UserDetails userId = GetUserDetailsFromTable(conn, "Users","UserID" ,"Fname", user_name, password);
+                        if (userId !=null)
                         {
-                            MessageBox.Show("Welcome User!");
+                            Session.Id=userId.UserId;
+                            Session.Role = "User";
+                            Session.Name= userId.Name;
+                            Session.pic = userId.picpath;
+
+
                             user_home userHome = new user_home(); // صفحة المستخدم
                             userHome.Show();
                             this.Hide();
@@ -82,9 +89,17 @@ namespace Tabkha_1._1
                         }
 
                         // تحقق من جدول Chefs
-                        if (CheckUserInTable(conn, "Chefs", user_name, password))
+
+                        userId = GetUserDetailsFromTable(conn, "Chefs", "ChefID","Fname", user_name, password);
+                        if (userId != null)
                         {
-                            MessageBox.Show("Welcome Chef!");
+
+                            Session.Id = userId.UserId;
+                            Session.Role = "Chef";
+                            Session.Name = userId.Name;
+                            Session.pic = userId.picpath;
+
+
                             Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
                             ownerProfile.Show();
                             this.Hide();
@@ -92,9 +107,15 @@ namespace Tabkha_1._1
                         }
 
                         // تحقق من جدول Admins
-                        if (CheckUserInTable(conn, "Admins", user_name, password))
+
+                        userId = GetUserDetailsFromTable(conn, "Admins", "AdminID","Username", user_name, password);
+                        if (userId != null)
                         {
-                            MessageBox.Show("Welcome Admin!");
+                            Session.Id = userId.UserId;
+                            Session.Role = "Admin";
+                            Session.Name = userId.Name;
+                            Session.pic = userId.picpath;
+
                             Admin adminPage = new Admin(); // صفحة المدير
                             adminPage.Show();
                             this.Hide();
@@ -132,7 +153,7 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connect.connectionString))
             {
                 
                 
@@ -178,16 +199,48 @@ namespace Tabkha_1._1
 
         }
 
-        private bool CheckUserInTable(SqlConnection conn, string tableName, string username, string password)
+        public class UserDetails
         {
-            string query = $"SELECT COUNT(*) FROM {tableName} WHERE Email = @Username or Phone= @Username AND Password = @Password";
+            public int UserId { get; set; } // المعرف الفريد
+            public string Name { get; set; } // اسم المستخدم
+
+            public string picpath { get; set; }
+        }
+
+        private UserDetails GetUserDetailsFromTable(SqlConnection conn, string tableName, string idColumn, string nameColumn, string username, string password)
+        {
+            string query;
+            if (tableName.Equals("Admins", StringComparison.OrdinalIgnoreCase))
+            {
+                // Query for the admin table (no Phone column)
+                query = $"SELECT {idColumn},{nameColumn} ,[ProfilePic] FROM {tableName} WHERE Email = @Username AND Password = @Password";
+            }
+            else
+            {
+                // Query for tables with both Email and Phone columns
+                query = $"SELECT {idColumn},{nameColumn},[ProfilePic] FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
+            }
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Password", password);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                return count > 0;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new UserDetails
+                        {
+                            UserId = Convert.ToInt32(reader[idColumn]),
+                            Name = reader[nameColumn].ToString(),
+                            picpath = reader.FieldCount > reader.GetOrdinal("ProfilePic") ? reader["ProfilePic"].ToString() : null
+                        };
+                    }
+                }
             }
+            return null; // إذا لم يتم العثور على المستخدم
         }
+
+
     }
 }

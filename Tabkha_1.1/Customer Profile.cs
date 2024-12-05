@@ -64,6 +64,10 @@ namespace Tabkha_1._1
 
         private void Customer_Profile_Load(object sender, EventArgs e)
         {
+            lbl_username.Text = Session.Name;
+            img_customer_profile.Image = !string.IsNullOrEmpty(Session.pic)
+            ? Image.FromFile(Session.pic)
+            : Properties.Resources.Max_R_Headshot__1_;
             lbl_data.Text = "Profile";
         }
 

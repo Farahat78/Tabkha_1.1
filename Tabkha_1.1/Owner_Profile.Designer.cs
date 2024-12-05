@@ -71,8 +71,6 @@
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_usercomment = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.lbl_comments = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
@@ -86,8 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
             this.pnl_menu.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
-            this.Panel_Template.SuspendLayout();
+            this.pnl_dish.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -112,61 +109,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1039, 34);
             this.guna2GradientPanel1.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(42, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(40, 36);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 15;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // img_minimize
-            // 
-            this.img_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_minimize.Image = ((System.Drawing.Image)(resources.GetObject("img_minimize.Image")));
-            this.img_minimize.Location = new System.Drawing.Point(954, 6);
-            this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(36, 24);
-            this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_minimize.TabIndex = 5;
-            this.img_minimize.TabStop = false;
-            this.img_minimize.Click += new System.EventHandler(this.img_minimize_Click);
-            // 
-            // img_close
-            // 
-            this.img_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_close.BackColor = System.Drawing.Color.Transparent;
-            this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
-            this.img_close.Location = new System.Drawing.Point(995, 4);
-            this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(34, 26);
-            this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_close.TabIndex = 3;
-            this.img_close.TabStop = false;
-            this.img_close.Click += new System.EventHandler(this.img_close_Click);
             // 
             // guna2Elipse1
             // 
@@ -308,16 +250,6 @@
             this.btn_logout.Text = "Log out";
             this.btn_logout.UseVisualStyleBackColor = false;
             // 
-            // img_profile
-            // 
-            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
-            this.img_profile.Location = new System.Drawing.Point(53, 19);
-            this.img_profile.Name = "img_profile";
-            this.img_profile.Size = new System.Drawing.Size(107, 101);
-            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_profile.TabIndex = 23;
-            this.img_profile.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -329,19 +261,6 @@
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "01044057963";
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(548, 83);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(118, 33);
-            this.btn_add.TabIndex = 26;
-            this.btn_add.Text = "Add New Item";
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_edit
             // 
@@ -415,11 +334,25 @@
             // 
             // pictureBox2
             // 
+            this.pnl_dish.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_dish.Controls.Add(this.pictureBox2);
+            this.pnl_dish.Controls.Add(this.label7);
+            this.pnl_dish.Controls.Add(this.guna2RatingStar3);
+            this.pnl_dish.Controls.Add(this.label8);
+            this.pnl_dish.FillColor = System.Drawing.Color.White;
+            this.pnl_dish.Location = new System.Drawing.Point(23, 289);
+            this.pnl_dish.Name = "pnl_dish";
+            this.pnl_dish.ShadowColor = System.Drawing.Color.Black;
+            this.pnl_dish.Size = new System.Drawing.Size(213, 295);
+            this.pnl_dish.TabIndex = 28;
+            // 
+            // pictureBox2
+            // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T1454411;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(189, 118);
+            this.pictureBox2.Size = new System.Drawing.Size(213, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
@@ -502,19 +435,24 @@
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(302, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 17);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Contact Us";
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T1454411;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(213, 140);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
             // 
             // guna2Elipse10
             // 
-            this.guna2Elipse10.BorderRadius = 20;
-            this.guna2Elipse10.TargetControl = this.Panel_Template;
+            this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
+            this.img_profile.Location = new System.Drawing.Point(60, 22);
+            this.img_profile.Name = "img_profile";
+            this.img_profile.Size = new System.Drawing.Size(120, 120);
+            this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_profile.TabIndex = 23;
+            this.img_profile.TabStop = false;
             // 
             // guna2Elipse11
             // 
@@ -534,27 +472,6 @@
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(293, 376);
             this.guna2ShadowPanel2.TabIndex = 31;
-            // 
-            // lbl_usercomment
-            // 
-            this.lbl_usercomment.AutoEllipsis = true;
-            this.lbl_usercomment.ForeColor = System.Drawing.Color.Black;
-            this.lbl_usercomment.Location = new System.Drawing.Point(37, 77);
-            this.lbl_usercomment.Name = "lbl_usercomment";
-            this.lbl_usercomment.Size = new System.Drawing.Size(238, 43);
-            this.lbl_usercomment.TabIndex = 33;
-            this.lbl_usercomment.Text = "The most beautiful restaurant I have ever eat from it ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(7, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 17);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Mohamed ";
             // 
             // lbl_comments
             // 
@@ -630,10 +547,8 @@
             this.pnl_menu.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
-            this.Panel_Template.ResumeLayout(false);
-            this.Panel_Template.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnl_dish.ResumeLayout(false);
+            this.pnl_dish.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
