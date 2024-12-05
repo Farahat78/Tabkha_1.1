@@ -204,6 +204,7 @@
             this.btn_uploadphoto.TabIndex = 43;
             this.btn_uploadphoto.Text = "Upload Photo";
             this.btn_uploadphoto.UseVisualStyleBackColor = false;
+            this.btn_uploadphoto.Click += new System.EventHandler(this.btn_uploadphoto_Click);
             // 
             // checkBox3
             // 
