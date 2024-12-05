@@ -81,7 +81,6 @@ namespace Tabkha_1._1
                             Session.Name= userId.Name;
 
 
-
                             user_home userHome = new user_home(); // صفحة المستخدم
                             userHome.Show();
                             this.Hide();
@@ -97,7 +96,6 @@ namespace Tabkha_1._1
                             Session.Id = userId.UserId;
                             Session.Role = "Chef";
                             Session.Name = userId.Name;
-
 
 
                             Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
