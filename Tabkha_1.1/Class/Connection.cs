@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tabkha_1._1
+namespace Tabkha_1._1.Class
 {
     public class Connection
     {
-        public string connectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        string connectionString = "Data Source=Hossam;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
     }
 }

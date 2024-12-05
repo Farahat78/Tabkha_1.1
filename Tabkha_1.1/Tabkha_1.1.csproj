@@ -83,6 +83,7 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Connection.cs" />
     <Compile Include="comments.cs">
       <SubType>Form</SubType>
     </Compile>
