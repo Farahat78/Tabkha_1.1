@@ -84,10 +84,10 @@
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Connection.cs" />
-    <Compile Include="comments.cs">
+    <Compile Include="ProfileForms\comments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="comments.Designer.cs">
+    <Compile Include="ProfileForms\comments.Designer.cs">
       <DependentUpon>comments.cs</DependentUpon>
     </Compile>
     <Compile Include="custom Textbox.cs">
@@ -129,10 +129,10 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Manage Profile.cs">
+    <Compile Include="ProfileForms\Manage Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\Manage Profile.Designer.cs">
+    <Compile Include="ProfileForms\Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="option for register.cs">
@@ -198,10 +198,10 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\View order details.cs">
+    <Compile Include="ProfileForms\View order details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\View order details.Designer.cs">
+    <Compile Include="ProfileForms\View order details.Designer.cs">
       <DependentUpon>View order details.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
@@ -219,7 +219,7 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="comments.resx">
+    <EmbeddedResource Include="ProfileForms\comments.resx">
       <DependentUpon>comments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Profile.resx">
@@ -240,7 +240,7 @@
     <EmbeddedResource Include="AdminForms\ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\Manage Profile.resx">
+    <EmbeddedResource Include="ProfileForms\Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="option for register.resx">
@@ -283,7 +283,7 @@
     <EmbeddedResource Include="user_home.resx">
       <DependentUpon>user_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\View order details.resx">
+    <EmbeddedResource Include="ProfileForms\View order details.resx">
       <DependentUpon>View order details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
