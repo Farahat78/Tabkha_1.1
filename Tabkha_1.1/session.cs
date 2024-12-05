@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tabkha_1._1
 {
-    internal class Session
+    public class Session
     {
         public static int? Id { get; set; }
         public static string Name { get; set; }
