@@ -39,7 +39,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnl_up = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_logout = new System.Windows.Forms.Label();
             this.img_profile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -66,6 +66,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_delivery_info = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -90,7 +91,6 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnl_cart.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,16 +219,6 @@
             this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 4;
             this.label8.Text = "Subtotal";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(12, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(462, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "_________________________________________________________________";
             // 
             // panel1
             // 
@@ -389,6 +379,16 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "_________________________________________________________________";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label5.Location = new System.Drawing.Point(12, 385);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(462, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "_________________________________________________________________";
+            // 
             // pnl_up
             // 
             this.pnl_up.Controls.Add(this.lbl_logout);
@@ -533,6 +533,17 @@
             this.pnl_delivery_info.ShadowColor = System.Drawing.Color.Black;
             this.pnl_delivery_info.Size = new System.Drawing.Size(456, 282);
             this.pnl_delivery_info.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Kafr El-Shiekh"});
+            this.comboBox1.Location = new System.Drawing.Point(18, 235);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(409, 24);
+            this.comboBox1.TabIndex = 61;
             // 
             // label22
             // 
@@ -786,17 +797,6 @@
             // 
             this.guna2Elipse5.BorderRadius = 15;
             this.guna2Elipse5.TargetControl = this.btn_place_order;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Kafr El-Shiekh"});
-            this.comboBox1.Location = new System.Drawing.Point(18, 235);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(409, 24);
-            this.comboBox1.TabIndex = 61;
             // 
             // place_order
             // 

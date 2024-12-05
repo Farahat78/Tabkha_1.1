@@ -42,21 +42,21 @@ namespace Tabkha_1._1 {
         
         private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationFK__Delivery__OrderI__4E88ABD4;
+        private global::System.Data.DataRelation relationFK__Delivery__OrderI__60A75C0F;
         
-        private global::System.Data.DataRelation relationFK__Menu__ChefID__3D5E1FD2;
+        private global::System.Data.DataRelation relationFK__Menu__ChefID__4F7CD00D;
         
-        private global::System.Data.DataRelation relationFK__OrderItem__MenuI__45F365D3;
+        private global::System.Data.DataRelation relationFK__OrderItem__MenuI__5812160E;
         
-        private global::System.Data.DataRelation relationFK__OrderItem__Order__44FF419A;
+        private global::System.Data.DataRelation relationFK__OrderItem__Order__571DF1D5;
         
-        private global::System.Data.DataRelation relationFK__Orders__UserID__412EB0B6;
+        private global::System.Data.DataRelation relationFK__Orders__UserID__534D60F1;
         
-        private global::System.Data.DataRelation relationFK__Payment__OrderID__52593CB8;
+        private global::System.Data.DataRelation relationFK__Payment__OrderID__6477ECF3;
         
-        private global::System.Data.DataRelation relationFK__Reviews__ChefID__49C3F6B7;
+        private global::System.Data.DataRelation relationFK__Reviews__ChefID__5BE2A6F2;
         
-        private global::System.Data.DataRelation relationFK__Reviews__UserID__48CFD27E;
+        private global::System.Data.DataRelation relationFK__Reviews__UserID__5AEE82B9;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -402,14 +402,14 @@ namespace Tabkha_1._1 {
                     this.tableUsers.InitVars();
                 }
             }
-            this.relationFK__Delivery__OrderI__4E88ABD4 = this.Relations["FK__Delivery__OrderI__4E88ABD4"];
-            this.relationFK__Menu__ChefID__3D5E1FD2 = this.Relations["FK__Menu__ChefID__3D5E1FD2"];
-            this.relationFK__OrderItem__MenuI__45F365D3 = this.Relations["FK__OrderItem__MenuI__45F365D3"];
-            this.relationFK__OrderItem__Order__44FF419A = this.Relations["FK__OrderItem__Order__44FF419A"];
-            this.relationFK__Orders__UserID__412EB0B6 = this.Relations["FK__Orders__UserID__412EB0B6"];
-            this.relationFK__Payment__OrderID__52593CB8 = this.Relations["FK__Payment__OrderID__52593CB8"];
-            this.relationFK__Reviews__ChefID__49C3F6B7 = this.Relations["FK__Reviews__ChefID__49C3F6B7"];
-            this.relationFK__Reviews__UserID__48CFD27E = this.Relations["FK__Reviews__UserID__48CFD27E"];
+            this.relationFK__Delivery__OrderI__60A75C0F = this.Relations["FK__Delivery__OrderI__60A75C0F"];
+            this.relationFK__Menu__ChefID__4F7CD00D = this.Relations["FK__Menu__ChefID__4F7CD00D"];
+            this.relationFK__OrderItem__MenuI__5812160E = this.Relations["FK__OrderItem__MenuI__5812160E"];
+            this.relationFK__OrderItem__Order__571DF1D5 = this.Relations["FK__OrderItem__Order__571DF1D5"];
+            this.relationFK__Orders__UserID__534D60F1 = this.Relations["FK__Orders__UserID__534D60F1"];
+            this.relationFK__Payment__OrderID__6477ECF3 = this.Relations["FK__Payment__OrderID__6477ECF3"];
+            this.relationFK__Reviews__ChefID__5BE2A6F2 = this.Relations["FK__Reviews__ChefID__5BE2A6F2"];
+            this.relationFK__Reviews__UserID__5AEE82B9 = this.Relations["FK__Reviews__UserID__5AEE82B9"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -417,7 +417,7 @@ namespace Tabkha_1._1 {
         private void InitClass() {
             this.DataSetName = "tabkha1DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/tabkha1DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/tabkha1DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAdmins = new AdminsDataTable();
@@ -438,38 +438,38 @@ namespace Tabkha_1._1 {
             base.Tables.Add(this.tableReviews);
             this.tableUsers = new UsersDataTable();
             base.Tables.Add(this.tableUsers);
-            this.relationFK__Delivery__OrderI__4E88ABD4 = new global::System.Data.DataRelation("FK__Delivery__OrderI__4E88ABD4", new global::System.Data.DataColumn[] {
+            this.relationFK__Delivery__OrderI__60A75C0F = new global::System.Data.DataRelation("FK__Delivery__OrderI__60A75C0F", new global::System.Data.DataColumn[] {
                         this.tableOrders.OrderIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDelivery.OrderIDColumn}, false);
-            this.Relations.Add(this.relationFK__Delivery__OrderI__4E88ABD4);
-            this.relationFK__Menu__ChefID__3D5E1FD2 = new global::System.Data.DataRelation("FK__Menu__ChefID__3D5E1FD2", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Delivery__OrderI__60A75C0F);
+            this.relationFK__Menu__ChefID__4F7CD00D = new global::System.Data.DataRelation("FK__Menu__ChefID__4F7CD00D", new global::System.Data.DataColumn[] {
                         this.tableChefs.ChefIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableMenu.ChefIDColumn}, false);
-            this.Relations.Add(this.relationFK__Menu__ChefID__3D5E1FD2);
-            this.relationFK__OrderItem__MenuI__45F365D3 = new global::System.Data.DataRelation("FK__OrderItem__MenuI__45F365D3", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Menu__ChefID__4F7CD00D);
+            this.relationFK__OrderItem__MenuI__5812160E = new global::System.Data.DataRelation("FK__OrderItem__MenuI__5812160E", new global::System.Data.DataColumn[] {
                         this.tableMenu.MenuIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableOrderItems.MenuIDColumn}, false);
-            this.Relations.Add(this.relationFK__OrderItem__MenuI__45F365D3);
-            this.relationFK__OrderItem__Order__44FF419A = new global::System.Data.DataRelation("FK__OrderItem__Order__44FF419A", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__OrderItem__MenuI__5812160E);
+            this.relationFK__OrderItem__Order__571DF1D5 = new global::System.Data.DataRelation("FK__OrderItem__Order__571DF1D5", new global::System.Data.DataColumn[] {
                         this.tableOrders.OrderIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableOrderItems.OrderIDColumn}, false);
-            this.Relations.Add(this.relationFK__OrderItem__Order__44FF419A);
-            this.relationFK__Orders__UserID__412EB0B6 = new global::System.Data.DataRelation("FK__Orders__UserID__412EB0B6", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__OrderItem__Order__571DF1D5);
+            this.relationFK__Orders__UserID__534D60F1 = new global::System.Data.DataRelation("FK__Orders__UserID__534D60F1", new global::System.Data.DataColumn[] {
                         this.tableUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableOrders.UserIDColumn}, false);
-            this.Relations.Add(this.relationFK__Orders__UserID__412EB0B6);
-            this.relationFK__Payment__OrderID__52593CB8 = new global::System.Data.DataRelation("FK__Payment__OrderID__52593CB8", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Orders__UserID__534D60F1);
+            this.relationFK__Payment__OrderID__6477ECF3 = new global::System.Data.DataRelation("FK__Payment__OrderID__6477ECF3", new global::System.Data.DataColumn[] {
                         this.tableOrders.OrderIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePayment.OrderIDColumn}, false);
-            this.Relations.Add(this.relationFK__Payment__OrderID__52593CB8);
-            this.relationFK__Reviews__ChefID__49C3F6B7 = new global::System.Data.DataRelation("FK__Reviews__ChefID__49C3F6B7", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Payment__OrderID__6477ECF3);
+            this.relationFK__Reviews__ChefID__5BE2A6F2 = new global::System.Data.DataRelation("FK__Reviews__ChefID__5BE2A6F2", new global::System.Data.DataColumn[] {
                         this.tableChefs.ChefIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReviews.ChefIDColumn}, false);
-            this.Relations.Add(this.relationFK__Reviews__ChefID__49C3F6B7);
-            this.relationFK__Reviews__UserID__48CFD27E = new global::System.Data.DataRelation("FK__Reviews__UserID__48CFD27E", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Reviews__ChefID__5BE2A6F2);
+            this.relationFK__Reviews__UserID__5AEE82B9 = new global::System.Data.DataRelation("FK__Reviews__UserID__5AEE82B9", new global::System.Data.DataColumn[] {
                         this.tableUsers.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableReviews.UserIDColumn}, false);
-            this.Relations.Add(this.relationFK__Reviews__UserID__48CFD27E);
+            this.Relations.Add(this.relationFK__Reviews__UserID__5AEE82B9);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1480,7 +1480,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DeliveryRow AddDeliveryRow(string Name, string Password, string Email, OrdersRow parentOrdersRowByFK__Delivery__OrderI__4E88ABD4, string DeliveryStatus, System.DateTime AcceptedAt) {
+            public DeliveryRow AddDeliveryRow(string Name, string Password, string Email, OrdersRow parentOrdersRowByFK__Delivery__OrderI__60A75C0F, string DeliveryStatus, System.DateTime AcceptedAt) {
                 DeliveryRow rowDeliveryRow = ((DeliveryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1490,8 +1490,8 @@ namespace Tabkha_1._1 {
                         null,
                         DeliveryStatus,
                         AcceptedAt};
-                if ((parentOrdersRowByFK__Delivery__OrderI__4E88ABD4 != null)) {
-                    columnValuesArray[4] = parentOrdersRowByFK__Delivery__OrderI__4E88ABD4[0];
+                if ((parentOrdersRowByFK__Delivery__OrderI__60A75C0F != null)) {
+                    columnValuesArray[4] = parentOrdersRowByFK__Delivery__OrderI__60A75C0F[0];
                 }
                 rowDeliveryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDeliveryRow);
@@ -1886,7 +1886,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MenuRow AddMenuRow(ChefsRow parentChefsRowByFK__Menu__ChefID__3D5E1FD2, string DishName, string Description, decimal Price, string DishPic, int Quantity, string Weight, string Ingredients, string Category, int PrepTime, System.DateTime CreatedAt) {
+            public MenuRow AddMenuRow(ChefsRow parentChefsRowByFK__Menu__ChefID__4F7CD00D, string DishName, string Description, decimal Price, string DishPic, int Quantity, string Weight, string Ingredients, string Category, int PrepTime, System.DateTime CreatedAt) {
                 MenuRow rowMenuRow = ((MenuRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1901,8 +1901,8 @@ namespace Tabkha_1._1 {
                         Category,
                         PrepTime,
                         CreatedAt};
-                if ((parentChefsRowByFK__Menu__ChefID__3D5E1FD2 != null)) {
-                    columnValuesArray[1] = parentChefsRowByFK__Menu__ChefID__3D5E1FD2[0];
+                if ((parentChefsRowByFK__Menu__ChefID__4F7CD00D != null)) {
+                    columnValuesArray[1] = parentChefsRowByFK__Menu__ChefID__4F7CD00D[0];
                 }
                 rowMenuRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMenuRow);
@@ -2242,7 +2242,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderItemsRow AddOrderItemsRow(OrdersRow parentOrdersRowByFK__OrderItem__Order__44FF419A, MenuRow parentMenuRowByFK__OrderItem__MenuI__45F365D3, int Quantity, decimal Price) {
+            public OrderItemsRow AddOrderItemsRow(OrdersRow parentOrdersRowByFK__OrderItem__Order__571DF1D5, MenuRow parentMenuRowByFK__OrderItem__MenuI__5812160E, int Quantity, decimal Price) {
                 OrderItemsRow rowOrderItemsRow = ((OrderItemsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2250,11 +2250,11 @@ namespace Tabkha_1._1 {
                         null,
                         Quantity,
                         Price};
-                if ((parentOrdersRowByFK__OrderItem__Order__44FF419A != null)) {
-                    columnValuesArray[1] = parentOrdersRowByFK__OrderItem__Order__44FF419A[0];
+                if ((parentOrdersRowByFK__OrderItem__Order__571DF1D5 != null)) {
+                    columnValuesArray[1] = parentOrdersRowByFK__OrderItem__Order__571DF1D5[0];
                 }
-                if ((parentMenuRowByFK__OrderItem__MenuI__45F365D3 != null)) {
-                    columnValuesArray[2] = parentMenuRowByFK__OrderItem__MenuI__45F365D3[0];
+                if ((parentMenuRowByFK__OrderItem__MenuI__5812160E != null)) {
+                    columnValuesArray[2] = parentMenuRowByFK__OrderItem__MenuI__5812160E[0];
                 }
                 rowOrderItemsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOrderItemsRow);
@@ -2566,7 +2566,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrdersRow AddOrdersRow(UsersRow parentUsersRowByFK__Orders__UserID__412EB0B6, decimal TotalPrice, string OrderStatus, System.DateTime CreatedAt) {
+            public OrdersRow AddOrdersRow(UsersRow parentUsersRowByFK__Orders__UserID__534D60F1, decimal TotalPrice, string OrderStatus, System.DateTime CreatedAt) {
                 OrdersRow rowOrdersRow = ((OrdersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2574,8 +2574,8 @@ namespace Tabkha_1._1 {
                         TotalPrice,
                         OrderStatus,
                         CreatedAt};
-                if ((parentUsersRowByFK__Orders__UserID__412EB0B6 != null)) {
-                    columnValuesArray[1] = parentUsersRowByFK__Orders__UserID__412EB0B6[0];
+                if ((parentUsersRowByFK__Orders__UserID__534D60F1 != null)) {
+                    columnValuesArray[1] = parentUsersRowByFK__Orders__UserID__534D60F1[0];
                 }
                 rowOrdersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOrdersRow);
@@ -2898,7 +2898,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PaymentRow AddPaymentRow(OrdersRow parentOrdersRowByFK__Payment__OrderID__52593CB8, string PaymentMethod, decimal Amount, string PaymentStatus, System.DateTime PaidAt) {
+            public PaymentRow AddPaymentRow(OrdersRow parentOrdersRowByFK__Payment__OrderID__6477ECF3, string PaymentMethod, decimal Amount, string PaymentStatus, System.DateTime PaidAt) {
                 PaymentRow rowPaymentRow = ((PaymentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2907,8 +2907,8 @@ namespace Tabkha_1._1 {
                         Amount,
                         PaymentStatus,
                         PaidAt};
-                if ((parentOrdersRowByFK__Payment__OrderID__52593CB8 != null)) {
-                    columnValuesArray[1] = parentOrdersRowByFK__Payment__OrderID__52593CB8[0];
+                if ((parentOrdersRowByFK__Payment__OrderID__6477ECF3 != null)) {
+                    columnValuesArray[1] = parentOrdersRowByFK__Payment__OrderID__6477ECF3[0];
                 }
                 rowPaymentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPaymentRow);
@@ -3235,7 +3235,7 @@ namespace Tabkha_1._1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ReviewsRow AddReviewsRow(UsersRow parentUsersRowByFK__Reviews__UserID__48CFD27E, ChefsRow parentChefsRowByFK__Reviews__ChefID__49C3F6B7, int Rating, string Comment, System.DateTime CreatedAt) {
+            public ReviewsRow AddReviewsRow(UsersRow parentUsersRowByFK__Reviews__UserID__5AEE82B9, ChefsRow parentChefsRowByFK__Reviews__ChefID__5BE2A6F2, int Rating, string Comment, System.DateTime CreatedAt) {
                 ReviewsRow rowReviewsRow = ((ReviewsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3244,11 +3244,11 @@ namespace Tabkha_1._1 {
                         Rating,
                         Comment,
                         CreatedAt};
-                if ((parentUsersRowByFK__Reviews__UserID__48CFD27E != null)) {
-                    columnValuesArray[1] = parentUsersRowByFK__Reviews__UserID__48CFD27E[0];
+                if ((parentUsersRowByFK__Reviews__UserID__5AEE82B9 != null)) {
+                    columnValuesArray[1] = parentUsersRowByFK__Reviews__UserID__5AEE82B9[0];
                 }
-                if ((parentChefsRowByFK__Reviews__ChefID__49C3F6B7 != null)) {
-                    columnValuesArray[2] = parentChefsRowByFK__Reviews__ChefID__49C3F6B7[0];
+                if ((parentChefsRowByFK__Reviews__ChefID__5BE2A6F2 != null)) {
+                    columnValuesArray[2] = parentChefsRowByFK__Reviews__ChefID__5BE2A6F2[0];
                 }
                 rowReviewsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReviewsRow);
@@ -4119,22 +4119,22 @@ namespace Tabkha_1._1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MenuRow[] GetMenuRows() {
-                if ((this.Table.ChildRelations["FK__Menu__ChefID__3D5E1FD2"] == null)) {
+                if ((this.Table.ChildRelations["FK__Menu__ChefID__4F7CD00D"] == null)) {
                     return new MenuRow[0];
                 }
                 else {
-                    return ((MenuRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Menu__ChefID__3D5E1FD2"])));
+                    return ((MenuRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Menu__ChefID__4F7CD00D"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ReviewsRow[] GetReviewsRows() {
-                if ((this.Table.ChildRelations["FK__Reviews__ChefID__49C3F6B7"] == null)) {
+                if ((this.Table.ChildRelations["FK__Reviews__ChefID__5BE2A6F2"] == null)) {
                     return new ReviewsRow[0];
                 }
                 else {
-                    return ((ReviewsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reviews__ChefID__49C3F6B7"])));
+                    return ((ReviewsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reviews__ChefID__5BE2A6F2"])));
                 }
             }
         }
@@ -4249,10 +4249,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrdersRow OrdersRow {
                 get {
-                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Delivery__OrderI__4E88ABD4"])));
+                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Delivery__OrderI__60A75C0F"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Delivery__OrderI__4E88ABD4"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Delivery__OrderI__60A75C0F"]);
                 }
             }
             
@@ -4493,10 +4493,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ChefsRow ChefsRow {
                 get {
-                    return ((ChefsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Menu__ChefID__3D5E1FD2"])));
+                    return ((ChefsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Menu__ChefID__4F7CD00D"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Menu__ChefID__3D5E1FD2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Menu__ChefID__4F7CD00D"]);
                 }
             }
             
@@ -4623,11 +4623,11 @@ namespace Tabkha_1._1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrderItemsRow[] GetOrderItemsRows() {
-                if ((this.Table.ChildRelations["FK__OrderItem__MenuI__45F365D3"] == null)) {
+                if ((this.Table.ChildRelations["FK__OrderItem__MenuI__5812160E"] == null)) {
                     return new OrderItemsRow[0];
                 }
                 else {
-                    return ((OrderItemsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__OrderItem__MenuI__45F365D3"])));
+                    return ((OrderItemsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__OrderItem__MenuI__5812160E"])));
                 }
             }
         }
@@ -4725,10 +4725,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MenuRow MenuRow {
                 get {
-                    return ((MenuRow)(this.GetParentRow(this.Table.ParentRelations["FK__OrderItem__MenuI__45F365D3"])));
+                    return ((MenuRow)(this.GetParentRow(this.Table.ParentRelations["FK__OrderItem__MenuI__5812160E"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__OrderItem__MenuI__45F365D3"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__OrderItem__MenuI__5812160E"]);
                 }
             }
             
@@ -4736,10 +4736,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrdersRow OrdersRow {
                 get {
-                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__OrderItem__Order__44FF419A"])));
+                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__OrderItem__Order__571DF1D5"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__OrderItem__Order__44FF419A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__OrderItem__Order__571DF1D5"]);
                 }
             }
             
@@ -4885,10 +4885,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UsersRow UsersRow {
                 get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Orders__UserID__412EB0B6"])));
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Orders__UserID__534D60F1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Orders__UserID__412EB0B6"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Orders__UserID__534D60F1"]);
                 }
             }
             
@@ -4943,33 +4943,33 @@ namespace Tabkha_1._1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DeliveryRow[] GetDeliveryRows() {
-                if ((this.Table.ChildRelations["FK__Delivery__OrderI__4E88ABD4"] == null)) {
+                if ((this.Table.ChildRelations["FK__Delivery__OrderI__60A75C0F"] == null)) {
                     return new DeliveryRow[0];
                 }
                 else {
-                    return ((DeliveryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Delivery__OrderI__4E88ABD4"])));
+                    return ((DeliveryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Delivery__OrderI__60A75C0F"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrderItemsRow[] GetOrderItemsRows() {
-                if ((this.Table.ChildRelations["FK__OrderItem__Order__44FF419A"] == null)) {
+                if ((this.Table.ChildRelations["FK__OrderItem__Order__571DF1D5"] == null)) {
                     return new OrderItemsRow[0];
                 }
                 else {
-                    return ((OrderItemsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__OrderItem__Order__44FF419A"])));
+                    return ((OrderItemsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__OrderItem__Order__571DF1D5"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PaymentRow[] GetPaymentRows() {
-                if ((this.Table.ChildRelations["FK__Payment__OrderID__52593CB8"] == null)) {
+                if ((this.Table.ChildRelations["FK__Payment__OrderID__6477ECF3"] == null)) {
                     return new PaymentRow[0];
                 }
                 else {
-                    return ((PaymentRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Payment__OrderID__52593CB8"])));
+                    return ((PaymentRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Payment__OrderID__6477ECF3"])));
                 }
             }
         }
@@ -5083,10 +5083,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrdersRow OrdersRow {
                 get {
-                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Payment__OrderID__52593CB8"])));
+                    return ((OrdersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Payment__OrderID__6477ECF3"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Payment__OrderID__52593CB8"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Payment__OrderID__6477ECF3"]);
                 }
             }
             
@@ -5260,10 +5260,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ChefsRow ChefsRow {
                 get {
-                    return ((ChefsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reviews__ChefID__49C3F6B7"])));
+                    return ((ChefsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reviews__ChefID__5BE2A6F2"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reviews__ChefID__49C3F6B7"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reviews__ChefID__5BE2A6F2"]);
                 }
             }
             
@@ -5271,10 +5271,10 @@ namespace Tabkha_1._1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UsersRow UsersRow {
                 get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reviews__UserID__48CFD27E"])));
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Reviews__UserID__5AEE82B9"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reviews__UserID__48CFD27E"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Reviews__UserID__5AEE82B9"]);
                 }
             }
             
@@ -5551,22 +5551,22 @@ namespace Tabkha_1._1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrdersRow[] GetOrdersRows() {
-                if ((this.Table.ChildRelations["FK__Orders__UserID__412EB0B6"] == null)) {
+                if ((this.Table.ChildRelations["FK__Orders__UserID__534D60F1"] == null)) {
                     return new OrdersRow[0];
                 }
                 else {
-                    return ((OrdersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Orders__UserID__412EB0B6"])));
+                    return ((OrdersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Orders__UserID__534D60F1"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ReviewsRow[] GetReviewsRows() {
-                if ((this.Table.ChildRelations["FK__Reviews__UserID__48CFD27E"] == null)) {
+                if ((this.Table.ChildRelations["FK__Reviews__UserID__5AEE82B9"] == null)) {
                     return new ReviewsRow[0];
                 }
                 else {
-                    return ((ReviewsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reviews__UserID__48CFD27E"])));
+                    return ((ReviewsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Reviews__UserID__5AEE82B9"])));
                 }
             }
         }

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,12 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
     </Reference>
@@ -51,13 +44,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=27.1462.58.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.27.1.58\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Shared.Base, Version=27.1462.58.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Shared.Base.27.1.58\lib\net462\Syncfusion.Shared.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -100,7 +89,6 @@
     <Compile Include="comments.Designer.cs">
       <DependentUpon>comments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
     <Compile Include="custom Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -121,10 +109,6 @@
     </Compile>
     <Compile Include="forget.Designer.cs">
       <DependentUpon>forget.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ForgetPassword.cs" />
-    <Compile Include="ForgetPassword.Designer.cs">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -200,16 +184,7 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabkha1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tabkha_systemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="session.cs" />
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forget.resx">
       <DependentUpon>forget.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ForgetPassword.resx">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -326,28 +298,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tabkha1DataSet1.xsc">
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tabkha1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tabkha1DataSet1.xss">
-      <DependentUpon>tabkha1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha_systemDataSet.xsc">
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tabkha_systemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tabkha_systemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tabkha_systemDataSet.xss">
-      <DependentUpon>tabkha_systemDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -357,9 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\maximize.png" />
@@ -379,6 +326,7 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
     <None Include="Resources\chef-hat.png" />
+    <None Include="Resources\chef.png" />
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\communication.png" />
@@ -396,18 +344,11 @@
     <None Include="Resources\Screenshot 2024-11-29 211928.png" />
     <None Include="Resources\Screenshot 2024-11-29 213224.png" />
     <None Include="Resources\phone-call.png" />
+    <Content Include="Resources\minus.png" />
     <Content Include="Resources\twitter %281%29.png" />
     <None Include="Resources\twitter %281%291.png" />
     <None Include="Resources\twitter.png" />
     <Content Include="Resources\whatsapp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>

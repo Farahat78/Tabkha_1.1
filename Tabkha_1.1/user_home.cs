@@ -84,8 +84,8 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha_system;Integrated Security=True;Encrypt=False";
-            string query = "SELECT[cook_firstname]+' '+[cook_lastname]'fullname',[cook_phonen],[cook_businessinfo],[cook_image]FROM [tabkha_system].[dbo].[cook]";
+            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+            string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -115,31 +115,46 @@ namespace Tabkha_1._1
                     // 3. تخصيص البيانات داخل الكارد
                     // اسم المطعم
                     Label nameLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_resname");
-                    if (nameLabel != null) nameLabel.Text = reader["fullname"].ToString();
+                    if (nameLabel != null) nameLabel.Text = reader["Rname"].ToString();
 
                     // phone
                     Label phone = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_phone");
-                    if (phone != null) phone.Text= reader["cook_phonen"].ToString();
+                    if (phone != null) phone.Text= reader["Phone"].ToString();
 
                     Label categoryLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_bio");
                     if (categoryLabel != null)
-                        categoryLabel.Text = reader["cook_businessinfo"].ToString();
+                        categoryLabel.Text = reader["Bio"].ToString();
 
                     // الشعار (Logo)
                     try
                     {
                         PictureBox logoPictureBox = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_reslogo");
-                        string imagepath = reader[@"cook_image"].ToString();
-                        if (logoPictureBox != null) logoPictureBox.Image = Image.FromFile(imagepath);
-                        logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        string imagepath = reader["ProFilePic"]?.ToString();
+
+                        if (logoPictureBox != null)
+                        {
+                            if (!string.IsNullOrEmpty(imagepath) && System.IO.File.Exists(imagepath))
+                            {
+                                // إذا كانت الصورة موجودة في المسار
+                                logoPictureBox.Image = Image.FromFile(imagepath);
+                            }
+                            else
+                            {
+                                // إذا لم تكن الصورة موجودة أو لم يتم العثور على المسار
+                                logoPictureBox.Image = Properties.Resources.chef; // تعيين null لإظهار InitialImage
+                            }
+
+                            logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error loading image: " + ex.Message);
                     }
 
-                        // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
-                        flowLayoutPanel1.Controls.Add(newCard);
+
+                    // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
+                    flowLayoutPanel1.Controls.Add(newCard);
                 }
 
                 reader.Close();
@@ -158,6 +173,37 @@ namespace Tabkha_1._1
 
             // نسخ الخصائص الأخرى حسب الحاجة
             return newControl;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txt_search.Text.Trim().ToLower(); // الحصول على النص المدخل
+            foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+            {
+                // ابحث عن العنصر المطلوب داخل الكارت
+                Label nameLabel = card.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_resname");
+
+                if (nameLabel != null && nameLabel.Text.ToLower().Contains(searchQuery))
+                {
+                    card.Visible = true; // إظهار الكارت إذا كان يطابق النص
+                }
+                else
+                {
+                    card.Visible = false; // إخفاء الكارت إذا لم يكن يطابق النص
+                }
+            }
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+            {
+                foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+                {
+                    panelTemplate.Visible= false;
+                    card.Visible = true; // إعادة إظهار جميع الكروت
+                }
+            }
         }
     }
 }

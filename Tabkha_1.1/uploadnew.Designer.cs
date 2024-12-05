@@ -94,6 +94,7 @@
             this.btn_save.TabIndex = 68;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label13
             // 
@@ -290,6 +291,7 @@
             this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 46;
             this.label2.Text = "Description:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Name
             // 
@@ -529,6 +531,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
+            this.Load += new System.EventHandler(this.uploadnew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_preptime)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);

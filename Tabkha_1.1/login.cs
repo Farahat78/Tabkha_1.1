@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tabkha_1._1
 {
@@ -24,7 +25,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
+        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -62,63 +63,57 @@ namespace Tabkha_1._1
 
             else
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+
+
+                try
                 {
-                    try
+                    using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
-                        if (user_name.Contains('@') == true)
-                        {
-                            query = "select count(1) from customers where customer_email=@email and customer_password=@password";
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@email", user_name);
-                                cmd.Parameters.AddWithValue("@password", password);
-                                int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                if (rowaffected > 0)
-                                {
-                                    user_home user_Home = new user_home();
-                                    user_Home.Show();
-                                    this.Hide();
-                                }
-                            }
-                        }
-                        else
-                        {
-                            query = "select count(1) from customers where customer_phonen=@phone and customer_password=@password";
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@phone", user_name);
-                                cmd.Parameters.AddWithValue("@password", password);
-                                int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                if (rowaffected > 0)
-                                {
-                                    user_home user_Home = new user_home();
-                                    user_Home.Show();
-                                    this.Hide();
-                                }
-                                else
-                                {
-                                   
-                                    
-                                        MessageBox.Show("login failed , try again");
-                                    
-                                }
-                            }
 
+                        // تحقق من جدول Users
+                        if (CheckUserInTable(conn, "Users", user_name, password))
+                        {
+                            MessageBox.Show("Welcome User!");
+                            user_home userHome = new user_home(); // صفحة المستخدم
+                            userHome.Show();
+                            this.Hide();
+                            return;
                         }
 
+                        // تحقق من جدول Chefs
+                        if (CheckUserInTable(conn, "Chefs", user_name, password))
+                        {
+                            MessageBox.Show("Welcome Chef!");
+                            Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
+                            ownerProfile.Show();
+                            this.Hide();
+                            return;
+                        }
 
+                        // تحقق من جدول Admins
+                        if (CheckUserInTable(conn, "Admins", user_name, password))
+                        {
+                            MessageBox.Show("Welcome Admin!");
+                            Admin adminPage = new Admin(); // صفحة المدير
+                            adminPage.Show();
+                            this.Hide();
+                            return;
+                        }
+
+                        // إذا لم يتم العثور على المستخدم
+                        MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-
-
-
-                    catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
 
 
-            }
+
+
+                catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
+                }
+
+
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -143,7 +138,7 @@ namespace Tabkha_1._1
                 
                     conn.Open();
                    
-                        query = "select customer_password from customers where customer_email=@email ";
+                        query = "select Password from Users where Email=@email ";
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
 
@@ -152,7 +147,7 @@ namespace Tabkha_1._1
                              {
                                    if(reader.Read())
                                    {
-                                        password = reader["customer_password"].ToString();
+                                        password = reader["Password"].ToString();
                                         
 
                                    }
@@ -160,15 +155,8 @@ namespace Tabkha_1._1
                              }
 
                    
-                        }   
-                    
-
-                   
-
-
-                
+                        } 
             }
-
 
             string subject = "Welcome to Our System!";
             string body = $"  your password is   {password}    ...!";
@@ -188,6 +176,18 @@ namespace Tabkha_1._1
                 }
             }
 
+        }
+
+        private bool CheckUserInTable(SqlConnection conn, string tableName, string username, string password)
+        {
+            string query = $"SELECT COUNT(*) FROM {tableName} WHERE Email = @Username or Phone= @Username AND Password = @Password";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
         }
     }
 }
