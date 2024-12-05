@@ -12,6 +12,8 @@ namespace Tabkha_1._1
         public static string Name { get; set; }
         public static string Role { get; set; }
 
+        public static string pic { get; set; }
+
 
     }
 }
