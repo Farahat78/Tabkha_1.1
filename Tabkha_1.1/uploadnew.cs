@@ -66,12 +66,6 @@ namespace Tabkha_1._1
                 MessageBox.Show("please provide details");
             }
         }
-        //public void clear()
-        //{
-        //    textBox1.Text = "";
-        //    textBox2.Text = "";
-        //    textBox3.Text = "";
-        //}
 
         public uploadnew()
         {
