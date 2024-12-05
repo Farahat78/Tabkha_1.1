@@ -111,14 +111,9 @@ namespace Tabkha_1._1
         private void Admin_Load(object sender, EventArgs e)
         {
             lbl_account.Text = Session.Name;
-            if (!string.IsNullOrEmpty(Session.pic))
-            {
-                guna2CirclePictureBox1.Image = Image.FromFile(Session.pic);
-            }
-            else
-            {
-                guna2CirclePictureBox1.Image = Properties.Resources.Max_R_Headshot__1_;
-            }
+            guna2CirclePictureBox1.Image = !string.IsNullOrEmpty(Session.pic)
+            ? Image.FromFile(Session.pic)
+            : Properties.Resources.Max_R_Headshot__1_;
         }
     }
 }
