@@ -83,8 +83,6 @@ namespace Tabkha_1._1
                                         Session.Name = user_name;
                                         Session.Pic = reader["DishPic"].ToString();
                                     }
-                                    cmd.Parameters.AddWithValue("@email", user_name);
-                                    cmd.Parameters.AddWithValue("@password", password);
 
                                     int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
                                     if (rowaffected > 0)
@@ -118,19 +116,9 @@ namespace Tabkha_1._1
                                         user_Home.Show();
                                         this.Hide();
                                     }
-                                    else
-                                    {
-
-
-                                        MessageBox.Show("login failed , try again");
 
                                     }
                                 }
-
-                            }
-                        }
-
-                    }
 
 
 
@@ -140,7 +128,6 @@ namespace Tabkha_1._1
 
 
             }
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -182,14 +169,7 @@ namespace Tabkha_1._1
 
                    
                         }   
-                    
-
-                   
-
-
-                
             }
-
 
             string subject = "Welcome to Our System!";
             string body = $"  your password is   {password}    ...!";
