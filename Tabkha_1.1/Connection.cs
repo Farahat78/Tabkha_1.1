@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tabkha_1._1
 {
-    internal class Connection
+    public class Connection
     {
         public string connectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
     }

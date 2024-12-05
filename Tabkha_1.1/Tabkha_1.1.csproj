@@ -184,7 +184,7 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="session.cs" />
+    <Compile Include="Class\session.cs" />
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
