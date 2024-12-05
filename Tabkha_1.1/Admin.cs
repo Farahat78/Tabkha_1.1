@@ -106,7 +106,6 @@ namespace Tabkha_1._1
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            Session Admin = new Session();
 
         }
     }
