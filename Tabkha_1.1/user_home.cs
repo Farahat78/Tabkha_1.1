@@ -129,17 +129,32 @@ namespace Tabkha_1._1
                     try
                     {
                         PictureBox logoPictureBox = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_reslogo");
-                        string imagepath = reader[@"ProFilePic"].ToString();
-                        if (logoPictureBox != null) logoPictureBox.Image = Image.FromFile(imagepath);
-                        logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        string imagepath = reader["ProFilePic"]?.ToString();
+
+                        if (logoPictureBox != null)
+                        {
+                            if (!string.IsNullOrEmpty(imagepath) && System.IO.File.Exists(imagepath))
+                            {
+                                // إذا كانت الصورة موجودة في المسار
+                                logoPictureBox.Image = Image.FromFile(imagepath);
+                            }
+                            else
+                            {
+                                // إذا لم تكن الصورة موجودة أو لم يتم العثور على المسار
+                                logoPictureBox.Image = Properties.Resources.chef; // تعيين null لإظهار InitialImage
+                            }
+
+                            logoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error loading image: " + ex.Message);
                     }
 
-                        // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
-                        flowLayoutPanel1.Controls.Add(newCard);
+
+                    // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
+                    flowLayoutPanel1.Controls.Add(newCard);
                 }
 
                 reader.Close();

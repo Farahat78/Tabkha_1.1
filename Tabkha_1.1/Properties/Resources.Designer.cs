@@ -73,6 +73,16 @@ namespace Tabkha_1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chef {
+            get {
+                object obj = ResourceManager.GetObject("chef", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chef_hat {
             get {
                 object obj = ResourceManager.GetObject("chef-hat", resourceCulture);

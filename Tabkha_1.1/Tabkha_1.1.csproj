@@ -326,6 +326,7 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
     <None Include="Resources\chef-hat.png" />
+    <None Include="Resources\chef.png" />
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\communication.png" />

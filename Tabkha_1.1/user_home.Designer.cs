@@ -396,6 +396,7 @@
             // img_reslogo
             // 
             this.img_reslogo.Image = global::Tabkha_1._1.Properties.Resources.restaurant;
+            this.img_reslogo.InitialImage = global::Tabkha_1._1.Properties.Resources.chef;
             this.img_reslogo.Location = new System.Drawing.Point(3, 3);
             this.img_reslogo.Name = "img_reslogo";
             this.img_reslogo.Size = new System.Drawing.Size(110, 110);
