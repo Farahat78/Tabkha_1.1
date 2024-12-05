@@ -20,7 +20,7 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=Hossam;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -77,7 +77,7 @@ namespace Tabkha_1._1
                     try
                     {
                         connect.Open();
-                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address)VALUES (@name,@password,@email,@phonenumber,@city,@address);";
+                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address)VALUES (@firstname ,@lastname ,@password,@email,@phonenumber,@city,@address);";
                         using (SqlCommand cmd = new SqlCommand(query, connect))
                         {
                             cmd.Parameters.AddWithValue("@firstname", First_Name);
