@@ -24,7 +24,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
+        string connectionString = @"Data Source=GODZILA\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)

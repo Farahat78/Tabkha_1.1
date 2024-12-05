@@ -38,7 +38,7 @@ namespace Tabkha_1._1
                 Weight += checkBox3.Checked.ToString();
             }
 
-            if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=null && n_quantity.Value !=null && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
+            if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
             {
                 SqlConnection con = new SqlConnection("Server=GODZILA\\SQLEXPRESS;Database=visual programming task;Trusted_Connection=True;");
                 con.Open();
