@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
     public partial class uploadnew : Form
     {
+        Connection connect = new Connection();
         public void insert()
         {
             string Name =txt_name.Text;
@@ -42,7 +44,7 @@ namespace Tabkha_1._1
 
             if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
             {
-                SqlConnection con = new SqlConnection("Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False");
+                SqlConnection con = new SqlConnection(connect.connectionString);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Menu] (ChefID,DishName,Price,DishPic,Quantity,Weight,Ingredients,Category,PrepTime,Description) values(@ChefID,@Name,@Price,@DishPic,@Quantity,@Weight,@Ingredients,@Category,@PrepTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@ChefID", Session.Id);
