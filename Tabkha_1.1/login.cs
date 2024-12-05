@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -25,7 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        Connection connect = new Connection();
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
                     {
                         conn.Open();
 
@@ -151,7 +152,7 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connect.connectionString))
             {
                 
                 
