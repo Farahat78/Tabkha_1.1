@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
     public partial class Admin : Form
     {
-
+        Connection connect = new Connection();
         private bool isSidebarExpanded = true;
+
+        
 
         public Admin()
         {
@@ -69,6 +72,10 @@ namespace Tabkha_1._1
 
         private void btn_out_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
+            login l = new login();
+            l.Show();
             this.Close();
         }
 
@@ -99,6 +106,14 @@ namespace Tabkha_1._1
             adminProfile.orders = false;
             adminProfile.Show();
             this.Hide();
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            lbl_account.Text = Session.Name;
+            guna2CirclePictureBox1.Image = !string.IsNullOrEmpty(Session.pic)
+            ? Image.FromFile(Session.pic)
+            : Properties.Resources.Max_R_Headshot__1_;
         }
     }
 }

@@ -9,7 +9,9 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tabkha_1._1
 {
@@ -24,7 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=GODZILA\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        Connection connect = new Connection();
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -62,84 +64,77 @@ namespace Tabkha_1._1
 
             else
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+
+
+                try
                 {
-                    try
+                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
                     {
                         conn.Open();
-                        if (user_name.Contains('@') == true)
+
+                        // تحقق من جدول Users
+                        UserDetails userId = GetUserDetailsFromTable(conn, "Users","UserID" ,"Fname", user_name, password);
+                        if (userId !=null)
                         {
-                            query = "select count(1) from customers where customer_email=@email and customer_password=@password";
-
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                using (SqlDataReader reader = cmd.ExecuteReader())
-                                {
-                                    if (reader.Read())
-                                    {
-                                        // تخزين بيانات المستخدم في الجلسة
-                                        Session.Id = Convert.ToInt32(reader["customer_id"]);
-                                        Session.Email = reader["customer_email"].ToString();
-                                        Session.Name = user_name;
-                                        Session.Pic = reader["DishPic"].ToString();
-                                    }
-                                    cmd.Parameters.AddWithValue("@email", user_name);
-                                    cmd.Parameters.AddWithValue("@password", password);
-
-                                    int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                    if (rowaffected > 0)
-                                    {
-                                        user_home user_Home = new user_home();
-                                        user_Home.Show();
-                                        this.Hide();
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            query = "select count(1) from customers where customer_phonen=@phone and customer_password=@password";
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@phone", user_name);
-                                cmd.Parameters.AddWithValue("@password", password);
-                                int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                using (SqlDataReader reader = cmd.ExecuteReader())
-                                {
-                                    if (reader.Read())
-                                    {
-                                        // تخزين بيانات المستخدم في الجلسة
-                                        Session.Id = Convert.ToInt32(reader["customer_id"]);
-                                        Session.Name = user_name;
-                                    }
-                                    if (rowaffected > 0)
-                                    {
-                                        user_home user_Home = new user_home();
-                                        user_Home.Show();
-                                        this.Hide();
-                                    }
-                                    else
-                                    {
+                            Session.Id=userId.UserId;
+                            Session.Role = "User";
+                            Session.Name= userId.Name;
+                            Session.pic = userId.picpath;
 
 
-                                        MessageBox.Show("login failed , try again");
-
-                                    }
-                                }
-
-                            }
+                            user_home userHome = new user_home(); // صفحة المستخدم
+                            userHome.Show();
+                            this.Hide();
+                            return;
                         }
 
+                        // تحقق من جدول Chefs
+
+                        userId = GetUserDetailsFromTable(conn, "Chefs", "ChefID","Fname", user_name, password);
+                        if (userId != null)
+                        {
+
+                            Session.Id = userId.UserId;
+                            Session.Role = "Chef";
+                            Session.Name = userId.Name;
+                            Session.pic = userId.picpath;
+
+
+                            Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
+                            ownerProfile.Show();
+                            this.Hide();
+                            return;
+                        }
+
+                        // تحقق من جدول Admins
+
+                        userId = GetUserDetailsFromTable(conn, "Admins", "AdminID","Username", user_name, password);
+                        if (userId != null)
+                        {
+                            Session.Id = userId.UserId;
+                            Session.Role = "Admin";
+                            Session.Name = userId.Name;
+                            Session.pic = userId.picpath;
+
+                            Admin adminPage = new Admin(); // صفحة المدير
+                            adminPage.Show();
+                            this.Hide();
+                            return;
+                        }
+
+                        // إذا لم يتم العثور على المستخدم
+                        MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-
-
-
-                    catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
 
 
-            }
+
+
+                catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
+                }
+
+
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -158,13 +153,13 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connect.connectionString))
             {
                 
                 
                     conn.Open();
                    
-                        query = "select customer_password from customers where customer_email=@email ";
+                        query = "select Password from Users where Email=@email ";
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
 
@@ -173,7 +168,7 @@ namespace Tabkha_1._1
                              {
                                    if(reader.Read())
                                    {
-                                        password = reader["customer_password"].ToString();
+                                        password = reader["Password"].ToString();
                                         
 
                                    }
@@ -181,15 +176,8 @@ namespace Tabkha_1._1
                              }
 
                    
-                        }   
-                    
-
-                   
-
-
-                
+                        } 
             }
-
 
             string subject = "Welcome to Our System!";
             string body = $"  your password is   {password}    ...!";
@@ -210,5 +198,49 @@ namespace Tabkha_1._1
             }
 
         }
+
+        public class UserDetails
+        {
+            public int UserId { get; set; } // المعرف الفريد
+            public string Name { get; set; } // اسم المستخدم
+
+            public string picpath { get; set; }
+        }
+
+        private UserDetails GetUserDetailsFromTable(SqlConnection conn, string tableName, string idColumn, string nameColumn, string username, string password)
+        {
+            string query;
+            if (tableName.Equals("Admins", StringComparison.OrdinalIgnoreCase))
+            {
+                // Query for the admin table (no Phone column)
+                query = $"SELECT {idColumn},{nameColumn} ,[ProfilePic] FROM {tableName} WHERE Email = @Username AND Password = @Password";
+            }
+            else
+            {
+                // Query for tables with both Email and Phone columns
+                query = $"SELECT {idColumn},{nameColumn},[ProfilePic] FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
+            }
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new UserDetails
+                        {
+                            UserId = Convert.ToInt32(reader[idColumn]),
+                            Name = reader[nameColumn].ToString(),
+                            picpath = reader.FieldCount > reader.GetOrdinal("ProfilePic") ? reader["ProfilePic"].ToString() : null
+                        };
+                    }
+                }
+            }
+            return null; // إذا لم يتم العثور على المستخدم
+        }
+
+
     }
 }

@@ -83,6 +83,7 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Connection.cs" />
     <Compile Include="comments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,7 +185,7 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="session.cs" />
+    <Compile Include="Class\session.cs" />
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +327,7 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
     <None Include="Resources\chef-hat.png" />
+    <None Include="Resources\chef.png" />
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\communication.png" />
