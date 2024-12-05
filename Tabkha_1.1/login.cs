@@ -213,7 +213,7 @@ namespace Tabkha_1._1
             if (tableName.Equals("Admins", StringComparison.OrdinalIgnoreCase))
             {
                 // Query for the admin table (no Phone column)
-                query = $"SELECT {idColumn},{nameColumn} FROM {tableName} WHERE Email = @Username AND Password = @Password";
+                query = $"SELECT {idColumn},{nameColumn} ,[ProfilePic] FROM {tableName} WHERE Email = @Username AND Password = @Password";
             }
             else
             {
@@ -233,7 +233,7 @@ namespace Tabkha_1._1
                         {
                             UserId = Convert.ToInt32(reader[idColumn]),
                             Name = reader[nameColumn].ToString(),
-                            picpath = reader["ProfilePic"].ToString()
+                            picpath = reader.FieldCount > reader.GetOrdinal("ProfilePic") ? reader["ProfilePic"].ToString() : null
                         };
                     }
                 }
