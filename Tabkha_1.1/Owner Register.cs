@@ -25,7 +25,7 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha1;Integrated Security=True;";
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {

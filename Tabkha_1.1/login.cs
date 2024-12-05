@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tabkha_1._1
 {
@@ -25,7 +24,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
-        string connectionString = @"Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -68,9 +67,7 @@ namespace Tabkha_1._1
                     try
                     {
                         conn.Open();
-
-                        // تحقق من جدول Users
-                        if (CheckUserInTable(conn, "Users", user_name, password))
+                        if (user_name.Contains('@') == true)
                         {
                             query = "select count(1) from customers where customer_email=@email and customer_password=@password";
 
@@ -107,23 +104,31 @@ namespace Tabkha_1._1
                                 cmd.Parameters.AddWithValue("@phone", user_name);
                                 cmd.Parameters.AddWithValue("@password", password);
                                 int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
-                                if (rowaffected > 0)
+                                using (SqlDataReader reader = cmd.ExecuteReader())
                                 {
-                                    user_home user_Home = new user_home();
-                                    user_Home.Show();
-                                    this.Hide();
-                                }
-                                else
-                                {
-                                   
-                                    
+                                    if (reader.Read())
+                                    {
+                                        // تخزين بيانات المستخدم في الجلسة
+                                        Session.Id = Convert.ToInt32(reader["customer_id"]);
+                                        Session.Name = user_name;
+                                    }
+                                    if (rowaffected > 0)
+                                    {
+                                        user_home user_Home = new user_home();
+                                        user_Home.Show();
+                                        this.Hide();
+                                    }
+                                    else
+                                    {
+
+
                                         MessageBox.Show("login failed , try again");
-                                    
+
+                                    }
                                 }
+
                             }
-
                         }
-
 
                     }
 
@@ -141,7 +146,6 @@ namespace Tabkha_1._1
         {
             option_for_register option = new option_for_register();
             option.Show();
-            this.Hide();
         }
 
         private void L_lbl_forgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -160,24 +164,24 @@ namespace Tabkha_1._1
                 
                     conn.Open();
                    
-                        query = "select Password from Users where Email=@email ";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-
-                    cmd.Parameters.AddWithValue("@email", user_email);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
+                        query = "select customer_password from customers where customer_email=@email ";
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            password = reader["Password"].ToString();
 
+                             cmd.Parameters.AddWithValue("@email", user_email);
+                             using (SqlDataReader reader = cmd.ExecuteReader())
+                             {
+                                   if(reader.Read())
+                                   {
+                                        password = reader["customer_password"].ToString();
+                                        
 
-                        }
+                                   }
 
-                    }
-                }
+                             }
+                        }   
+                    
 
-                
             }
 
 
@@ -199,17 +203,6 @@ namespace Tabkha_1._1
                 }
             }
 
-        }
-        private bool CheckUserInTable(SqlConnection conn, string tableName, string username, string password)
-        {
-            string query = $"SELECT COUNT(*) FROM {tableName} WHERE Email = @Username or Phone = @Username AND Password = @Password";
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                return count > 0;
-            }
         }
     }
 }
