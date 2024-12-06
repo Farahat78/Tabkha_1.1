@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -27,7 +28,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT   DishName,   DishPic, Price FROM [tabkha1].[dbo].[Menu] ";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
@@ -109,7 +110,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT Users.Fname as fname ,Reviews.Comment  as comment FROM   [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users  ON Reviews.UserID = Users.UserID WHERE    Reviews.ChefID = @ChefID;";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", chief_id);
@@ -216,7 +217,7 @@ namespace Tabkha_1._1
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            Customer_Profile ownerProfile = new Customer_Profile(Session.Id);
+            Customer_Profile ownerProfile = new Customer_Profile();
             ownerProfile.hideSome();
             ownerProfile.Show();
             this.Hide();
