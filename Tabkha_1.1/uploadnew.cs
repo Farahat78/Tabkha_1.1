@@ -15,7 +15,6 @@ namespace Tabkha_1._1
 {
     public partial class uploadnew : Form
     {
-        Connection connect = new Connection();
         public void insert()
         {
             string Name =txt_name.Text;
