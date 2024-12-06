@@ -43,29 +43,24 @@ namespace Tabkha_1._1
             btn_edit_img.Visible = true;
             btn_save.Visible = true;
         }
-        int currentUserID = Session.Id;
         private void btn_save_Click(object sender, EventArgs e)
         {
             readOnly();
             using (SqlConnection conn = new SqlConnection(Connection.connectionString))
             {
                 conn.Open();
-                string query = $"UPDATE {Session.Role} SET Name = @Name, Email = @Email, Password = @Password WHERE {Session.Id} = @UserID";
+                string query = "SELECT Name, Email, Password FROM Users WHERE UserID = @UserID";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
-                    cmd.Parameters.AddWithValue("@UserID", currentUserID);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+                    cmd.Parameters.AddWithValue("@UserID", Session.Id);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to update profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (reader.Read())
+                        {
+                            txtbox_name.Text = reader["Name"].ToString();
+                            txtbox_email.Text = reader["Email"].ToString();
+                            txtbox_password.Text = reader["Password"].ToString();
+                        }
                     }
                 }
             }
