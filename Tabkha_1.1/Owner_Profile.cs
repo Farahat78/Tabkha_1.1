@@ -22,11 +22,9 @@ namespace Tabkha_1._1
             
 
         }
-
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha1;Integrated Security=True;";
             string query = "SELECT   DishName,   DishPic, Price FROM [tabkha1].[dbo].[Menu] ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -109,7 +107,6 @@ namespace Tabkha_1._1
             label6.Visible = false;
             lbl_usercomment.Visible = false;
             // 1. اتصال بقاعدة البيانات
-            string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha1;Integrated Security=True;";
             string query = "SELECT Users.Fname as fname ,Reviews.Comment  as comment FROM   [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users  ON Reviews.UserID = Users.UserID WHERE    Reviews.ChefID = @ChefID;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
