@@ -2,23 +2,51 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
     public partial class Customer_Profile: Form
     {
+        int currentUserID;
 
         private bool isSidebarExpanded = true;
+
+        private void LoadUserData()
+        {
+            Manage_Profile manage = new Manage_Profile();
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                conn.Open();
+                string query = $"SELECT Name, Email, Password FROM {Session.Role} WHERE {Session.Id} = @UserID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", currentUserID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            manage.Name = reader["Name"].ToString();
+                            manage.Email = reader["Email"].ToString();
+                            manage.Password = reader["Password"].ToString();
+                        }
+                    }
+                }
+            }
+        }
 
         public Customer_Profile(int userID)
         {
             InitializeComponent();
-            //currentUserID = userID;
+            currentUserID = userID;
+            LoadUserData();
         }
 
         private void ChangeColor(Button btn, Button btn2)

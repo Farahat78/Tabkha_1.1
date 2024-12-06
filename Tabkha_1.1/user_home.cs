@@ -58,7 +58,7 @@ namespace Tabkha_1._1
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            Customer_Profile customer_Profile = new Customer_Profile();
+            Customer_Profile customer_Profile = new Customer_Profile(Session.Id);
             customer_Profile.Show();
             this.Hide();
         }

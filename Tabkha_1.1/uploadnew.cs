@@ -43,7 +43,7 @@ namespace Tabkha_1._1
 
             if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
             {
-                SqlConnection con = new SqlConnection(connect.connectionString);
+                SqlConnection con = new SqlConnection(Connection.connectionString);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Menu] (ChefID,DishName,Price,DishPic,Quantity,Weight,Ingredients,Category,PrepTime,Description) values(@ChefID,@Name,@Price,@DishPic,@Quantity,@Weight,@Ingredients,@Category,@PrepTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@ChefID", Session.Id);

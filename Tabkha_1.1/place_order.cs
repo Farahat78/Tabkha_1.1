@@ -65,7 +65,7 @@ namespace Tabkha_1._1
 
         private void label29_Click(object sender, EventArgs e)
         {
-            Customer_Profile customer_Profile = new Customer_Profile();
+            Customer_Profile customer_Profile = new Customer_Profile(Session.Id);
             customer_Profile.Show();
             this.Hide();
         }
