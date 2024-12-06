@@ -88,7 +88,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Location = new System.Drawing.Point(108, 13);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(87, 19);
+            this.lbl_name.Size = new System.Drawing.Size(76, 16);
             this.lbl_name.TabIndex = 7;
             this.lbl_name.Text = "User Name";
             // 
@@ -97,7 +97,7 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Location = new System.Drawing.Point(108, 41);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(48, 19);
+            this.lbl_email.Size = new System.Drawing.Size(41, 16);
             this.lbl_email.TabIndex = 8;
             this.lbl_email.Text = "Email";
             // 
@@ -106,7 +106,7 @@
             this.lbl_Pnumber.AutoSize = true;
             this.lbl_Pnumber.Location = new System.Drawing.Point(108, 71);
             this.lbl_Pnumber.Name = "lbl_Pnumber";
-            this.lbl_Pnumber.Size = new System.Drawing.Size(115, 19);
+            this.lbl_Pnumber.Size = new System.Drawing.Size(97, 16);
             this.lbl_Pnumber.TabIndex = 9;
             this.lbl_Pnumber.Text = "Phone Number";
             // 
@@ -115,7 +115,7 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Location = new System.Drawing.Point(108, 107);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(76, 19);
+            this.lbl_password.Size = new System.Drawing.Size(67, 16);
             this.lbl_password.TabIndex = 10;
             this.lbl_password.Text = "Password";
             // 
@@ -123,7 +123,7 @@
             // 
             this.txtbox_email.Location = new System.Drawing.Point(222, 38);
             this.txtbox_email.Name = "txtbox_email";
-            this.txtbox_email.Size = new System.Drawing.Size(328, 27);
+            this.txtbox_email.Size = new System.Drawing.Size(328, 22);
             this.txtbox_email.TabIndex = 6;
             this.txtbox_email.WatermarkColor = System.Drawing.Color.Gray;
             this.txtbox_email.WatermarkText = "example@gmail.com";
@@ -132,7 +132,7 @@
             // 
             this.txtbox_Pnumber.Location = new System.Drawing.Point(222, 68);
             this.txtbox_Pnumber.Name = "txtbox_Pnumber";
-            this.txtbox_Pnumber.Size = new System.Drawing.Size(328, 27);
+            this.txtbox_Pnumber.Size = new System.Drawing.Size(328, 22);
             this.txtbox_Pnumber.TabIndex = 5;
             this.txtbox_Pnumber.WatermarkColor = System.Drawing.Color.Gray;
             this.txtbox_Pnumber.WatermarkText = "+2010104706";
@@ -141,7 +141,7 @@
             // 
             this.txtbox_password.Location = new System.Drawing.Point(222, 104);
             this.txtbox_password.Name = "txtbox_password";
-            this.txtbox_password.Size = new System.Drawing.Size(328, 27);
+            this.txtbox_password.Size = new System.Drawing.Size(328, 22);
             this.txtbox_password.TabIndex = 4;
             this.txtbox_password.UseSystemPasswordChar = true;
             this.txtbox_password.WatermarkColor = System.Drawing.Color.Gray;
@@ -151,7 +151,7 @@
             // 
             this.txtbox_name.Location = new System.Drawing.Point(222, 10);
             this.txtbox_name.Name = "txtbox_name";
-            this.txtbox_name.Size = new System.Drawing.Size(328, 27);
+            this.txtbox_name.Size = new System.Drawing.Size(328, 22);
             this.txtbox_name.TabIndex = 3;
             this.txtbox_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txtbox_name.WatermarkText = "Enter name here";
@@ -188,6 +188,7 @@
             this.Controls.Add(this.btn_edit_img);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manage_Profile";
+            this.Load += new System.EventHandler(this.Manage_Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

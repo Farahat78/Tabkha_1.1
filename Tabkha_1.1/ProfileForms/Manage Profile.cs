@@ -12,6 +12,10 @@ namespace Tabkha_1._1
 {
     public partial class Manage_Profile : Form
     {
+        public string SName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+
         public Manage_Profile()
         {
             InitializeComponent();
@@ -40,6 +44,13 @@ namespace Tabkha_1._1
         private void btn_save_Click(object sender, EventArgs e)
         {
             readOnly();
+        }
+
+        private void Manage_Profile_Load(object sender, EventArgs e)
+        {
+            txtbox_email.Text = Email;
+            txtbox_name.Text = Name;
+            txtbox_password.Text = Password;
         }
     }
 }

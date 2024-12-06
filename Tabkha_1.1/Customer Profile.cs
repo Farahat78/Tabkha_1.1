@@ -12,11 +12,13 @@ namespace Tabkha_1._1
 {
     public partial class Customer_Profile: Form
     {
+
         private bool isSidebarExpanded = true;
 
-        public Customer_Profile()
+        public Customer_Profile(int userID)
         {
             InitializeComponent();
+            //currentUserID = userID;
         }
 
         private void ChangeColor(Button btn, Button btn2)
