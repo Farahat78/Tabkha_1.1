@@ -596,6 +596,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.Panel_Template);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 289);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
