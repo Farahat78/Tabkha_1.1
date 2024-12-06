@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,7 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
+        string connectionString = "";
 
         private void img_minimize_Click(object sender, EventArgs e)
         {
@@ -39,6 +42,37 @@ namespace Tabkha_1._1
             Owner_Profile owner_Profile = new Owner_Profile();
             owner_Profile.Show();
             this.Hide();
+        }
+
+        private void lbl_product_description_Click(object sender, EventArgs e)
+        {
+            string description = "";
+            string dishname = "";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "select Description from Menu where DishName=@dname ";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+
+                    cmd.Parameters.AddWithValue("@dname", dishname);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            description = reader["Description"].ToString();
+
+
+                        }
+
+                    }
+
+
+                }
+            }
+            lbl_product_description.Text = description;
         }
     }
 }
