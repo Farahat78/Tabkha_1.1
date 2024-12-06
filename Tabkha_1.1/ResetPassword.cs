@@ -21,8 +21,6 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
-
         private void img_close_Click(object sender, EventArgs e)
         {
             this.Close();

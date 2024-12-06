@@ -14,7 +14,6 @@ namespace Tabkha_1._1
 {
     public partial class ManageChefForm : Form
     {
-        Connection connect = new Connection();
         private void LoadData()
         {
             string query = @"

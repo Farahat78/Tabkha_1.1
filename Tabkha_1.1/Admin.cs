@@ -16,8 +16,6 @@ namespace Tabkha_1._1
         Connection connect = new Connection();
         private bool isSidebarExpanded = true;
 
-        
-
         public Admin()
         {
             InitializeComponent();

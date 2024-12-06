@@ -114,12 +114,10 @@ namespace Tabkha_1._1
                 Gpnl_general.Width = this.Width - pnl_sidebar.Width;
             }
         }
-
         private void btn_out_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btn_comments_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_orders, btn_view);

@@ -20,7 +20,6 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=Hossam;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
