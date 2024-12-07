@@ -19,34 +19,11 @@ namespace Tabkha_1._1
 
         private bool isSidebarExpanded = true;
 
-        private void LoadUserData()
-        {
-            Manage_Profile manage = new Manage_Profile();
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
-            {
-                conn.Open();
-                string query = $"SELECT Name, Email, Password FROM {Session.Role} WHERE {Session.Id} = @UserID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@UserID", currentUserID);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            manage.Name = reader["Name"].ToString();
-                            manage.Email = reader["Email"].ToString();
-                            manage.Password = reader["Password"].ToString();
-                        }
-                    }
-                }
-            }
-        }
+        
 
         public Customer_Profile(int userID)
         {
             InitializeComponent();
-            currentUserID = userID;
-            LoadUserData();
         }
 
         private void ChangeColor(Button btn, Button btn2)
@@ -146,6 +123,10 @@ namespace Tabkha_1._1
         }
         private void btn_out_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
+            login login = new login();
+            login.Show();
             this.Close();
         }
         private void btn_comments_Click(object sender, EventArgs e)

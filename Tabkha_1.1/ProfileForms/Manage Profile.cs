@@ -15,10 +15,6 @@ namespace Tabkha_1._1
 {
     public partial class Manage_Profile : Form
     {
-        public string SName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-
         public Manage_Profile()
         {
             InitializeComponent();
@@ -43,13 +39,29 @@ namespace Tabkha_1._1
             btn_edit_img.Visible = true;
             btn_save.Visible = true;
         }
-        private void btn_save_Click(object sender, EventArgs e)
+
+        private void LoadUserData()
         {
-            readOnly();
+            Manage_Profile manage = new Manage_Profile();
+            string query = "";
+
+            // Determine which table to query based on the role in the session
+            if (Session.Role == "Admin")
+            {
+                query = "SELECT Username, Email, Password FROM Admins WHERE AdminID = @UserID";
+            }
+            else if (Session.Role == "User")
+            {
+                query = "SELECT Name, Email, Password FROM Users WHERE UserID = @UserID";
+            }
+            else if (Session.Role == "Chef")
+            {
+                query = "SELECT Name, Email, Password FROM Chefs WHERE ChefID = @UserID";
+            }
+
             using (SqlConnection conn = new SqlConnection(Connection.connectionString))
             {
                 conn.Open();
-                string query = "SELECT Name, Email, Password FROM Users WHERE UserID = @UserID";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", Session.Id);
@@ -57,7 +69,7 @@ namespace Tabkha_1._1
                     {
                         if (reader.Read())
                         {
-                            txtbox_name.Text = reader["Name"].ToString();
+                            txtbox_name.Text = reader["Username"].ToString();
                             txtbox_email.Text = reader["Email"].ToString();
                             txtbox_password.Text = reader["Password"].ToString();
                         }
@@ -66,11 +78,51 @@ namespace Tabkha_1._1
             }
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            readOnly();
+            string query = "";
+
+            // Determine which table to update based on the role in the session
+            if (Session.Role == "Admin")
+            {
+                query = "UPDATE Admins SET Username = @Name, Email = @Email, Password = @Password WHERE AdminID = @UserID";
+            }
+            else if (Session.Role == "User")
+            {
+                query = "UPDATE Users SET Name = @Name, Email = @Email, Password = @Password WHERE UserID = @UserID";
+            }
+            else if (Session.Role == "Chef")
+            {
+                query = "UPDATE Chefs SET Name = @Name, Email = @Email, Password = @Password WHERE ChefID = @UserID";
+            }
+
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
+                    cmd.Parameters.AddWithValue("@UserID", Session.Id);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
         private void Manage_Profile_Load(object sender, EventArgs e)
         {
-            txtbox_email.Text = Email;
-            txtbox_name.Text = Name;
-            txtbox_password.Text = Password;
+            LoadUserData();
         }
     }
 }

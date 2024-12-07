@@ -77,7 +77,7 @@ namespace Tabkha_1._1
                     try
                     {
                         connect.Open();
-                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address)VALUES (@name,@password,@email,@phonenumber,@city,@address);";
+                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address) VALUES (@firstname,@lastname ,@password,@email,@phonenumber,@city,@address);";
                         using (SqlCommand cmd = new SqlCommand(query, connect))
                         {
                             cmd.Parameters.AddWithValue("@firstname", First_Name);

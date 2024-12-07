@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -65,8 +66,11 @@ namespace Tabkha_1._1
 
         private void lbl_logout_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
             login login = new login();
             login.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,10 +89,9 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = "Data Source=LAPTOP-EBHNP4IJ\\;Initial Catalog=tabkha1;Integrated Security=True";
             string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
