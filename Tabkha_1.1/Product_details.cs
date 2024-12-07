@@ -18,7 +18,6 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = "";
 
         private void img_minimize_Click(object sender, EventArgs e)
         {
