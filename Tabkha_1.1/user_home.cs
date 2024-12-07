@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -87,7 +88,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();

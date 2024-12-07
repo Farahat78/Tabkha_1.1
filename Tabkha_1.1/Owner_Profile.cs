@@ -26,7 +26,7 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string query = "SELECT   DishName,   DishPic, Price FROM [tabkha1].[dbo].[Menu] ";
+            string query = $"  SELECT   DishName,   DishPic, Price FROM [tabkha1].[dbo].[Menu] WHERE ChefID = {Session.Id}";
 
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
