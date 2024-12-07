@@ -85,7 +85,6 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = "Data Source=LAPTOP-EBHNP4IJ\\;Initial Catalog=tabkha1;Integrated Security=True";
             string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
