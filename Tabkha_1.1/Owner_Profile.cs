@@ -217,7 +217,7 @@ namespace Tabkha_1._1
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            Customer_Profile ownerProfile = new Customer_Profile();
+            Customer_Profile ownerProfile = new Customer_Profile(Session.Id);
             ownerProfile.hideSome();
             ownerProfile.Show();
             this.Hide();
