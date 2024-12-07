@@ -77,7 +77,7 @@ namespace Tabkha_1._1
                         if (userId !=null)
                         {
                             Session.Id=userId.UserId;
-                            Session.Role = "User";
+                            Session.Role = "Users";
                             Session.Name= userId.Name;
                             Session.pic = userId.picpath;
 
@@ -95,7 +95,7 @@ namespace Tabkha_1._1
                         {
 
                             Session.Id = userId.UserId;
-                            Session.Role = "Chef";
+                            Session.Role = "Chefs";
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
@@ -112,7 +112,7 @@ namespace Tabkha_1._1
                         if (userId != null)
                         {
                             Session.Id = userId.UserId;
-                            Session.Role = "Admin";
+                            Session.Role = "Admins";
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
