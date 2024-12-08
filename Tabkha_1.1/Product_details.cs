@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -48,7 +49,7 @@ namespace Tabkha_1._1
             string description = "";
             string dishname = "";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
             {
                 conn.Open();
 
@@ -72,6 +73,12 @@ namespace Tabkha_1._1
                 }
             }
             lbl_product_description.Text = description;
+        }
+
+        private void Product_details_Load(object sender, EventArgs e)
+        {
+            label11.Text = Session.Name;
+            guna2CirclePictureBox1.Image = Image.FromFile(Session.pic);
         }
     }
 }
