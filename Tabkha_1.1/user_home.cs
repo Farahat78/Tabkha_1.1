@@ -89,7 +89,7 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
+            string query = "SELECT [ChefID],[Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
@@ -107,7 +107,9 @@ namespace Tabkha_1._1
                     Panel newCard = new Panel
                     {
                         Size = panelTemplate.Size,
-                        BackColor = panelTemplate.BackColor
+                        BackColor = panelTemplate.BackColor,
+                        Tag = reader["ChefID"]
+                        
                     };
 
                     foreach (Control control in panelTemplate.Controls)
@@ -156,7 +158,7 @@ namespace Tabkha_1._1
                         MessageBox.Show("Error loading image: " + ex.Message);
                     }
 
-
+                    newCard.Click += (s, e) => OpenRestaurant((int)newCard.Tag);
                     // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
                     flowLayoutPanel1.Controls.Add(newCard);
                 }
@@ -177,6 +179,13 @@ namespace Tabkha_1._1
 
             // نسخ الخصائص الأخرى حسب الحاجة
             return newControl;
+        }
+
+        private void OpenRestaurant(int ChefID)
+        {
+            var restaurant = new Owner_Profile(ChefID);
+            restaurant.Show();
+            this.Hide(); // إذا أردت إخفاء الصفحة الحالية
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
