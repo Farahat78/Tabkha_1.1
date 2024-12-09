@@ -211,5 +211,10 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
