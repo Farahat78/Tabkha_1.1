@@ -19,8 +19,6 @@ namespace Tabkha_1._1
 
         private bool isSidebarExpanded = true;
 
-        
-
         public Customer_Profile(int userID)
         {
             InitializeComponent();
