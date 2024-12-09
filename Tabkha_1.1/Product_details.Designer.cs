@@ -78,10 +78,10 @@
             this.btn_submib = new System.Windows.Forms.Button();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
-            this.txt_addcomment = new Tabkha_1._1.CustomTextBox();
-            this.btn_ratedone = new System.Windows.Forms.Button();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txt_addcomment = new Tabkha_1._1.CustomTextBox();
+            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,16 +111,15 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1221, 134);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1139, 134);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // img_back
             // 
-            this.img_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.img_back.BackColor = System.Drawing.Color.Transparent;
             this.img_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_back.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.img_back.Location = new System.Drawing.Point(62, 4);
+            this.img_back.Location = new System.Drawing.Point(3, 4);
             this.img_back.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_back.Name = "img_back";
             this.img_back.Size = new System.Drawing.Size(38, 31);
@@ -134,7 +133,7 @@
             this.lbl_logout.AutoSize = true;
             this.lbl_logout.BackColor = System.Drawing.Color.Transparent;
             this.lbl_logout.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_logout.Location = new System.Drawing.Point(1050, 91);
+            this.lbl_logout.Location = new System.Drawing.Point(1061, 90);
             this.lbl_logout.Name = "lbl_logout";
             this.lbl_logout.Size = new System.Drawing.Size(72, 24);
             this.lbl_logout.TabIndex = 20;
@@ -146,7 +145,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(-553, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(-635, 42);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 45);
@@ -159,7 +158,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(876, 65);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(887, 71);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -174,7 +173,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(934, 91);
+            this.label11.Location = new System.Drawing.Point(945, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 24);
@@ -202,7 +201,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1180, 4);
+            this.img_close.Location = new System.Drawing.Point(1098, 4);
             this.img_close.Margin = new System.Windows.Forms.Padding(4);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 31);
@@ -217,7 +216,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(1129, 7);
+            this.img_minimize.Location = new System.Drawing.Point(1047, 7);
             this.img_minimize.Margin = new System.Windows.Forms.Padding(4);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 28);
@@ -245,11 +244,12 @@
             // 
             // img_product
             // 
+            this.img_product.Dock = System.Windows.Forms.DockStyle.Fill;
             this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
-            this.img_product.Location = new System.Drawing.Point(3, -2);
+            this.img_product.Location = new System.Drawing.Point(0, 0);
             this.img_product.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(379, 298);
+            this.img_product.Size = new System.Drawing.Size(379, 300);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.img_product.TabIndex = 0;
             this.img_product.TabStop = false;
@@ -293,9 +293,9 @@
             this.lbl_preparationtime.Location = new System.Drawing.Point(608, 370);
             this.lbl_preparationtime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_preparationtime.Name = "lbl_preparationtime";
-            this.lbl_preparationtime.Size = new System.Drawing.Size(88, 19);
+            this.lbl_preparationtime.Size = new System.Drawing.Size(32, 19);
             this.lbl_preparationtime.TabIndex = 6;
-            this.lbl_preparationtime.Text = "50 minutes";
+            this.lbl_preparationtime.Text = "50 ";
             // 
             // btn_order
             // 
@@ -612,7 +612,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(19, 1018);
+            this.label17.Location = new System.Drawing.Point(19, 1012);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(168, 26);
@@ -626,13 +626,14 @@
             this.btn_submib.FlatAppearance.BorderSize = 0;
             this.btn_submib.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submib.ForeColor = System.Drawing.Color.White;
-            this.btn_submib.Location = new System.Drawing.Point(857, 1182);
+            this.btn_submib.Location = new System.Drawing.Point(857, 1176);
             this.btn_submib.Margin = new System.Windows.Forms.Padding(4);
             this.btn_submib.Name = "btn_submib";
             this.btn_submib.Size = new System.Drawing.Size(150, 57);
             this.btn_submib.TabIndex = 40;
             this.btn_submib.Text = "Submit";
             this.btn_submib.UseVisualStyleBackColor = false;
+            this.btn_submib.Click += new System.EventHandler(this.btn_submib_Click);
             // 
             // guna2Elipse4
             // 
@@ -651,6 +652,21 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Available Now";
             // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 20;
+            // 
+            // txt_addcomment
+            // 
+            this.txt_addcomment.Location = new System.Drawing.Point(222, 1030);
+            this.txt_addcomment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_addcomment.Multiline = true;
+            this.txt_addcomment.Name = "txt_addcomment";
+            this.txt_addcomment.Size = new System.Drawing.Size(785, 142);
+            this.txt_addcomment.TabIndex = 42;
+            this.txt_addcomment.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_addcomment.WatermarkText = "Write A comment";
+            // 
             // customTextBox1
             // 
             this.customTextBox1.Location = new System.Drawing.Point(200, 1007);
@@ -661,44 +677,23 @@
             this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
             this.customTextBox1.WatermarkText = "Write a comment";
             // 
-            // txt_addcomment
+            // label8
             // 
-            this.txt_addcomment.Location = new System.Drawing.Point(222, 1036);
-            this.txt_addcomment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_addcomment.Multiline = true;
-            this.txt_addcomment.Name = "txt_addcomment";
-            this.txt_addcomment.Size = new System.Drawing.Size(785, 142);
-            this.txt_addcomment.TabIndex = 42;
-            this.txt_addcomment.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_addcomment.WatermarkText = "Write A comment";
-            // 
-            // btn_ratedone
-            // 
-            this.btn_ratedone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_ratedone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ratedone.FlatAppearance.BorderSize = 0;
-            this.btn_ratedone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ratedone.ForeColor = System.Drawing.Color.White;
-            this.btn_ratedone.Location = new System.Drawing.Point(195, 761);
-            this.btn_ratedone.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ratedone.Name = "btn_ratedone";
-            this.btn_ratedone.Size = new System.Drawing.Size(70, 31);
-            this.btn_ratedone.TabIndex = 43;
-            this.btn_ratedone.Text = "Done";
-            this.btn_ratedone.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 20;
-            this.guna2Elipse5.TargetControl = this.btn_ratedone;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(634, 371);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 19);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "minutes";
             // 
             // Product_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1247, 696);
-            this.Controls.Add(this.btn_ratedone);
+            this.ClientSize = new System.Drawing.Size(1165, 696);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_addcomment);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_submib);
@@ -808,8 +803,8 @@
         private CustomTextBox customTextBox1;
         private CustomTextBox txt_addcomment;
         private System.Windows.Forms.Label lbl_logout;
-        private System.Windows.Forms.Button btn_ratedone;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private System.Windows.Forms.PictureBox img_back;
+        private System.Windows.Forms.Label label8;
     }
 }

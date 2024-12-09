@@ -78,6 +78,7 @@
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.img_back = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
@@ -95,10 +96,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.img_back);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
             this.guna2GradientPanel1.Controls.Add(this.img_close);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
@@ -387,6 +390,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T1454411;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -411,6 +415,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(47, 177);
@@ -607,6 +612,21 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 355);
             this.flowLayoutPanel1.TabIndex = 33;
             // 
+            // img_back
+            // 
+            this.img_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_back.BackColor = System.Drawing.Color.Transparent;
+            this.img_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_back.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.img_back.Location = new System.Drawing.Point(8, 4);
+            this.img_back.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_back.Name = "img_back";
+            this.img_back.Size = new System.Drawing.Size(38, 31);
+            this.img_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_back.TabIndex = 14;
+            this.img_back.TabStop = false;
+            this.img_back.Click += new System.EventHandler(this.img_back_Click);
+            // 
             // Owner_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -645,6 +665,7 @@
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -699,5 +720,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse12;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox img_back;
     }
 }

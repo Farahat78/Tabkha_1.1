@@ -30,15 +30,15 @@ namespace Tabkha_1._1
             string Weight = "";
             if (checkBox1.Checked)
             {
-                Weight += checkBox1.Checked.ToString();
+                Weight += checkBox1.Text;
             }
             else if(checkBox2.Checked)
             {
-                Weight += checkBox2.Checked.ToString();
+                Weight += checkBox2.Text;
             }
             else if(checkBox3.Checked)
             {
-                Weight += checkBox3.Checked.ToString();
+                Weight += checkBox3.Text;
             }
 
             if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
