@@ -68,7 +68,7 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connect.connectionString))
+                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
                     {
                         conn.Open();
 
@@ -77,7 +77,7 @@ namespace Tabkha_1._1
                         if (userId !=null)
                         {
                             Session.Id=userId.UserId;
-                            Session.Role = "User";
+                            Session.Role = "Users";
                             Session.Name= userId.Name;
                             Session.pic = userId.picpath;
 
@@ -95,7 +95,7 @@ namespace Tabkha_1._1
                         {
 
                             Session.Id = userId.UserId;
-                            Session.Role = "Chef";
+                            Session.Role = "Chefs";
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
@@ -112,7 +112,7 @@ namespace Tabkha_1._1
                         if (userId != null)
                         {
                             Session.Id = userId.UserId;
-                            Session.Role = "Admin";
+                            Session.Role = "Admins";
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
@@ -153,7 +153,7 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(connect.connectionString))
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
             {
                 
                 
@@ -218,7 +218,7 @@ namespace Tabkha_1._1
             else
             {
                 // Query for tables with both Email and Phone columns
-                query = $"SELECT {idColumn},{nameColumn},[ProfilePic] FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
+                query = $"SELECT {idColumn},[Fname], [Lname],[ProfilePic] FROM {tableName} WHERE (Email = @Username OR Phone = @Username) AND Password = @Password";
             }
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
@@ -229,16 +229,31 @@ namespace Tabkha_1._1
                 {
                     if (reader.Read())
                     {
+                        string fullName;
+
+                        if (tableName.Equals("Admins", StringComparison.OrdinalIgnoreCase))
+                        {
+                            // Admin table has a single name column
+                            fullName = reader[nameColumn].ToString();
+                        }
+                        else
+                        {
+                            // Users and Chefs have FName and LName columns
+                            string firstName = reader["FName"].ToString();
+                            string lastName = reader["LName"].ToString();
+                            fullName = $"{firstName} {lastName}";
+                        }
+
                         return new UserDetails
                         {
                             UserId = Convert.ToInt32(reader[idColumn]),
-                            Name = reader[nameColumn].ToString(),
+                            Name = fullName,
                             picpath = reader.FieldCount > reader.GetOrdinal("ProfilePic") ? reader["ProfilePic"].ToString() : null
                         };
                     }
                 }
             }
-            return null; // إذا لم يتم العثور على المستخدم
+            return null; // Return null if no user is found
         }
 
 

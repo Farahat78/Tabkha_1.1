@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -29,20 +30,20 @@ namespace Tabkha_1._1
             string Weight = "";
             if (checkBox1.Checked)
             {
-                Weight += checkBox1.Checked.ToString();
+                Weight += checkBox1.Text;
             }
             else if(checkBox2.Checked)
             {
-                Weight += checkBox2.Checked.ToString();
+                Weight += checkBox2.Text;
             }
             else if(checkBox3.Checked)
             {
-                Weight += checkBox3.Checked.ToString();
+                Weight += checkBox3.Text;
             }
 
             if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
             {
-                SqlConnection con = new SqlConnection("Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False");
+                SqlConnection con = new SqlConnection(Connection.connectionString);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Menu] (ChefID,DishName,Price,DishPic,Quantity,Weight,Ingredients,Category,PrepTime,Description) values(@ChefID,@Name,@Price,@DishPic,@Quantity,@Weight,@Ingredients,@Category,@PrepTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@ChefID", Session.Id);
@@ -66,12 +67,6 @@ namespace Tabkha_1._1
                 MessageBox.Show("please provide details");
             }
         }
-        //public void clear()
-        //{
-        //    textBox1.Text = "";
-        //    textBox2.Text = "";
-        //    textBox3.Text = "";
-        //}
 
         public uploadnew()
         {

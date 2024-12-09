@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -21,8 +22,6 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
-
         private void img_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,7 +48,7 @@ namespace Tabkha_1._1
             else
             {
                 string email = globalvariables.global_email;
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
                 {
                     try
                     {

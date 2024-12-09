@@ -36,13 +36,15 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_Pnumber = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pic_pro = new System.Windows.Forms.PictureBox();
             this.txtbox_email = new Tabkha_1._1.CustomTextBox();
             this.txtbox_Pnumber = new Tabkha_1._1.CustomTextBox();
             this.txtbox_password = new Tabkha_1._1.CustomTextBox();
             this.txtbox_name = new Tabkha_1._1.CustomTextBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pro)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_edit_img
@@ -56,6 +58,7 @@
             this.btn_edit_img.TabIndex = 0;
             this.btn_edit_img.Text = "Upload";
             this.btn_edit_img.UseVisualStyleBackColor = false;
+            this.btn_edit_img.Click += new System.EventHandler(this.btn_edit_img_Click);
             // 
             // btn_save
             // 
@@ -88,7 +91,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Location = new System.Drawing.Point(108, 13);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(87, 19);
+            this.lbl_name.Size = new System.Drawing.Size(76, 16);
             this.lbl_name.TabIndex = 7;
             this.lbl_name.Text = "User Name";
             // 
@@ -97,7 +100,7 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Location = new System.Drawing.Point(108, 41);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(48, 19);
+            this.lbl_email.Size = new System.Drawing.Size(41, 16);
             this.lbl_email.TabIndex = 8;
             this.lbl_email.Text = "Email";
             // 
@@ -106,7 +109,7 @@
             this.lbl_Pnumber.AutoSize = true;
             this.lbl_Pnumber.Location = new System.Drawing.Point(108, 71);
             this.lbl_Pnumber.Name = "lbl_Pnumber";
-            this.lbl_Pnumber.Size = new System.Drawing.Size(115, 19);
+            this.lbl_Pnumber.Size = new System.Drawing.Size(97, 16);
             this.lbl_Pnumber.TabIndex = 9;
             this.lbl_Pnumber.Text = "Phone Number";
             // 
@@ -115,46 +118,9 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Location = new System.Drawing.Point(108, 107);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(76, 19);
+            this.lbl_password.Size = new System.Drawing.Size(67, 16);
             this.lbl_password.TabIndex = 10;
             this.lbl_password.Text = "Password";
-            // 
-            // txtbox_email
-            // 
-            this.txtbox_email.Location = new System.Drawing.Point(222, 38);
-            this.txtbox_email.Name = "txtbox_email";
-            this.txtbox_email.Size = new System.Drawing.Size(328, 27);
-            this.txtbox_email.TabIndex = 6;
-            this.txtbox_email.WatermarkColor = System.Drawing.Color.Gray;
-            this.txtbox_email.WatermarkText = "example@gmail.com";
-            // 
-            // txtbox_Pnumber
-            // 
-            this.txtbox_Pnumber.Location = new System.Drawing.Point(222, 68);
-            this.txtbox_Pnumber.Name = "txtbox_Pnumber";
-            this.txtbox_Pnumber.Size = new System.Drawing.Size(328, 27);
-            this.txtbox_Pnumber.TabIndex = 5;
-            this.txtbox_Pnumber.WatermarkColor = System.Drawing.Color.Gray;
-            this.txtbox_Pnumber.WatermarkText = "+2010104706";
-            // 
-            // txtbox_password
-            // 
-            this.txtbox_password.Location = new System.Drawing.Point(222, 104);
-            this.txtbox_password.Name = "txtbox_password";
-            this.txtbox_password.Size = new System.Drawing.Size(328, 27);
-            this.txtbox_password.TabIndex = 4;
-            this.txtbox_password.UseSystemPasswordChar = true;
-            this.txtbox_password.WatermarkColor = System.Drawing.Color.Gray;
-            this.txtbox_password.WatermarkText = "Enter password here";
-            // 
-            // txtbox_name
-            // 
-            this.txtbox_name.Location = new System.Drawing.Point(222, 10);
-            this.txtbox_name.Name = "txtbox_name";
-            this.txtbox_name.Size = new System.Drawing.Size(328, 27);
-            this.txtbox_name.TabIndex = 3;
-            this.txtbox_name.WatermarkColor = System.Drawing.Color.Gray;
-            this.txtbox_name.WatermarkText = "Enter name here";
             // 
             // guna2Elipse1
             // 
@@ -171,10 +137,57 @@
             this.guna2Elipse3.BorderRadius = 20;
             this.guna2Elipse3.TargetControl = this.btn_edit_img;
             // 
+            // pic_pro
+            // 
+            this.pic_pro.Location = new System.Drawing.Point(492, 141);
+            this.pic_pro.Name = "pic_pro";
+            this.pic_pro.Size = new System.Drawing.Size(100, 50);
+            this.pic_pro.TabIndex = 11;
+            this.pic_pro.TabStop = false;
+            this.pic_pro.Visible = false;
+            // 
+            // txtbox_email
+            // 
+            this.txtbox_email.Location = new System.Drawing.Point(222, 38);
+            this.txtbox_email.Name = "txtbox_email";
+            this.txtbox_email.Size = new System.Drawing.Size(328, 22);
+            this.txtbox_email.TabIndex = 6;
+            this.txtbox_email.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_email.WatermarkText = "example@gmail.com";
+            // 
+            // txtbox_Pnumber
+            // 
+            this.txtbox_Pnumber.Location = new System.Drawing.Point(222, 68);
+            this.txtbox_Pnumber.Name = "txtbox_Pnumber";
+            this.txtbox_Pnumber.Size = new System.Drawing.Size(328, 22);
+            this.txtbox_Pnumber.TabIndex = 5;
+            this.txtbox_Pnumber.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_Pnumber.WatermarkText = "+2010104706";
+            // 
+            // txtbox_password
+            // 
+            this.txtbox_password.Location = new System.Drawing.Point(222, 104);
+            this.txtbox_password.Name = "txtbox_password";
+            this.txtbox_password.Size = new System.Drawing.Size(328, 22);
+            this.txtbox_password.TabIndex = 4;
+            this.txtbox_password.UseSystemPasswordChar = true;
+            this.txtbox_password.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_password.WatermarkText = "Enter password here";
+            // 
+            // txtbox_name
+            // 
+            this.txtbox_name.Location = new System.Drawing.Point(222, 10);
+            this.txtbox_name.Name = "txtbox_name";
+            this.txtbox_name.Size = new System.Drawing.Size(328, 22);
+            this.txtbox_name.TabIndex = 3;
+            this.txtbox_name.WatermarkColor = System.Drawing.Color.Gray;
+            this.txtbox_name.WatermarkText = "Enter name here";
+            // 
             // Manage_Profile
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(621, 203);
+            this.Controls.Add(this.pic_pro);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_Pnumber);
             this.Controls.Add(this.lbl_email);
@@ -188,6 +201,8 @@
             this.Controls.Add(this.btn_edit_img);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manage_Profile";
+            this.Load += new System.EventHandler(this.Manage_Profile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +223,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.PictureBox pic_pro;
     }
 }

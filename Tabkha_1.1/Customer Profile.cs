@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
     public partial class Customer_Profile: Form
     {
+        int currentUserID;
+
         private bool isSidebarExpanded = true;
 
-        public Customer_Profile()
+        public Customer_Profile(int userID)
         {
             InitializeComponent();
         }
@@ -32,6 +37,7 @@ namespace Tabkha_1._1
             Form.Dock = DockStyle.Fill;
             Gpnl_general.Controls.Add(Form);
             Form.Show();
+            MessageBox.Show($"Loaded Form: {Form.GetType().Name}");
         }
 
         public void hideSome()
@@ -52,7 +58,11 @@ namespace Tabkha_1._1
 
         private void btn_manageProfile_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new Manage_Profile());
+            Manage_Profile manage = new Manage_Profile();
+            manage.Owner = this;  // Set the current form (Customer_Profile) as the owner
+            manage.readOnly();
+            manage.LoadProfilePicture(Session.pic);
+            LoadFormIntoPanel(manage);
             lbl_data.Text = "Manage Your Profile";
         }
 
@@ -75,9 +85,10 @@ namespace Tabkha_1._1
         {
             ChangeColor(btn_view, btn_orders);
             lbl_data.Text = "Profile";
-            Manage_Profile veiw = new Manage_Profile();
-            veiw.readOnly();
-            LoadFormIntoPanel(veiw);
+            Manage_Profile manageProfileForm = new Manage_Profile();
+            manageProfileForm.Owner = this;
+            manageProfileForm.readOnly();
+            LoadFormIntoPanel(manageProfileForm);
         }
 
         private void btn_orders_Click(object sender, EventArgs e)
@@ -114,10 +125,21 @@ namespace Tabkha_1._1
                 Gpnl_general.Width = this.Width - pnl_sidebar.Width;
             }
         }
-
         private void btn_out_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
+            login login = new login();
+            login.Show();
             this.Close();
+        }
+
+        public void RefreshProfile()
+        {
+            lbl_username.Text = Session.Name;
+            img_customer_profile.Image = !string.IsNullOrEmpty(Session.pic)
+                ? Image.FromFile(Session.pic)
+                : Properties.Resources.Max_R_Headshot__1_;
         }
 
         private void btn_comments_Click(object sender, EventArgs e)

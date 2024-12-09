@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -58,15 +59,18 @@ namespace Tabkha_1._1
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            Customer_Profile customer_Profile = new Customer_Profile();
+            Customer_Profile customer_Profile = new Customer_Profile(Session.Id);
             customer_Profile.Show();
             this.Hide();
         }
 
         private void lbl_logout_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
             login login = new login();
             login.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,10 +89,9 @@ namespace Tabkha_1._1
         private void CreateCardsFromDatabase()
         {
             // 1. اتصال بقاعدة البيانات
-            string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
-            string query = "SELECT [Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
+            string query = "SELECT [ChefID],[Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
@@ -104,7 +107,9 @@ namespace Tabkha_1._1
                     Panel newCard = new Panel
                     {
                         Size = panelTemplate.Size,
-                        BackColor = panelTemplate.BackColor
+                        BackColor = panelTemplate.BackColor,
+                        Tag = reader["ChefID"]
+                        
                     };
 
                     foreach (Control control in panelTemplate.Controls)
@@ -153,7 +158,7 @@ namespace Tabkha_1._1
                         MessageBox.Show("Error loading image: " + ex.Message);
                     }
 
-
+                    newCard.Click += (s, e) => OpenRestaurant((int)newCard.Tag);
                     // 4. إضافة الكارد الجديد إلى الـ FlowLayoutPanel
                     flowLayoutPanel1.Controls.Add(newCard);
                 }
@@ -174,6 +179,13 @@ namespace Tabkha_1._1
 
             // نسخ الخصائص الأخرى حسب الحاجة
             return newControl;
+        }
+
+        private void OpenRestaurant(int ChefID)
+        {
+            var restaurant = new Owner_Profile(ChefID);
+            restaurant.Show();
+            this.Hide(); // إذا أردت إخفاء الصفحة الحالية
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
