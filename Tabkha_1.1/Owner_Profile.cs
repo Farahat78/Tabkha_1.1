@@ -20,8 +20,6 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
             Comments();
-            
-
         }
         private void CreateCardsFromDatabase()
         {
