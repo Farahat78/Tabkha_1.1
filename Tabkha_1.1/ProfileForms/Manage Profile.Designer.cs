@@ -36,13 +36,15 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_Pnumber = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pic_pro = new System.Windows.Forms.PictureBox();
             this.txtbox_email = new Tabkha_1._1.CustomTextBox();
             this.txtbox_Pnumber = new Tabkha_1._1.CustomTextBox();
             this.txtbox_password = new Tabkha_1._1.CustomTextBox();
             this.txtbox_name = new Tabkha_1._1.CustomTextBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pro)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_edit_img
@@ -56,6 +58,7 @@
             this.btn_edit_img.TabIndex = 0;
             this.btn_edit_img.Text = "Upload";
             this.btn_edit_img.UseVisualStyleBackColor = false;
+            this.btn_edit_img.Click += new System.EventHandler(this.btn_edit_img_Click);
             // 
             // btn_save
             // 
@@ -119,6 +122,30 @@
             this.lbl_password.TabIndex = 10;
             this.lbl_password.Text = "Password";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this.btn_save;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.btn_edit;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 20;
+            this.guna2Elipse3.TargetControl = this.btn_edit_img;
+            // 
+            // pic_pro
+            // 
+            this.pic_pro.Location = new System.Drawing.Point(492, 141);
+            this.pic_pro.Name = "pic_pro";
+            this.pic_pro.Size = new System.Drawing.Size(100, 50);
+            this.pic_pro.TabIndex = 11;
+            this.pic_pro.TabStop = false;
+            this.pic_pro.Visible = false;
+            // 
             // txtbox_email
             // 
             this.txtbox_email.Location = new System.Drawing.Point(222, 38);
@@ -156,25 +183,11 @@
             this.txtbox_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txtbox_name.WatermarkText = "Enter name here";
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this.btn_save;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.btn_edit;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 20;
-            this.guna2Elipse3.TargetControl = this.btn_edit_img;
-            // 
             // Manage_Profile
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(621, 203);
+            this.Controls.Add(this.pic_pro);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_Pnumber);
             this.Controls.Add(this.lbl_email);
@@ -189,6 +202,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manage_Profile";
             this.Load += new System.EventHandler(this.Manage_Profile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +223,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.PictureBox pic_pro;
     }
 }
