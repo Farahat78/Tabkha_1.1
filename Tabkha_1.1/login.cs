@@ -141,6 +141,7 @@ namespace Tabkha_1._1
         {
             option_for_register option = new option_for_register();
             option.Show();
+            this.Hide();
         }
 
         private void L_lbl_forgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -149,6 +150,7 @@ namespace Tabkha_1._1
             forget.Show();
             this.Hide();
         }
+
         private void Sendcode(string user_email)
         {
             string password = "";
