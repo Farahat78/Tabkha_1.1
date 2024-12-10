@@ -17,6 +17,7 @@ namespace Tabkha_1._1
         public user_home()
         {
             InitializeComponent();
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -45,6 +46,9 @@ namespace Tabkha_1._1
         private void user_home_Load(object sender, EventArgs e)
         {
             lbl_account.Text = Session.Name;
+            guna2CirclePictureBox1.Image = !string.IsNullOrEmpty(Session.pic)
+           ? Image.FromFile(Session.pic)
+           : Properties.Resources.Max_R_Headshot__1_;
             btn_apply.Enabled = false;
             btn_apply.BackColor = Color.Gray;
             CreateCardsFromDatabase();
