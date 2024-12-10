@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using static Guna.UI2.Native.WinApi;
 using System.Xml.Linq;
 using Tabkha_1._1;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
@@ -52,7 +53,7 @@ namespace Tabkha_1._1
                 string bio = txtbox_bio.Text;
                 string fullname = First_Name + " " + Last_Name;
 
-                using (SqlConnection connect = new SqlConnection(connectionString))
+                using (SqlConnection connect = new SqlConnection(Connection.connectionString))
                 {
                     try
                     {
