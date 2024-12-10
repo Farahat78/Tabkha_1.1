@@ -69,6 +69,25 @@ namespace Tabkha_1._1
             MenuID = menuid;
             Load_all_page_data();
             ChefID = chefid;
+
+            label11.Text = Session.Name;
+            guna2CirclePictureBox1.Image = !string.IsNullOrEmpty(Session.pic)
+                       ? Image.FromFile(Session.pic)
+                       : Properties.Resources.Max_R_Headshot__1_;
+
+            if (Session.Role == "Chefs")
+            {
+                btn_addtocart.Visible = false;
+                btn_Edit.Visible = true;
+                lbl_Cart.Visible = false;
+            }
+            else if (Session.Role=="Users")
+            {
+                btn_addtocart.Visible=true;
+                btn_Edit.Visible=false;
+                lbl_Cart.Visible=true;
+            }
+            Comments();
         }
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -83,8 +102,8 @@ namespace Tabkha_1._1
 
         private void btn_order_Click(object sender, EventArgs e)
         {
-            place_order place_Order = new place_order();
-            place_Order.Show();
+            uploadnew uploadPage = new uploadnew(MenuID);
+            uploadPage.Show();
             this.Hide();
         }
 
@@ -128,17 +147,8 @@ namespace Tabkha_1._1
 
         private void Product_details_Load(object sender, EventArgs e)
         {
-           
-            label11.Text = Session.Name;
-            //if (Session.pic != null)
-            //{
-            //    guna2CirclePictureBox1.Image = Image.FromFile(Session.pic);
-            //}
-            //else
-            //{
-            //    guna2CirclePictureBox1.Image = Properties.Resources.Max_R_Headshot__1_;
-            //}
-            guna2CirclePictureBox1.Image = Properties.Resources.Max_R_Headshot__1_;
+
+            DisplayQuantity(MenuID);
         }
 
         private void Insertcomment()
@@ -147,7 +157,7 @@ namespace Tabkha_1._1
             string comment = txt_addcomment.Text;
             int userid = Session.Id;
             int chefid = ChefID;
-            if (txt_addcomment.Text != "" || guna2RatingStar1.Value==0)
+            if (txt_addcomment.Text != "" && guna2RatingStar1.Value!=0)
             {
                 SqlConnection con = new SqlConnection(Connection.connectionString);
                 con.Open();
@@ -169,12 +179,185 @@ namespace Tabkha_1._1
         }
         private void insertintocart()
         {
+            string dishpic = img_product.ImageLocation.ToString();
+            string productname = lbl_product_name.Text;
+            string price = lbl_price.Text;
+            int quantity = (int)num_quantity.Value;
+            int userid = Session.Id ;
+            int dishid = MenuID;
+            string wheight = "";
+
+            if (radio_wieght.Checked)
+            {
+                wheight = radio_wieght.Text; // أو أي قيمة مخصصة تريدها
+            }
+            else if (radioButton2.Checked)
+            {
+                wheight = radioButton2.Text;
+            }
+            else if (radioButton3.Checked)
+            {
+                wheight = radioButton3.Text;
+            }
+
+            if (num_quantity.Value != 0 && wheight != "")
+            {
+                using (SqlConnection con = new SqlConnection(Connection.connectionString))
+                {
+                    con.Open();
+
+                    // التحقق من الكمية المتوفرة
+                    SqlCommand checkCmd = new SqlCommand("SELECT Quantity FROM [dbo].[Menu] WHERE MenuID = @dishid", con);
+                    checkCmd.Parameters.AddWithValue("@dishid", dishid);
+
+
+                    int availableQuantity = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (availableQuantity >= quantity)
+                    {
+                        // إدخال الطلب في جدول Cart
+                        SqlCommand insertCmd = new SqlCommand("INSERT INTO [dbo].[Cart] (UserID, DishID, Quantity, Price, DishPic , weight) VALUES (@userid, @dishid, @quantity, @price, @dishpic , @weight)", con);
+                        insertCmd.Parameters.AddWithValue("@userid", userid);
+                        insertCmd.Parameters.AddWithValue("@dishid", dishid);
+                        insertCmd.Parameters.AddWithValue("@quantity", quantity);
+                        insertCmd.Parameters.AddWithValue("@price", price);
+                        insertCmd.Parameters.AddWithValue("@dishpic", dishpic);
+                        insertCmd.Parameters.AddWithValue("@weight" , wheight);
+                        insertCmd.ExecuteNonQuery();
+
+                        // تحديث الكمية المتوفرة في جدول Menu
+                        SqlCommand updateCmd = new SqlCommand("UPDATE [dbo].[Menu] SET Quantity = Quantity - @quantity WHERE MenuID = @dishid", con);
+                        updateCmd.Parameters.AddWithValue("@quantity", quantity);
+                        updateCmd.Parameters.AddWithValue("@dishid", dishid);
+                        updateCmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Added to Cart Successfully");
+
+                        DisplayQuantity(MenuID);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry, the available quantity is less than your request.");
+                    }
+
+                    con.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Choose Wheight and Quantity");
+            }
+
 
         }
+
+        private void DisplayQuantity(int dishId)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(Connection.connectionString))
+                {
+                    con.Open();
+
+                    // الاستعلام لجلب الكمية
+                    string query = "SELECT Quantity FROM [dbo].[Menu] WHERE MenuID = @dishId";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@dishId", dishId);
+
+                    // تنفيذ الاستعلام وجلب الكمية
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        int quantity = Convert.ToInt32(result); // تحويل القيمة إلى عدد صحيح
+                        label10.Text = $"Available Quantity: {quantity}"; // عرض الكمية في الـ Label
+                    }
+                    else
+                    {
+                        label10.Text = "Dish not found."; // إذا لم يتم العثور على الطبق
+                    }
+
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}"); // عرض رسالة في حالة وجود خطأ
+            }
+        }
+
+        private void Comments()
+        {
+            label15.Visible = false;
+            lbl_comment.Visible = false;
+            guna2RatingStar2.Visible= false;
+            // 1. اتصال بقاعدة البيانات
+            string query = "SELECT  Users.Fname AS fname,  Reviews.Comment AS comment, Reviews.Rating AS rating FROM [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users ON  Reviews.UserID = Users.UserID WHERE  Reviews.ChefID = @ChefID;";
+
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ChefID", ChefID);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                int yoffset = 590;
+                while (reader.Read())
+                {
+                    Label username = new Label()
+                    {
+                        Text = reader["fname"].ToString(), // Set the username from the database‍
+                        Font = label15.Font,               // Copy the font from label6
+                        ForeColor = label15.ForeColor,     // Copy the text color from label6
+                        AutoSize = true,                  // Enable auto-size‍
+                        Location = new Point(label15.Location.X, yoffset) // Position at label6's location‍
+                    };
+
+
+                    Label Usercomment = new Label
+                    {
+                        Text = reader["comment"].ToString(), // Set the comment from the database‍
+                        Font = lbl_comment.Font,         // Copy the font from lbl_usercomment‍
+                        ForeColor = lbl_comment.ForeColor, // Copy the text color‍
+                        AutoSize = true,                      // Enable auto-size‍
+                        Location = new Point(lbl_comment.Location.X, yoffset)
+                    };
+                    Guna.UI2.WinForms.Guna2RatingStar UserRating = new Guna.UI2.WinForms.Guna2RatingStar
+                    {
+                        Value = reader["Rating"] != DBNull.Value ? Convert.ToSingle(reader["Rating"]) : 0f, // تعيين التقييم من قاعدة البيانات
+                        AutoSize = false,
+                        RatingColor = Color.FromArgb(255, 128, 0),
+                        ReadOnly = true,
+                        Size = new Size(89, 28),
+                        Location = new Point(guna2RatingStar2.Location.X, yoffset) // ضبط الموقع أسفل التعليق
+                    };
+                    this.Controls.Add(username);
+                    this.Controls.Add(Usercomment);
+                    this.Controls.Add(UserRating);
+                    yoffset += 40;
+                }
+            }
+        }
+
+
+
 
         private void btn_submib_Click(object sender, EventArgs e)
         {
             Insertcomment();
+            Comments();
+        }
+
+        private void btn_addtocart_Click(object sender, EventArgs e)
+        {
+            insertintocart();
+        }
+
+        private void lbl_Cart_Click(object sender, EventArgs e)
+        {
+            place_order place_Order = new place_order();
+            place_Order.Show();
+            this.Hide();
         }
     }
 }
