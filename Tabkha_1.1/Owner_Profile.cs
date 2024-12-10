@@ -22,12 +22,21 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
             Comments();
+            chefid = Session.Id;
+            LoadChefProfile(chefid);
+            btn_add.Visible = true;
+            btn_edit.Visible = true;
+            btn_logout.Visible = true;
         }
         public Owner_Profile(int ChefID)
         {
             InitializeComponent();
             chefid = ChefID;
             Comments();
+            LoadChefProfile(chefid);
+            btn_add.Visible = false;
+            btn_edit.Visible = false;
+            btn_logout.Visible = false;
         }
         private void CreateCardsFromDatabase()
         {
@@ -115,19 +124,20 @@ namespace Tabkha_1._1
         }
 
         //test
-        private int chief_id = 1;
+
         
         private void Comments()
         {
             label6.Visible = false;
             lbl_usercomment.Visible = false;
+            guna2RatingStar1.Visible = false;
             // 1. اتصال بقاعدة البيانات
-            string query = "SELECT Users.Fname as fname ,Reviews.Comment  as comment FROM   [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users  ON Reviews.UserID = Users.UserID WHERE    Reviews.ChefID = @ChefID;";
+            string query = "SELECT  Users.Fname AS fname,  Reviews.Comment AS comment, Reviews.Rating AS rating FROM [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users ON  Reviews.UserID = Users.UserID WHERE  Reviews.ChefID = @ChefID;";
 
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ChefID", chief_id);
+                command.Parameters.AddWithValue("@ChefID", chefid);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -152,12 +162,21 @@ namespace Tabkha_1._1
                         AutoSize = true,                      // Enable auto-size‍
                         Location = new Point(lbl_usercomment.Location.X, yoffset + 30) 
                     };
-                    
+
+                    Guna.UI2.WinForms.Guna2RatingStar UserRating = new Guna.UI2.WinForms.Guna2RatingStar
+                    {
+                        Value = reader["Rating"] != DBNull.Value ? Convert.ToSingle(reader["Rating"]) : 0f, // تعيين التقييم من قاعدة البيانات
+                        AutoSize = false,
+                        RatingColor = Color.FromArgb(255, 128, 0),
+                        ReadOnly = true,
+                        Size = new Size(89, 28),
+                        Location = new Point(guna2RatingStar1.Location.X, yoffset) // ضبط الموقع أسفل التعليق
+                    };
 
 
-                    
                     guna2ShadowPanel2.Controls.Add(username);
                     guna2ShadowPanel2.Controls.Add(Usercomment);
+                    guna2ShadowPanel2.Controls.Add(UserRating);
                     yoffset += 70;
                 }
             }
@@ -202,6 +221,134 @@ namespace Tabkha_1._1
             btn4.ForeColor = Color.White;
             btn5.ForeColor = Color.White;
         }
+        public void LoadChefProfile(int chefId)
+        {
+            // الاتصال بقاعدة البيانات
+            SqlConnection con = new SqlConnection(Connection.connectionString);
+            try
+            {
+                con.Open();
+
+                // استعلام SQL لاسترجاع البيانات المطلوبة
+                SqlCommand cmd = new SqlCommand("  SELECT ProfilePic, Rname, Bio, Phone FROM [dbo].[Chefs] WHERE ChefID = @ChefID", con);
+                cmd.Parameters.AddWithValue("@ChefID", chefId);
+
+                // تنفيذ الاستعلام
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // تحميل البيانات في العناصر المناسبة
+                        string profilePicPath = reader["ProfilePic"].ToString(); // مسار صورة الملف الشخصي
+                        string restaurantName = reader["Rname"].ToString(); // اسم المطعم
+                        string bio = reader["Bio"].ToString(); // السيرة الذاتية
+                        string phone = reader["Phone"].ToString(); // رقم الهاتف
+
+                        // تعيين البيانات في أماكنها (تأكد من أن العناصر مناسبة في النموذج)
+                        img_profile.Image = !string.IsNullOrEmpty(profilePicPath)
+                        ? Image.FromFile(profilePicPath)
+                        : Properties.Resources.chef;
+                        label1.Text = restaurantName; // تأكد من أن lbl_restaurantName هو الـ Label لاسم المطعم
+                        label2.Text = bio; // تأكد من أن lbl_bio هو الـ Label للسيرة الذاتية
+                        label3.Text = phone; // تأكد من أن lbl_phone هو الـ Label لرقم الهاتف
+                    }
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading profile: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void FilterMenu(string category)
+        {
+            string query;
+
+            if (Session.Role == "Chefs")
+            {
+                query = $"SELECT MenuID, DishName, DishPic, Price FROM [tabkha1].[dbo].[Menu] WHERE ChefID = {Session.Id} AND Category = @Category";
+            }
+            else
+            {
+                query = $"SELECT MenuID, DishName, DishPic, Price FROM [tabkha1].[dbo].[Menu] WHERE ChefID = {chefid} AND Category = @Category";
+            }
+
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Category", category);
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                flowLayoutPanel1.Controls.Clear();  // Clear existing cards
+
+                while (reader.Read())
+                {
+                    // نسخ الكارد الأساسي
+                    Panel newCard = new Panel
+                    {
+                        Size = Panel_Template.Size,
+                        BackColor = Panel_Template.BackColor,
+                        Tag = reader["MenuID"]
+                    };
+
+                    foreach (Control control in Panel_Template.Controls)
+                    {
+                        Control clonedControl = CloneControl(control);
+                        newCard.Controls.Add(clonedControl);
+                    }
+
+                    // تخصيص البيانات داخل الكارد
+                    Label nameLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "label8");
+                    if (nameLabel != null) nameLabel.Text = reader["DishName"].ToString();
+
+                    Label price = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "label7");
+                    if (price != null) price.Text = reader["Price"].ToString();
+
+                    // الشعار (Logo)
+                    try
+                    {
+                        PictureBox pic = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "pictureBox2");
+                        string imagepath = reader["DishPic"]?.ToString();
+
+                        if (pic != null)
+                        {
+                            if (!string.IsNullOrEmpty(imagepath) && System.IO.File.Exists(imagepath))
+                            {
+                                pic.Image = Image.FromFile(imagepath);
+                            }
+                            else
+                            {
+                                pic.Image = Properties.Resources.chef; // تعيين null لإظهار InitialImage
+                            }
+
+                            pic.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error loading image: " + ex.Message);
+                    }
+
+                    newCard.Click += (s, e) => OpenProductDetails((int)newCard.Tag);
+                    flowLayoutPanel1.Controls.Add(newCard);
+                }
+
+                reader.Close();
+            }
+        }
+
+
+
         private void img_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -215,26 +362,31 @@ namespace Tabkha_1._1
         private void btn_appitizer_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_appitizer, btn_dessert, btn_mainCourse, btn_salad, btn_soup);
+            FilterMenu("Appitizer");
         }
 
         private void btn_mainCourse_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_mainCourse, btn_appitizer, btn_dessert, btn_salad, btn_soup);
+            FilterMenu("Main Course");
         }
 
         private void btn_soup_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_soup,btn_appitizer, btn_dessert, btn_mainCourse, btn_salad);
+            FilterMenu("Soup");
         }
 
         private void btn_salad_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_salad,btn_appitizer, btn_dessert, btn_mainCourse, btn_soup);
+            FilterMenu("Salad");
         }
 
         private void btn_dessert_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_dessert,btn_appitizer, btn_mainCourse, btn_salad, btn_soup);
+            FilterMenu("Dessert");
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
