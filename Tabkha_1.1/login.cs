@@ -141,6 +141,7 @@ namespace Tabkha_1._1
         {
             option_for_register option = new option_for_register();
             option.Show();
+            this.Hide();
         }
 
         private void L_lbl_forgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
