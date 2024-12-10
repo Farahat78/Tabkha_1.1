@@ -154,7 +154,6 @@ namespace Tabkha_1._1
                     
 
 
-                    
                     guna2ShadowPanel2.Controls.Add(username);
                     guna2ShadowPanel2.Controls.Add(Usercomment);
                     yoffset += 70;
