@@ -72,8 +72,8 @@ namespace Tabkha_1._1
                             if (rowaffected > 0)
                             {
                                 SendWelcomeEmail(fullname, Email);
-                                user_home user_Home = new user_home();
-                                user_Home.Show();
+                                login login = new login();
+                                login.Show();
                                 this.Hide();
                             }
                             else
