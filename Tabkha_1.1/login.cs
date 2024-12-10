@@ -149,6 +149,7 @@ namespace Tabkha_1._1
             forget.Show();
             this.Hide();
         }
+
         private void Sendcode(string user_email)
         {
             string password = "";
