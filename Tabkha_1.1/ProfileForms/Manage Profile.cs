@@ -138,7 +138,6 @@ namespace Tabkha_1._1
                         {
                             customerProfile.RefreshProfile(); // Update the profile dynamically
                         }
-                        MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
