@@ -115,7 +115,6 @@ namespace Tabkha_1._1
         }
 
         //test
-        private int chief_id = 1;
         
         private void Comments()
         {
