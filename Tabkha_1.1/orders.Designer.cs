@@ -82,16 +82,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.lbl_order_price = new System.Windows.Forms.Label();
-            this.txt_search_order = new Tabkha_1._1.CustomTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lbl_order_notes = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_order_name = new System.Windows.Forms.Label();
             this.lbl_order_quantity = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -104,12 +100,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_neworders = new System.Windows.Forms.Button();
             this.btn_pendingorders = new System.Windows.Forms.Button();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txt_search_order = new Tabkha_1._1.CustomTextBox();
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_up.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -142,7 +139,7 @@
             this.pnl_up.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnl_up.Location = new System.Drawing.Point(0, 0);
             this.pnl_up.Name = "pnl_up";
-            this.pnl_up.Size = new System.Drawing.Size(1021, 113);
+            this.pnl_up.Size = new System.Drawing.Size(1053, 113);
             this.pnl_up.TabIndex = 3;
             // 
             // lbl_logout
@@ -190,7 +187,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -203,7 +200,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(934, 3);
+            this.img_minimize.Location = new System.Drawing.Point(966, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,7 +228,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(978, 3);
+            this.img_close.Location = new System.Drawing.Point(1010, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -632,14 +629,11 @@
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_price);
             this.guna2ShadowPanel1.Controls.Add(this.txt_search_order);
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox1);
-            this.guna2ShadowPanel1.Controls.Add(this.label19);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_order_notes);
             this.guna2ShadowPanel1.Controls.Add(this.label40);
             this.guna2ShadowPanel1.Controls.Add(this.label15);
             this.guna2ShadowPanel1.Controls.Add(this.label16);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_name);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_order_quantity);
-            this.guna2ShadowPanel1.Controls.Add(this.label17);
             this.guna2ShadowPanel1.Controls.Add(this.label12);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_Address);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
@@ -752,16 +746,6 @@
             this.lbl_order_price.TabIndex = 41;
             this.lbl_order_price.Text = "300";
             // 
-            // txt_search_order
-            // 
-            this.txt_search_order.Location = new System.Drawing.Point(438, 7);
-            this.txt_search_order.Multiline = true;
-            this.txt_search_order.Name = "txt_search_order";
-            this.txt_search_order.Size = new System.Drawing.Size(185, 38);
-            this.txt_search_order.TabIndex = 19;
-            this.txt_search_order.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_search_order.WatermarkText = "Order Number";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.search;
@@ -771,26 +755,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(378, 136);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(87, 18);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "One Spicy ";
-            // 
-            // lbl_order_notes
-            // 
-            this.lbl_order_notes.AutoSize = true;
-            this.lbl_order_notes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order_notes.Location = new System.Drawing.Point(376, 112);
-            this.lbl_order_notes.Name = "lbl_order_notes";
-            this.lbl_order_notes.Size = new System.Drawing.Size(91, 18);
-            this.lbl_order_notes.TabIndex = 39;
-            this.lbl_order_notes.Text = "No Tomato";
             // 
             // label40
             // 
@@ -842,16 +806,6 @@
             this.lbl_order_quantity.Size = new System.Drawing.Size(18, 18);
             this.lbl_order_quantity.TabIndex = 35;
             this.lbl_order_quantity.Text = "2";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(299, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 18);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Notes :";
             // 
             // label12
             // 
@@ -964,11 +918,6 @@
             this.guna2Elipse3.BorderRadius = 40;
             this.guna2Elipse3.TargetControl = this.btn_cancelorder;
             // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 30;
-            this.guna2Elipse4.TargetControl = this.txt_search_order;
-            // 
             // guna2Elipse5
             // 
             this.guna2Elipse5.BorderRadius = 30;
@@ -1014,11 +963,26 @@
             this.guna2Elipse7.BorderRadius = 30;
             this.guna2Elipse7.TargetControl = this.btn_pendingorders;
             // 
+            // txt_search_order
+            // 
+            this.txt_search_order.Location = new System.Drawing.Point(438, 7);
+            this.txt_search_order.Multiline = true;
+            this.txt_search_order.Name = "txt_search_order";
+            this.txt_search_order.Size = new System.Drawing.Size(185, 38);
+            this.txt_search_order.TabIndex = 19;
+            this.txt_search_order.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_search_order.WatermarkText = "Order Number";
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.txt_search_order;
+            // 
             // orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 586);
+            this.ClientSize = new System.Drawing.Size(1053, 606);
             this.Controls.Add(this.btn_neworders);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.pnl_order_details);
@@ -1092,13 +1056,10 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lbl_order_price;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lbl_order_notes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lbl_order_name;
         private System.Windows.Forms.Label lbl_order_quantity;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_Address;
         private System.Windows.Forms.Label label1;
