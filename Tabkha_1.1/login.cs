@@ -137,7 +137,7 @@ namespace Tabkha_1._1
             
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             option_for_register option = new option_for_register();
             option.Show();
