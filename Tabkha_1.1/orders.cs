@@ -24,8 +24,15 @@ namespace Tabkha_1._1
         private void btn_View_order_Click(object sender, EventArgs e)
         {
             pnl_order_details.Visible = true;
+            Button clickedButton = sender as Button;
+            if (clickedButton != null && clickedButton.Tag != null)
+            {
+                int orderId = Convert.ToInt32(clickedButton.Tag);
 
-            
+                // استدعاء وظيفة لتحميل بيانات الطلب من قاعدة البيانات وعرضها
+                LoadOrderDetailsToPanel(orderId);
+            }
+
         }
 
         private void img_close_Click(object sender, EventArgs e)
@@ -47,11 +54,27 @@ namespace Tabkha_1._1
 
         private void btn_acceptorder_Click(object sender, EventArgs e)
         {
+        if (btn_acceptorder.Text == "Accept Order")
+            {
+                UpdateOrderStatus("Pending");
+              
+            }
+        else if (btn_acceptorder.Text == "Done")
+            {
+                UpdateOrderStatus("Done");
+            }
+        else if (btn_acceptorder.Text == "Print Receipt")
+            {
 
+            }
+           
         }
 
         private void btn_neworders_Click(object sender, EventArgs e)
         {
+            btn_acceptorder.Text = "Accept Order";
+            btn_acceptorder.BackColor = Color.FromArgb(204, 82, 48);
+            pnl_order_details.Visible = false;
             lbl_status.Text = "New Orders";
             flowLayoutPanel1.Controls.Clear();
             CreateOrderCardsFromDatabase("new");
@@ -59,36 +82,36 @@ namespace Tabkha_1._1
 
         private void CreateOrderCardsFromDatabase(string status)
         {
-           string query = @"
-            SELECT 
-                users.Fname + ' ' + users.Lname AS username,
-                users.Phone,
-                users.Address,
-                orders.OrderID AS orderid,
-                STRING_AGG(Menu.DishName, CHAR(10)) AS DishNames,
-                STRING_AGG(CAST(OrderItems.Quantity AS NVARCHAR), CHAR(10)) AS Quantities,
-                STRING_AGG(CAST(OrderItems.Price AS NVARCHAR), CHAR(10)) AS Prices,
-                Orders.TotalPrice
-            FROM 
-                Orders
-            JOIN 
-                Users ON Orders.UserID = Users.UserID
-            JOIN 
-                OrderItems ON Orders.OrderID = OrderItems.OrderID
-            JOIN 
-                Menu ON OrderItems.MenuID = Menu.MenuID
-            JOIN 
-                Chefs ON Menu.ChefID = Chefs.ChefID
-            WHERE  
-                Orders.OrderStatus = @orderstatus AND Chefs.ChefID = @ChefID 
-            GROUP BY 
-                users.Fname, users.Lname, users.Phone, users.Address, orders.OrderID, Orders.TotalPrice;
-        ";
+            string query = @"
+    SELECT 
+        users.Fname + ' ' + users.Lname AS username,
+        users.Phone,
+        users.Address,
+        orders.OrderID AS orderid,
+        STRING_AGG(Menu.DishName, CHAR(10)) AS DishNames,
+        STRING_AGG(CAST(OrderItems.Quantity AS NVARCHAR), CHAR(10)) AS Quantities,
+        STRING_AGG(CAST(OrderItems.Price AS NVARCHAR), CHAR(10)) AS Prices,
+        Orders.TotalPrice
+    FROM 
+        Orders
+    JOIN 
+        Users ON Orders.UserID = Users.UserID
+    JOIN 
+        OrderItems ON Orders.OrderID = OrderItems.OrderID
+    JOIN 
+        Menu ON OrderItems.MenuID = Menu.MenuID
+    JOIN 
+        Chefs ON Menu.ChefID = Chefs.ChefID
+    WHERE  
+        Orders.OrderStatus = @orderstatus AND Chefs.ChefID = @ChefID 
+    GROUP BY 
+        users.Fname, users.Lname, users.Phone, users.Address, orders.OrderID, Orders.TotalPrice;
+    ";
 
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ChefID",Session.Id);
+                command.Parameters.AddWithValue("@ChefID", Session.Id);
                 command.Parameters.AddWithValue("@orderstatus", status);
 
                 connection.Open();
@@ -126,25 +149,51 @@ namespace Tabkha_1._1
 
                     // تفاصيل الأطباق
                     Label dishesLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_order_name");
-                    if (dishesLabel != null) dishesLabel.Text = reader["DishNames"].ToString();
+                    if (dishesLabel != null)
+                    {
+                        // تقسيم الأطباق التي تم إرجاعها بواسطة STRING_AGG
+                        string[] dishNames = reader["DishNames"].ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                        dishesLabel.Text = string.Join("\n", dishNames); // عرض الأطباق
+                    }
 
                     // الكميات
-                    Label quantitiesLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_quantities");
-                    if (quantitiesLabel != null) quantitiesLabel.Text = reader["Quantities"].ToString();
+                    Label quantitiesLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_order_quantity");
+                    if (quantitiesLabel != null)
+                    {
+                        string[] quantities = reader["Quantities"].ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                        quantitiesLabel.Text = string.Join("\n", quantities); // عرض الكميات
+                    }
 
                     // الأسعار
                     Label pricesLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_order_price");
-                    if (pricesLabel != null) pricesLabel.Text = reader["Prices"].ToString();
+                    if (pricesLabel != null)
+                    {
+                        string[] prices = reader["Prices"].ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                        pricesLabel.Text = string.Join("\n", prices) + " EGP"; // عرض الأسعار
+                    }
 
                     // الإجمالي
                     Label totalPriceLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_total_price");
-                    if (totalPriceLabel != null) totalPriceLabel.Text = $"{reader["TotalPrice"]}";
+                    if (totalPriceLabel != null)
+                    {
+                        totalPriceLabel.Text = $"{reader["TotalPrice"]} EGP";
+                    }
+
+                    // الزرار View
+                    Button viewButton = newCard.Controls.OfType<Button>().FirstOrDefault(c => c.Name == "btn_View_order");
+                    if (viewButton != null)
+                    {
+                        viewButton.Tag = reader["orderid"]; // تخزين OrderID
+                        viewButton.Click += btn_View_order_Click; // ربط بالحدث
+                    }
 
                     flowLayoutPanel1.Controls.Add(newCard);
                 }
 
                 reader.Close();
             }
+        }
+
 
 
         private Control CloneControl(Control control)
@@ -162,8 +211,132 @@ namespace Tabkha_1._1
             return newControl;
         }
 
+        private void LoadOrderDetailsToPanel(int orderId)
+        {
+            string query = @"
+    SELECT 
+        users.Fname + ' ' + users.Lname AS username,
+        users.Phone,
+        users.Address,
+        Menu.DishName,
+        OrderItems.Quantity,
+        OrderItems.Price,
+        Orders.TotalPrice
+    FROM 
+        Orders
+    JOIN 
+        Users ON Orders.UserID = Users.UserID
+    JOIN 
+        OrderItems ON Orders.OrderID = OrderItems.OrderID
+    JOIN 
+        Menu ON OrderItems.MenuID = Menu.MenuID
+    WHERE  
+        Orders.OrderID = @OrderID;
+";
+
+            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OrderID", orderId);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                decimal subtotal = 0; // لحساب subtotal بناءً على العناصر
+                int rowIndex = 0; // لاستخدامها مع العناصر المتكررة
+
+                label5.Text = "";
+                label30.Text = "";
+                label31.Text = "";
+                while (reader.Read())
+                {
+                    // تحديث البيانات الثابتة (التي لا تتغير مثل الاسم، العنوان، الهاتف)
+                    if (rowIndex == 0)
+                    {
+                        label20.Text = orderId.ToString();
+                        lbl_client_name.Text = reader["username"].ToString();
+                        lbl_clientPhone.Text = reader["Phone"].ToString();
+                        label10.Text = reader["Address"].ToString();
+                    }
+
+                    // إضافة الأطباق، الكميات، والأسعار
+                    string dishName = reader["DishName"].ToString();
+                    string quantity = reader["Quantity"].ToString();
+                    string price = reader["Price"].ToString();
+
+                    // إضافة القيم للأطباق، الكميات، والأسعار في الـ Labels
+                    label5.Text += $"{dishName}\n"; // إضافة أسماء الأطباق
+                    label30.Text += $"{quantity}\n"; // إضافة الكميات
+                    label31.Text += $"{price} EGP\n"; // إضافة الأسعار
+
+                    // احتساب الـ Subtotal
+                    subtotal += Convert.ToDecimal(price) * Convert.ToDecimal(quantity);
+
+                    rowIndex++; // الانتقال إلى السطر التالي
+                }
+
+                // حساب الإجمالي والـ Delivery
+                decimal delivery = 20;
+                decimal total = subtotal + delivery;
+
+                lbl_subtotal.Text = $"{subtotal} EGP";
+                lbl_delvery_price.Text = $"{delivery} EGP";
+                lbl_total.Text = $"{total} EGP";
+
+                reader.Close();
+            }
+        }
+    
+        private void UpdateOrderStatus (string status)
+        {
+                int orderid = Convert.ToInt32(label20.Text);
+                try
+                {
+
+                    // كتابة استعلام الـ UPDATE لتحديث حالة الطلب
+                    string updateQuery = @"
+                            UPDATE Orders
+                            SET OrderStatus = @status
+                            WHERE OrderID = @OrderID;
+                        ";
+
+                    // تنفيذ الاستعلام باستخدام SqlConnection
+                    using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(updateQuery, connection);
+                        command.Parameters.AddWithValue("@OrderID", orderid); // إضافة معلمة الـ OrderID
+                        command.Parameters.AddWithValue("@status", status);
+
+                    connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery(); // تنفيذ التحديث
+                    if (status == "Pending")
+                    {
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Order Accepted");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No order found with the specified OrderID.");
+                        }
+                    }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                flowLayoutPanel1.Controls.Clear();
+                CreateOrderCardsFromDatabase("new");
+            
+        }
+
         private void btn_pendingorders_Click(object sender, EventArgs e)
         {
+            btn_acceptorder.Text = "Done";
+            btn_acceptorder.BackColor = Color.Green;
+            pnl_order_details.Visible = false;
             lbl_status.Text = "Pending Orders";
             flowLayoutPanel1.Controls.Clear();
             CreateOrderCardsFromDatabase("Pending");
@@ -178,5 +351,16 @@ namespace Tabkha_1._1
             login.Show();
             this.Hide();
         }
+
+        private void btn_DoneOrders_Click(object sender, EventArgs e)
+        {
+            lbl_status.Text = "Done Orders";
+            btn_acceptorder.Text = "Print Receipt";
+            btn_acceptorder.BackColor= Color.FromArgb(204, 82, 48);
+            flowLayoutPanel1.Controls.Clear();
+            CreateOrderCardsFromDatabase("Done");
+        }
+
+        
     }
 }

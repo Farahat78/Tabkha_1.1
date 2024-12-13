@@ -26,6 +26,7 @@ namespace Tabkha_1._1
             LoadChefProfile(chefid);
             btn_add.Visible = true;
             btn_edit.Visible = true;
+            btn_orders.Visible = true;
             btn_logout.Visible = true;
         }
         public Owner_Profile(int ChefID)
@@ -36,6 +37,7 @@ namespace Tabkha_1._1
             LoadChefProfile(chefid);
             btn_add.Visible = false;
             btn_edit.Visible = false;
+            btn_orders.Visible = false;
             btn_logout.Visible = false;
         }
         private void CreateCardsFromDatabase()

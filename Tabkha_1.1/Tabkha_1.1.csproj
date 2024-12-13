@@ -322,6 +322,7 @@
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\communication.png" />
+    <None Include="Resources\dish.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
     <Content Include="Resources\facebook.png" />
