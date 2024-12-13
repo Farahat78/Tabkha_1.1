@@ -148,5 +148,12 @@ namespace Tabkha_1._1
             lbl_data.Text = "Comments ";
             LoadFormIntoPanel(new comments());
         }
+
+        private void img_back_Click(object sender, EventArgs e)
+        {
+                Owner_Profile home = new Owner_Profile();
+                home.Show();
+                this.Hide();   
+        }
     }
 }

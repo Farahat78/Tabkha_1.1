@@ -56,6 +56,7 @@
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_back = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -68,10 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_customer_profile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.img_back);
             this.guna2GradientPanel1.Controls.Add(this.lbl_data);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
@@ -386,6 +389,20 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this.btn_comments;
             // 
+            // img_back
+            // 
+            this.img_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_back.BackColor = System.Drawing.Color.Transparent;
+            this.img_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_back.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.img_back.Location = new System.Drawing.Point(3, 3);
+            this.img_back.Name = "img_back";
+            this.img_back.Size = new System.Drawing.Size(34, 26);
+            this.img_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_back.TabIndex = 19;
+            this.img_back.TabStop = false;
+            this.img_back.Click += new System.EventHandler(this.img_back_Click);
+            // 
             // Customer_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,6 +435,7 @@
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_customer_profile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,5 +468,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
         private System.Windows.Forms.Button btn_comments;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.PictureBox img_back;
     }
 }
