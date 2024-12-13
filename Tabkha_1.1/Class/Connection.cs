@@ -8,6 +8,6 @@ namespace Tabkha_1._1.Class
 {
     public class Connection
     {
-        public static string connectionString = "Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+        public static string connectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
     }
 }

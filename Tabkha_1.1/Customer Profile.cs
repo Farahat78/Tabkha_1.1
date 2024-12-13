@@ -154,9 +154,25 @@ namespace Tabkha_1._1
 
         private void img_back_Click(object sender, EventArgs e)
         {
+            if (Session.Role == "Chefs")
+            {
                 Owner_Profile home = new Owner_Profile();
                 home.Show();
-                this.Hide();   
+                this.Hide();
+            }
+            else if (Session.Role == "Admins")
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
+            else if (Session.Role == "Users")
+            {
+                user_home user_Home = new user_home();
+                user_Home.Show();
+                this.Hide();
+            }
+               
         }
     }
 }

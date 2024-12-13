@@ -400,7 +400,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
