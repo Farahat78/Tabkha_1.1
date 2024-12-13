@@ -93,7 +93,6 @@ namespace Tabkha_1._1
             string DishPic;
             if (!string.IsNullOrEmpty(currentImagePath))
             {
-                // إذا كان هناك صورة جديدة تم رفعها، نأخذ المسار الجديد
                 DishPic = currentImagePath;
             }
             else
