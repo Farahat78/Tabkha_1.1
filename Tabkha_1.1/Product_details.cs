@@ -359,5 +359,14 @@ namespace Tabkha_1._1
             place_Order.Show();
             this.Hide();
         }
+
+        private void lbl_logout_Click(object sender, EventArgs e)
+        {
+            Session.Logout();
+
+            login login = new login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -433,5 +433,14 @@ namespace Tabkha_1._1
             orders.Show();
             this.Hide();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session.Logout();
+
+            login login = new login();  
+            login.Show();
+            this.Hide();
+        }
     }
 }

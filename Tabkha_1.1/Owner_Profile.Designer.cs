@@ -47,6 +47,7 @@
             this.pnl_menu = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btn_dessert = new System.Windows.Forms.Button();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btn_orders = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.img_profile = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_orders = new System.Windows.Forms.Button();
             this.guna2Elipse14 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
@@ -293,6 +293,19 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1039, 127);
             this.guna2ShadowPanel1.TabIndex = 21;
             // 
+            // btn_orders
+            // 
+            this.btn_orders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_orders.ForeColor = System.Drawing.Color.White;
+            this.btn_orders.Location = new System.Drawing.Point(601, 83);
+            this.btn_orders.Name = "btn_orders";
+            this.btn_orders.Size = new System.Drawing.Size(118, 33);
+            this.btn_orders.TabIndex = 30;
+            this.btn_orders.Text = "My Orders";
+            this.btn_orders.UseVisualStyleBackColor = false;
+            this.btn_orders.Click += new System.EventHandler(this.btn_orders_Click);
+            // 
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
@@ -304,6 +317,7 @@
             this.btn_logout.TabIndex = 28;
             this.btn_logout.Text = "Log out";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // img_profile
             // 
@@ -595,19 +609,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(717, 299);
             this.flowLayoutPanel1.TabIndex = 33;
-            // 
-            // btn_orders
-            // 
-            this.btn_orders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_orders.ForeColor = System.Drawing.Color.White;
-            this.btn_orders.Location = new System.Drawing.Point(601, 83);
-            this.btn_orders.Name = "btn_orders";
-            this.btn_orders.Size = new System.Drawing.Size(118, 33);
-            this.btn_orders.TabIndex = 30;
-            this.btn_orders.Text = "My Orders";
-            this.btn_orders.UseVisualStyleBackColor = false;
-            this.btn_orders.Click += new System.EventHandler(this.btn_orders_Click);
             // 
             // guna2Elipse14
             // 
