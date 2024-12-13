@@ -18,11 +18,6 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private void txt_fname_MouseClick(object sender, MouseEventArgs e)
-        {
-            txt_fname.Text = null;
-        }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             TextBox[] textBoxes = { txt_cardnum, txt_expiry, txt_cvv };
@@ -34,14 +29,12 @@ namespace Tabkha_1._1
             }
 
         }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             TextBox[] textBoxes = { txt_cardnum, txt_expiry, txt_cvv };
             foreach (TextBox txt in textBoxes)
             {
                 txt.ReadOnly = false;
-              
             }
 
         }

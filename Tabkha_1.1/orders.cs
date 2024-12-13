@@ -47,7 +47,6 @@ namespace Tabkha_1._1
 
         private void btn_acceptorder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Order Accepted");
 
         }
 
@@ -85,7 +84,6 @@ namespace Tabkha_1._1
             GROUP BY 
                 users.Fname, users.Lname, users.Phone, users.Address, orders.OrderID, Orders.TotalPrice;
         ";
-
 
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
@@ -148,7 +146,6 @@ namespace Tabkha_1._1
                 reader.Close();
             }
 
-        }
 
         private Control CloneControl(Control control)
         {
