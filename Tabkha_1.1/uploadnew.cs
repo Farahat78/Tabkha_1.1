@@ -91,15 +91,17 @@ namespace Tabkha_1._1
             string Category = combo_category.Text;
             string Ingredients = txt_ingredients.Text;
             string DishPic;
+
             if (!string.IsNullOrEmpty(currentImagePath))
             {
-                // إذا كان هناك صورة جديدة تم رفعها، نأخذ المسار الجديد
                 DishPic = currentImagePath;
             }
             else
             {
-                DishPic = img_product.ImageLocation; 
-            } 
+                DishPic = img_product.ImageLocation;
+            }
+
+
 
             // تحديد الـ Weight بناءً على الـ Checkboxes
             string Weight = "";
@@ -137,7 +139,15 @@ namespace Tabkha_1._1
                 cmd.Parameters.AddWithValue("@Quantity", Quantity);
                 cmd.Parameters.AddWithValue("@Category", Category);
                 cmd.Parameters.AddWithValue("@Price", Price);
-                cmd.Parameters.AddWithValue("@DishPic", DishPic);
+                // تأكد إذا كان DishPic فارغًا، وإذا كان كذلك، مرر DBNull.Value
+                if (string.IsNullOrEmpty(DishPic))
+                {
+                    cmd.Parameters.AddWithValue("@DishPic", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@DishPic", DishPic);
+                }
                 cmd.Parameters.AddWithValue("@Weight", Weight);
 
                 cmd.ExecuteNonQuery();

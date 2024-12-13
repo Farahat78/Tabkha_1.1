@@ -396,7 +396,7 @@ namespace Tabkha_1._1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Owner_Profile owner_Profile = new Owner_Profile(Session.Id);
+            Owner_Profile owner_Profile = new Owner_Profile();
             owner_Profile.Show();
             this.Hide();
         }
