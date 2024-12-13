@@ -97,10 +97,11 @@
             this.btn_pendingorders = new System.Windows.Forms.Button();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_search_order = new Tabkha_1._1.CustomTextBox();
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_DoneOrders = new System.Windows.Forms.Button();
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.txt_search_order = new Tabkha_1._1.CustomTextBox();
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_up.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -192,6 +193,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // img_minimize
             // 
@@ -804,6 +806,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label40
             // 
@@ -874,22 +877,6 @@
             this.guna2Elipse7.BorderRadius = 30;
             this.guna2Elipse7.TargetControl = this.btn_pendingorders;
             // 
-            // txt_search_order
-            // 
-            this.txt_search_order.Location = new System.Drawing.Point(509, 8);
-            this.txt_search_order.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_search_order.Multiline = true;
-            this.txt_search_order.Name = "txt_search_order";
-            this.txt_search_order.Size = new System.Drawing.Size(208, 44);
-            this.txt_search_order.TabIndex = 19;
-            this.txt_search_order.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_search_order.WatermarkText = "Order Number";
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 30;
-            this.guna2Elipse4.TargetControl = this.txt_search_order;
-            // 
             // btn_DoneOrders
             // 
             this.btn_DoneOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
@@ -911,6 +898,27 @@
             // 
             this.guna2Elipse8.BorderRadius = 30;
             this.guna2Elipse8.TargetControl = this.btn_DoneOrders;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // txt_search_order
+            // 
+            this.txt_search_order.Location = new System.Drawing.Point(509, 8);
+            this.txt_search_order.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_search_order.Multiline = true;
+            this.txt_search_order.Name = "txt_search_order";
+            this.txt_search_order.Size = new System.Drawing.Size(208, 44);
+            this.txt_search_order.TabIndex = 19;
+            this.txt_search_order.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_search_order.WatermarkText = "Order Number";
+            this.txt_search_order.TextChanged += new System.EventHandler(this.txt_search_order_TextChanged);
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.txt_search_order;
             // 
             // orders
             // 
@@ -1022,5 +1030,6 @@
         private System.Windows.Forms.Panel PanelTemplate;
         private System.Windows.Forms.Button btn_DoneOrders;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
