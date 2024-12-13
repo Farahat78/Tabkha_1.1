@@ -50,8 +50,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_number = new System.Windows.Forms.Label();
-            this.lbl_age = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.img_customer_profile = new System.Windows.Forms.PictureBox();
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -335,8 +333,6 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_number);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_age);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_username);
             this.guna2ShadowPanel1.Controls.Add(this.img_customer_profile);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -348,38 +344,17 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(839, 106);
             this.guna2ShadowPanel1.TabIndex = 75;
             // 
-            // lbl_number
-            // 
-            this.lbl_number.AutoSize = true;
-            this.lbl_number.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_number.Location = new System.Drawing.Point(111, 60);
-            this.lbl_number.Name = "lbl_number";
-            this.lbl_number.Size = new System.Drawing.Size(103, 17);
-            this.lbl_number.TabIndex = 10;
-            this.lbl_number.Text = "Phone Number";
-            // 
-            // lbl_age
-            // 
-            this.lbl_age.AutoSize = true;
-            this.lbl_age.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.Location = new System.Drawing.Point(111, 43);
-            this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(33, 17);
-            this.lbl_age.TabIndex = 11;
-            this.lbl_age.Text = "Age";
-            // 
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.BackColor = System.Drawing.Color.Transparent;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(111, 26);
+            this.lbl_username.Location = new System.Drawing.Point(111, 41);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(45, 17);
             this.lbl_username.TabIndex = 12;
             this.lbl_username.Text = "Name";
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // img_customer_profile
             // 
@@ -425,6 +400,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Customer_Profile";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Profile";
             this.Load += new System.EventHandler(this.Customer_Profile_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -466,8 +442,6 @@
         private System.Windows.Forms.PictureBox img_customer_profile;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse12;
-        private System.Windows.Forms.Label lbl_number;
-        private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Button btn_toggleSideBar;
         private System.Windows.Forms.Button btn_out;
