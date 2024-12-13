@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,8 @@ namespace Tabkha_1._1
 {
     public partial class orders : Form
     {
-    
+
+        private string printContent;
         public orders()
         {
             InitializeComponent();
@@ -65,7 +67,7 @@ namespace Tabkha_1._1
             }
         else if (btn_acceptorder.Text == "Print Receipt")
             {
-
+                    PrintReceipt();
             }
            
         }
@@ -361,6 +363,179 @@ namespace Tabkha_1._1
             CreateOrderCardsFromDatabase("Done");
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txt_search_order.Text.Trim().ToLower(); // الحصول على النص المدخل
+            foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+            {
+                // ابحث عن العنصر المطلوب داخل الكارت
+                Label nameLabel = card.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "label4");
+
+                if (nameLabel != null && nameLabel.Text.ToLower().Contains(searchQuery))
+                {
+                    card.Visible = true; // إظهار الكارت إذا كان يطابق النص
+                }
+                else
+                {
+                    card.Visible = false; // إخفاء الكارت إذا لم يكن يطابق النص
+                }
+            }
+        }
+
+        private void txt_search_order_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search_order.Text))
+            {
+                foreach (Panel card in flowLayoutPanel1.Controls.OfType<Panel>())
+                {
+                    PanelTemplate.Visible = false;
+                    card.Visible = true; // إعادة إظهار جميع الكروت
+                }
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Owner_Profile owner_Profile = new Owner_Profile(Session.Id);
+            owner_Profile.Show();
+            this.Hide();
+        }
+        private void PrintReceipt()
+        {
+            // إعداد النصوص
+            printContent = "Tabkha Receipt\n";
+            printContent += "---------------------------\n";
+            printContent += $"Order ID: {label20.Text}\n";
+            printContent += $"Client Name: {lbl_client_name.Text}\n";
+            printContent += $"Phone: {lbl_clientPhone.Text}\n";
+            printContent += $"Address: {label10.Text}\n";
+            printContent += "---------------------------\n";
+            printContent += "Item         Qty    Price\n";
+            printContent += "---------------------------\n";
+
+            string[] items = label5.Text.Split('\n'); // أسماء الأطباق
+            string[] quantities = label30.Text.Split('\n'); // الكميات
+            string[] prices = label31.Text.Split('\n'); // الأسعار
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(items[i]))
+                {
+                    printContent += $"{items[i].PadRight(12)} {quantities[i].PadRight(6)} {prices[i]}\n";
+                }
+            }
+
+            printContent += "---------------------------\n";
+            printContent += $"Subtotal: {lbl_subtotal.Text}\n";
+            printContent += $"Delivery: {lbl_delvery_price.Text}\n";
+            printContent += $"Total: {lbl_total.Text}\n";
+            printContent += "---------------------------\n";
+            printContent += "Thank you for using Tabkha!";
+
+            // احسب الطول المطلوب بناءً على النص
+            float lineHeight = new Font("Arial", 12).GetHeight(); // ارتفاع السطر
+            int totalLines = printContent.Split('\n').Length; // عدد الأسطر
+            int pageHeight = (int)(lineHeight * totalLines) + 100; // إضافة هامش علوي وسفلي
+
+            // ضبط حجم الورقة
+            PaperSize paperSize = new PaperSize("Custom", 400, pageHeight); // العرض 300 والطول ديناميكي
+            printDocument1.DefaultPageSettings.PaperSize = paperSize;
+
+            // عرض مربع معاينة الطباعة
+            PrintPreviewDialog previewDialog = new PrintPreviewDialog();
+            previewDialog.Document = printDocument1;
+
+            if (previewDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            // إعداد الخطوط
+            Font titleFont = new Font("Arial", 16, FontStyle.Bold );
+            Font subtitleFont = new Font("Arial", 12, FontStyle.Bold );
+            Font contentFont = new Font("Arial", 10);
+            Font smallFont = new Font("Arial", 8);
+            Brush brush = Brushes.Black;
+
+            // إعداد المواضع
+            float x = 50; // الهامش الأفقي
+            float y = 50; // الهامش الرأسي
+            float lineHeight = contentFont.GetHeight(e.Graphics);
+
+            // رسم العنوان
+            e.Graphics.DrawString("TABKHA", titleFont, brush, x + 100, y);
+            y += lineHeight + 20;
+
+            // رسم الخط الفاصل
+            e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
+            y += 10;
+
+            // رسم البيانات الأساسية
+            e.Graphics.DrawString($"Order ID: {label20.Text}", contentFont, brush, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString($"Client Name: {lbl_client_name.Text}", contentFont, brush, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString($"Phone: {lbl_clientPhone.Text}", contentFont, brush, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString($"Address: {label10.Text}", contentFont, brush, x, y);
+            y += lineHeight + 10;
+
+            // رسم الخط الفاصل
+            e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
+            y += 10;
+
+            // عنوان جدول الطلبات
+            e.Graphics.DrawString("Item                      Qty               Price", subtitleFont, brush, x, y);
+            y += lineHeight + 10;
+
+            // رسم الخط الفاصل
+            e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
+            y += 10;
+
+            // رسم عناصر الطلب
+            string[] items = label5.Text.Split('\n');
+            string[] quantities = label30.Text.Split('\n');
+            string[] prices = label31.Text.Split('\n');
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(items[i]))
+                {
+                    e.Graphics.DrawString(items[i], contentFont, brush, x, y);
+                    e.Graphics.DrawString(quantities[i], contentFont, brush, x + 150, y);
+                    e.Graphics.DrawString(prices[i], contentFont, brush, x + 220, y);
+                    y += lineHeight;
+                }
+            }
+
+            // رسم الخط الفاصل
+            y += 10;
+            e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
+            y += 10;
+
+            // رسم المجموعات
+            e.Graphics.DrawString($"Subtotal: {lbl_subtotal.Text}", contentFont, brush, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString($"Delivery: {lbl_delvery_price.Text}", contentFont, brush, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString($"Total: {lbl_total.Text}", subtitleFont, brush, x, y);
+            y += lineHeight + 10;
+
+            // رسم الخط الفاصل
+            e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
+            y += 10;
+
+            // رسالة الشكر
+            e.Graphics.DrawString("    THANK YOU FOR USING TABKHA!", contentFont, brush, x + 20, y);
+            y += lineHeight + 20;
+
+          
+        }
+    
     }
 }
