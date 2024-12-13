@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,30 +32,36 @@ namespace Tabkha_1._1
             newControl.ForeColor = control.ForeColor;
             newControl.Name = control.Name;
 
-            // Copy other properties as needed
+            // Clone other properties if necessary (e.g., events, etc.)
             return newControl;
         }
 
+
         private void LoadReviews()
         {
+            lbl_nme.Visible = false;
+            lbl_comments.Visible = false;
+            stars.Visible = false;
+            img_profile.Visible = false;
+
             try
             {
                 string query = @"
-                    SELECT 
-                        Reviews.ReviewID, 
-                        Reviews.Comment, 
-                        Reviews.Rating, 
-                        Users.Fname, 
-                        Users.Lname, 
-                        Users.ProfilePic 
-                    FROM 
-                        Reviews 
-                    INNER JOIN 
-                        Users 
-                    ON 
-                        Reviews.UserID = Users.UserID 
-                    WHERE 
-                        Reviews.ChefID = @ChefID"; // Use the ChefID of the current chef
+            SELECT 
+                Reviews.ReviewID, 
+                Reviews.Comment, 
+                Reviews.Rating, 
+                Users.Fname, 
+                Users.Lname, 
+                Users.ProfilePic 
+            FROM 
+                Reviews 
+            INNER JOIN 
+                Users 
+            ON 
+                Reviews.UserID = Users.UserID 
+            WHERE 
+                Reviews.ChefID = @ChefID"; // Use the ChefID of the current chef
 
                 using (SqlConnection connection = new SqlConnection(Connection.connectionString))
                 {
@@ -63,47 +70,50 @@ namespace Tabkha_1._1
                     connection.Open();
 
                     SqlDataReader reader = command.ExecuteReader();
-                    //flowLayoutPanel1.Controls.Clear(); // Clear existing comments
+                    flowLayoutPanel1.Controls.Clear(); // Clear any previous reviews
+
+                    int yoffset = 50; // Initial vertical offset for positioning controls
 
                     while (reader.Read())
                     {
-                        // Clone the existing comment card template
+                        // Clone the entire comment card (panel) template
                         Panel newCard = CloneCommentCard();
 
-                        // Update profile picture
-                        PictureBox profilePicBox = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_profile");
+                        // Retrieve and update the profile picture
+                        PictureBox imgPic = newCard.Controls.OfType<PictureBox>().FirstOrDefault(c => c.Name == "img_profile");
                         string profilePicPath = reader["ProfilePic"]?.ToString();
-                        if (profilePicBox != null)
+                        if (imgPic != null)
                         {
-                            profilePicBox.Image = !string.IsNullOrEmpty(profilePicPath)
-                                ? Image.FromFile(profilePicPath)
-                                : Properties.Resources.Max_R_Headshot__1_; // Default image if none provided
-                            profilePicBox.SizeMode = PictureBoxSizeMode.Zoom;
+                            imgPic.Image = !string.IsNullOrEmpty(profilePicPath) ? Image.FromFile(profilePicPath) : Properties.Resources.Max_R_Headshot__1_;
+                            imgPic.SizeMode = PictureBoxSizeMode.Zoom;
                         }
 
-                        // Update name
+                        // Update the username label
                         Label nameLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_nme");
                         if (nameLabel != null)
                         {
                             nameLabel.Text = $"{reader["Fname"]} {reader["Lname"]}";
                         }
 
-                        // Update rating (e.g., stars)
-                        Label ratingLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "stars");
-                        if (ratingLabel != null)
-                        {
-                            ratingLabel.Text = new string('★', (int)reader["Rating"]); // Display stars based on rating
-                        }
-
-                        // Update comment text
+                        // Update the comment label
                         Label commentLabel = newCard.Controls.OfType<Label>().FirstOrDefault(c => c.Name == "lbl_comments");
                         if (commentLabel != null)
                         {
                             commentLabel.Text = reader["Comment"].ToString();
                         }
 
-                        // Add the comment card to the FlowLayoutPanel
+                        // Update the rating star control
+                        Guna.UI2.WinForms.Guna2RatingStar userRating = newCard.Controls.OfType<Guna.UI2.WinForms.Guna2RatingStar>().FirstOrDefault(c => c.Name == "stars");
+                        if (userRating != null)
+                        {
+                            userRating.Value = reader["Rating"] != DBNull.Value ? Convert.ToSingle(reader["Rating"]) : 0f;
+                        }
+
+                        // Add the cloned card to the FlowLayoutPanel
                         flowLayoutPanel1.Controls.Add(newCard);
+
+                        // Update the vertical offset for the next comment
+                        yoffset += 70; // Adjust this value based on your layout
                     }
 
                     reader.Close();
@@ -117,25 +127,33 @@ namespace Tabkha_1._1
 
         private Panel CloneCommentCard()
         {
+            // Create a new panel (cloning the template's properties)
             Panel newCard = new Panel
             {
-                Size = panelTemplate.Size,
-                BackColor = panelTemplate.BackColor,
-                BorderStyle = panelTemplate.BorderStyle
+                Size = panelTemplate.Size, // Clone the size of the panel template
+                BackColor = panelTemplate.BackColor, // Clone background color
+                BorderStyle = panelTemplate.BorderStyle // Clone border style
             };
 
+            // Clone each control from the template and add to the new panel
             foreach (Control control in panelTemplate.Controls)
             {
-                Control clonedControl = CloneControl(control);
-                newCard.Controls.Add(clonedControl);
+                Control clonedControl = CloneControl(control); // Clone each control
+                newCard.Controls.Add(clonedControl); // Add the cloned control to the new card
             }
 
             return newCard;
         }
 
+
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comments_Load(object sender, EventArgs e)
+        {
+            LoadReviews();
         }
     }
 }

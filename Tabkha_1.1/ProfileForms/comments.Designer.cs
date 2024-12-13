@@ -138,6 +138,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "comments";
             this.Text = "comments";
+            this.Load += new System.EventHandler(this.comments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
             this.panelTemplate.ResumeLayout(false);
             this.panelTemplate.PerformLayout();

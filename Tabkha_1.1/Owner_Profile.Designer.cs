@@ -1,4 +1,6 @@
-﻿namespace Tabkha_1._1
+﻿using System;
+
+namespace Tabkha_1._1
 {
     partial class Owner_Profile
     {
@@ -654,6 +656,11 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
