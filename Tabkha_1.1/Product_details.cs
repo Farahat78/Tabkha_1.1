@@ -368,5 +368,10 @@ namespace Tabkha_1._1
             login.Show();
             this.Hide();
         }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

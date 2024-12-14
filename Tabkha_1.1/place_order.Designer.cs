@@ -369,7 +369,7 @@
             this.img_profile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.img_profile.ImageRotate = 0F;
-            this.img_profile.Location = new System.Drawing.Point(796, 60);
+            this.img_profile.Location = new System.Drawing.Point(771, 60);
             this.img_profile.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_profile.Name = "img_profile";
             this.img_profile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -386,7 +386,7 @@
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label29.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(848, 74);
+            this.label29.Location = new System.Drawing.Point(821, 74);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(87, 21);
