@@ -109,7 +109,7 @@ namespace Tabkha_1._1
 
         private void img_back_Click(object sender, EventArgs e)
         {
-            Owner_Profile owner_Profile = new Owner_Profile();
+            Owner_Profile owner_Profile = new Owner_Profile(ChefID);
             owner_Profile.Show();
             this.Hide();
         }
@@ -367,6 +367,11 @@ namespace Tabkha_1._1
             login login = new login();
             login.Show();
             this.Hide();
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

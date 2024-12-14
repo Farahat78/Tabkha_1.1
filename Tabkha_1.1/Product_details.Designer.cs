@@ -112,15 +112,16 @@
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1056, 113);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1077, 113);
             this.guna2GradientPanel1.TabIndex = 1;
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // lbl_Cart
             // 
             this.lbl_Cart.AutoSize = true;
             this.lbl_Cart.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Cart.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cart.Location = new System.Drawing.Point(717, 79);
+            this.lbl_Cart.Location = new System.Drawing.Point(668, 79);
             this.lbl_Cart.Name = "lbl_Cart";
             this.lbl_Cart.Size = new System.Drawing.Size(39, 21);
             this.lbl_Cart.TabIndex = 22;
@@ -158,7 +159,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(-521, -23);
+            this.pictureBox1.Location = new System.Drawing.Point(-500, -23);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 38);
@@ -171,7 +172,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(788, 60);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(717, 60);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -186,7 +187,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(840, 76);
+            this.label11.Location = new System.Drawing.Point(774, 76);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 21);
@@ -214,7 +215,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1021, 3);
+            this.img_close.Location = new System.Drawing.Point(1042, 3);
             this.img_close.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
@@ -229,7 +230,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(974, 6);
+            this.img_minimize.Location = new System.Drawing.Point(995, 6);
             this.img_minimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
@@ -701,7 +702,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1077, 586);
+            this.ClientSize = new System.Drawing.Size(1098, 586);
             this.Controls.Add(this.guna2RatingStar2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);

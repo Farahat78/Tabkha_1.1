@@ -98,7 +98,7 @@
             this.lbl_logout.AutoSize = true;
             this.lbl_logout.BackColor = System.Drawing.Color.Transparent;
             this.lbl_logout.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_logout.Location = new System.Drawing.Point(942, 80);
+            this.lbl_logout.Location = new System.Drawing.Point(949, 80);
             this.lbl_logout.Name = "lbl_logout";
             this.lbl_logout.Size = new System.Drawing.Size(62, 21);
             this.lbl_logout.TabIndex = 14;
@@ -124,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(710, 80);
+            this.label2.Location = new System.Drawing.Point(676, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 21);
             this.label2.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(774, 61);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(729, 61);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 42);
@@ -151,7 +151,7 @@
             this.lbl_account.AutoSize = true;
             this.lbl_account.BackColor = System.Drawing.Color.Transparent;
             this.lbl_account.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_account.Location = new System.Drawing.Point(826, 80);
+            this.lbl_account.Location = new System.Drawing.Point(784, 80);
             this.lbl_account.Name = "lbl_account";
             this.lbl_account.Size = new System.Drawing.Size(87, 21);
             this.lbl_account.TabIndex = 7;
