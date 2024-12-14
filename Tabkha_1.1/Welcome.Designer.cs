@@ -589,9 +589,9 @@
             this.label16.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(226, 978);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(366, 24);
+            this.label16.Size = new System.Drawing.Size(176, 48);
             this.label16.TabIndex = 33;
-            this.label16.Text = "Backend Developer And Quality Assurance";
+            this.label16.Text = "Backend Developer \r\n Quality Assurance";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
