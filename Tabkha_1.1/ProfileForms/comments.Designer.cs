@@ -46,7 +46,7 @@
             this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.img_profile.Location = new System.Drawing.Point(3, 3);
             this.img_profile.Name = "img_profile";
-            this.img_profile.Size = new System.Drawing.Size(80, 80);
+            this.img_profile.Size = new System.Drawing.Size(71, 67);
             this.img_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_profile.TabIndex = 0;
             this.img_profile.TabStop = false;
@@ -60,18 +60,18 @@
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(93, 12);
+            this.lbl_username.Location = new System.Drawing.Point(83, 10);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(161, 24);
+            this.lbl_username.Size = new System.Drawing.Size(138, 21);
             this.lbl_username.TabIndex = 3;
             this.lbl_username.Text = "Ahmed Mohamed";
             // 
             // lbl_comments
             // 
             this.lbl_comments.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_comments.Location = new System.Drawing.Point(97, 40);
+            this.lbl_comments.Location = new System.Drawing.Point(86, 34);
             this.lbl_comments.Name = "lbl_comments";
-            this.lbl_comments.Size = new System.Drawing.Size(722, 52);
+            this.lbl_comments.Size = new System.Drawing.Size(642, 44);
             this.lbl_comments.TabIndex = 4;
             this.lbl_comments.Text = "Greet Restaurant wish you all the best";
             // 
@@ -83,15 +83,15 @@
             this.pnl_template.Controls.Add(this.lbl_username);
             this.pnl_template.Location = new System.Drawing.Point(3, 3);
             this.pnl_template.Name = "pnl_template";
-            this.pnl_template.Size = new System.Drawing.Size(904, 98);
+            this.pnl_template.Size = new System.Drawing.Size(804, 83);
             this.pnl_template.TabIndex = 5;
             // 
             // guna2RatingStar1
             // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(781, 12);
+            this.guna2RatingStar1.Location = new System.Drawing.Point(694, 10);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.ReadOnly = true;
-            this.guna2RatingStar1.Size = new System.Drawing.Size(120, 28);
+            this.guna2RatingStar1.Size = new System.Drawing.Size(107, 24);
             this.guna2RatingStar1.TabIndex = 5;
             this.guna2RatingStar1.Value = 3F;
             // 
@@ -100,22 +100,23 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.pnl_template);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 138);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 116);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 312);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(828, 263);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // comments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(931, 450);
+            this.ClientSize = new System.Drawing.Size(828, 379);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "comments";
             this.Text = "comments";
+            this.Load += new System.EventHandler(this.comments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_profile)).EndInit();
             this.pnl_template.ResumeLayout(false);
             this.pnl_template.PerformLayout();

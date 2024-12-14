@@ -141,5 +141,10 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void comments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
