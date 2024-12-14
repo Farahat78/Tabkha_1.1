@@ -1,4 +1,6 @@
-﻿namespace Tabkha_1._1
+﻿using System;
+
+namespace Tabkha_1._1
 {
     partial class Owner_Profile
     {
@@ -568,6 +570,7 @@
             this.label6.Size = new System.Drawing.Size(150, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Ahmed Mohamed";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // lbl_comments
             // 
@@ -654,6 +657,11 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

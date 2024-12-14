@@ -124,6 +124,7 @@
             this.txt_search.TabIndex = 8;
             this.txt_search.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_search.WatermarkText = "Search";
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // ManageUser
             // 

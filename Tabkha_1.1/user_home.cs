@@ -232,5 +232,10 @@ namespace Tabkha_1._1
         {
 
         }
+
+        private void panelTemplate_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

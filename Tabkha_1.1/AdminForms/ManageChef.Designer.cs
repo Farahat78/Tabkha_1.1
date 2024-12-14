@@ -102,6 +102,7 @@
             this.customTextBox1.TabIndex = 8;
             this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
             this.customTextBox1.WatermarkText = "Search";
+            this.customTextBox1.TextChanged += new System.EventHandler(this.customTextBox1_TextChanged);
             // 
             // dgv_chefs
             // 

@@ -377,6 +377,7 @@
             this.panelTemplate.Size = new System.Drawing.Size(734, 115);
             this.panelTemplate.TabIndex = 9;
             this.panelTemplate.Visible = false;
+            this.panelTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTemplate_Paint);
             // 
             // lbl_bio
             // 
