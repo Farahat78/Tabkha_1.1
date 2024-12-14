@@ -452,7 +452,6 @@ namespace Tabkha_1._1
         }
 
 
-
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             // إعداد الخطوط
