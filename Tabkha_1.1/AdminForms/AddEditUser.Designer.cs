@@ -47,18 +47,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_city = new Tabkha_1._1.CustomTextBox();
+            this.lbl_city = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_address = new Tabkha_1._1.CustomTextBox();
+            this.lbl_address = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbl_address = new System.Windows.Forms.Label();
-            this.txt_address = new Tabkha_1._1.CustomTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_city = new Tabkha_1._1.CustomTextBox();
-            this.lbl_city = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_close)).BeginInit();
@@ -68,9 +68,10 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(122, 255);
+            this.btn_save.Location = new System.Drawing.Point(137, 303);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(71, 41);
+            this.btn_save.Size = new System.Drawing.Size(80, 49);
             this.btn_save.TabIndex = 14;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -80,9 +81,9 @@
             // 
             this.lbl_email.AutoSize = true;
             this.lbl_email.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(20, 55);
+            this.lbl_email.Location = new System.Drawing.Point(22, 65);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(42, 18);
+            this.lbl_email.Size = new System.Drawing.Size(51, 22);
             this.lbl_email.TabIndex = 11;
             this.lbl_email.Text = "Email";
             // 
@@ -90,9 +91,9 @@
             // 
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(20, 21);
+            this.lbl_name.Location = new System.Drawing.Point(22, 25);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(77, 18);
+            this.lbl_name.Size = new System.Drawing.Size(93, 22);
             this.lbl_name.TabIndex = 10;
             this.lbl_name.Text = "User Name";
             // 
@@ -102,9 +103,10 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(248, 3);
+            this.img_minimize.Location = new System.Drawing.Point(279, 4);
+            this.img_minimize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(36, 24);
+            this.img_minimize.Size = new System.Drawing.Size(40, 28);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_minimize.TabIndex = 5;
             this.img_minimize.TabStop = false;
@@ -115,10 +117,11 @@
             this.img_logo.BackColor = System.Drawing.Color.Transparent;
             this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(12, 3);
+            this.img_logo.Location = new System.Drawing.Point(14, 4);
+            this.img_logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(35, 26);
+            this.img_logo.Size = new System.Drawing.Size(39, 31);
             this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
@@ -130,9 +133,10 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(295, 3);
+            this.img_close.Location = new System.Drawing.Point(332, 4);
+            this.img_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(34, 26);
+            this.img_close.Size = new System.Drawing.Size(38, 31);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_close.TabIndex = 3;
             this.img_close.TabStop = false;
@@ -148,15 +152,17 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(338, 34);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(380, 40);
             this.guna2GradientPanel1.TabIndex = 9;
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(135, 55);
+            this.txt_email.Location = new System.Drawing.Point(152, 65);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(178, 22);
+            this.txt_email.Size = new System.Drawing.Size(200, 27);
             this.txt_email.TabIndex = 13;
             this.txt_email.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_email.WatermarkText = "Enter Email here";
@@ -164,9 +170,10 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(135, 18);
+            this.txt_name.Location = new System.Drawing.Point(152, 21);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(178, 22);
+            this.txt_name.Size = new System.Drawing.Size(200, 27);
             this.txt_name.TabIndex = 12;
             this.txt_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_name.WatermarkText = "Enter name here";
@@ -174,9 +181,10 @@
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(137, 92);
+            this.txt_phone.Location = new System.Drawing.Point(154, 109);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(176, 22);
+            this.txt_phone.Size = new System.Drawing.Size(198, 27);
             this.txt_phone.TabIndex = 16;
             this.txt_phone.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_phone.WatermarkText = "Enter phone number here";
@@ -185,17 +193,18 @@
             // 
             this.lbl_phone.AutoSize = true;
             this.lbl_phone.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phone.Location = new System.Drawing.Point(20, 92);
+            this.lbl_phone.Location = new System.Drawing.Point(22, 109);
             this.lbl_phone.Name = "lbl_phone";
-            this.lbl_phone.Size = new System.Drawing.Size(102, 18);
+            this.lbl_phone.Size = new System.Drawing.Size(125, 22);
             this.lbl_phone.TabIndex = 15;
             this.lbl_phone.Text = "Phone Number";
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(135, 214);
+            this.txt_password.Location = new System.Drawing.Point(152, 254);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(178, 22);
+            this.txt_password.Size = new System.Drawing.Size(200, 27);
             this.txt_password.TabIndex = 18;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Enter password here";
@@ -205,9 +214,9 @@
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(20, 214);
+            this.lbl_password.Location = new System.Drawing.Point(22, 254);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(67, 18);
+            this.lbl_password.Size = new System.Drawing.Size(82, 22);
             this.lbl_password.TabIndex = 17;
             this.lbl_password.Text = "Password";
             // 
@@ -215,9 +224,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 21);
+            this.label1.Location = new System.Drawing.Point(134, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 18);
+            this.label1.Size = new System.Drawing.Size(15, 22);
             this.label1.TabIndex = 19;
             this.label1.Text = ":";
             // 
@@ -225,9 +234,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 55);
+            this.label2.Location = new System.Drawing.Point(134, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 18);
+            this.label2.Size = new System.Drawing.Size(15, 22);
             this.label2.TabIndex = 20;
             this.label2.Text = ":";
             // 
@@ -235,9 +244,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(117, 95);
+            this.label3.Location = new System.Drawing.Point(132, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(12, 18);
+            this.label3.Size = new System.Drawing.Size(15, 22);
             this.label3.TabIndex = 21;
             this.label3.Text = ":";
             // 
@@ -245,9 +254,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(117, 217);
+            this.label4.Location = new System.Drawing.Point(132, 258);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(12, 18);
+            this.label4.Size = new System.Drawing.Size(15, 22);
             this.label4.TabIndex = 22;
             this.label4.Text = ":";
             // 
@@ -275,12 +284,73 @@
             this.guna2ShadowPanel1.Controls.Add(this.txt_password);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 34);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 40);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(338, 308);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(380, 366);
             this.guna2ShadowPanel1.TabIndex = 26;
             this.guna2ShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel1_Paint);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(132, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 22);
+            this.label6.TabIndex = 28;
+            this.label6.Text = ":";
+            // 
+            // txt_city
+            // 
+            this.txt_city.Location = new System.Drawing.Point(152, 202);
+            this.txt_city.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_city.Name = "txt_city";
+            this.txt_city.Size = new System.Drawing.Size(200, 27);
+            this.txt_city.TabIndex = 27;
+            this.txt_city.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_city.WatermarkText = "Enter City here";
+            // 
+            // lbl_city
+            // 
+            this.lbl_city.AutoSize = true;
+            this.lbl_city.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_city.Location = new System.Drawing.Point(22, 202);
+            this.lbl_city.Name = "lbl_city";
+            this.lbl_city.Size = new System.Drawing.Size(39, 22);
+            this.lbl_city.TabIndex = 26;
+            this.lbl_city.Text = "City";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(132, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 22);
+            this.label5.TabIndex = 25;
+            this.label5.Text = ":";
+            // 
+            // txt_address
+            // 
+            this.txt_address.Location = new System.Drawing.Point(152, 153);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(200, 27);
+            this.txt_address.TabIndex = 24;
+            this.txt_address.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_address.WatermarkText = "Enter address here";
+            // 
+            // lbl_address
+            // 
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_address.Location = new System.Drawing.Point(22, 153);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(70, 22);
+            this.lbl_address.TabIndex = 23;
+            this.lbl_address.Text = "Address";
             // 
             // guna2Elipse1
             // 
@@ -312,74 +382,18 @@
             this.guna2Elipse6.BorderRadius = 20;
             this.guna2Elipse6.TargetControl = this.txt_email;
             // 
-            // lbl_address
-            // 
-            this.lbl_address.AutoSize = true;
-            this.lbl_address.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_address.Location = new System.Drawing.Point(20, 129);
-            this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(58, 18);
-            this.lbl_address.TabIndex = 23;
-            this.lbl_address.Text = "Address";
-            // 
-            // txt_address
-            // 
-            this.txt_address.Location = new System.Drawing.Point(135, 129);
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(178, 22);
-            this.txt_address.TabIndex = 24;
-            this.txt_address.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_address.WatermarkText = "Enter address here";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(117, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 18);
-            this.label5.TabIndex = 25;
-            this.label5.Text = ":";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 18);
-            this.label6.TabIndex = 28;
-            this.label6.Text = ":";
-            // 
-            // txt_city
-            // 
-            this.txt_city.Location = new System.Drawing.Point(135, 170);
-            this.txt_city.Name = "txt_city";
-            this.txt_city.Size = new System.Drawing.Size(178, 22);
-            this.txt_city.TabIndex = 27;
-            this.txt_city.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_city.WatermarkText = "Enter City here";
-            // 
-            // lbl_city
-            // 
-            this.lbl_city.AutoSize = true;
-            this.lbl_city.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_city.Location = new System.Drawing.Point(20, 170);
-            this.lbl_city.Name = "lbl_city";
-            this.lbl_city.Size = new System.Drawing.Size(32, 18);
-            this.lbl_city.TabIndex = 26;
-            this.lbl_city.Text = "City";
-            // 
             // AddEditUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(338, 342);
+            this.ClientSize = new System.Drawing.Size(380, 406);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddEditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddEditUser";
             this.Load += new System.EventHandler(this.AddEditUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).EndInit();
