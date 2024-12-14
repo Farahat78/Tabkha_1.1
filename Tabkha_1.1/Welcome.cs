@@ -72,5 +72,10 @@ namespace Tabkha_1._1
             gMapControl1.CanDragMap = true;
             gMapControl1.DragButton = MouseButtons.Left;
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

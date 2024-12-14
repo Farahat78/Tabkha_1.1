@@ -109,7 +109,7 @@ namespace Tabkha_1._1
 
         private void img_back_Click(object sender, EventArgs e)
         {
-            Owner_Profile owner_Profile = new Owner_Profile(ChefID);
+            Owner_Profile owner_Profile = new Owner_Profile();
             owner_Profile.Show();
             this.Hide();
         }
@@ -357,6 +357,15 @@ namespace Tabkha_1._1
         {
             place_order place_Order = new place_order();
             place_Order.Show();
+            this.Hide();
+        }
+
+        private void lbl_logout_Click(object sender, EventArgs e)
+        {
+            Session.Logout();
+
+            login login = new login();
+            login.Show();
             this.Hide();
         }
     }

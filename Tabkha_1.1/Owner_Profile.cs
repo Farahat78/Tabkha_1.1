@@ -364,7 +364,7 @@ namespace Tabkha_1._1
         private void btn_appitizer_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_appitizer, btn_dessert, btn_mainCourse, btn_salad, btn_soup);
-            FilterMenu("Appitizer");
+            FilterMenu("Appitizers");
         }
 
         private void btn_mainCourse_Click(object sender, EventArgs e)
@@ -431,6 +431,15 @@ namespace Tabkha_1._1
         {
             orders orders = new orders();
             orders.Show();
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session.Logout();
+
+            login login = new login();  
+            login.Show();
             this.Hide();
         }
     }

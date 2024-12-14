@@ -50,14 +50,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_number = new System.Windows.Forms.Label();
-            this.lbl_age = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.img_customer_profile = new System.Windows.Forms.PictureBox();
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse13 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_back = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -70,10 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_customer_profile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.img_back);
             this.guna2GradientPanel1.Controls.Add(this.lbl_data);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.img_minimize);
@@ -335,8 +336,6 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_number);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_age);
             this.guna2ShadowPanel1.Controls.Add(this.lbl_username);
             this.guna2ShadowPanel1.Controls.Add(this.img_customer_profile);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -348,38 +347,17 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(839, 106);
             this.guna2ShadowPanel1.TabIndex = 75;
             // 
-            // lbl_number
-            // 
-            this.lbl_number.AutoSize = true;
-            this.lbl_number.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_number.Location = new System.Drawing.Point(111, 60);
-            this.lbl_number.Name = "lbl_number";
-            this.lbl_number.Size = new System.Drawing.Size(103, 17);
-            this.lbl_number.TabIndex = 10;
-            this.lbl_number.Text = "Phone Number";
-            // 
-            // lbl_age
-            // 
-            this.lbl_age.AutoSize = true;
-            this.lbl_age.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.Location = new System.Drawing.Point(111, 43);
-            this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(33, 17);
-            this.lbl_age.TabIndex = 11;
-            this.lbl_age.Text = "Age";
-            // 
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.BackColor = System.Drawing.Color.Transparent;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(111, 26);
+            this.lbl_username.Location = new System.Drawing.Point(111, 41);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(45, 17);
             this.lbl_username.TabIndex = 12;
             this.lbl_username.Text = "Name";
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // img_customer_profile
             // 
@@ -411,6 +389,20 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this.btn_comments;
             // 
+            // img_back
+            // 
+            this.img_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_back.BackColor = System.Drawing.Color.Transparent;
+            this.img_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_back.Image = global::Tabkha_1._1.Properties.Resources.arrow;
+            this.img_back.Location = new System.Drawing.Point(3, 3);
+            this.img_back.Name = "img_back";
+            this.img_back.Size = new System.Drawing.Size(34, 26);
+            this.img_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_back.TabIndex = 19;
+            this.img_back.TabStop = false;
+            this.img_back.Click += new System.EventHandler(this.img_back_Click);
+            // 
             // Customer_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -425,6 +417,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Customer_Profile";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Profile";
             this.Load += new System.EventHandler(this.Customer_Profile_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -442,6 +435,7 @@
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_customer_profile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -466,8 +460,6 @@
         private System.Windows.Forms.PictureBox img_customer_profile;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse12;
-        private System.Windows.Forms.Label lbl_number;
-        private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Button btn_toggleSideBar;
         private System.Windows.Forms.Button btn_out;
@@ -476,5 +468,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
         private System.Windows.Forms.Button btn_comments;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.PictureBox img_back;
     }
 }

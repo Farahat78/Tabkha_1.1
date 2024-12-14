@@ -56,6 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_disc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_signUp = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -68,7 +69,6 @@
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse12 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btn_signUp = new System.Windows.Forms.Button();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_minimize)).BeginInit();
@@ -209,6 +209,7 @@
             this.txt_confirmPassword.Name = "txt_confirmPassword";
             this.txt_confirmPassword.Size = new System.Drawing.Size(160, 35);
             this.txt_confirmPassword.TabIndex = 29;
+            this.txt_confirmPassword.UseSystemPasswordChar = true;
             this.txt_confirmPassword.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_confirmPassword.WatermarkText = "Password";
             // 
@@ -219,6 +220,7 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(160, 35);
             this.txt_password.TabIndex = 28;
+            this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Password";
             // 
@@ -385,6 +387,22 @@
             this.label2.Text = "Sign Up Now!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_signUp
+            // 
+            this.btn_signUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_signUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_signUp.FlatAppearance.BorderSize = 0;
+            this.btn_signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signUp.ForeColor = System.Drawing.Color.White;
+            this.btn_signUp.Location = new System.Drawing.Point(431, 529);
+            this.btn_signUp.Name = "btn_signUp";
+            this.btn_signUp.Size = new System.Drawing.Size(202, 43);
+            this.btn_signUp.TabIndex = 11;
+            this.btn_signUp.Text = "Sign Up";
+            this.btn_signUp.UseVisualStyleBackColor = false;
+            this.btn_signUp.Click += new System.EventHandler(this.btn_signUp_Click);
+            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 20;
@@ -443,22 +461,6 @@
             // 
             this.guna2Elipse12.BorderRadius = 20;
             this.guna2Elipse12.TargetControl = this.txtbox_city;
-            // 
-            // btn_signUp
-            // 
-            this.btn_signUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_signUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_signUp.FlatAppearance.BorderSize = 0;
-            this.btn_signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signUp.ForeColor = System.Drawing.Color.White;
-            this.btn_signUp.Location = new System.Drawing.Point(431, 529);
-            this.btn_signUp.Name = "btn_signUp";
-            this.btn_signUp.Size = new System.Drawing.Size(202, 43);
-            this.btn_signUp.TabIndex = 11;
-            this.btn_signUp.Text = "Sign Up";
-            this.btn_signUp.UseVisualStyleBackColor = false;
-            this.btn_signUp.Click += new System.EventHandler(this.btn_signUp_Click);
             // 
             // register
             // 

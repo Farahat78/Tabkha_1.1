@@ -319,6 +319,7 @@ namespace Tabkha_1._1
             this.btn_logout.TabIndex = 28;
             this.btn_logout.Text = "Log out";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // img_profile
             // 

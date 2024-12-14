@@ -49,13 +49,6 @@
             this.btn_signUp = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.register_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lbl_lname = new System.Windows.Forms.Label();
-            this.lbl_bio = new System.Windows.Forms.Label();
-            this.lbl_confirmpassword = new System.Windows.Forms.Label();
-            this.lbl_fname = new System.Windows.Forms.Label();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txtbox_bio = new Tabkha_1._1.CustomTextBox();
             this.txtbox_businesssName = new Tabkha_1._1.CustomTextBox();
             this.txt_email = new Tabkha_1._1.CustomTextBox();
@@ -64,6 +57,13 @@
             this.txt_password = new Tabkha_1._1.CustomTextBox();
             this.txtbox_lname = new Tabkha_1._1.CustomTextBox();
             this.txt_fname = new Tabkha_1._1.CustomTextBox();
+            this.lbl_lname = new System.Windows.Forms.Label();
+            this.lbl_bio = new System.Windows.Forms.Label();
+            this.lbl_confirmpassword = new System.Windows.Forms.Label();
+            this.lbl_fname = new System.Windows.Forms.Label();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -320,55 +320,6 @@
             this.register_card.TabIndex = 16;
             this.register_card.Paint += new System.Windows.Forms.PaintEventHandler(this.register_card_Paint);
             // 
-            // lbl_lname
-            // 
-            this.lbl_lname.AutoSize = true;
-            this.lbl_lname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_lname.Location = new System.Drawing.Point(415, 65);
-            this.lbl_lname.Name = "lbl_lname";
-            this.lbl_lname.Size = new System.Drawing.Size(89, 22);
-            this.lbl_lname.TabIndex = 31;
-            this.lbl_lname.Text = "Last Name";
-            // 
-            // lbl_bio
-            // 
-            this.lbl_bio.AutoSize = true;
-            this.lbl_bio.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_bio.Location = new System.Drawing.Point(245, 446);
-            this.lbl_bio.Name = "lbl_bio";
-            this.lbl_bio.Size = new System.Drawing.Size(34, 22);
-            this.lbl_bio.TabIndex = 26;
-            this.lbl_bio.Text = "Bio";
-            // 
-            // lbl_confirmpassword
-            // 
-            this.lbl_confirmpassword.AutoSize = true;
-            this.lbl_confirmpassword.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_confirmpassword.Location = new System.Drawing.Point(415, 137);
-            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
-            this.lbl_confirmpassword.Size = new System.Drawing.Size(154, 22);
-            this.lbl_confirmpassword.TabIndex = 15;
-            this.lbl_confirmpassword.Text = "Confirm Passworsd";
-            // 
-            // lbl_fname
-            // 
-            this.lbl_fname.AutoSize = true;
-            this.lbl_fname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_fname.Location = new System.Drawing.Point(243, 65);
-            this.lbl_fname.Name = "lbl_fname";
-            this.lbl_fname.Size = new System.Drawing.Size(90, 22);
-            this.lbl_fname.TabIndex = 14;
-            this.lbl_fname.Text = "First Name";
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.register_card;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 20;
-            // 
             // txtbox_bio
             // 
             this.txtbox_bio.Location = new System.Drawing.Point(248, 471);
@@ -421,6 +372,7 @@
             this.txt_confirmPassword.Name = "txt_confirmPassword";
             this.txt_confirmPassword.Size = new System.Drawing.Size(160, 35);
             this.txt_confirmPassword.TabIndex = 4;
+            this.txt_confirmPassword.UseSystemPasswordChar = true;
             this.txt_confirmPassword.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_confirmPassword.WatermarkText = "Confirm tha password";
             // 
@@ -432,6 +384,7 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(160, 35);
             this.txt_password.TabIndex = 5;
+            this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Enter your password";
             // 
@@ -456,6 +409,55 @@
             this.txt_fname.TabIndex = 7;
             this.txt_fname.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_fname.WatermarkText = "First Name";
+            // 
+            // lbl_lname
+            // 
+            this.lbl_lname.AutoSize = true;
+            this.lbl_lname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_lname.Location = new System.Drawing.Point(415, 65);
+            this.lbl_lname.Name = "lbl_lname";
+            this.lbl_lname.Size = new System.Drawing.Size(89, 22);
+            this.lbl_lname.TabIndex = 31;
+            this.lbl_lname.Text = "Last Name";
+            // 
+            // lbl_bio
+            // 
+            this.lbl_bio.AutoSize = true;
+            this.lbl_bio.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_bio.Location = new System.Drawing.Point(245, 446);
+            this.lbl_bio.Name = "lbl_bio";
+            this.lbl_bio.Size = new System.Drawing.Size(34, 22);
+            this.lbl_bio.TabIndex = 26;
+            this.lbl_bio.Text = "Bio";
+            // 
+            // lbl_confirmpassword
+            // 
+            this.lbl_confirmpassword.AutoSize = true;
+            this.lbl_confirmpassword.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_confirmpassword.Location = new System.Drawing.Point(415, 137);
+            this.lbl_confirmpassword.Name = "lbl_confirmpassword";
+            this.lbl_confirmpassword.Size = new System.Drawing.Size(154, 22);
+            this.lbl_confirmpassword.TabIndex = 15;
+            this.lbl_confirmpassword.Text = "Confirm Passworsd";
+            // 
+            // lbl_fname
+            // 
+            this.lbl_fname.AutoSize = true;
+            this.lbl_fname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_fname.Location = new System.Drawing.Point(243, 65);
+            this.lbl_fname.Name = "lbl_fname";
+            this.lbl_fname.Size = new System.Drawing.Size(90, 22);
+            this.lbl_fname.TabIndex = 14;
+            this.lbl_fname.Text = "First Name";
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.register_card;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 20;
             // 
             // guna2Elipse6
             // 
@@ -507,6 +509,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Owner_Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Owner_Register";
             this.Load += new System.EventHandler(this.Owner_Register_Load);
             this.guna2GradientPanel2.ResumeLayout(false);
