@@ -124,9 +124,9 @@ namespace Tabkha_1._1
             login login = new login();
             login.Show();
             this.Hide();
+        }
 
         private void SendWelcomeEmail(string name, string user_email)
-
         {
             string subject = "Welcome to Our System!";
             string body = $"Dear {name},\n\n Welcome to Tabkha System !\n Whether you're here to create culinary masterpieces or enjoy the finest dishes, you're in the right place. Together, we celebrate the joy of cooking, sharing, and savoring amazing food. Let’s make every meal a memorable one...!";
@@ -146,5 +146,5 @@ namespace Tabkha_1._1
                 }
             }
         }
-    }
+    } 
 }
