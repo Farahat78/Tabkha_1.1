@@ -364,7 +364,7 @@ namespace Tabkha_1._1
         private void btn_appitizer_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_appitizer, btn_dessert, btn_mainCourse, btn_salad, btn_soup);
-            FilterMenu("Appitizers");
+            FilterMenu("appetizers");
         }
 
         private void btn_mainCourse_Click(object sender, EventArgs e)
