@@ -31,30 +31,26 @@
             this.components = new System.ComponentModel.Container();
             this.pnl_cart = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.lbl_delivery = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.lbl_subtotal = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTemplate = new System.Windows.Forms.Panel();
+            this.lbl_remove = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_wieght = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_price = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbl_product_name = new System.Windows.Forms.Label();
             this.img_product = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnl_up = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_logout = new System.Windows.Forms.Label();
             this.img_profile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -66,17 +62,13 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_delivery_info = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.txt_country = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txt_city = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txt_phone = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.txt_lname = new System.Windows.Forms.TextBox();
-            this.lbl_lname = new System.Windows.Forms.Label();
-            this.txt_fname = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,9 +88,8 @@
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl_cart.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panelTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             this.pnl_up.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_profile)).BeginInit();
@@ -114,21 +105,19 @@
             // 
             this.pnl_cart.BackColor = System.Drawing.Color.Transparent;
             this.pnl_cart.Controls.Add(this.lbl_total);
-            this.pnl_cart.Controls.Add(this.label18);
             this.pnl_cart.Controls.Add(this.lbl_delivery);
-            this.pnl_cart.Controls.Add(this.label16);
             this.pnl_cart.Controls.Add(this.lbl_subtotal);
-            this.pnl_cart.Controls.Add(this.label14);
             this.pnl_cart.Controls.Add(this.label11);
             this.pnl_cart.Controls.Add(this.label9);
             this.pnl_cart.Controls.Add(this.label8);
-            this.pnl_cart.Controls.Add(this.label5);
-            this.pnl_cart.Controls.Add(this.panel1);
             this.pnl_cart.Controls.Add(this.label1);
             this.pnl_cart.Controls.Add(this.label2);
             this.pnl_cart.Controls.Add(this.label10);
+            this.pnl_cart.Controls.Add(this.label5);
+            this.pnl_cart.Controls.Add(this.flowLayoutPanel1);
             this.pnl_cart.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_cart.Location = new System.Drawing.Point(2, 118);
+            this.pnl_cart.Location = new System.Drawing.Point(3, 120);
+
             this.pnl_cart.Name = "pnl_cart";
             this.pnl_cart.ShadowColor = System.Drawing.Color.Black;
             this.pnl_cart.Size = new System.Drawing.Size(557, 538);
@@ -138,64 +127,32 @@
             // 
             this.lbl_total.AutoSize = true;
             this.lbl_total.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_total.Location = new System.Drawing.Point(469, 493);
+            this.lbl_total.Location = new System.Drawing.Point(440, 493);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(37, 21);
             this.lbl_total.TabIndex = 50;
             this.lbl_total.Text = "320";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(443, 494);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(31, 17);
-            this.label18.TabIndex = 49;
-            this.label18.Text = "EGP";
-            // 
+
             // lbl_delivery
             // 
             this.lbl_delivery.AutoSize = true;
             this.lbl_delivery.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_delivery.Location = new System.Drawing.Point(469, 446);
+            this.lbl_delivery.Location = new System.Drawing.Point(441, 446);
             this.lbl_delivery.Name = "lbl_delivery";
             this.lbl_delivery.Size = new System.Drawing.Size(28, 21);
             this.lbl_delivery.TabIndex = 48;
             this.lbl_delivery.Text = "20";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(443, 449);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 17);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "EGP";
-            // 
             // lbl_subtotal
             // 
             this.lbl_subtotal.AutoSize = true;
             this.lbl_subtotal.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_subtotal.Location = new System.Drawing.Point(469, 411);
+            this.lbl_subtotal.Location = new System.Drawing.Point(438, 411);
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(37, 21);
             this.lbl_subtotal.TabIndex = 46;
             this.lbl_subtotal.Text = "300";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(443, 413);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 17);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "EGP";
             // 
             // label11
             // 
@@ -223,145 +180,6 @@
             this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 4;
             this.label8.Text = "Subtotal";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(12, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(462, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "_________________________________________________________________";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.lbl_wieght);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.lbl_price);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lbl_product_name);
-            this.panel1.Controls.Add(this.img_product);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(11, 45);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 343);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.cross;
-            this.pictureBox1.Location = new System.Drawing.Point(492, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(446, 72);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown1.TabIndex = 44;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(377, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 12);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Quantity :";
-            // 
-            // lbl_wieght
-            // 
-            this.lbl_wieght.AutoSize = true;
-            this.lbl_wieght.Font = new System.Drawing.Font("Calibri", 8F);
-            this.lbl_wieght.Location = new System.Drawing.Point(429, 53);
-            this.lbl_wieght.Name = "lbl_wieght";
-            this.lbl_wieght.Size = new System.Drawing.Size(50, 17);
-            this.lbl_wieght.TabIndex = 41;
-            this.lbl_wieght.Text = "400 gm";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(377, 56);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
-            this.label12.TabIndex = 40;
-            this.label12.Text = "Wieght :";
-            // 
-            // lbl_price
-            // 
-            this.lbl_price.AutoSize = true;
-            this.lbl_price.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_price.Location = new System.Drawing.Point(404, 26);
-            this.lbl_price.Name = "lbl_price";
-            this.lbl_price.Size = new System.Drawing.Size(40, 24);
-            this.lbl_price.TabIndex = 39;
-            this.lbl_price.Text = "300";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(377, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 17);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "EGP";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 6F);
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(120, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 15);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "ID=12345";
-            // 
-            // lbl_product_name
-            // 
-            this.lbl_product_name.AutoSize = true;
-            this.lbl_product_name.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_product_name.Location = new System.Drawing.Point(116, 32);
-            this.lbl_product_name.Name = "lbl_product_name";
-            this.lbl_product_name.Size = new System.Drawing.Size(95, 19);
-            this.lbl_product_name.TabIndex = 36;
-            this.lbl_product_name.Text = "Main Meal";
-            // 
-            // img_product
-            // 
-            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
-            this.img_product.Location = new System.Drawing.Point(9, 29);
-            this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(93, 61);
-            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_product.TabIndex = 35;
-            this.img_product.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label4.Location = new System.Drawing.Point(20, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(434, 16);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "_____________________________________________________________";
             // 
             // label1
             // 
@@ -393,6 +211,132 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "_________________________________________________________________";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label5.Location = new System.Drawing.Point(12, 385);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(462, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "_________________________________________________________________";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.panelTemplate);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 40);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(541, 352);
+            this.flowLayoutPanel1.TabIndex = 51;
+            // 
+            // panelTemplate
+            // 
+            this.panelTemplate.AutoScroll = true;
+            this.panelTemplate.Controls.Add(this.lbl_remove);
+            this.panelTemplate.Controls.Add(this.label21);
+            this.panelTemplate.Controls.Add(this.label6);
+            this.panelTemplate.Controls.Add(this.lbl_wieght);
+            this.panelTemplate.Controls.Add(this.label12);
+            this.panelTemplate.Controls.Add(this.lbl_price);
+            this.panelTemplate.Controls.Add(this.lbl_product_name);
+            this.panelTemplate.Controls.Add(this.img_product);
+            this.panelTemplate.Controls.Add(this.label4);
+            this.panelTemplate.Location = new System.Drawing.Point(3, 3);
+            this.panelTemplate.Name = "panelTemplate";
+            this.panelTemplate.Size = new System.Drawing.Size(530, 116);
+            this.panelTemplate.TabIndex = 2;
+            // 
+            // lbl_remove
+            // 
+            this.lbl_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_remove.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.lbl_remove.ForeColor = System.Drawing.Color.Red;
+            this.lbl_remove.Location = new System.Drawing.Point(435, 10);
+            this.lbl_remove.Name = "lbl_remove";
+            this.lbl_remove.Size = new System.Drawing.Size(64, 16);
+            this.lbl_remove.TabIndex = 47;
+            this.lbl_remove.Text = "Remove";
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label21.Location = new System.Drawing.Point(443, 74);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 15);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(377, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 12);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Quantity :";
+            // 
+            // lbl_wieght
+            // 
+            this.lbl_wieght.Font = new System.Drawing.Font("Calibri", 8F);
+            this.lbl_wieght.Location = new System.Drawing.Point(429, 53);
+            this.lbl_wieght.Name = "lbl_wieght";
+            this.lbl_wieght.Size = new System.Drawing.Size(86, 21);
+            this.lbl_wieght.TabIndex = 41;
+            this.lbl_wieght.Text = "400 gm";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(377, 56);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Wieght :";
+            // 
+            // lbl_price
+            // 
+            this.lbl_price.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+
+            this.lbl_price.Location = new System.Drawing.Point(375, 26);
+            this.lbl_price.Name = "lbl_price";
+            this.lbl_price.Size = new System.Drawing.Size(112, 24);
+            this.lbl_price.TabIndex = 39;
+            this.lbl_price.Text = "300";
+            // 
+            // lbl_product_name
+            // 
+            this.lbl_product_name.AutoSize = true;
+            this.lbl_product_name.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl_product_name.Location = new System.Drawing.Point(116, 32);
+            this.lbl_product_name.Name = "lbl_product_name";
+            this.lbl_product_name.Size = new System.Drawing.Size(95, 19);
+            this.lbl_product_name.TabIndex = 36;
+            this.lbl_product_name.Text = "Main Meal";
+            // 
+            // img_product
+            // 
+
+            this.img_product.Image = global::Tabkha_1._1.Properties.Resources.dish;
+            this.img_product.Location = new System.Drawing.Point(9, 29);
+            this.img_product.Name = "img_product";
+            this.img_product.Size = new System.Drawing.Size(93, 61);
+            this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_product.TabIndex = 35;
+            this.img_product.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label4.Location = new System.Drawing.Point(20, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(434, 16);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "_____________________________________________________________";
+            // 
             // pnl_up
             // 
             this.pnl_up.Controls.Add(this.lbl_logout);
@@ -408,7 +352,8 @@
             this.pnl_up.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnl_up.Location = new System.Drawing.Point(0, 0);
             this.pnl_up.Name = "pnl_up";
-            this.pnl_up.Size = new System.Drawing.Size(1028, 113);
+            this.pnl_up.Size = new System.Drawing.Size(1075, 113);
+
             this.pnl_up.TabIndex = 2;
             // 
             // lbl_logout
@@ -421,6 +366,7 @@
             this.lbl_logout.Size = new System.Drawing.Size(62, 21);
             this.lbl_logout.TabIndex = 24;
             this.lbl_logout.Text = "Log out";
+            this.lbl_logout.Click += new System.EventHandler(this.lbl_logout_Click);
             // 
             // img_profile
             // 
@@ -428,7 +374,7 @@
             this.img_profile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_profile.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.img_profile.ImageRotate = 0F;
-            this.img_profile.Location = new System.Drawing.Point(796, 52);
+            this.img_profile.Location = new System.Drawing.Point(771, 60);
             this.img_profile.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_profile.Name = "img_profile";
             this.img_profile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -445,7 +391,7 @@
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label29.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(848, 74);
+            this.label29.Location = new System.Drawing.Point(821, 74);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(87, 21);
@@ -459,7 +405,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -473,7 +419,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(941, 3);
+            this.img_minimize.Location = new System.Drawing.Point(987, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -494,6 +440,7 @@
             this.img_logo.TabIndex = 6;
             this.img_logo.TabStop = false;
             this.img_logo.UseTransparentBackground = true;
+            this.img_logo.Click += new System.EventHandler(this.img_logo_Click);
             // 
             // img_close
             // 
@@ -501,7 +448,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(985, 3);
+            this.img_close.Location = new System.Drawing.Point(1030, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -521,58 +468,34 @@
             // pnl_delivery_info
             // 
             this.pnl_delivery_info.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_delivery_info.Controls.Add(this.txt_country);
-            this.pnl_delivery_info.Controls.Add(this.label21);
-            this.pnl_delivery_info.Controls.Add(this.txt_city);
+            this.pnl_delivery_info.Controls.Add(this.comboBox1);
             this.pnl_delivery_info.Controls.Add(this.label22);
             this.pnl_delivery_info.Controls.Add(this.txt_address);
             this.pnl_delivery_info.Controls.Add(this.label20);
             this.pnl_delivery_info.Controls.Add(this.txt_phone);
             this.pnl_delivery_info.Controls.Add(this.label19);
-            this.pnl_delivery_info.Controls.Add(this.txt_lname);
-            this.pnl_delivery_info.Controls.Add(this.lbl_lname);
-            this.pnl_delivery_info.Controls.Add(this.txt_fname);
+            this.pnl_delivery_info.Controls.Add(this.txt_name);
             this.pnl_delivery_info.Controls.Add(this.label17);
             this.pnl_delivery_info.Controls.Add(this.label13);
             this.pnl_delivery_info.Controls.Add(this.label15);
             this.pnl_delivery_info.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_delivery_info.Location = new System.Drawing.Point(572, 118);
+
+            this.pnl_delivery_info.Location = new System.Drawing.Point(573, 120);
             this.pnl_delivery_info.Name = "pnl_delivery_info";
             this.pnl_delivery_info.ShadowColor = System.Drawing.Color.Black;
             this.pnl_delivery_info.Size = new System.Drawing.Size(456, 282);
             this.pnl_delivery_info.TabIndex = 3;
             // 
-            // txt_country
+            // comboBox1
             // 
-            this.txt_country.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_country.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_country.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_country.Location = new System.Drawing.Point(238, 237);
-            this.txt_country.Multiline = true;
-            this.txt_country.Name = "txt_country";
-            this.txt_country.Size = new System.Drawing.Size(188, 31);
-            this.txt_country.TabIndex = 63;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(236, 216);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 16);
-            this.label21.TabIndex = 62;
-            this.label21.Text = "Country*";
-            // 
-            // txt_city
-            // 
-            this.txt_city.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_city.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_city.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_city.Location = new System.Drawing.Point(18, 237);
-            this.txt_city.Multiline = true;
-            this.txt_city.Name = "txt_city";
-            this.txt_city.Size = new System.Drawing.Size(188, 31);
-            this.txt_city.TabIndex = 61;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Kafr El-Shiekh"});
+            this.comboBox1.Location = new System.Drawing.Point(18, 235);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(409, 24);
+            this.comboBox1.TabIndex = 61;
             // 
             // label22
             // 
@@ -627,37 +550,16 @@
             this.label19.TabIndex = 56;
             this.label19.Text = "Phone*";
             // 
-            // txt_lname
+            // txt_name
             // 
-            this.txt_lname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_lname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_lname.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_lname.Location = new System.Drawing.Point(238, 58);
-            this.txt_lname.Multiline = true;
-            this.txt_lname.Name = "txt_lname";
-            this.txt_lname.Size = new System.Drawing.Size(188, 31);
-            this.txt_lname.TabIndex = 55;
-            // 
-            // lbl_lname
-            // 
-            this.lbl_lname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_lname.AutoSize = true;
-            this.lbl_lname.Location = new System.Drawing.Point(236, 37);
-            this.lbl_lname.Name = "lbl_lname";
-            this.lbl_lname.Size = new System.Drawing.Size(77, 16);
-            this.lbl_lname.TabIndex = 54;
-            this.lbl_lname.Text = "Last Name*";
-            // 
-            // txt_fname
-            // 
-            this.txt_fname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_fname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_fname.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_fname.Location = new System.Drawing.Point(18, 58);
-            this.txt_fname.Multiline = true;
-            this.txt_fname.Name = "txt_fname";
-            this.txt_fname.Size = new System.Drawing.Size(188, 31);
-            this.txt_fname.TabIndex = 53;
+            this.txt_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_name.Location = new System.Drawing.Point(18, 58);
+            this.txt_name.Multiline = true;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(408, 31);
+            this.txt_name.TabIndex = 53;
             // 
             // label17
             // 
@@ -665,9 +567,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(14, 37);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 16);
+            this.label17.Size = new System.Drawing.Size(49, 16);
             this.label17.TabIndex = 52;
-            this.label17.Text = "First Name*";
+            this.label17.Text = "Name*";
             // 
             // label13
             // 
@@ -706,7 +608,7 @@
             this.pnl_payment_info.Controls.Add(this.label23);
             this.pnl_payment_info.Controls.Add(this.label24);
             this.pnl_payment_info.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_payment_info.Location = new System.Drawing.Point(572, 410);
+            this.pnl_payment_info.Location = new System.Drawing.Point(573, 412);
             this.pnl_payment_info.Name = "pnl_payment_info";
             this.pnl_payment_info.ShadowColor = System.Drawing.Color.Black;
             this.pnl_payment_info.Size = new System.Drawing.Size(456, 246);
@@ -758,6 +660,7 @@
             this.btn_place_order.TabIndex = 45;
             this.btn_place_order.Text = "Place Order";
             this.btn_place_order.UseVisualStyleBackColor = false;
+            this.btn_place_order.Click += new System.EventHandler(this.btn_place_order_Click);
             // 
             // radio_credit
             // 
@@ -853,7 +756,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1039, 586);
+            this.ClientSize = new System.Drawing.Size(1075, 853);
             this.Controls.Add(this.pnl_payment_info);
             this.Controls.Add(this.pnl_delivery_info);
             this.Controls.Add(this.pnl_up);
@@ -864,10 +767,9 @@
             this.Text = "place_order";
             this.pnl_cart.ResumeLayout(false);
             this.pnl_cart.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelTemplate.ResumeLayout(false);
+            this.panelTemplate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).EndInit();
             this.pnl_up.ResumeLayout(false);
             this.pnl_up.PerformLayout();
@@ -895,25 +797,19 @@
         private System.Windows.Forms.PictureBox img_close;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Panel panelTemplate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_wieght;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_price;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_product_name;
         private System.Windows.Forms.PictureBox img_product;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_delivery_info;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_payment_info;
         private System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lbl_delivery;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lbl_subtotal;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -921,15 +817,10 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private System.Windows.Forms.TextBox txt_fname;
+        private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt_lname;
-        private System.Windows.Forms.Label lbl_lname;
-        private System.Windows.Forms.TextBox txt_country;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txt_city;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Label label20;
@@ -944,7 +835,6 @@
         private System.Windows.Forms.RadioButton radio_cash;
         private System.Windows.Forms.Button btn_place_order;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbl_logout;
         private Guna.UI2.WinForms.Guna2CirclePictureBox img_profile;
@@ -952,5 +842,9 @@
         private CustomTextBox txt_cvv;
         private CustomTextBox txt_expiry;
         private CustomTextBox txt_cardnum;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbl_remove;
     }
 }

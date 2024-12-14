@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Tabkha_1._1.Class;
 
 namespace Tabkha_1._1
 {
     public partial class Customer_Profile: Form
     {
+        int currentUserID;
+
         private bool isSidebarExpanded = true;
 
-        public Customer_Profile()
+        public Customer_Profile(int userID)
         {
             InitializeComponent();
         }
@@ -37,7 +42,7 @@ namespace Tabkha_1._1
         public void hideSome()
         {
             btn_orders.Visible = false;
-            
+            btn_comments.Visible = true;
         }
 
         private void img_close_Click(object sender, EventArgs e)
@@ -52,7 +57,11 @@ namespace Tabkha_1._1
 
         private void btn_manageProfile_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new Manage_Profile());
+            Manage_Profile manage = new Manage_Profile();
+            manage.Owner = this;  // Set the current form (Customer_Profile) as the owner
+            manage.readOnly();
+            manage.LoadProfilePicture(Session.pic);
+            LoadFormIntoPanel(manage);
             lbl_data.Text = "Manage Your Profile";
         }
 
@@ -64,6 +73,10 @@ namespace Tabkha_1._1
 
         private void Customer_Profile_Load(object sender, EventArgs e)
         {
+            lbl_username.Text = Session.Name;
+            img_customer_profile.Image = !string.IsNullOrEmpty(Session.pic)
+            ? Image.FromFile(Session.pic)
+            : Properties.Resources.Max_R_Headshot__1_;
             lbl_data.Text = "Profile";
         }
 
@@ -71,22 +84,29 @@ namespace Tabkha_1._1
         {
             ChangeColor(btn_view, btn_orders);
             lbl_data.Text = "Profile";
-            Manage_Profile veiw = new Manage_Profile();
-            veiw.readOnly();
-            LoadFormIntoPanel(veiw);
+            Manage_Profile manageProfileForm = new Manage_Profile();
+            manageProfileForm.Owner = this;
+            manageProfileForm.readOnly();
+            LoadFormIntoPanel(manageProfileForm);
         }
 
         private void btn_orders_Click(object sender, EventArgs e)
         {
             ChangeColor(btn_orders, btn_view);
             lbl_data.Text = "Previous Orders";
-            LoadFormIntoPanel(new uploadnew());
+            LoadFormIntoPanel(new View_order_details());
         }
 
         private void btn_toggleSideBar_Click(object sender, EventArgs e)
         {
             isSidebarExpanded = !isSidebarExpanded;
             AdjustMainPanel();
+        }
+
+        public bool orders
+        {
+            get => btn_orders.Visible;
+            set => btn_orders.Visible = value;
         }
 
         private void AdjustMainPanel()
@@ -104,10 +124,54 @@ namespace Tabkha_1._1
                 Gpnl_general.Width = this.Width - pnl_sidebar.Width;
             }
         }
-
         private void btn_out_Click(object sender, EventArgs e)
         {
+            Session.Logout();
+
+            login login = new login();
+            login.Show();
             this.Close();
+        }
+
+        public void RefreshProfile()
+        {
+            lbl_username.Text = Session.Name;
+            img_customer_profile.Image = !string.IsNullOrEmpty(Session.pic)
+                ? Image.FromFile(Session.pic)
+                : Properties.Resources.Max_R_Headshot__1_;
+        }
+
+        private void btn_comments_Click(object sender, EventArgs e)
+        {
+            ChangeColor(btn_orders, btn_view);
+            lbl_data.Text = "Comments ";
+            comments comments = new comments();
+
+            comments.LoadComments(Session.Id);
+            LoadFormIntoPanel(comments);
+        }
+
+        private void img_back_Click(object sender, EventArgs e)
+        {
+            if (Session.Role == "Chefs")
+            {
+                Owner_Profile home = new Owner_Profile();
+                home.Show();
+                this.Hide();
+            }
+            else if (Session.Role == "Admins")
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
+            else if (Session.Role == "Users")
+            {
+                user_home user_Home = new user_home();
+                user_Home.Show();
+                this.Hide();
+            }
+               
         }
     }
 }

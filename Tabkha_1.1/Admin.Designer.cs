@@ -77,10 +77,10 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(868, 65);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(818, 42);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 42);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(66, 65);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 9;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -91,7 +91,7 @@
             this.lbl_account.AutoSize = true;
             this.lbl_account.BackColor = System.Drawing.Color.Transparent;
             this.lbl_account.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_account.Location = new System.Drawing.Point(918, 85);
+            this.lbl_account.Location = new System.Drawing.Point(890, 85);
             this.lbl_account.Name = "lbl_account";
             this.lbl_account.Size = new System.Drawing.Size(87, 21);
             this.lbl_account.TabIndex = 10;
@@ -178,7 +178,7 @@
             this.btn_out.FlatAppearance.BorderSize = 0;
             this.btn_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_out.Location = new System.Drawing.Point(67, 258);
+            this.btn_out.Location = new System.Drawing.Point(67, 348);
             this.btn_out.Name = "btn_out";
             this.btn_out.Size = new System.Drawing.Size(209, 28);
             this.btn_out.TabIndex = 5;
@@ -195,7 +195,7 @@
             this.btn_users.FlatAppearance.BorderSize = 0;
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(67, 168);
+            this.btn_users.Location = new System.Drawing.Point(67, 227);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(209, 32);
             this.btn_users.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.btn_chefs.FlatAppearance.BorderSize = 0;
             this.btn_chefs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chefs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chefs.Location = new System.Drawing.Point(67, 84);
+            this.btn_chefs.Location = new System.Drawing.Point(67, 115);
             this.btn_chefs.Name = "btn_chefs";
             this.btn_chefs.Size = new System.Drawing.Size(209, 32);
             this.btn_chefs.TabIndex = 3;
@@ -286,7 +286,9 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

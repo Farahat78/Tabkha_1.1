@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,13 +44,10 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=27.1462.58.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.27.1.58\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Shared.Base, Version=27.1462.58.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Shared.Base.27.1.58\lib\net462\Syncfusion.Shared.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -84,6 +83,13 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Connection.cs" />
+    <Compile Include="ProfileForms\comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileForms\comments.Designer.cs">
+      <DependentUpon>comments.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -93,11 +99,11 @@
     <Compile Include="Customer Profile.Designer.cs">
       <DependentUpon>Customer Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delivery.cs">
+    <Compile Include="forget.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delivery.Designer.cs">
-      <DependentUpon>Delivery.cs</DependentUpon>
+    <Compile Include="forget.Designer.cs">
+      <DependentUpon>forget.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -117,10 +123,10 @@
     <Compile Include="AdminForms\ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Manage Profile.cs">
+    <Compile Include="ProfileForms\Manage Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\Manage Profile.Designer.cs">
+    <Compile Include="ProfileForms\Manage Profile.Designer.cs">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="option for register.cs">
@@ -167,6 +173,13 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\session.cs" />
     <Compile Include="uploadnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,10 +192,10 @@
     <Compile Include="user_home.Designer.cs">
       <DependentUpon>user_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\View order details.cs">
+    <Compile Include="ProfileForms\View order details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\View order details.Designer.cs">
+    <Compile Include="ProfileForms\View order details.Designer.cs">
       <DependentUpon>View order details.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
@@ -200,11 +213,14 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForms\comments.resx">
+      <DependentUpon>comments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer Profile.resx">
       <DependentUpon>customer profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delivery.resx">
-      <DependentUpon>Delivery.cs</DependentUpon>
+    <EmbeddedResource Include="forget.resx">
+      <DependentUpon>forget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -215,7 +231,7 @@
     <EmbeddedResource Include="AdminForms\ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\Manage Profile.resx">
+    <EmbeddedResource Include="ProfileForms\Manage Profile.resx">
       <DependentUpon>Manage Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="option for register.resx">
@@ -249,13 +265,16 @@
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uploadnew.resx">
       <DependentUpon>uploadnew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_home.resx">
       <DependentUpon>user_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\View order details.resx">
+    <EmbeddedResource Include="ProfileForms\View order details.resx">
       <DependentUpon>View order details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
@@ -282,9 +301,6 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minus.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\maximize.png" />
   </ItemGroup>
   <ItemGroup>
@@ -302,9 +318,11 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
     <None Include="Resources\chef-hat.png" />
+    <None Include="Resources\chef.png" />
     <Content Include="Resources\chevron.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\communication.png" />
+    <None Include="Resources\dish.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
     <Content Include="Resources\facebook.png" />
@@ -319,6 +337,7 @@
     <None Include="Resources\Screenshot 2024-11-29 211928.png" />
     <None Include="Resources\Screenshot 2024-11-29 213224.png" />
     <None Include="Resources\phone-call.png" />
+    <Content Include="Resources\minus.png" />
     <Content Include="Resources\twitter %281%29.png" />
     <None Include="Resources\twitter %281%291.png" />
     <None Include="Resources\twitter.png" />

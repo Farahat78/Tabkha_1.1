@@ -88,12 +88,14 @@
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(454, 554);
+            this.btn_save.Location = new System.Drawing.Point(469, 551);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(260, 65);
             this.btn_save.TabIndex = 68;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label13
             // 
@@ -119,7 +121,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(849, 453);
+            this.label11.Location = new System.Drawing.Point(849, 452);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 24);
             this.label11.TabIndex = 64;
@@ -128,6 +130,7 @@
             // n_quantity
             // 
             this.n_quantity.Location = new System.Drawing.Point(929, 386);
+            this.n_quantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.n_quantity.Name = "n_quantity";
             this.n_quantity.Size = new System.Drawing.Size(147, 27);
             this.n_quantity.TabIndex = 63;
@@ -162,6 +165,7 @@
             "soup ",
             "salad"});
             this.combo_category.Location = new System.Drawing.Point(929, 287);
+            this.combo_category.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.combo_category.Name = "combo_category";
             this.combo_category.Size = new System.Drawing.Size(147, 27);
             this.combo_category.TabIndex = 60;
@@ -170,7 +174,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(844, 263);
+            this.label7.Location = new System.Drawing.Point(844, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 24);
             this.label7.TabIndex = 58;
@@ -179,7 +183,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(835, 98);
+            this.panel1.Location = new System.Drawing.Point(835, 99);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 430);
             this.panel1.TabIndex = 57;
@@ -198,16 +203,19 @@
             this.btn_uploadphoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_uploadphoto.ForeColor = System.Drawing.Color.White;
             this.btn_uploadphoto.Location = new System.Drawing.Point(117, 411);
+            this.btn_uploadphoto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_uploadphoto.Name = "btn_uploadphoto";
             this.btn_uploadphoto.Size = new System.Drawing.Size(170, 43);
             this.btn_uploadphoto.TabIndex = 43;
             this.btn_uploadphoto.Text = "Upload Photo";
             this.btn_uploadphoto.UseVisualStyleBackColor = false;
+            this.btn_uploadphoto.Click += new System.EventHandler(this.btn_uploadphoto_Click);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(963, 212);
+            this.checkBox3.Location = new System.Drawing.Point(963, 213);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(66, 23);
             this.checkBox3.TabIndex = 56;
@@ -218,6 +226,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(963, 182);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(90, 23);
             this.checkBox2.TabIndex = 55;
@@ -228,6 +237,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(963, 152);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(90, 23);
             this.checkBox1.TabIndex = 54;
@@ -240,9 +250,9 @@
             this.label6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(844, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 24);
+            this.label6.Size = new System.Drawing.Size(170, 24);
             this.label6.TabIndex = 53;
-            this.label6.Text = "Available Wieghts :";
+            this.label6.Text = "Available Weights :";
             // 
             // label5
             // 
@@ -267,6 +277,7 @@
             // n_preptime
             // 
             this.n_preptime.Location = new System.Drawing.Point(580, 343);
+            this.n_preptime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.n_preptime.Name = "n_preptime";
             this.n_preptime.Size = new System.Drawing.Size(120, 27);
             this.n_preptime.TabIndex = 49;
@@ -285,11 +296,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(410, 199);
+            this.label2.Location = new System.Drawing.Point(410, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 46;
             this.label2.Text = "Description:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Name
             // 
@@ -323,7 +335,8 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -399,9 +412,10 @@
             // img_product
             // 
             this.img_product.Image = global::Tabkha_1._1.Properties.Resources.for_web_2020_05_04T145441_475;
-            this.img_product.Location = new System.Drawing.Point(13, 99);
+            this.img_product.Location = new System.Drawing.Point(14, 99);
+            this.img_product.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(379, 301);
+            this.img_product.Size = new System.Drawing.Size(379, 300);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_product.TabIndex = 42;
             this.img_product.TabStop = false;
@@ -410,7 +424,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 58);
+            this.label1.Location = new System.Drawing.Point(14, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 29);
             this.label1.TabIndex = 69;
@@ -420,7 +434,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(3, 73);
+            this.label14.Location = new System.Drawing.Point(3, 72);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(1188, 19);
             this.label14.TabIndex = 70;
@@ -431,6 +445,7 @@
             // 
             this.txt_price.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_price.Location = new System.Drawing.Point(899, 476);
+            this.txt_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.Size = new System.Drawing.Size(177, 39);
@@ -442,6 +457,7 @@
             // 
             this.txt_ingredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ingredients.Location = new System.Drawing.Point(414, 418);
+            this.txt_ingredients.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_ingredients.Multiline = true;
             this.txt_ingredients.Name = "txt_ingredients";
             this.txt_ingredients.Size = new System.Drawing.Size(408, 93);
@@ -452,7 +468,8 @@
             // txt_description
             // 
             this.txt_description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_description.Location = new System.Drawing.Point(414, 231);
+            this.txt_description.Location = new System.Drawing.Point(414, 232);
+            this.txt_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(408, 93);
@@ -464,6 +481,7 @@
             // 
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_name.Location = new System.Drawing.Point(414, 151);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(408, 39);
@@ -527,8 +545,10 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uploadnew";
+            this.Load += new System.EventHandler(this.uploadnew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.n_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_preptime)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);

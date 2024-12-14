@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tabkha_1._1.Class;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 namespace Tabkha_1._1
@@ -18,52 +21,104 @@ namespace Tabkha_1._1
             InitializeComponent();
         }
 
-        private DataTable usersTable;
-
-        private void ManageChefsForm_Load(object sender, EventArgs e)
+        private void LoadData()
         {
-            usersTable = new DataTable();
-            usersTable.Columns.Add("User ID", typeof(int));
-            usersTable.Columns.Add("Name", typeof(string));
-            usersTable.Columns.Add("Email", typeof(string));
-            usersTable.Columns.Add("Phone Number", typeof(string));
-            usersTable.Columns.Add("Address", typeof(string));
-            usersTable.Columns.Add("Password", typeof(string));
-
-            dgv_users.DataSource = usersTable;
+            string query = @"
+                SELECT 
+                    [UserID],
+                    [Fname] + ' ' + [Lname] AS [Name], 
+                    [Email] AS [Email],
+                    [Phone] AS [Phone Number],
+                    [Address] AS [Address],
+                    [City] AS [City],
+                    [Password] AS [Password]
+                FROM [tabkha1].[dbo].[Users]";
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                dgv_users.DataSource = dataTable;
+            }
         }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
-            AddEditUser detailsForm = new AddEditUser();
-            detailsForm.change_add();
-            if (detailsForm.ShowDialog() == DialogResult.OK)
+            using (var form = new AddEditUser())
             {
-                dgv_users.Rows.Add(dgv_users.Rows.Count + 1, detailsForm.UserName, detailsForm.Email, detailsForm.Phone, detailsForm.Address, detailsForm.Password); 
+                form.change_add();
+                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,Address,City) VALUES (@Fname, @Lname, @Password, @Email, @Phone, @Address, @City)";
+                        using (var cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Fname", form.Fname);
+                            cmd.Parameters.AddWithValue("@Lname", form.Lname);
+                            cmd.Parameters.AddWithValue("@Password", form.Password);
+                            cmd.Parameters.AddWithValue("@Email", form.Email);
+                            cmd.Parameters.AddWithValue("@Phone", form.Phone);
+                            cmd.Parameters.AddWithValue("@Address", form.Address);
+                            cmd.Parameters.AddWithValue("@City", form.City);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        LoadData();
+                    }
+                }
             }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (dgv_users.CurrentRow != null)
+            if(dgv_users.CurrentRow != null)
             {
-                AddEditUser detailsForm = new AddEditUser
+                int rowIndex = dgv_users.SelectedCells[0].RowIndex;
+                DataGridViewRow row = dgv_users.Rows[rowIndex];
+
+                int id = Convert.ToInt32(row.Cells["UserID"].Value);
+
+                using (var form = new AddEditUser())
                 {
-                    UserName = dgv_users.CurrentRow.Cells["nme"].Value.ToString(),
-                    Email = dgv_users.CurrentRow.Cells["email"].Value.ToString(),
-                    Phone = dgv_users.CurrentRow.Cells["number"].Value.ToString(),
-                    Address = dgv_users.CurrentRow.Cells["address"].Value.ToString(),
-                    Password = dgv_users.CurrentRow.Cells["Password"].Value.ToString(),
-                };
-                detailsForm.passwod_ReadOnly();
-                detailsForm.change_edit();
-                if (detailsForm.ShowDialog() == DialogResult.OK)
-                {
-                    dgv_users.CurrentRow.Cells["nme"].Value = detailsForm.UserName;
-                    dgv_users.CurrentRow.Cells["email"].Value = detailsForm.Email;
-                    dgv_users.CurrentRow.Cells["number"].Value = detailsForm.Phone;
-                    dgv_users.CurrentRow.Cells["address"].Value = detailsForm.Address;
+                    form.passwod_ReadOnly();
+                    form.change_edit();
+                    form.Nme = row.Cells["Name"].Value.ToString();
+                    form.Password = row.Cells["Password"].Value.ToString();
+                    form.Address = row.Cells["Address"].Value.ToString();
+                    form.City = row.Cells["City"].Value.ToString();
+                    form.Phone = row.Cells["Phone Number"].Value.ToString();
+                    form.Email = row.Cells["Email"].Value.ToString();
+                    
+                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    {
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            string query = "UPDATE Users SET Fname = @Fname, Lname = @Lname, Email = @Email, Phone = @Phone, Password = @Password, Address = @Address, City = @City WHERE UserID = @Id";
+                            using (var cmd = new SqlCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@Fname", form.Fname);
+                                cmd.Parameters.AddWithValue("@Lname", form.Lname);
+                                cmd.Parameters.AddWithValue("@Email", form.Email);
+                                cmd.Parameters.AddWithValue("@Phone", form.Phone);
+                                cmd.Parameters.AddWithValue("@Password", form.Password);
+                                cmd.Parameters.AddWithValue("@Address", form.Address);
+                                cmd.Parameters.AddWithValue("@City", form.City);
+                                cmd.Parameters.AddWithValue("@Id", id);
+
+                                conn.Open();
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+                            }
+                            LoadData();
+                        }
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please select a cell to edit a user.");
             }
         }
         private void btn_delete_Click(object sender, EventArgs e)
@@ -80,8 +135,23 @@ namespace Tabkha_1._1
 
                 if (result == DialogResult.Yes)
                 {
-                    // Remove the selected row
-                    dgv_users.Rows.Remove(dgv_users.CurrentRow);
+                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    {
+                        int rowIndex = dgv_users.SelectedCells[0].RowIndex;
+                        DataGridViewRow row = dgv_users.Rows[rowIndex];
+
+                        int id = Convert.ToInt32(row.Cells["UserID"].Value);
+                        string query = "DELETE FROM Users WHERE UserID = @Id";
+                        using (var cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Id", id);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        LoadData();
+                    }
                 }
             }
             else
@@ -92,7 +162,51 @@ namespace Tabkha_1._1
 
         private void ManageUser_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
 
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            // Get the search text
+            string searchText = txt_search.Text.Trim();
+
+            // SQL query with LIKE for searching FName, LName, or both
+            string query = @"
+        SELECT 
+            [UserID],
+            [Fname] + ' ' + [Lname] AS [Name], 
+            [Email] AS [Email],
+            [Phone] AS [Phone Number],
+            [Address] AS [Address],
+            [City] AS [City],
+            [Password] AS [Password]
+        FROM [tabkha1].[dbo].[Users]
+        WHERE [Fname] LIKE @Search OR [Lname] LIKE @Search 
+              OR ([Fname] + ' ' + [Lname]) LIKE @Search";
+
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Add parameter for search
+                    cmd.Parameters.AddWithValue("@Search", $"%{searchText}%");
+
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        // Bind the filtered data to the DataGridView
+                        dgv_users.DataSource = dt;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }
