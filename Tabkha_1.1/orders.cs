@@ -322,7 +322,19 @@ namespace Tabkha_1._1
                             MessageBox.Show("No order found with the specified OrderID.");
                         }
                     }
+                    if (status == "Done")
+                    {
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Nice Work");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No order found with the specified OrderID.");
+                        }
                     }
+
+                }
 
                 }
                 catch (Exception ex)
@@ -356,6 +368,7 @@ namespace Tabkha_1._1
 
         private void btn_DoneOrders_Click(object sender, EventArgs e)
         {
+            pnl_order_details.Visible=false;
             lbl_status.Text = "Done Orders";
             btn_acceptorder.Text = "Print Receipt";
             btn_acceptorder.BackColor= Color.FromArgb(204, 82, 48);
