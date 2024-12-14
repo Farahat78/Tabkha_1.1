@@ -164,5 +164,49 @@ namespace Tabkha_1._1
         {
             LoadData();
         }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            // Get the search text
+            string searchText = txt_search.Text.Trim();
+
+            // SQL query with LIKE for searching FName, LName, or both
+            string query = @"
+        SELECT 
+            [UserID],
+            [Fname] + ' ' + [Lname] AS [Name], 
+            [Email] AS [Email],
+            [Phone] AS [Phone Number],
+            [Address] AS [Address],
+            [City] AS [City],
+            [Password] AS [Password]
+        FROM [tabkha1].[dbo].[Users]
+        WHERE [Fname] LIKE @Search OR [Lname] LIKE @Search 
+              OR ([Fname] + ' ' + [Lname]) LIKE @Search";
+
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Add parameter for search
+                    cmd.Parameters.AddWithValue("@Search", $"%{searchText}%");
+
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        // Bind the filtered data to the DataGridView
+                        dgv_users.DataSource = dt;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }

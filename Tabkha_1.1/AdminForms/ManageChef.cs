@@ -164,5 +164,46 @@ namespace Tabkha_1._1
         {
             LoadData();
         }
+
+        private void customTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = customTextBox1.Text.Trim();
+
+            string query = @"
+        SELECT 
+            [ChefID],
+            [Fname] + ' ' + [Lname] AS [Chef Name], 
+            [Email] AS [Email],
+            [Password] AS [Password],
+            [Phone] AS [Phone Number],
+            [Rname] AS [Restaurant Name]
+        FROM [tabkha1].[dbo].[Chefs]
+        WHERE [Fname] LIKE @Search OR [Lname] LIKE @Search 
+              OR ([Fname] + ' ' + [Lname]) LIKE @Search";
+
+            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Add the search parameter
+                    cmd.Parameters.AddWithValue("@Search", $"%{searchText}%");
+
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // Bind filtered data to the DataGridView
+                        dgv_chefs.DataSource = dataTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
