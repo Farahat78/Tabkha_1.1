@@ -127,7 +127,7 @@ namespace Tabkha_1._1
             {
                 // Confirm deletion
                 DialogResult result = MessageBox.Show(
-                    "Are you sure you want to delete this User?",
+                    "Are you sure you want to delete this User and all related data?",
                     "Confirm Deletion",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning
@@ -140,17 +140,65 @@ namespace Tabkha_1._1
                         int rowIndex = dgv_users.SelectedCells[0].RowIndex;
                         DataGridViewRow row = dgv_users.Rows[rowIndex];
 
-                        int id = Convert.ToInt32(row.Cells["UserID"].Value);
-                        string query = "DELETE FROM Users WHERE UserID = @Id";
-                        using (var cmd = new SqlCommand(query, conn))
+                        // Ensure UserID exists and is valid
+                        object cellValue = row.Cells["UserID"].Value;
+                        if (cellValue != null && int.TryParse(cellValue.ToString(), out int id))
                         {
-                            cmd.Parameters.AddWithValue("@Id", id);
-
+                            // Start a transaction
                             conn.Open();
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
+                            using (SqlTransaction transaction = conn.BeginTransaction())
+                            {
+                                try
+                                {
+                                    // Delete related data first
+                                    string deleteOrders = "DELETE FROM Orders WHERE UserID = @Id";
+                                    string deleteFavorites = "DELETE FROM Favorites WHERE UserID = @Id";
+                                    string deleteMessages = "DELETE FROM Messages WHERE SenderID = @Id OR ReceiverID = @Id";
+
+                                    using (SqlCommand cmd = new SqlCommand(deleteOrders, conn, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@Id", id);
+                                        cmd.ExecuteNonQuery();
+                                    }
+
+                                    using (SqlCommand cmd = new SqlCommand(deleteFavorites, conn, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@Id", id);
+                                        cmd.ExecuteNonQuery();
+                                    }
+
+                                    using (SqlCommand cmd = new SqlCommand(deleteMessages, conn, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@Id", id);
+                                        cmd.ExecuteNonQuery();
+                                    }
+
+                                    // Finally, delete the user
+                                    string deleteUser = "DELETE FROM Users WHERE UserID = @Id";
+                                    using (SqlCommand cmd = new SqlCommand(deleteUser, conn, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@Id", id);
+                                        cmd.ExecuteNonQuery();
+                                    }
+
+                                    // Commit the transaction
+                                    transaction.Commit();
+
+                                    // Reload data
+                                    LoadData();
+                                }
+                                catch (Exception ex)
+                                {
+                                    // Rollback transaction on error
+                                    transaction.Rollback();
+                                    MessageBox.Show($"Error deleting user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                         }
-                        LoadData();
+                        else
+                        {
+                            MessageBox.Show("Invalid User ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -159,6 +207,8 @@ namespace Tabkha_1._1
                 MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void ManageUser_Load(object sender, EventArgs e)
         {

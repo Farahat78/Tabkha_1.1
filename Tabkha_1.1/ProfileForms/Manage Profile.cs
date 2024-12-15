@@ -150,6 +150,7 @@ namespace Tabkha_1._1
         private void Manage_Profile_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            ChangeAsRole();
         }
 
         public void LoadProfilePicture(string picturePath)
@@ -161,6 +162,19 @@ namespace Tabkha_1._1
             else
             {
                 pic_pro.Image = null; // Or set a default image if the path is empty
+            }
+        }
+
+        private void ChangeAsRole()
+        {
+            if (Session.Role == "Admins")
+            {
+                lbl_Pnumber.Visible = false;
+                txtbox_Pnumber.Visible=false;
+            }
+            else if (Session.Role == "Users")
+            {
+
             }
         }
 
