@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.login_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.txt_password = new Tabkha_1._1.CustomTextBox();
-            this.txt_username = new Tabkha_1._1.CustomTextBox();
             this.lbl_pass = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.linklbl_register = new System.Windows.Forms.LinkLabel();
@@ -49,9 +47,11 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_logoo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txt_password = new Tabkha_1._1.CustomTextBox();
+            this.txt_username = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.img_logoo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.login_card.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -80,29 +80,6 @@
             this.login_card.ShadowColor = System.Drawing.Color.Black;
             this.login_card.Size = new System.Drawing.Size(644, 458);
             this.login_card.TabIndex = 10;
-            // 
-            // txt_password
-            // 
-            this.txt_password.Location = new System.Drawing.Point(323, 202);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_password.Multiline = true;
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(275, 41);
-            this.txt_password.TabIndex = 19;
-            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_password.WatermarkText = "your Password";
-            // 
-            // txt_username
-            // 
-            this.txt_username.Location = new System.Drawing.Point(323, 125);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_username.Multiline = true;
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(275, 41);
-            this.txt_username.TabIndex = 18;
-            this.txt_username.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_username.WatermarkText = "Enter your Email, Phone number";
             // 
             // lbl_pass
             // 
@@ -294,16 +271,6 @@
             this.guna2Elipse3.BorderRadius = 20;
             this.guna2Elipse3.TargetControl = this.btn_signIn;
             // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 30;
-            this.guna2Elipse4.TargetControl = this.txt_password;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 30;
-            this.guna2Elipse5.TargetControl = this.txt_username;
-            // 
             // img_logoo
             // 
             this.img_logoo.BackColor = System.Drawing.Color.Transparent;
@@ -318,6 +285,39 @@
             this.img_logoo.TabIndex = 15;
             this.img_logoo.TabStop = false;
             this.img_logoo.UseTransparentBackground = true;
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(323, 202);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_password.Multiline = true;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(275, 41);
+            this.txt_password.TabIndex = 19;
+            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_password.WatermarkText = "your Password";
+            // 
+            // txt_username
+            // 
+            this.txt_username.Location = new System.Drawing.Point(323, 125);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_username.Multiline = true;
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(275, 41);
+            this.txt_username.TabIndex = 18;
+            this.txt_username.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_username.WatermarkText = "Enter your Email, Phone number";
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.txt_password;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 30;
+            this.guna2Elipse5.TargetControl = this.txt_username;
             // 
             // login
             // 
