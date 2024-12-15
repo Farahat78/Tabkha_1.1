@@ -295,14 +295,12 @@ namespace Tabkha_1._1
                 try
                 {
 
-                    // كتابة استعلام الـ UPDATE لتحديث حالة الطلب
                     string updateQuery = @"
                             UPDATE Orders
                             SET OrderStatus = @status
                             WHERE OrderID = @OrderID;
                         ";
 
-                    // تنفيذ الاستعلام باستخدام SqlConnection
                     using (SqlConnection connection = new SqlConnection(Connection.connectionString))
                     {
                         SqlCommand command = new SqlCommand(updateQuery, connection);
@@ -454,7 +452,6 @@ namespace Tabkha_1._1
             PaperSize paperSize = new PaperSize("Custom", 400, pageHeight); // العرض 300 والطول ديناميكي
             printDocument1.DefaultPageSettings.PaperSize = paperSize;
 
-            // عرض مربع معاينة الطباعة
             PrintPreviewDialog previewDialog = new PrintPreviewDialog();
             previewDialog.Document = printDocument1;
 
@@ -479,15 +476,12 @@ namespace Tabkha_1._1
             float y = 50; // الهامش الرأسي
             float lineHeight = contentFont.GetHeight(e.Graphics);
 
-            // رسم العنوان
             e.Graphics.DrawString("TABKHA", titleFont, brush, x + 100, y);
             y += lineHeight + 20;
 
-            // رسم الخط الفاصل
             e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
             y += 10;
 
-            // رسم البيانات الأساسية
             e.Graphics.DrawString($"Order ID: {label20.Text}", contentFont, brush, x, y);
             y += lineHeight;
             e.Graphics.DrawString($"Client Name: {lbl_client_name.Text}", contentFont, brush, x, y);
@@ -497,19 +491,15 @@ namespace Tabkha_1._1
             e.Graphics.DrawString($"Address: {label10.Text}", contentFont, brush, x, y);
             y += lineHeight + 10;
 
-            // رسم الخط الفاصل
             e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
             y += 10;
 
-            // عنوان جدول الطلبات
             e.Graphics.DrawString("Item                      Qty               Price", subtitleFont, brush, x, y);
             y += lineHeight + 10;
 
-            // رسم الخط الفاصل
             e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
             y += 10;
 
-            // رسم عناصر الطلب
             string[] items = label5.Text.Split('\n');
             string[] quantities = label30.Text.Split('\n');
             string[] prices = label31.Text.Split('\n');
@@ -525,12 +515,10 @@ namespace Tabkha_1._1
                 }
             }
 
-            // رسم الخط الفاصل
             y += 10;
             e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
             y += 10;
 
-            // رسم المجموعات
             e.Graphics.DrawString($"Subtotal: {lbl_subtotal.Text}", contentFont, brush, x, y);
             y += lineHeight;
             e.Graphics.DrawString($"Delivery: {lbl_delvery_price.Text}", contentFont, brush, x, y);
@@ -538,11 +526,9 @@ namespace Tabkha_1._1
             e.Graphics.DrawString($"Total: {lbl_total.Text}", subtitleFont, brush, x, y);
             y += lineHeight + 10;
 
-            // رسم الخط الفاصل
             e.Graphics.DrawLine(Pens.Black, x, y, x + 300, y);
             y += 10;
 
-            // رسالة الشكر
             e.Graphics.DrawString("    THANK YOU FOR USING TABKHA!", contentFont, brush, x + 20, y);
             y += lineHeight + 20;
 
