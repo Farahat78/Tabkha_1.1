@@ -26,7 +26,9 @@ namespace Tabkha_1._1
             txtbox_email.ReadOnly = true;
             txtbox_name.ReadOnly = true;
             txtbox_Pnumber.ReadOnly = true;
+            txt_bio.ReadOnly = true;
             btn_edit_img.Visible = false;
+            txt_Rname.ReadOnly = true;
             btn_save.Visible = false;
         }
 
@@ -35,6 +37,8 @@ namespace Tabkha_1._1
             txtbox_password.ReadOnly = false;
             txtbox_email.ReadOnly = false;
             txtbox_name.ReadOnly = false;
+            txt_Rname.ReadOnly = false;
+            txt_bio.ReadOnly = false;
             txtbox_Pnumber.ReadOnly = false;
             btn_edit_img.Visible = true;
             btn_save.Visible = true;
@@ -56,7 +60,7 @@ namespace Tabkha_1._1
             }
             else if (Session.Role == "Chefs")
             {
-                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic FROM Chefs WHERE ChefID = @UserID";
+                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic, Rname, Bio FROM Chefs WHERE ChefID = @UserID";
             }
 
             using (SqlConnection conn = new SqlConnection(Connection.connectionString))
@@ -72,6 +76,13 @@ namespace Tabkha_1._1
                             if (Session.Role == "Admins")
                             {
                                 txtbox_name.Text = reader["Username"].ToString();
+                            }
+                            else if (Session.Role == "Chefs")
+                            {
+                                txt_Rname.Text = reader["Rname"].ToString();
+                                txtbox_name.Text = $"{reader["Fname"]} {reader["Lname"]}";
+                                txtbox_Pnumber.Text = reader["Phone"].ToString();
+                                txt_bio.Text = reader["Bio"].ToString();
                             }
                             else
                             {
@@ -103,7 +114,7 @@ namespace Tabkha_1._1
             }
             else if (Session.Role == "Chefs")
             {
-                query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber WHERE ChefID = @UserID";
+                query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber, Rname = @Rname, Bio = @Bio WHERE ChefID = @UserID";
             }
 
             using (SqlConnection conn = new SqlConnection(Connection.connectionString))
@@ -121,6 +132,11 @@ namespace Tabkha_1._1
                         cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
                         cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
                         cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
+                    }
+                    if (Session.Role == "Chefs")
+                    {
+                        cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
                     }
                     cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
                     cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
@@ -171,10 +187,17 @@ namespace Tabkha_1._1
             {
                 lbl_Pnumber.Visible = false;
                 txtbox_Pnumber.Visible=false;
+                lbl_Rname.Visible = false;
+                txt_Rname.Visible = false;
+                lbl_bio.Visible = false;
+                txt_bio.Visible = false;
             }
             else if (Session.Role == "Users")
             {
-
+                lbl_Rname.Visible = false;
+                txt_Rname.Visible = false;
+                lbl_bio.Visible = false;
+                txt_bio.Visible = false;
             }
         }
 

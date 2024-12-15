@@ -40,10 +40,14 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pic_pro = new System.Windows.Forms.PictureBox();
+            this.lbl_Rname = new System.Windows.Forms.Label();
+            this.txt_Rname = new Tabkha_1._1.CustomTextBox();
             this.txtbox_email = new Tabkha_1._1.CustomTextBox();
             this.txtbox_Pnumber = new Tabkha_1._1.CustomTextBox();
             this.txtbox_password = new Tabkha_1._1.CustomTextBox();
             this.txtbox_name = new Tabkha_1._1.CustomTextBox();
+            this.lbl_bio = new System.Windows.Forms.Label();
+            this.txt_bio = new Tabkha_1._1.CustomTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +69,7 @@
             this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(373, 148);
+            this.btn_save.Location = new System.Drawing.Point(378, 182);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(84, 32);
             this.btn_save.TabIndex = 1;
@@ -78,7 +82,7 @@
             this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(266, 148);
+            this.btn_edit.Location = new System.Drawing.Point(271, 182);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(84, 32);
             this.btn_edit.TabIndex = 2;
@@ -107,7 +111,7 @@
             // lbl_Pnumber
             // 
             this.lbl_Pnumber.AutoSize = true;
-            this.lbl_Pnumber.Location = new System.Drawing.Point(108, 71);
+            this.lbl_Pnumber.Location = new System.Drawing.Point(108, 97);
             this.lbl_Pnumber.Name = "lbl_Pnumber";
             this.lbl_Pnumber.Size = new System.Drawing.Size(97, 16);
             this.lbl_Pnumber.TabIndex = 9;
@@ -116,7 +120,7 @@
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
-            this.lbl_password.Location = new System.Drawing.Point(108, 107);
+            this.lbl_password.Location = new System.Drawing.Point(108, 69);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(67, 16);
             this.lbl_password.TabIndex = 10;
@@ -139,12 +143,30 @@
             // 
             // pic_pro
             // 
-            this.pic_pro.Location = new System.Drawing.Point(492, 141);
+            this.pic_pro.Location = new System.Drawing.Point(497, 175);
             this.pic_pro.Name = "pic_pro";
             this.pic_pro.Size = new System.Drawing.Size(100, 50);
             this.pic_pro.TabIndex = 11;
             this.pic_pro.TabStop = false;
             this.pic_pro.Visible = false;
+            // 
+            // lbl_Rname
+            // 
+            this.lbl_Rname.AutoSize = true;
+            this.lbl_Rname.Location = new System.Drawing.Point(108, 124);
+            this.lbl_Rname.Name = "lbl_Rname";
+            this.lbl_Rname.Size = new System.Drawing.Size(112, 16);
+            this.lbl_Rname.TabIndex = 13;
+            this.lbl_Rname.Text = "Restaurant Name";
+            // 
+            // txt_Rname
+            // 
+            this.txt_Rname.Location = new System.Drawing.Point(222, 121);
+            this.txt_Rname.Name = "txt_Rname";
+            this.txt_Rname.Size = new System.Drawing.Size(328, 22);
+            this.txt_Rname.TabIndex = 12;
+            this.txt_Rname.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_Rname.WatermarkText = "Tabkha";
             // 
             // txtbox_email
             // 
@@ -157,7 +179,7 @@
             // 
             // txtbox_Pnumber
             // 
-            this.txtbox_Pnumber.Location = new System.Drawing.Point(222, 68);
+            this.txtbox_Pnumber.Location = new System.Drawing.Point(222, 94);
             this.txtbox_Pnumber.Name = "txtbox_Pnumber";
             this.txtbox_Pnumber.Size = new System.Drawing.Size(328, 22);
             this.txtbox_Pnumber.TabIndex = 5;
@@ -166,7 +188,7 @@
             // 
             // txtbox_password
             // 
-            this.txtbox_password.Location = new System.Drawing.Point(222, 104);
+            this.txtbox_password.Location = new System.Drawing.Point(222, 66);
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.Size = new System.Drawing.Size(328, 22);
             this.txtbox_password.TabIndex = 4;
@@ -183,10 +205,32 @@
             this.txtbox_name.WatermarkColor = System.Drawing.Color.Gray;
             this.txtbox_name.WatermarkText = "Enter name here";
             // 
+            // lbl_bio
+            // 
+            this.lbl_bio.AutoSize = true;
+            this.lbl_bio.Location = new System.Drawing.Point(108, 152);
+            this.lbl_bio.Name = "lbl_bio";
+            this.lbl_bio.Size = new System.Drawing.Size(27, 16);
+            this.lbl_bio.TabIndex = 15;
+            this.lbl_bio.Text = "Bio";
+            // 
+            // txt_bio
+            // 
+            this.txt_bio.Location = new System.Drawing.Point(222, 149);
+            this.txt_bio.Name = "txt_bio";
+            this.txt_bio.Size = new System.Drawing.Size(328, 22);
+            this.txt_bio.TabIndex = 14;
+            this.txt_bio.WatermarkColor = System.Drawing.Color.Gray;
+            this.txt_bio.WatermarkText = "Bio";
+            // 
             // Manage_Profile
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(621, 203);
+            this.ClientSize = new System.Drawing.Size(621, 223);
+            this.Controls.Add(this.lbl_bio);
+            this.Controls.Add(this.txt_bio);
+            this.Controls.Add(this.lbl_Rname);
+            this.Controls.Add(this.txt_Rname);
             this.Controls.Add(this.pic_pro);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_Pnumber);
@@ -224,5 +268,9 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.PictureBox pic_pro;
+        private System.Windows.Forms.Label lbl_Rname;
+        private CustomTextBox txt_Rname;
+        private System.Windows.Forms.Label lbl_bio;
+        private CustomTextBox txt_bio;
     }
 }
