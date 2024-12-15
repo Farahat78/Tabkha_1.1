@@ -581,7 +581,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(195, 779);
+            this.label17.Location = new System.Drawing.Point(179, 779);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(356, 29);
             this.label17.TabIndex = 32;
@@ -629,9 +629,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(682, 660);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(330, 29);
+            this.label13.Size = new System.Drawing.Size(234, 29);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Eng\\Hossam Mostafa (El-Joker) ";
+            this.label13.Text = "Eng\\Hossam Mostafa ";
             // 
             // label10
             // 
@@ -652,9 +652,9 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(682, 779);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(346, 29);
+            this.label11.Size = new System.Drawing.Size(212, 29);
             this.label11.TabIndex = 26;
-            this.label11.Text = "Eng\\Asmaa Hamed (Error Queen)";
+            this.label11.Text = "Eng\\Asmaa Hamed ";
             // 
             // label8
             // 
@@ -698,9 +698,9 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(192, 660);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(341, 29);
+            this.label6.Size = new System.Drawing.Size(222, 29);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Eng\\Ahmed Farahat (El-Dactoor)";
+            this.label6.Text = "Eng\\Ahmed Farahat \r\n";
             // 
             // label5
             // 
