@@ -109,9 +109,19 @@ namespace Tabkha_1._1
 
         private void img_back_Click(object sender, EventArgs e)
         {
-            Owner_Profile owner_Profile = new Owner_Profile(ChefID);
-            owner_Profile.Show();
-            this.Hide();
+            if (Session.Role == "Users")
+            {
+                Owner_Profile owner_Profile = new Owner_Profile(ChefID);
+                owner_Profile.Show();
+                this.Hide();
+            }
+            else if (Session.Role == "Chefs")
+            {
+                Owner_Profile owner_Profile2 = new Owner_Profile();
+                owner_Profile2.Show();
+                this .Hide();
+            }
+          
         }
 
         private void lbl_product_description_Click(object sender, EventArgs e)

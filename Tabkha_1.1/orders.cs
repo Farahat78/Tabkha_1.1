@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,10 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
             CreateOrderCardsFromDatabase("new");
+            lbl_myacc.Text = Session.Name;
+            img_profile.Image = !string.IsNullOrEmpty(Session.pic)
+           ? Image.FromFile(Session.pic)
+           : Properties.Resources.Max_R_Headshot__1_;
         }
 
         private void btn_View_order_Click(object sender, EventArgs e)
