@@ -62,6 +62,7 @@ namespace Tabkha_1._1
             { MessageBox.Show("Required Fields Empty"); }
             else
             {
+
                 string First_Name = txtbox_fname.Text;
                 string Last_Name = txt_lname.Text;
                 string Password = txt_password.Text;
@@ -77,11 +78,14 @@ namespace Tabkha_1._1
                     try
                     {
                         connect.Open();
+
                         string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address) VALUES (@firstname,@lastname ,@password,@email,@phonenumber,@city,@address);";
+
                         using (SqlCommand cmd = new SqlCommand(query, connect))
                         {
                             cmd.Parameters.AddWithValue("@firstname", First_Name);
                             cmd.Parameters.AddWithValue("@lastname", Last_Name);
+
                             cmd.Parameters.AddWithValue("@password", Password);
                             cmd.Parameters.AddWithValue("@email", Email);
                             cmd.Parameters.AddWithValue("@phonenumber", Phone_Number);
@@ -90,6 +94,7 @@ namespace Tabkha_1._1
                             int rowaffected = cmd.ExecuteNonQuery();
                             if (rowaffected > 0)
                             {
+
                                 SendWelcomeEmail(fullname, Email);
                                 login login = new login();
                                 login.Show();
@@ -103,7 +108,10 @@ namespace Tabkha_1._1
                     }
                     catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
+
             }
+
+
         }
 
         private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
@@ -117,6 +125,7 @@ namespace Tabkha_1._1
             login.Show();
             this.Hide();
         }
+
         private void SendWelcomeEmail(string name, string user_email)
         {
             string subject = "Welcome to Our System!";
@@ -137,5 +146,5 @@ namespace Tabkha_1._1
                 }
             }
         }
-    }
+    } 
 }

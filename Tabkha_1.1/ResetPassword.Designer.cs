@@ -169,9 +169,9 @@
             this.customTextBox2.Location = new System.Drawing.Point(317, 294);
             this.customTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.PasswordChar = '*';
             this.customTextBox2.Size = new System.Drawing.Size(256, 27);
             this.customTextBox2.TabIndex = 17;
-            this.customTextBox2.UseSystemPasswordChar = true;
             this.customTextBox2.WatermarkColor = System.Drawing.Color.Gray;
             this.customTextBox2.WatermarkText = "";
             // 
@@ -180,9 +180,9 @@
             this.customTextBox1.Location = new System.Drawing.Point(317, 243);
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.PasswordChar = '*';
             this.customTextBox1.Size = new System.Drawing.Size(256, 27);
             this.customTextBox1.TabIndex = 16;
-            this.customTextBox1.UseSystemPasswordChar = true;
             this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
             this.customTextBox1.WatermarkText = "example@gmail.com";
             // 

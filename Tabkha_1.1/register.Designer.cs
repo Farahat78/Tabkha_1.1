@@ -207,9 +207,9 @@
             this.txt_confirmPassword.Location = new System.Drawing.Point(543, 135);
             this.txt_confirmPassword.Multiline = true;
             this.txt_confirmPassword.Name = "txt_confirmPassword";
+            this.txt_confirmPassword.PasswordChar = '*';
             this.txt_confirmPassword.Size = new System.Drawing.Size(160, 35);
             this.txt_confirmPassword.TabIndex = 29;
-            this.txt_confirmPassword.UseSystemPasswordChar = true;
             this.txt_confirmPassword.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_confirmPassword.WatermarkText = "Password";
             // 
@@ -218,9 +218,9 @@
             this.txt_password.Location = new System.Drawing.Point(344, 135);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(160, 35);
             this.txt_password.TabIndex = 28;
-            this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_password.WatermarkText = "Password";
             // 

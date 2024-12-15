@@ -37,7 +37,6 @@ namespace Tabkha_1._1
             Form.Dock = DockStyle.Fill;
             Gpnl_general.Controls.Add(Form);
             Form.Show();
-            MessageBox.Show($"Loaded Form: {Form.GetType().Name}");
         }
 
         public void hideSome()

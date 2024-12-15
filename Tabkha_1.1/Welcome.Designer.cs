@@ -570,9 +570,9 @@
             this.label16.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(201, 824);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(234, 21);
+            this.label16.Size = new System.Drawing.Size(152, 42);
             this.label16.TabIndex = 33;
-            this.label16.Text = "Backend Developer And Testing";
+            this.label16.Text = "Backend Developer \r\n Quality Assurance";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
@@ -583,9 +583,9 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(195, 779);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(265, 29);
+            this.label17.Size = new System.Drawing.Size(356, 29);
             this.label17.TabIndex = 32;
-            this.label17.Text = "Eng\\Ahmed Abdelghany ";
+            this.label17.Text = "Eng\\Ahmed Abdelghany (Eledara)";
             // 
             // label14
             // 
@@ -606,9 +606,9 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(195, 922);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(226, 29);
+            this.label15.Size = new System.Drawing.Size(178, 29);
             this.label15.TabIndex = 30;
-            this.label15.Text = "Eng\\Hagar Ramadan";
+            this.label15.Text = "Hagar Ramadan";
             // 
             // label12
             // 
@@ -629,9 +629,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(682, 660);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(293, 29);
+            this.label13.Size = new System.Drawing.Size(330, 29);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Eng\\Hossam El-Din Mostafa";
+            this.label13.Text = "Eng\\Hossam Mostafa (El-Joker) ";
             // 
             // label10
             // 
@@ -652,9 +652,9 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(682, 779);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(207, 29);
+            this.label11.Size = new System.Drawing.Size(346, 29);
             this.label11.TabIndex = 26;
-            this.label11.Text = "Eng\\Asmaa Hamed";
+            this.label11.Text = "Eng\\Asmaa Hamed (Error Queen)";
             // 
             // label8
             // 
@@ -675,9 +675,9 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(682, 922);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 29);
+            this.label9.Size = new System.Drawing.Size(118, 29);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Eng\\Bilal Salah";
+            this.label9.Text = "Bilal Salah";
             // 
             // label7
             // 
@@ -698,9 +698,9 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(192, 660);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 29);
+            this.label6.Size = new System.Drawing.Size(341, 29);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Eng\\Ahmed Farahat";
+            this.label6.Text = "Eng\\Ahmed Farahat (El-Dactoor)";
             // 
             // label5
             // 
