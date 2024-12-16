@@ -675,9 +675,9 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(682, 922);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 29);
+            this.label9.Size = new System.Drawing.Size(172, 29);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Eng\\Bilal Salah";
+            this.label9.Text = "Eng\\Belal Salah";
             // 
             // label7
             // 
