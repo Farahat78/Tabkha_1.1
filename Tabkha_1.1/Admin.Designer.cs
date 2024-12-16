@@ -236,6 +236,7 @@
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_dashboard.UseVisualStyleBackColor = false;
+            this.btn_dashboard.Visible = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
             // guna2Elipse1
@@ -310,7 +311,6 @@
         private System.Windows.Forms.PictureBox img_close;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Button btn_chefs;
         private System.Windows.Forms.Button btn_users;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
@@ -321,5 +321,6 @@
         private System.Windows.Forms.Button btn_out;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private System.Windows.Forms.Button btn_toggleSideBar;
+        private System.Windows.Forms.Button btn_dashboard;
     }
 }
