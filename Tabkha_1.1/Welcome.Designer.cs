@@ -583,9 +583,9 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(179, 779);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(356, 29);
+            this.label17.Size = new System.Drawing.Size(265, 29);
             this.label17.TabIndex = 32;
-            this.label17.Text = "Eng\\Ahmed Abdelghany (Eledara)";
+            this.label17.Text = "Eng\\Ahmed Abdelghany ";
             // 
             // label14
             // 
@@ -606,9 +606,9 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(195, 922);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(178, 29);
+            this.label15.Size = new System.Drawing.Size(226, 29);
             this.label15.TabIndex = 30;
-            this.label15.Text = "Hagar Ramadan";
+            this.label15.Text = "Eng\\Hagar Ramadan";
             // 
             // label12
             // 
@@ -675,9 +675,9 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(682, 922);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 29);
+            this.label9.Size = new System.Drawing.Size(166, 29);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Bilal Salah";
+            this.label9.Text = "Eng\\Bilal Salah";
             // 
             // label7
             // 
