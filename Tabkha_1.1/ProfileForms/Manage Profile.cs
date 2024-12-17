@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -99,65 +100,86 @@ namespace Tabkha_1._1
             }
         }
 
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for email validation
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
         private void btn_save_Click(object sender, EventArgs e)
         {
-            readOnly();
-            string query = "";
+            if (!IsValidEmail(txtbox_email.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (txtbox_name.Text == ""
+                || txtbox_password.Text == ""
+                || txtbox_email.Text == "")
+            {
+                MessageBox.Show("Please fill out all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                readOnly();
+                string query = "";
 
-            if (Session.Role == "Admins")
-            {
-                query = "UPDATE Admins SET Username = @Name, Email = @Email, Password = @Password, ProfilePic = @ProfilePic WHERE AdminID = @UserID";
-            }
-            else if (Session.Role == "Users")
-            {
-                query = "UPDATE Users SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber WHERE UserID = @UserID";
-            }
-            else if (Session.Role == "Chefs")
-            {
-                query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber, Rname = @Rname, Bio = @Bio WHERE ChefID = @UserID";
-            }
-
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                if (Session.Role == "Admins")
                 {
-                    if (Session.Role == "Admins")
-                    {
-                        cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
-                    }
-                    if (Session.Role == "Users" || Session.Role == "Chefs")
-                    {
-                        string[] names = txtbox_name.Text.Trim().Split(' ');
-                        cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
-                        cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
-                        cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
-                    }
-                    if (Session.Role == "Chefs")
-                    {
-                        cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
-                    }
-                    cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
-                    cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
-                    cmd.Parameters.AddWithValue("@UserID", Session.Id);
+                    query = "UPDATE Admins SET Username = @Name, Email = @Email, Password = @Password, ProfilePic = @ProfilePic WHERE AdminID = @UserID";
+                }
+                else if (Session.Role == "Users")
+                {
+                    query = "UPDATE Users SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber WHERE UserID = @UserID";
+                }
+                else if (Session.Role == "Chefs")
+                {
+                    query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber, Rname = @Rname, Bio = @Bio WHERE ChefID = @UserID";
+                }
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        string[] names = txtbox_name.Text.Trim().Split(' ');
-                        Session.Name = names.Length > 0
-                            ? names[0] + (names.Length > 1 ? " " + names[1] : "")
-                            : "";
-                        if (this.Owner is Customer_Profile customerProfile)
+                        if (Session.Role == "Admins")
                         {
-                            customerProfile.RefreshProfile(); // Update the profile dynamically
+                            cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to update profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (Session.Role == "Users" || Session.Role == "Chefs")
+                        {
+                            string[] names = txtbox_name.Text.Trim().Split(' ');
+                            cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
+                            cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
+                            cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
+                        }
+                        if (Session.Role == "Chefs")
+                        {
+                            cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
+                        }
+                        cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
+                        cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
+                        cmd.Parameters.AddWithValue("@UserID", Session.Id);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            string[] names = txtbox_name.Text.Trim().Split(' ');
+                            Session.Name = names.Length > 0
+                                ? names[0] + (names.Length > 1 ? " " + names[1] : "")
+                                : "";
+                            if (this.Owner is Customer_Profile customerProfile)
+                            {
+                                customerProfile.RefreshProfile(); // Update the profile dynamically
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -191,6 +213,12 @@ namespace Tabkha_1._1
                 txt_Rname.Visible = false;
                 lbl_bio.Visible = false;
                 txt_bio.Visible = false;
+                lbl_email.Location = new Point(lbl_email.Location.X, lbl_email.Location.Y + 27);
+                txtbox_email.Location = new Point(txtbox_email.Location.X, txtbox_email.Location.Y + 27);
+                lbl_password.Location = new Point(lbl_password.Location.X, lbl_password.Location.Y + 27);
+                lbl_name.Location = new Point(lbl_name.Location.X, lbl_name.Location.Y + 27);
+                txtbox_name.Location = new Point(txtbox_name.Location.X, txtbox_name.Location.Y + 27);
+                txtbox_password.Location = new Point(txtbox_password.Location.X, txtbox_password.Location.Y + 27);
             }
             else if (Session.Role == "Users")
             {
@@ -198,6 +226,14 @@ namespace Tabkha_1._1
                 txt_Rname.Visible = false;
                 lbl_bio.Visible = false;
                 txt_bio.Visible = false;
+                lbl_email.Location = new Point(lbl_email.Location.X, lbl_email.Location.Y + 25);
+                txtbox_email.Location = new Point(txtbox_email.Location.X, txtbox_email.Location.Y + 25);
+                lbl_password.Location = new Point(lbl_password.Location.X, lbl_password.Location.Y + 25);
+                txtbox_password.Location = new Point(txtbox_password.Location.X, txtbox_password.Location.Y + 25);
+                lbl_Pnumber.Location = new Point(lbl_Pnumber.Location.X, lbl_Pnumber.Location.Y + 25);
+                lbl_name.Location = new Point(lbl_name.Location.X, lbl_name.Location.Y + 25);
+                txtbox_name.Location = new Point(txtbox_name.Location.X, txtbox_name.Location.Y + 25);
+                txtbox_Pnumber.Location = new Point(txtbox_Pnumber.Location.X, txtbox_Pnumber.Location.Y + 25);
             }
         }
 

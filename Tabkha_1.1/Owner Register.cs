@@ -14,6 +14,7 @@ using static Guna.UI2.Native.WinApi;
 using System.Xml.Linq;
 using Tabkha_1._1;
 using Tabkha_1._1.Class;
+using System.Text.RegularExpressions;
 
 namespace Tabkha_1._1
 {
@@ -26,12 +27,24 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for email validation
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            if (txt_confirmPassword.Text!=txt_password.Text)
+            if (txt_confirmPassword.Text != txt_password.Text)
             {
-                MessageBox.Show("Review password");
+                MessageBox.Show("Passwords do not match. Please review your password fields.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!IsValidEmail(txt_email.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else if (txt_fname.Text=="" 
                 ||txt_password.Text == "" 
@@ -40,17 +53,20 @@ namespace Tabkha_1._1
                 || txtbox_phoneNumber.Text==""
                 ||txtbox_bio.Text==""
                 || txtbox_businesssName.Text=="")
-            { MessageBox.Show("Required Fields Empty"); }
+            {
+                MessageBox.Show("Please fill out all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             else
             {
-                string First_Name = txt_fname.Text;
-                string Last_Name = txtbox_lname.Text;   
-                string Password = txt_password.Text;
-                string Confirm_Password = txt_confirmPassword.Text;
-                string Email = txt_email.Text;
-                string Phone_Number = txtbox_phoneNumber.Text;
-                string restaurant_name= txtbox_businesssName.Text;
-                string bio = txtbox_bio.Text;
+                string First_Name = txt_fname.Text.Trim();
+                string Last_Name = txtbox_lname.Text.Trim();   
+                string Password = txt_password.Text.Trim();
+                string Confirm_Password = txt_confirmPassword.Text.Trim();
+                string Email = txt_email.Text.Trim();
+                string Phone_Number = txtbox_phoneNumber.Text.Trim();
+                string restaurant_name= txtbox_businesssName.Text.Trim();
+                string bio = txtbox_bio.Text.Trim();
                 string fullname = First_Name + " " + Last_Name;
 
                 using (SqlConnection connect = new SqlConnection(Connection.connectionString))
@@ -115,7 +131,17 @@ namespace Tabkha_1._1
 
         private void Owner_Register_Load(object sender, EventArgs e)
         {
+            // Initialize placeholder on form load
+            txt_password.Text = placeholderText;
+            txt_confirmPassword.Text = placeholderText1;
+            txt_confirmPassword.ForeColor = placeholderColor;
+            txt_password.ForeColor = placeholderColor;
+            txt_password.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+            txt_confirmPassword.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
 
+            // Disable masking to show placeholder text
+            txt_password.PasswordChar = '\0';
+            txt_confirmPassword.PasswordChar = '\0';
         }
         private void SendWelcomeEmail(string name, string user_email)
         {
@@ -144,6 +170,94 @@ namespace Tabkha_1._1
             login login = new login();
             login.Show();
             this.Hide() ;
+        }
+
+        private void btn_eye_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
+
+        private bool isPasswordVisible = false;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
+        private void TogglePasswordVisibility()
+        {
+            if (isPasswordVisible)
+            {
+                // Hide the password
+                txt_password.PasswordChar = '\u2022';
+                txt_confirmPassword.PasswordChar = '\u2022';
+                btn_eye.Image = Properties.Resources.eye__1_;
+                button1.Image = Properties.Resources.eye__1_;// Replace with 'eye closed' icon
+                isPasswordVisible = false;
+            }
+            else
+            {
+                // Show the password
+                txt_password.PasswordChar = '\0';
+                txt_confirmPassword.PasswordChar = '\0';
+                btn_eye.Image = Properties.Resources.eye;
+                button1.Image = Properties.Resources.eye;// Replace with 'eye open' icon
+                isPasswordVisible = true;
+            }
+        }
+        private string placeholderText1 = "Confirm password"; // Set your placeholder text
+        private Color placeholderColor = Color.Gray;  // Light gray for placeholder
+        private Color textColor = Color.Black;
+
+        private void txt_confirmPassword_Enter(object sender, EventArgs e)
+        {
+            if (txt_confirmPassword.Text == placeholderText1)
+            {
+                txt_confirmPassword.Text = "";
+                txt_confirmPassword.ForeColor = textColor;
+
+                // Ensure PasswordChar works only when the placeholder is gone
+                txt_confirmPassword.PasswordChar = isPasswordVisible ? '\0' : '\u2022';
+            }
+        }
+
+        private void txt_confirmPassword_Leave(object sender, EventArgs e)
+        {
+            // Restore placeholder if the textbox is empty
+            if (string.IsNullOrWhiteSpace(txt_confirmPassword.Text))
+            {
+                txt_confirmPassword.Text = placeholderText1;
+                txt_confirmPassword.ForeColor = placeholderColor;
+
+                // Disable masking to show placeholder clearly
+                txt_confirmPassword.PasswordChar = '\0';
+            }
+        }
+
+        private string placeholderText = "Enter your password";
+
+        private void txt_password_Enter(object sender, EventArgs e)
+        {
+            if (txt_password.Text == placeholderText)
+            {
+                txt_password.Text = "";
+                txt_password.ForeColor = textColor;
+
+                // Ensure PasswordChar works only when the placeholder is gone
+                txt_password.PasswordChar = isPasswordVisible ? '\0' : '\u2022';
+            }
+        }
+
+        private void txt_password_Leave(object sender, EventArgs e)
+        {
+            // Restore placeholder if the textbox is empty
+            if (string.IsNullOrWhiteSpace(txt_password.Text))
+            {
+                txt_password.Text = placeholderText;
+                txt_password.ForeColor = placeholderColor;
+
+                // Disable masking to show placeholder clearly
+                txt_password.PasswordChar = '\0';
+            }
         }
     }
 }

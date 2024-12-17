@@ -88,9 +88,9 @@
             this.btn_eye.FlatAppearance.BorderSize = 0;
             this.btn_eye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eye.Image = global::Tabkha_1._1.Properties.Resources.eye__1_;
-            this.btn_eye.Location = new System.Drawing.Point(491, 173);
+            this.btn_eye.Location = new System.Drawing.Point(495, 175);
             this.btn_eye.Name = "btn_eye";
-            this.btn_eye.Size = new System.Drawing.Size(36, 21);
+            this.btn_eye.Size = new System.Drawing.Size(28, 16);
             this.btn_eye.TabIndex = 20;
             this.btn_eye.UseVisualStyleBackColor = false;
             this.btn_eye.Click += new System.EventHandler(this.btn_eye_Click);
