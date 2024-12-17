@@ -270,7 +270,7 @@ namespace Tabkha_1._1
             if (isPasswordVisible)
             {
                 // Hide the password
-                txt_password.PasswordChar = '*';
+                txt_password.PasswordChar = '\u2022';
                 btn_eye.Image = Properties.Resources.eye__1_; // Replace with 'eye closed' icon
                 isPasswordVisible = false;
             }
@@ -295,7 +295,7 @@ namespace Tabkha_1._1
                 txt_password.ForeColor = textColor;
 
                 // Ensure PasswordChar works only when the placeholder is gone
-                txt_password.PasswordChar = isPasswordVisible ? '\0' : '*';
+                txt_password.PasswordChar = isPasswordVisible ? '\0' : '\u2022';
             }
         }
 
