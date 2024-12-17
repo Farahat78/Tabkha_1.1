@@ -439,7 +439,7 @@ namespace Tabkha_1._1
             // تحديث النص في الـ Label بناءً على حالة الطلب
             switch (orderStatus)
             {
-                case "New":
+                case "new":
                     lbl_OrderStatus.Text = "Your order is new and will be processed soon.";
                     progressBar1.Value = 25; // تحديث قيمة الـ ProgressBar
                     lbl_OrderStatus.ForeColor = Color.Blue; // تغيير لون النص إلى الأزرق

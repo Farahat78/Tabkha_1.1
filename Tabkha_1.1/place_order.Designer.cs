@@ -117,7 +117,6 @@
             this.pnl_cart.Controls.Add(this.flowLayoutPanel1);
             this.pnl_cart.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_cart.Location = new System.Drawing.Point(3, 120);
-
             this.pnl_cart.Name = "pnl_cart";
             this.pnl_cart.ShadowColor = System.Drawing.Color.Black;
             this.pnl_cart.Size = new System.Drawing.Size(557, 538);
@@ -133,7 +132,6 @@
             this.lbl_total.TabIndex = 50;
             this.lbl_total.Text = "320";
             // 
-
             // lbl_delivery
             // 
             this.lbl_delivery.AutoSize = true;
@@ -299,7 +297,6 @@
             // lbl_price
             // 
             this.lbl_price.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-
             this.lbl_price.Location = new System.Drawing.Point(375, 26);
             this.lbl_price.Name = "lbl_price";
             this.lbl_price.Size = new System.Drawing.Size(112, 24);
@@ -318,7 +315,6 @@
             // 
             // img_product
             // 
-
             this.img_product.Image = global::Tabkha_1._1.Properties.Resources.dish;
             this.img_product.Location = new System.Drawing.Point(9, 29);
             this.img_product.Name = "img_product";
@@ -353,7 +349,6 @@
             this.pnl_up.Location = new System.Drawing.Point(0, 0);
             this.pnl_up.Name = "pnl_up";
             this.pnl_up.Size = new System.Drawing.Size(1075, 113);
-
             this.pnl_up.TabIndex = 2;
             // 
             // lbl_logout
@@ -479,7 +474,6 @@
             this.pnl_delivery_info.Controls.Add(this.label13);
             this.pnl_delivery_info.Controls.Add(this.label15);
             this.pnl_delivery_info.FillColor = System.Drawing.Color.WhiteSmoke;
-
             this.pnl_delivery_info.Location = new System.Drawing.Point(573, 120);
             this.pnl_delivery_info.Name = "pnl_delivery_info";
             this.pnl_delivery_info.ShadowColor = System.Drawing.Color.Black;
@@ -756,7 +750,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1075, 853);
+            this.ClientSize = new System.Drawing.Size(1075, 663);
             this.Controls.Add(this.pnl_payment_info);
             this.Controls.Add(this.pnl_delivery_info);
             this.Controls.Add(this.pnl_up);

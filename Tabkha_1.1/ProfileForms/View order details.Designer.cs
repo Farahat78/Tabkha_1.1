@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PanelTemplate = new System.Windows.Forms.Panel();
+            this.btn_Print_reciept = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_total_price = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,9 +51,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_order_quantity = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Print_reciept = new System.Windows.Forms.Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.lbl_OrderStatus = new System.Windows.Forms.Label();
@@ -116,8 +116,35 @@
             this.PanelTemplate.Location = new System.Drawing.Point(3, 4);
             this.PanelTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelTemplate.Name = "PanelTemplate";
-            this.PanelTemplate.Size = new System.Drawing.Size(785, 177);
+            this.PanelTemplate.Size = new System.Drawing.Size(910, 177);
             this.PanelTemplate.TabIndex = 7;
+            // 
+            // btn_Print_reciept
+            // 
+            this.btn_Print_reciept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
+            this.btn_Print_reciept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Print_reciept.FlatAppearance.BorderSize = 0;
+            this.btn_Print_reciept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Print_reciept.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Print_reciept.ForeColor = System.Drawing.Color.White;
+            this.btn_Print_reciept.Location = new System.Drawing.Point(680, 126);
+            this.btn_Print_reciept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Print_reciept.Name = "btn_Print_reciept";
+            this.btn_Print_reciept.Size = new System.Drawing.Size(159, 37);
+            this.btn_Print_reciept.TabIndex = 49;
+            this.btn_Print_reciept.Text = "Print Reciept";
+            this.btn_Print_reciept.UseVisualStyleBackColor = false;
+            this.btn_Print_reciept.Click += new System.EventHandler(this.btn_Print_reciept_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(775, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Pending";
             // 
             // label6
             // 
@@ -132,7 +159,7 @@
             // lbl_total_price
             // 
             this.lbl_total_price.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total_price.Location = new System.Drawing.Point(663, 97);
+            this.lbl_total_price.Location = new System.Drawing.Point(772, 99);
             this.lbl_total_price.Name = "lbl_total_price";
             this.lbl_total_price.Size = new System.Drawing.Size(124, 26);
             this.lbl_total_price.TabIndex = 46;
@@ -152,7 +179,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(576, 95);
+            this.label24.Location = new System.Drawing.Point(685, 97);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(84, 25);
             this.label24.TabIndex = 45;
@@ -181,7 +208,7 @@
             // lbl_order_price
             // 
             this.lbl_order_price.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order_price.Location = new System.Drawing.Point(508, 20);
+            this.lbl_order_price.Location = new System.Drawing.Point(676, 22);
             this.lbl_order_price.Name = "lbl_order_price";
             this.lbl_order_price.Size = new System.Drawing.Size(152, 75);
             this.lbl_order_price.TabIndex = 41;
@@ -229,7 +256,7 @@
             // lbl_order_name
             // 
             this.lbl_order_name.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order_name.Location = new System.Drawing.Point(401, 20);
+            this.lbl_order_name.Location = new System.Drawing.Point(569, 22);
             this.lbl_order_name.Name = "lbl_order_name";
             this.lbl_order_name.Size = new System.Drawing.Size(99, 133);
             this.lbl_order_name.TabIndex = 36;
@@ -239,7 +266,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(252, 18);
+            this.label12.Location = new System.Drawing.Point(420, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(130, 22);
             this.label12.TabIndex = 29;
@@ -248,7 +275,7 @@
             // lbl_order_quantity
             // 
             this.lbl_order_quantity.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order_quantity.Location = new System.Drawing.Point(378, 20);
+            this.lbl_order_quantity.Location = new System.Drawing.Point(546, 22);
             this.lbl_order_quantity.Name = "lbl_order_quantity";
             this.lbl_order_quantity.Size = new System.Drawing.Size(22, 142);
             this.lbl_order_quantity.TabIndex = 35;
@@ -265,42 +292,15 @@
             this.label11.Text = "_________________________________________________________________________________" +
     "_________";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(662, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "Pending";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.PanelTemplate);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 146);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(797, 223);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(928, 223);
             this.flowLayoutPanel1.TabIndex = 8;
             this.flowLayoutPanel1.Visible = false;
-            // 
-            // btn_Print_reciept
-            // 
-            this.btn_Print_reciept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.btn_Print_reciept.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Print_reciept.FlatAppearance.BorderSize = 0;
-            this.btn_Print_reciept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Print_reciept.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Print_reciept.ForeColor = System.Drawing.Color.White;
-            this.btn_Print_reciept.Location = new System.Drawing.Point(571, 124);
-            this.btn_Print_reciept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_Print_reciept.Name = "btn_Print_reciept";
-            this.btn_Print_reciept.Size = new System.Drawing.Size(159, 37);
-            this.btn_Print_reciept.TabIndex = 49;
-            this.btn_Print_reciept.Text = "Print Reciept";
-            this.btn_Print_reciept.UseVisualStyleBackColor = false;
-            this.btn_Print_reciept.Click += new System.EventHandler(this.btn_Print_reciept_Click);
             // 
             // guna2Elipse2
             // 
@@ -325,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 428);
+            this.ClientSize = new System.Drawing.Size(947, 428);
             this.Controls.Add(this.lbl_OrderStatus);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.progressBar1);

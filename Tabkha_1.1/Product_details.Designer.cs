@@ -113,7 +113,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1186, 134);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1167, 134);
             this.guna2GradientPanel1.TabIndex = 1;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
@@ -122,7 +122,7 @@
             this.lbl_Cart.AutoSize = true;
             this.lbl_Cart.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Cart.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cart.Location = new System.Drawing.Point(717, 79);
+            this.lbl_Cart.Location = new System.Drawing.Point(743, 90);
             this.lbl_Cart.Name = "lbl_Cart";
             this.lbl_Cart.Size = new System.Drawing.Size(45, 24);
             this.lbl_Cart.TabIndex = 22;
@@ -161,7 +161,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Tabkha_1._1.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(-521, -23);
+            this.pictureBox1.Location = new System.Drawing.Point(-540, -23);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 45);
@@ -174,7 +174,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::Tabkha_1._1.Properties.Resources.Max_R_Headshot__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(788, 60);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(846, 74);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -189,7 +189,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(840, 76);
+            this.label11.Location = new System.Drawing.Point(898, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 24);
@@ -202,7 +202,7 @@
             this.img_logo.Image = global::Tabkha_1._1.Properties.Resources.IMG_7139_jpg;
             this.img_logo.ImageRotate = 0F;
             this.img_logo.Location = new System.Drawing.Point(20, 30);
-            this.img_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.img_logo.Margin = new System.Windows.Forms.Padding(4);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.img_logo.Size = new System.Drawing.Size(100, 100);
@@ -217,7 +217,7 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = global::Tabkha_1._1.Properties.Resources.close;
-            this.img_close.Location = new System.Drawing.Point(1021, 3);
+            this.img_close.Location = new System.Drawing.Point(1125, 0);
             this.img_close.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_close.Name = "img_close";
             this.img_close.Size = new System.Drawing.Size(38, 31);
@@ -232,7 +232,7 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(974, 6);
+            this.img_minimize.Location = new System.Drawing.Point(1078, 3);
             this.img_minimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.img_minimize.Name = "img_minimize";
             this.img_minimize.Size = new System.Drawing.Size(40, 28);
@@ -252,7 +252,7 @@
             this.pnl_product.Controls.Add(this.img_product);
             this.pnl_product.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnl_product.Location = new System.Drawing.Point(26, 156);
-            this.pnl_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_product.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_product.Name = "pnl_product";
             this.pnl_product.ShadowColor = System.Drawing.Color.Black;
             this.pnl_product.Size = new System.Drawing.Size(379, 300);
@@ -321,7 +321,7 @@
             this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
             this.btn_Edit.Location = new System.Drawing.Point(422, 718);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(162, 53);
             this.btn_Edit.TabIndex = 12;
@@ -337,7 +337,7 @@
             this.btn_addtocart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addtocart.ForeColor = System.Drawing.Color.White;
             this.btn_addtocart.Location = new System.Drawing.Point(688, 718);
-            this.btn_addtocart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addtocart.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addtocart.Name = "btn_addtocart";
             this.btn_addtocart.Size = new System.Drawing.Size(162, 53);
             this.btn_addtocart.TabIndex = 13;
@@ -391,7 +391,7 @@
             // 
             this.num_quantity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.num_quantity.Location = new System.Drawing.Point(884, 390);
-            this.num_quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.num_quantity.Margin = new System.Windows.Forms.Padding(4);
             this.num_quantity.Name = "num_quantity";
             this.num_quantity.Size = new System.Drawing.Size(88, 27);
             this.num_quantity.TabIndex = 17;
@@ -455,7 +455,7 @@
             // str_rating
             // 
             this.str_rating.Location = new System.Drawing.Point(426, 583);
-            this.str_rating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.str_rating.Margin = new System.Windows.Forms.Padding(4);
             this.str_rating.Name = "str_rating";
             this.str_rating.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.str_rating.Size = new System.Drawing.Size(120, 28);
@@ -517,7 +517,7 @@
             // 
             this.radio_wieght.AutoSize = true;
             this.radio_wieght.Location = new System.Drawing.Point(884, 519);
-            this.radio_wieght.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radio_wieght.Margin = new System.Windows.Forms.Padding(4);
             this.radio_wieght.Name = "radio_wieght";
             this.radio_wieght.Size = new System.Drawing.Size(89, 23);
             this.radio_wieght.TabIndex = 30;
@@ -529,7 +529,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(883, 550);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(89, 23);
             this.radioButton2.TabIndex = 31;
@@ -541,7 +541,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(884, 581);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(65, 23);
             this.radioButton3.TabIndex = 32;
@@ -597,7 +597,7 @@
             // guna2RatingStar1
             // 
             this.guna2RatingStar1.Location = new System.Drawing.Point(110, 779);
-            this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2RatingStar1.Size = new System.Drawing.Size(89, 28);
@@ -622,7 +622,7 @@
             this.btn_submib.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submib.ForeColor = System.Drawing.Color.White;
             this.btn_submib.Location = new System.Drawing.Point(868, 1193);
-            this.btn_submib.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_submib.Margin = new System.Windows.Forms.Padding(4);
             this.btn_submib.Name = "btn_submib";
             this.btn_submib.Size = new System.Drawing.Size(150, 57);
             this.btn_submib.TabIndex = 40;
@@ -674,7 +674,7 @@
             // guna2RatingStar2
             // 
             this.guna2RatingStar2.Location = new System.Drawing.Point(830, 908);
-            this.guna2RatingStar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2RatingStar2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2RatingStar2.Name = "guna2RatingStar2";
             this.guna2RatingStar2.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2RatingStar2.Size = new System.Drawing.Size(89, 28);
@@ -706,7 +706,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1077, 586);
+            this.ClientSize = new System.Drawing.Size(1193, 586);
             this.Controls.Add(this.guna2RatingStar2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
