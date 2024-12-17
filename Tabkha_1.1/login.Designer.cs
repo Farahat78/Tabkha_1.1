@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.login_card = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btn_eye = new System.Windows.Forms.Button();
             this.lbl_pass = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.linklbl_register = new System.Windows.Forms.LinkLabel();
@@ -40,6 +41,7 @@
             this.L_lbl_forgetPass = new System.Windows.Forms.LinkLabel();
             this.chk_rememberMe = new System.Windows.Forms.CheckBox();
             this.btn_signIn = new System.Windows.Forms.Button();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.img_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_minimize = new System.Windows.Forms.PictureBox();
@@ -47,10 +49,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.img_logoo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.txt_password = new Tabkha_1._1.CustomTextBox();
-            this.txt_username = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.img_logoo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txt_username = new Tabkha_1._1.CustomTextBox();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.login_card.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             this.login_card.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.login_card.BackColor = System.Drawing.Color.Transparent;
-            this.login_card.Controls.Add(this.txt_password);
+            this.login_card.Controls.Add(this.btn_eye);
             this.login_card.Controls.Add(this.txt_username);
             this.login_card.Controls.Add(this.lbl_pass);
             this.login_card.Controls.Add(this.guna2GradientPanel2);
@@ -73,21 +74,34 @@
             this.login_card.Controls.Add(this.L_lbl_forgetPass);
             this.login_card.Controls.Add(this.chk_rememberMe);
             this.login_card.Controls.Add(this.btn_signIn);
+            this.login_card.Controls.Add(this.txt_password);
             this.login_card.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.login_card.Location = new System.Drawing.Point(79, 76);
-            this.login_card.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.login_card.Location = new System.Drawing.Point(70, 64);
             this.login_card.Name = "login_card";
             this.login_card.ShadowColor = System.Drawing.Color.Black;
-            this.login_card.Size = new System.Drawing.Size(644, 458);
+            this.login_card.Size = new System.Drawing.Size(572, 386);
             this.login_card.TabIndex = 10;
+            // 
+            // btn_eye
+            // 
+            this.btn_eye.BackColor = System.Drawing.Color.White;
+            this.btn_eye.FlatAppearance.BorderSize = 0;
+            this.btn_eye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eye.Image = global::Tabkha_1._1.Properties.Resources.eye__1_;
+            this.btn_eye.Location = new System.Drawing.Point(491, 173);
+            this.btn_eye.Name = "btn_eye";
+            this.btn_eye.Size = new System.Drawing.Size(36, 21);
+            this.btn_eye.TabIndex = 20;
+            this.btn_eye.UseVisualStyleBackColor = false;
+            this.btn_eye.Click += new System.EventHandler(this.btn_eye_Click);
             // 
             // lbl_pass
             // 
             this.lbl_pass.AutoSize = true;
             this.lbl_pass.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pass.Location = new System.Drawing.Point(309, 169);
+            this.lbl_pass.Location = new System.Drawing.Point(275, 142);
             this.lbl_pass.Name = "lbl_pass";
-            this.lbl_pass.Size = new System.Drawing.Size(91, 24);
+            this.lbl_pass.Size = new System.Drawing.Size(78, 21);
             this.lbl_pass.TabIndex = 13;
             this.lbl_pass.Text = "Password";
             // 
@@ -101,9 +115,8 @@
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(217)))), ((int)(((byte)(188)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(284, 458);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(252, 386);
             this.guna2GradientPanel2.TabIndex = 12;
             // 
             // linklbl_register
@@ -111,9 +124,9 @@
             this.linklbl_register.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.linklbl_register.AutoSize = true;
             this.linklbl_register.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(82)))), ((int)(((byte)(48)))));
-            this.linklbl_register.Location = new System.Drawing.Point(177, 378);
+            this.linklbl_register.Location = new System.Drawing.Point(157, 318);
             this.linklbl_register.Name = "linklbl_register";
-            this.linklbl_register.Size = new System.Drawing.Size(66, 19);
+            this.linklbl_register.Size = new System.Drawing.Size(58, 16);
             this.linklbl_register.TabIndex = 18;
             this.linklbl_register.TabStop = true;
             this.linklbl_register.Text = "Register";
@@ -124,10 +137,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 175);
-            this.label2.MaximumSize = new System.Drawing.Size(250, 95);
+            this.label2.Location = new System.Drawing.Point(37, 147);
+            this.label2.MaximumSize = new System.Drawing.Size(222, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 92);
+            this.label2.Size = new System.Drawing.Size(168, 78);
             this.label2.TabIndex = 1;
             this.label2.Text = "Welcome  Back!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,9 +149,9 @@
             // 
             this.lbl_register.AutoSize = true;
             this.lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_register.Location = new System.Drawing.Point(40, 379);
+            this.lbl_register.Location = new System.Drawing.Point(36, 319);
             this.lbl_register.Name = "lbl_register";
-            this.lbl_register.Size = new System.Drawing.Size(138, 17);
+            this.lbl_register.Size = new System.Drawing.Size(118, 15);
             this.lbl_register.TabIndex = 14;
             this.lbl_register.Text = "Don\'t have account?";
             // 
@@ -146,9 +159,9 @@
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(309, 97);
+            this.lbl_username.Location = new System.Drawing.Point(275, 82);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(97, 24);
+            this.lbl_username.Size = new System.Drawing.Size(85, 21);
             this.lbl_username.TabIndex = 12;
             this.lbl_username.Text = "UserName";
             // 
@@ -158,9 +171,9 @@
             this.L_lbl_forgetPass.AutoSize = true;
             this.L_lbl_forgetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_lbl_forgetPass.LinkColor = System.Drawing.Color.Black;
-            this.L_lbl_forgetPass.Location = new System.Drawing.Point(307, 252);
+            this.L_lbl_forgetPass.Location = new System.Drawing.Point(273, 212);
             this.L_lbl_forgetPass.Name = "L_lbl_forgetPass";
-            this.L_lbl_forgetPass.Size = new System.Drawing.Size(122, 17);
+            this.L_lbl_forgetPass.Size = new System.Drawing.Size(106, 15);
             this.L_lbl_forgetPass.TabIndex = 17;
             this.L_lbl_forgetPass.TabStop = true;
             this.L_lbl_forgetPass.Text = "Forget Password?";
@@ -170,10 +183,9 @@
             // 
             this.chk_rememberMe.AutoSize = true;
             this.chk_rememberMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_rememberMe.Location = new System.Drawing.Point(310, 286);
-            this.chk_rememberMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chk_rememberMe.Location = new System.Drawing.Point(276, 241);
             this.chk_rememberMe.Name = "chk_rememberMe";
-            this.chk_rememberMe.Size = new System.Drawing.Size(126, 21);
+            this.chk_rememberMe.Size = new System.Drawing.Size(113, 19);
             this.chk_rememberMe.TabIndex = 16;
             this.chk_rememberMe.Text = "Remember Me";
             this.chk_rememberMe.UseVisualStyleBackColor = true;
@@ -186,14 +198,24 @@
             this.btn_signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_signIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signIn.ForeColor = System.Drawing.Color.White;
-            this.btn_signIn.Location = new System.Drawing.Point(310, 365);
-            this.btn_signIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_signIn.Location = new System.Drawing.Point(276, 307);
             this.btn_signIn.Name = "btn_signIn";
-            this.btn_signIn.Size = new System.Drawing.Size(165, 43);
+            this.btn_signIn.Size = new System.Drawing.Size(147, 36);
             this.btn_signIn.TabIndex = 11;
             this.btn_signIn.Text = "Sign In";
             this.btn_signIn.UseVisualStyleBackColor = false;
             this.btn_signIn.Click += new System.EventHandler(this.btn_signIn_Click);
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(287, 166);
+            this.txt_password.Multiline = true;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(245, 35);
+            this.txt_password.TabIndex = 21;
+            this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
             // 
             // guna2GradientPanel1
             // 
@@ -205,9 +227,8 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(172)))), ((int)(((byte)(124)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(795, 40);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(707, 34);
             this.guna2GradientPanel1.TabIndex = 11;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
@@ -216,11 +237,10 @@
             this.img_logo.BackColor = System.Drawing.Color.Transparent;
             this.img_logo.Image = ((System.Drawing.Image)(resources.GetObject("img_logo.Image")));
             this.img_logo.ImageRotate = 0F;
-            this.img_logo.Location = new System.Drawing.Point(22, 0);
-            this.img_logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_logo.Location = new System.Drawing.Point(20, 0);
             this.img_logo.Name = "img_logo";
             this.img_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_logo.Size = new System.Drawing.Size(45, 43);
+            this.img_logo.Size = new System.Drawing.Size(40, 36);
             this.img_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_logo.TabIndex = 15;
             this.img_logo.TabStop = false;
@@ -232,10 +252,9 @@
             this.img_minimize.BackColor = System.Drawing.Color.Transparent;
             this.img_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_minimize.Image = global::Tabkha_1._1.Properties.Resources.minus;
-            this.img_minimize.Location = new System.Drawing.Point(699, 7);
-            this.img_minimize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_minimize.Location = new System.Drawing.Point(621, 6);
             this.img_minimize.Name = "img_minimize";
-            this.img_minimize.Size = new System.Drawing.Size(40, 28);
+            this.img_minimize.Size = new System.Drawing.Size(36, 24);
             this.img_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_minimize.TabIndex = 5;
             this.img_minimize.TabStop = false;
@@ -247,10 +266,9 @@
             this.img_close.BackColor = System.Drawing.Color.Transparent;
             this.img_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_close.Image = ((System.Drawing.Image)(resources.GetObject("img_close.Image")));
-            this.img_close.Location = new System.Drawing.Point(745, 5);
-            this.img_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_close.Location = new System.Drawing.Point(662, 4);
             this.img_close.Name = "img_close";
-            this.img_close.Size = new System.Drawing.Size(38, 31);
+            this.img_close.Size = new System.Drawing.Size(34, 26);
             this.img_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_close.TabIndex = 3;
             this.img_close.TabStop = false;
@@ -271,6 +289,11 @@
             this.guna2Elipse3.BorderRadius = 20;
             this.guna2Elipse3.TargetControl = this.btn_signIn;
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.txt_password;
+            // 
             // img_logoo
             // 
             this.img_logoo.BackColor = System.Drawing.Color.Transparent;
@@ -286,33 +309,15 @@
             this.img_logoo.TabStop = false;
             this.img_logoo.UseTransparentBackground = true;
             // 
-            // txt_password
-            // 
-            this.txt_password.Location = new System.Drawing.Point(323, 202);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_password.Multiline = true;
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(275, 41);
-            this.txt_password.TabIndex = 19;
-            this.txt_password.WatermarkColor = System.Drawing.Color.Gray;
-            this.txt_password.WatermarkText = "your Password";
-            // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(323, 125);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_username.Location = new System.Drawing.Point(287, 105);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(275, 41);
+            this.txt_username.Size = new System.Drawing.Size(245, 35);
             this.txt_username.TabIndex = 18;
             this.txt_username.WatermarkColor = System.Drawing.Color.Gray;
             this.txt_username.WatermarkText = "Enter your Email, Phone number";
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 30;
-            this.guna2Elipse4.TargetControl = this.txt_password;
             // 
             // guna2Elipse5
             // 
@@ -321,16 +326,16 @@
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 602);
+            this.ClientSize = new System.Drawing.Size(707, 507);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.login_card);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             this.login_card.ResumeLayout(false);
             this.login_card.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
@@ -364,9 +369,10 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox img_logo;
         private System.Windows.Forms.Label label2;
-        private CustomTextBox txt_password;
         private CustomTextBox txt_username;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox img_logoo;
+        private System.Windows.Forms.Button btn_eye;
+        private System.Windows.Forms.TextBox txt_password;
     }
 }

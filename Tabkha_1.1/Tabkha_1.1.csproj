@@ -325,6 +325,8 @@
     <None Include="Resources\dish.png" />
     <Content Include="Resources\envelope.png" />
     <None Include="Resources\envelope1.png" />
+    <None Include="Resources\eye %281%29.png" />
+    <None Include="Resources\eye.png" />
     <Content Include="Resources\facebook.png" />
     <None Include="Resources\whatsapp1.png" />
     <None Include="Resources\facebook1.png" />

@@ -21,13 +21,11 @@ namespace Tabkha_1._1
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=LAPTOP-EBHNP4IJ\;Initial Catalog=tabkha_system;Integrated Security=True";
 
         private void img_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        Connection connect = new Connection();
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -260,6 +258,68 @@ namespace Tabkha_1._1
             return null; // Return null if no user is found
         }
 
+        private bool isPasswordVisible = false;
 
+        private void btn_eye_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
+
+        private void TogglePasswordVisibility()
+        {
+            if (isPasswordVisible)
+            {
+                // Hide the password
+                txt_password.PasswordChar = '*';
+                btn_eye.Image = Properties.Resources.eye__1_; // Replace with 'eye closed' icon
+                isPasswordVisible = false;
+            }
+            else
+            {
+                // Show the password
+                txt_password.PasswordChar = '\0';
+                btn_eye.Image = Properties.Resources.eye; // Replace with 'eye open' icon
+                isPasswordVisible = true;
+            }
+        }
+
+        private string placeholderText = "Enter your password"; // Set your placeholder text
+        private Color placeholderColor = Color.Gray;  // Light gray for placeholder
+        private Color textColor = Color.Black;
+
+        private void txt_password_Enter(object sender, EventArgs e)
+        {
+            if (txt_password.Text == placeholderText)
+            {
+                txt_password.Text = "";
+                txt_password.ForeColor = textColor;
+
+                // Ensure PasswordChar works only when the placeholder is gone
+                txt_password.PasswordChar = isPasswordVisible ? '\0' : '*';
+            }
+        }
+
+        private void txt_password_Leave(object sender, EventArgs e)
+        {
+            // Restore placeholder if the textbox is empty
+            if (string.IsNullOrWhiteSpace(txt_password.Text))
+            {
+                txt_password.Text = placeholderText;
+                txt_password.ForeColor = placeholderColor;
+
+                // Disable masking to show placeholder clearly
+                txt_password.PasswordChar = '\0';
+            }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            // Initialize placeholder on form load
+            txt_password.Text = placeholderText;
+            txt_password.ForeColor = placeholderColor;
+
+            // Disable masking to show placeholder text
+            txt_password.PasswordChar = '\0';
+        }
     }
 }
