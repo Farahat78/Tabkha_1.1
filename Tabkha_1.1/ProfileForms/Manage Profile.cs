@@ -45,28 +45,32 @@ namespace Tabkha_1._1
             btn_save.Visible = true;
         }
 
+        private IUserDataStrategy GetStrategy()
+        {
+            switch (Session.Role)
+            {
+                case "Admins":
+                    return new AdminDataStrategy();
+                case "Users":
+                    return new UserDataStrategy();
+                case "Chefs":
+                    return new ChefDataStrategy();
+                default:
+                    throw new InvalidOperationException("Unknown role");
+            }
+        }
+
         private void LoadUserData()
         {
-            Manage_Profile manage = new Manage_Profile();
-            string query = "";
+            var strategy = GetStrategy();
+            string query = strategy.GetQuery();
 
-            // Determine which table to query based on the role in the session
-            if (Session.Role == "Admins")
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                query = "SELECT Username, Email, Password, ProfilePic FROM Admins WHERE AdminID = @UserID";
-            }
-            else if (Session.Role == "Users")
-            {
-                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic FROM Users WHERE UserID = @UserID";
-            }
-            else if (Session.Role == "Chefs")
-            {
-                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic, Rname, Bio FROM Chefs WHERE ChefID = @UserID";
-            }
-
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
-            {
-                conn.Open();
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", Session.Id);
@@ -81,13 +85,11 @@ namespace Tabkha_1._1
                             else if (Session.Role == "Chefs")
                             {
                                 txt_Rname.Text = reader["Rname"].ToString();
-                                txtbox_name.Text = $"{reader["Fname"]} {reader["Lname"]}";
-                                txtbox_Pnumber.Text = reader["Phone"].ToString();
                                 txt_bio.Text = reader["Bio"].ToString();
+                                txtbox_Pnumber.Text = reader["Phone"].ToString();
                             }
-                            else
+                            if (Session.Role != "Admins")
                             {
-                                // Combine FName and LName for Users and Chefs
                                 txtbox_name.Text = $"{reader["Fname"]} {reader["Lname"]}";
                                 txtbox_Pnumber.Text = reader["Phone"].ToString();
                             }
@@ -138,31 +140,34 @@ namespace Tabkha_1._1
                     query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber, Rname = @Rname, Bio = @Bio WHERE ChefID = @UserID";
                 }
 
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
+            {
+                    if (conn.State == System.Data.ConnectionState.Closed)
                     {
-                        if (Session.Role == "Admins")
-                        {
-                            cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
-                        }
-                        if (Session.Role == "Users" || Session.Role == "Chefs")
-                        {
-                            string[] names = txtbox_name.Text.Trim().Split(' ');
-                            cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
-                            cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
-                            cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
-                        }
-                        if (Session.Role == "Chefs")
-                        {
-                            cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
-                            cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
-                        }
-                        cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
-                        cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
-                        cmd.Parameters.AddWithValue("@UserID", Session.Id);
+                        conn.Open();
+                    }
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (Session.Role == "Admins")
+                    {
+                        cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
+                    }
+                    if (Session.Role == "Users" || Session.Role == "Chefs")
+                    {
+                        string[] names = txtbox_name.Text.Trim().Split(' ');
+                        cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
+                        cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
+                        cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
+                    }
+                    if (Session.Role == "Chefs")
+                    {
+                        cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
+                    }
+                    cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
+                    cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
+                    cmd.Parameters.AddWithValue("@UserID", Session.Id);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
@@ -266,9 +271,12 @@ namespace Tabkha_1._1
                         updatePicQuery = "UPDATE Chefs SET ProfilePic = @ProfilePic WHERE ChefID = @UserID";
                     }
 
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         using (SqlCommand cmd = new SqlCommand(updatePicQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);

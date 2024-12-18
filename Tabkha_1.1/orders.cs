@@ -115,13 +115,16 @@ namespace Tabkha_1._1
         users.Fname, users.Lname, users.Phone, users.Address, orders.OrderID, Orders.TotalPrice;
     ";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", Session.Id);
                 command.Parameters.AddWithValue("@orderstatus", status);
 
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 PanelTemplate.Visible = false;
@@ -241,12 +244,14 @@ namespace Tabkha_1._1
         Orders.OrderID = @OrderID;
 ";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@OrderID", orderId);
-
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 decimal subtotal = 0; // لحساب subtotal بناءً على العناصر
@@ -306,13 +311,15 @@ namespace Tabkha_1._1
                             WHERE OrderID = @OrderID;
                         ";
                    
-                    using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection connection = Connection.Instance.GetConnection())
                     {
                         SqlCommand command = new SqlCommand(updateQuery, connection);
                         command.Parameters.AddWithValue("@OrderID", orderid);
                         command.Parameters.AddWithValue("@status", status);
-
-                    connection.Open();
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
                         int rowsAffected = command.ExecuteNonQuery();
                     if (status == "Pending")
                     {

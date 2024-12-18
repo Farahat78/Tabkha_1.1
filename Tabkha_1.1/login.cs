@@ -26,6 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
+       
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -67,10 +68,12 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        conn.Open();
-
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         // تحقق من جدول Users
                         UserDetails userId = GetUserDetailsFromTable(conn, "Users","UserID" ,"Fname", user_name, password);
                         if (userId !=null)
@@ -81,8 +84,8 @@ namespace Tabkha_1._1
                             Session.pic = userId.picpath;
 
 
-                            user_home userHome = new user_home(); // صفحة المستخدم
-                            userHome.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToHome();
                             this.Hide();
                             return;
                         }
@@ -99,8 +102,8 @@ namespace Tabkha_1._1
                             Session.pic = userId.picpath;
 
 
-                            Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
-                            ownerProfile.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToProfile();
                             this.Hide();
                             return;
                         }
@@ -115,8 +118,8 @@ namespace Tabkha_1._1
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
-                            Admin adminPage = new Admin(); // صفحة المدير
-                            adminPage.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToAdminPanel();
                             this.Hide();
                             return;
                         }
@@ -155,11 +158,13 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                
-                
+
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
                     conn.Open();
+                }
                    
                         query = "select Password from Users where Email=@email ";
                         using (SqlCommand cmd = new SqlCommand(query, conn))

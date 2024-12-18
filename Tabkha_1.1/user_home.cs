@@ -95,10 +95,13 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT [ChefID],[Phone],[ProFilePic],[Rname],[Bio] FROM [tabkha1].[dbo].[Chefs]";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 // تأكد أن الكارد الأساسي مخفي

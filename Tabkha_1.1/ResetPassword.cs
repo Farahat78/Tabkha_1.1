@@ -48,11 +48,14 @@ namespace Tabkha_1._1
             else
             {
                 string email = globalvariables.global_email;
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                using (SqlConnection conn = Connection.Instance.GetConnection())
                 {
                     try
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
 
 
                         string query = "update  customers set customer_password=@password, customer_confirmpassword=@confirmpassword where customer_email=@email";

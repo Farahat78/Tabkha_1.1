@@ -69,11 +69,14 @@ namespace Tabkha_1._1
                 string bio = txtbox_bio.Text.Trim();
                 string fullname = First_Name + " " + Last_Name;
 
-                using (SqlConnection connect = new SqlConnection(Connection.connectionString))
+                using (SqlConnection connect = Connection.Instance.GetConnection())
                 {
                     try
                     {
-                        connect.Open();
+                        if (connect.State == System.Data.ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
                         string query = "INSERT INTO Chefs (Fname,Lname,Password,Email,Phone,Rname,Bio)VALUES (@fname,@lname,@password,@email,@phonenumber,@resname,@bio);";
                         using (SqlCommand cmd = new SqlCommand(query, connect))
                         {

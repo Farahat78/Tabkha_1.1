@@ -25,7 +25,7 @@ namespace Tabkha_1._1
                       ,[Phone] AS [Phone Number]
                       ,[Rname] AS [Restaurant Name]
                   FROM [tabkha1].[dbo].[Chefs]";
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
                 DataTable dataTable = new DataTable();
@@ -44,7 +44,7 @@ namespace Tabkha_1._1
             using (var form = new AddEditChef())
             {
                 form.change_add();
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                using (SqlConnection conn = Connection.Instance.GetConnection())
                 {
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -58,7 +58,10 @@ namespace Tabkha_1._1
                             cmd.Parameters.AddWithValue("@Phone", form.Phone);
                             cmd.Parameters.AddWithValue("@Rname", form.Rname);
 
-                            conn.Open();
+                            if (conn.State == System.Data.ConnectionState.Closed)
+                            {
+                                conn.Open();
+                            }
                             cmd.ExecuteNonQuery();
                             conn.Close();
                         }
@@ -87,7 +90,7 @@ namespace Tabkha_1._1
                     form.Phone = row.Cells["Phone Number"].Value.ToString();
                     form.Email = row.Cells["Email"].Value.ToString();
 
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         if (form.ShowDialog() == DialogResult.OK)
                         {
@@ -102,7 +105,10 @@ namespace Tabkha_1._1
                                 cmd.Parameters.AddWithValue("@Rname", form.Rname);
                                 cmd.Parameters.AddWithValue("@Id", id);
 
-                                conn.Open();
+                                if (conn.State == System.Data.ConnectionState.Closed)
+                                {
+                                    conn.Open();
+                                }
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
                             }
@@ -131,7 +137,7 @@ namespace Tabkha_1._1
 
                 if (result == DialogResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
                         DataGridViewRow row = dgv_chefs.Rows[rowIndex];
@@ -139,7 +145,10 @@ namespace Tabkha_1._1
                         int id = Convert.ToInt32(row.Cells["ChefID"].Value);
 
                         // Start a transaction
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         using (SqlTransaction transaction = conn.BeginTransaction())
                         {
                             try
@@ -216,7 +225,7 @@ namespace Tabkha_1._1
         WHERE [Fname] LIKE @Search OR [Lname] LIKE @Search 
               OR ([Fname] + ' ' + [Lname]) LIKE @Search";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -225,7 +234,10 @@ namespace Tabkha_1._1
 
                     try
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
