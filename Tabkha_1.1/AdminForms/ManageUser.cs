@@ -61,7 +61,10 @@ namespace Tabkha_1._1
                             cmd.Parameters.AddWithValue("@Address", form.Address);
                             cmd.Parameters.AddWithValue("@City", form.City);
 
-                            conn.Open();
+                            if (conn.State == System.Data.ConnectionState.Closed)
+                            {
+                                conn.Open();
+                            }
                             cmd.ExecuteNonQuery();
                             conn.Close();
                         }
@@ -107,7 +110,10 @@ namespace Tabkha_1._1
                                 cmd.Parameters.AddWithValue("@City", form.City);
                                 cmd.Parameters.AddWithValue("@Id", id);
 
-                                conn.Open();
+                                if (conn.State == System.Data.ConnectionState.Closed)
+                                {
+                                    conn.Open();
+                                }
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
                             }
@@ -145,7 +151,10 @@ namespace Tabkha_1._1
                         if (cellValue != null && int.TryParse(cellValue.ToString(), out int id))
                         {
                             // Start a transaction
-                            conn.Open();
+                            if (conn.State == System.Data.ConnectionState.Closed)
+                            {
+                                conn.Open();
+                            }
                             using (SqlTransaction transaction = conn.BeginTransaction())
                             {
                                 try
@@ -243,7 +252,10 @@ namespace Tabkha_1._1
 
                     try
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);

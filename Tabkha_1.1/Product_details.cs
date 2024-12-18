@@ -27,7 +27,10 @@ namespace Tabkha_1._1
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@menuid", MenuID);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
@@ -56,6 +59,7 @@ namespace Tabkha_1._1
                     lbl_product_name.Text = dishname;
                     lbl_product_description.Text = Description;
                     lbl_price.Text = Price.ToString();
+
                     lbl_preparationtime.Text = PrepTime.ToString();
                     label2.Text = Ingredients;
                     lnk_category.Text = Category;
@@ -131,7 +135,10 @@ namespace Tabkha_1._1
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                conn.Open();
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
 
                 string query = "select Description from Menu where DishName=@dname ";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -170,7 +177,10 @@ namespace Tabkha_1._1
             if (txt_addcomment.Text != "" && guna2RatingStar1.Value!=0)
             {
                 SqlConnection con = Connection.Instance.GetConnection();
-                con.Open();
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                }
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Reviews] (UserID,ChefID,Rating,Comment) values(@userid,@chefid,@rating,@comment)", con);
                 cmd.Parameters.AddWithValue("@userid", userid);
                 cmd.Parameters.AddWithValue("@chefid", chefid);
@@ -214,7 +224,10 @@ namespace Tabkha_1._1
             {
                 using (SqlConnection con = Connection.Instance.GetConnection())
                 {
-                    con.Open();
+                    if (con.State == System.Data.ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
 
                     // التحقق من الكمية المتوفرة
                     SqlCommand checkCmd = new SqlCommand("SELECT Quantity FROM [dbo].[Menu] WHERE MenuID = @dishid", con);
@@ -267,7 +280,10 @@ namespace Tabkha_1._1
             {
                 using (SqlConnection con = Connection.Instance.GetConnection())
                 {
-                    con.Open();
+                    if (con.State == System.Data.ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
 
                     // الاستعلام لجلب الكمية
                     string query = "SELECT Quantity FROM [dbo].[Menu] WHERE MenuID = @dishId";
@@ -308,7 +324,10 @@ namespace Tabkha_1._1
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", ChefID);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 int yoffset = 590;

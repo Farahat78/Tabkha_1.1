@@ -66,7 +66,10 @@ namespace Tabkha_1._1
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                conn.Open();
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", Session.Id);
@@ -140,7 +143,10 @@ namespace Tabkha_1._1
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     if (Session.Role == "Admins")
@@ -268,7 +274,10 @@ namespace Tabkha_1._1
 
                     using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         using (SqlCommand cmd = new SqlCommand(updatePicQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);

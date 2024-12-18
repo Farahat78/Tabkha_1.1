@@ -70,8 +70,10 @@ namespace Tabkha_1._1
                 {
                     using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        conn.Open();
-
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         // تحقق من جدول Users
                         UserDetails userId = GetUserDetailsFromTable(conn, "Users","UserID" ,"Fname", user_name, password);
                         if (userId !=null)
@@ -158,9 +160,11 @@ namespace Tabkha_1._1
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                
-                
+
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
                     conn.Open();
+                }
                    
                         query = "select Password from Users where Email=@email ";
                         using (SqlCommand cmd = new SqlCommand(query, conn))

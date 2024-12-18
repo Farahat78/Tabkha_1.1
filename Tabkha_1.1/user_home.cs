@@ -98,7 +98,10 @@ namespace Tabkha_1._1
             using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 // تأكد أن الكارد الأساسي مخفي

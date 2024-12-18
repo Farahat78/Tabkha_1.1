@@ -54,7 +54,10 @@ namespace Tabkha_1._1
             using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 // تأكد أن الكارد الأساسي مخفي
@@ -140,7 +143,10 @@ namespace Tabkha_1._1
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", chefid);
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 int yoffset = 50;
@@ -229,8 +235,10 @@ namespace Tabkha_1._1
             SqlConnection con = Connection.Instance.GetConnection();
             try
             {
-                con.Open();
-
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                }
                 // استعلام SQL لاسترجاع البيانات المطلوبة
                 SqlCommand cmd = new SqlCommand("  SELECT ProfilePic, Rname, Bio, Phone FROM [dbo].[Chefs] WHERE ChefID = @ChefID", con);
                 cmd.Parameters.AddWithValue("@ChefID", chefId);
@@ -287,8 +295,10 @@ namespace Tabkha_1._1
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Category", category);
-                connection.Open();
-
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 flowLayoutPanel1.Controls.Clear();  // Clear existing cards

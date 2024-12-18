@@ -58,7 +58,10 @@ namespace Tabkha_1._1
                             cmd.Parameters.AddWithValue("@Phone", form.Phone);
                             cmd.Parameters.AddWithValue("@Rname", form.Rname);
 
-                            conn.Open();
+                            if (conn.State == System.Data.ConnectionState.Closed)
+                            {
+                                conn.Open();
+                            }
                             cmd.ExecuteNonQuery();
                             conn.Close();
                         }
@@ -102,7 +105,10 @@ namespace Tabkha_1._1
                                 cmd.Parameters.AddWithValue("@Rname", form.Rname);
                                 cmd.Parameters.AddWithValue("@Id", id);
 
-                                conn.Open();
+                                if (conn.State == System.Data.ConnectionState.Closed)
+                                {
+                                    conn.Open();
+                                }
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
                             }
@@ -139,7 +145,10 @@ namespace Tabkha_1._1
                         int id = Convert.ToInt32(row.Cells["ChefID"].Value);
 
                         // Start a transaction
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         using (SqlTransaction transaction = conn.BeginTransaction())
                         {
                             try
@@ -225,7 +234,10 @@ namespace Tabkha_1._1
 
                     try
                     {
-                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Closed)
+                        {
+                            conn.Open();
+                        }
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);

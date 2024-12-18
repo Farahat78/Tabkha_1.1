@@ -16,7 +16,7 @@ namespace Tabkha_1._1.Class
         private Connection()
         {
            
-            _sqlConnection = new SqlConnection("Data Source=FARAHAT;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False");
+            _sqlConnection = new SqlConnection("Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False");
         }
 
        
@@ -41,7 +41,12 @@ namespace Tabkha_1._1.Class
 
         public SqlConnection GetConnection()
         {
+            if (_sqlConnection.ConnectionString == string.Empty)
+            {
+                _sqlConnection.ConnectionString = "Data Source=GODZILA\\SQLEXPRESS;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
+            }
             return _sqlConnection;
         }
+
     }
 }

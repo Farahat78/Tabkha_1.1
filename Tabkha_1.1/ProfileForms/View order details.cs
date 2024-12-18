@@ -62,7 +62,10 @@ namespace Tabkha_1._1
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", Session.Id);
 
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 PanelTemplate.Visible = false;
@@ -418,7 +421,10 @@ namespace Tabkha_1._1
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                conn.Open();
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@UserID", userId);
 

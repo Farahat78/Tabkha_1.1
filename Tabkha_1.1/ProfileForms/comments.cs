@@ -40,7 +40,10 @@ namespace Tabkha_1._1
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", chefId);
 
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 // مسح التعليقات القديمة قبل إضافة الجدد

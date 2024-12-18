@@ -81,7 +81,10 @@ namespace Tabkha_1._1
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", Session.Id); // تمرير UserID في الاستعلام
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
                 SqlDataReader reader = command.ExecuteReader();
 
                 // تأكد أن الكارد الأساسي مخفي
@@ -214,7 +217,10 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    connection.Open();
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
                     command.ExecuteNonQuery(); // تنفيذ الاستعلام
                     MessageBox.Show("Item deleted successfully.");
 
@@ -269,7 +275,11 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    connection.Open();
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+                        
                     int orderId = (int)command.ExecuteScalar(); // الحصول على OrderID للطلب الذي تم إضافته
 
                     // إضافة عناصر الطلب إلى جدول OrderItems

@@ -81,8 +81,10 @@ namespace Tabkha_1._1
                 {
                     try
                     {
-                        connect.Open();
-
+                        if (connect.State == System.Data.ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
                         string query = "INSERT INTO Users (Fname,Lname,Password,Email,Phone,City,Address) VALUES (@firstname,@lastname ,@password,@email,@phonenumber,@city,@address);";
 
                         using (SqlCommand cmd = new SqlCommand(query, connect))
