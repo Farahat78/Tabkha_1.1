@@ -84,8 +84,8 @@ namespace Tabkha_1._1
                             Session.pic = userId.picpath;
 
 
-                            user_home userHome = new user_home(); // صفحة المستخدم
-                            userHome.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToHome();
                             this.Hide();
                             return;
                         }
@@ -102,8 +102,8 @@ namespace Tabkha_1._1
                             Session.pic = userId.picpath;
 
 
-                            Owner_Profile ownerProfile = new Owner_Profile(); // صفحة الطباخ
-                            ownerProfile.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToProfile();
                             this.Hide();
                             return;
                         }
@@ -118,8 +118,8 @@ namespace Tabkha_1._1
                             Session.Name = userId.Name;
                             Session.pic = userId.picpath;
 
-                            Admin adminPage = new Admin(); // صفحة المدير
-                            adminPage.Show();
+                            IPageNavigator navigator = new PageNavigatorProxy();
+                            navigator.NavigateToAdminPanel();
                             this.Hide();
                             return;
                         }

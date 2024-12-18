@@ -58,10 +58,10 @@ namespace Tabkha_1._1
                 default:
                     throw new InvalidOperationException("Unknown role");
             }
-            }
+        }
 
         private void LoadUserData()
-            {
+        {
             var strategy = GetStrategy();
             string query = strategy.GetQuery();
 
