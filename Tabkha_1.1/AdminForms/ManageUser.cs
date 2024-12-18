@@ -143,70 +143,53 @@ namespace Tabkha_1._1
                 {
                     using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        int rowIndex = dgv_users.SelectedCells[0].RowIndex;
-                        DataGridViewRow row = dgv_users.Rows[rowIndex];
-
-                        // Ensure UserID exists and is valid
-                        object cellValue = row.Cells["UserID"].Value;
-                        if (cellValue != null && int.TryParse(cellValue.ToString(), out int id))
+                        if (conn.State == ConnectionState.Closed)
                         {
-                            // Start a transaction
-                            if (conn.State == System.Data.ConnectionState.Closed)
-                            {
-                                conn.Open();
-                            }
-                            using (SqlTransaction transaction = conn.BeginTransaction())
-                            {
-                                try
-                                {
-                                    // Delete related data first
-                                    string deleteOrders = "DELETE FROM Orders WHERE UserID = @Id";
-                                    string deleteFavorites = "DELETE FROM Favorites WHERE UserID = @Id";
-                                    string deleteMessages = "DELETE FROM Messages WHERE SenderID = @Id OR ReceiverID = @Id";
-
-                                    using (SqlCommand cmd = new SqlCommand(deleteOrders, conn, transaction))
-                                    {
-                                        cmd.Parameters.AddWithValue("@Id", id);
-                                        cmd.ExecuteNonQuery();
-                                    }
-
-                                    using (SqlCommand cmd = new SqlCommand(deleteFavorites, conn, transaction))
-                                    {
-                                        cmd.Parameters.AddWithValue("@Id", id);
-                                        cmd.ExecuteNonQuery();
-                                    }
-
-                                    using (SqlCommand cmd = new SqlCommand(deleteMessages, conn, transaction))
-                                    {
-                                        cmd.Parameters.AddWithValue("@Id", id);
-                                        cmd.ExecuteNonQuery();
-                                    }
-
-                                    // Finally, delete the user
-                                    string deleteUser = "DELETE FROM Users WHERE UserID = @Id";
-                                    using (SqlCommand cmd = new SqlCommand(deleteUser, conn, transaction))
-                                    {
-                                        cmd.Parameters.AddWithValue("@Id", id);
-                                        cmd.ExecuteNonQuery();
-                                    }
-
-                                    // Commit the transaction
-                                    transaction.Commit();
-
-                                    // Reload data
-                                    LoadData();
-                                }
-                                catch (Exception ex)
-                                {
-                                    // Rollback transaction on error
-                                    transaction.Rollback();
-                                    MessageBox.Show($"Error deleting user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
+                            conn.Open();
                         }
-                        else
+
+                        using (SqlTransaction transaction = conn.BeginTransaction())
                         {
-                            MessageBox.Show("Invalid User ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                int rowIndex = dgv_users.SelectedCells[0].RowIndex;
+                                DataGridViewRow row = dgv_users.Rows[rowIndex];
+                                int userId = Convert.ToInt32(row.Cells["UserID"].Value);
+
+                                // Delete related data
+                                string deleteCart = "DELETE FROM Cart WHERE UserID = @Id";
+                                string deleteOrderItems = "DELETE FROM OrderItems WHERE OrderID IN (SELECT OrderID FROM Orders WHERE UserID = @Id)";
+                                string deleteOrders = "DELETE FROM Orders WHERE UserID = @Id";
+                                string deleteReviews = "DELETE FROM Reviews WHERE UserID = @Id";
+                                string deleteUser = "DELETE FROM Users WHERE UserID = @Id";
+
+                                // Execute deletion queries
+                                ExecuteDeleteCommand(deleteCart, userId, conn, transaction);
+                                ExecuteDeleteCommand(deleteOrderItems, userId, conn, transaction);
+                                ExecuteDeleteCommand(deleteOrders, userId, conn, transaction);
+                                ExecuteDeleteCommand(deleteReviews, userId, conn, transaction);
+
+                                // Finally, delete the user
+                                ExecuteDeleteCommand(deleteUser, userId, conn, transaction);
+
+                                // Commit transaction
+                                transaction.Commit();
+
+                                MessageBox.Show("User and related data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Reload data
+                                LoadData();
+                            }
+                            catch (SqlException sqlEx)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -216,6 +199,16 @@ namespace Tabkha_1._1
                 MessageBox.Show("Please select a User to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ExecuteDeleteCommand(string query, int id, SqlConnection conn, SqlTransaction transaction)
+        {
+            using (SqlCommand cmd = new SqlCommand(query, conn, transaction))
+            {
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
 
 

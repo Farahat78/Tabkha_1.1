@@ -35,8 +35,8 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
             this.dgv_chefs = new System.Windows.Forms.DataGridView();
+            this.customTextBox1 = new Tabkha_1._1.CustomTextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chefs)).BeginInit();
@@ -94,16 +94,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // customTextBox1
-            // 
-            this.customTextBox1.Location = new System.Drawing.Point(318, 7);
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.customTextBox1.TabIndex = 8;
-            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
-            this.customTextBox1.WatermarkText = "Search";
-            this.customTextBox1.TextChanged += new System.EventHandler(this.customTextBox1_TextChanged);
-            // 
             // dgv_chefs
             // 
             this.dgv_chefs.AllowUserToAddRows = false;
@@ -135,6 +125,16 @@
             this.dgv_chefs.Size = new System.Drawing.Size(805, 374);
             this.dgv_chefs.TabIndex = 0;
             this.dgv_chefs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chefs_CellContentClick);
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.Location = new System.Drawing.Point(318, 7);
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.customTextBox1.TabIndex = 8;
+            this.customTextBox1.WatermarkColor = System.Drawing.Color.Gray;
+            this.customTextBox1.WatermarkText = "Search";
+            this.customTextBox1.TextChanged += new System.EventHandler(this.customTextBox1_TextChanged);
             // 
             // ManageChefForm
             // 

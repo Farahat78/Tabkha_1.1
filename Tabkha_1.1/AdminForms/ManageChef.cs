@@ -139,55 +139,46 @@ namespace Tabkha_1._1
                 {
                     using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
-                        int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
-                        DataGridViewRow row = dgv_chefs.Rows[rowIndex];
-
-                        int id = Convert.ToInt32(row.Cells["ChefID"].Value);
-
-                        // Start a transaction
                         if (conn.State == System.Data.ConnectionState.Closed)
                         {
                             conn.Open();
                         }
+
                         using (SqlTransaction transaction = conn.BeginTransaction())
                         {
                             try
                             {
-                                // Delete related data first
-                                string deleteRecipes = "DELETE FROM Recipes WHERE ChefID = @Id";
-                                string deleteOrders = "DELETE FROM Orders WHERE ChefID = @Id";
+                                int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
+                                DataGridViewRow row = dgv_chefs.Rows[rowIndex];
+                                int id = Convert.ToInt32(row.Cells["ChefID"].Value);
 
-                                using (SqlCommand cmd = new SqlCommand(deleteRecipes, conn, transaction))
-                                {
-                                    cmd.Parameters.AddWithValue("@Id", id);
-                                    cmd.ExecuteNonQuery();
-                                }
-
-                                using (SqlCommand cmd = new SqlCommand(deleteOrders, conn, transaction))
-                                {
-                                    cmd.Parameters.AddWithValue("@Id", id);
-                                    cmd.ExecuteNonQuery();
-                                }
-
-                                // Finally, delete the chef
+                                // Delete related data
+                                string deleteMenu = "DELETE FROM Menu WHERE ChefID = @Id";
                                 string deleteChef = "DELETE FROM Chefs WHERE ChefID = @Id";
-                                using (SqlCommand cmd = new SqlCommand(deleteChef, conn, transaction))
-                                {
-                                    cmd.Parameters.AddWithValue("@Id", id);
-                                    cmd.ExecuteNonQuery();
-                                }
 
-                                // Commit the transaction
+                                // Delete related records
+                                ExecuteDeleteCommand(deleteMenu, id, conn, transaction);
+
+                                // Delete the chef
+                                ExecuteDeleteCommand(deleteChef, id, conn, transaction);
+
+                                // Commit transaction
                                 transaction.Commit();
+
+                                MessageBox.Show("Chef and related data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 // Reload data
                                 LoadData();
                             }
+                            catch (SqlException sqlEx)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             catch (Exception ex)
                             {
-                                // Rollback transaction on error
                                 transaction.Rollback();
-                                MessageBox.Show($"Error deleting chef: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show($"Unexpected error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -198,6 +189,16 @@ namespace Tabkha_1._1
                 MessageBox.Show("Please select a Chef to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ExecuteDeleteCommand(string query, int id, SqlConnection conn, SqlTransaction transaction)
+        {
+            using (SqlCommand cmd = new SqlCommand(query, conn, transaction))
+            {
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
         private void dgv_chefs_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
