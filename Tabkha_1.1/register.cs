@@ -41,18 +41,7 @@ namespace Tabkha_1._1
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            
-            if (txt_confirmPassword.Text != txt_password.Text)
-            {
-                MessageBox.Show("Passwords do not match. Please review your password fields.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (!IsValidEmail(txt_email.Text))
-            {
-                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txt_email.Text == ""
+            if (txt_email.Text == ""
            || txt_password.Text == ""
            || txt_confirmPassword.Text == ""
            || txt_phone.Text == ""
@@ -62,6 +51,16 @@ namespace Tabkha_1._1
            || txtbox_fname.Text == "")
             {
                 MessageBox.Show("Please fill out all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txt_confirmPassword.Text != txt_password.Text)
+            {
+                MessageBox.Show("Passwords do not match. Please review your password fields.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!IsValidEmail(txt_email.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else

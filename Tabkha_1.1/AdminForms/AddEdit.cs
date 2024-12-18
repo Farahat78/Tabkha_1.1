@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,8 +46,20 @@ namespace Tabkha_1._1
 
         public string Rname { get; set; }
 
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for email validation
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (!IsValidEmail(txt_email.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (!string.IsNullOrWhiteSpace(txt_name.Text) && !string.IsNullOrWhiteSpace(txt_Rname.Text))
             {
                 string[] Name = txt_name.Text.Split(' ');
