@@ -45,28 +45,29 @@ namespace Tabkha_1._1
             btn_save.Visible = true;
         }
 
-        private void LoadUserData()
+        private IUserDataStrategy GetStrategy()
         {
-            Manage_Profile manage = new Manage_Profile();
-            string query = "";
+            switch (Session.Role)
+            {
+                case "Admins":
+                    return new AdminDataStrategy();
+                case "Users":
+                    return new UserDataStrategy();
+                case "Chefs":
+                    return new ChefDataStrategy();
+                default:
+                    throw new InvalidOperationException("Unknown role");
+            }
+            }
 
-            // Determine which table to query based on the role in the session
-            if (Session.Role == "Admins")
+        private void LoadUserData()
             {
-                query = "SELECT Username, Email, Password, ProfilePic FROM Admins WHERE AdminID = @UserID";
-            }
-            else if (Session.Role == "Users")
-            {
-                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic FROM Users WHERE UserID = @UserID";
-            }
-            else if (Session.Role == "Chefs")
-            {
-                query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic, Rname, Bio FROM Chefs WHERE ChefID = @UserID";
-            }
+            var strategy = GetStrategy();
+            string query = strategy.GetQuery();
 
             using (SqlConnection conn = Connection.Instance.GetConnection())
             {
-                if (conn.State == System.Data.ConnectionState.Closed)
+                if (conn.State == ConnectionState.Closed)
                 {
                     conn.Open();
                 }
@@ -84,13 +85,11 @@ namespace Tabkha_1._1
                             else if (Session.Role == "Chefs")
                             {
                                 txt_Rname.Text = reader["Rname"].ToString();
-                                txtbox_name.Text = $"{reader["Fname"]} {reader["Lname"]}";
-                                txtbox_Pnumber.Text = reader["Phone"].ToString();
                                 txt_bio.Text = reader["Bio"].ToString();
+                                txtbox_Pnumber.Text = reader["Phone"].ToString();
                             }
-                            else
+                            if (Session.Role != "Admins")
                             {
-                                // Combine FName and LName for Users and Chefs
                                 txtbox_name.Text = $"{reader["Fname"]} {reader["Lname"]}";
                                 txtbox_Pnumber.Text = reader["Phone"].ToString();
                             }
