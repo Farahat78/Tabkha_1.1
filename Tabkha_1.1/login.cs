@@ -26,6 +26,7 @@ namespace Tabkha_1._1
         {
             Application.Exit();
         }
+       
         private string query;
 
         private void img_minimize_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace Tabkha_1._1
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         conn.Open();
 
@@ -155,7 +156,7 @@ namespace Tabkha_1._1
         {
             string password = "";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 
                 

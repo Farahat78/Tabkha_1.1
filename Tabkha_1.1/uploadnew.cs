@@ -56,7 +56,7 @@ namespace Tabkha_1._1
 
             if (checkBox1.Text != "" && checkBox2.Text != "" && checkBox3.Text != "" && txt_description.Text !="" && txt_name.Text !="" && txt_ingredients.Text !="" && n_preptime.Value !=0 && n_quantity.Value !=0 && txt_price.Text !="" && combo_category.Text!="" && img_product.ToString() !="")
             {
-                SqlConnection con = new SqlConnection(Connection.connectionString);
+                SqlConnection con = Connection.Instance.GetConnection();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Menu] (ChefID,DishName,Price,DishPic,Quantity,Weight,Ingredients,Category,PrepTime,Description) values(@ChefID,@Name,@Price,@DishPic,@Quantity,@Weight,@Ingredients,@Category,@PrepTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@ChefID", Session.Id);
@@ -125,7 +125,7 @@ namespace Tabkha_1._1
                 combo_category.Text != "" && img_product.ToString() != "")
             {
                 // استعلام الـ UPDATE
-                SqlConnection con = new SqlConnection(Connection.connectionString);
+                SqlConnection con = Connection.Instance.GetConnection();
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand("UPDATE [dbo].[Menu] SET DishName = @Name, Price = @Price, DishPic = @DishPic, Quantity = @Quantity, Weight = @Weight, Ingredients = @Ingredients, Category = @Category, PrepTime = @PrepTime, Description = @Description WHERE MenuID = @DishID", con);
@@ -227,7 +227,7 @@ namespace Tabkha_1._1
         {
             string query = "SELECT [DishName],[Description],[Price],[DishPic],[Quantity],[Weight],[Ingredients],[Category],[PrepTime]FROM [dbo].[Menu] where MenuID = @DishID";
 
-            using (SqlConnection con = new SqlConnection(Connection.connectionString))
+            using (SqlConnection con = Connection.Instance.GetConnection())
             {
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@DishID", dishid);

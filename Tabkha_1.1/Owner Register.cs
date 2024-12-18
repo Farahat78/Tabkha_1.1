@@ -69,7 +69,7 @@ namespace Tabkha_1._1
                 string bio = txtbox_bio.Text.Trim();
                 string fullname = First_Name + " " + Last_Name;
 
-                using (SqlConnection connect = new SqlConnection(Connection.connectionString))
+                using (SqlConnection connect = Connection.Instance.GetConnection())
                 {
                     try
                     {

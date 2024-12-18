@@ -51,7 +51,7 @@ namespace Tabkha_1._1
                 // 1. اتصال بقاعدة البيانات
                  query = $"  SELECT  MenuID ,  DishName,   DishPic, Price FROM [tabkha1].[dbo].[Menu] WHERE ChefID ={chefid}";
             }
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
@@ -136,7 +136,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT  Users.Fname AS fname,  Reviews.Comment AS comment, Reviews.Rating AS rating FROM [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users ON  Reviews.UserID = Users.UserID WHERE  Reviews.ChefID = @ChefID;";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", chefid);
@@ -226,7 +226,7 @@ namespace Tabkha_1._1
         public void LoadChefProfile(int chefId)
         {
             // الاتصال بقاعدة البيانات
-            SqlConnection con = new SqlConnection(Connection.connectionString);
+            SqlConnection con = Connection.Instance.GetConnection();
             try
             {
                 con.Open();
@@ -283,7 +283,7 @@ namespace Tabkha_1._1
                 query = $"SELECT MenuID, DishName, DishPic, Price FROM [tabkha1].[dbo].[Menu] WHERE ChefID = {chefid} AND Category = @Category";
             }
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Category", category);

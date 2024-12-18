@@ -13,7 +13,7 @@ namespace Tabkha_1._1
 {
     public partial class Admin : Form
     {
-        Connection connect = new Connection();
+       
         private bool isSidebarExpanded = true;
 
         public Admin()

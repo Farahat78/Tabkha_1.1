@@ -64,7 +64,7 @@ namespace Tabkha_1._1
                 query = "SELECT Fname, Lname, Email, Phone, Password, ProfilePic, Rname, Bio FROM Chefs WHERE ChefID = @UserID";
             }
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -138,31 +138,31 @@ namespace Tabkha_1._1
                     query = "UPDATE Chefs SET Fname = @FName, Lname = @LName, Email = @Email, Password = @Password, ProfilePic = @ProfilePic, Phone = @PhoneNumber, Rname = @Rname, Bio = @Bio WHERE ChefID = @UserID";
                 }
 
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    if (Session.Role == "Admins")
                     {
-                        if (Session.Role == "Admins")
-                        {
-                            cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
-                        }
-                        if (Session.Role == "Users" || Session.Role == "Chefs")
-                        {
-                            string[] names = txtbox_name.Text.Trim().Split(' ');
-                            cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
-                            cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
-                            cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
-                        }
-                        if (Session.Role == "Chefs")
-                        {
-                            cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
-                            cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
-                        }
-                        cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
-                        cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
-                        cmd.Parameters.AddWithValue("@UserID", Session.Id);
+                        cmd.Parameters.AddWithValue("@Name", txtbox_name.Text.Trim());
+                    }
+                    if (Session.Role == "Users" || Session.Role == "Chefs")
+                    {
+                        string[] names = txtbox_name.Text.Trim().Split(' ');
+                        cmd.Parameters.AddWithValue("@FName", names.Length > 0 ? names[0] : "");
+                        cmd.Parameters.AddWithValue("@LName", names.Length > 1 ? names[1] : "");
+                        cmd.Parameters.AddWithValue("@PhoneNumber", txtbox_Pnumber.Text.Trim());
+                    }
+                    if (Session.Role == "Chefs")
+                    {
+                        cmd.Parameters.AddWithValue("@Rname", txt_Rname.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Bio", txt_bio.Text.Trim()); // Save Bio to the database
+                    }
+                    cmd.Parameters.AddWithValue("@Email", txtbox_email.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Password", txtbox_password.Text.Trim());
+                    cmd.Parameters.AddWithValue("@ProfilePic", Session.pic);
+                    cmd.Parameters.AddWithValue("@UserID", Session.Id);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
@@ -266,7 +266,7 @@ namespace Tabkha_1._1
                         updatePicQuery = "UPDATE Chefs SET ProfilePic = @ProfilePic WHERE ChefID = @UserID";
                     }
 
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         conn.Open();
                         using (SqlCommand cmd = new SqlCommand(updatePicQuery, conn))

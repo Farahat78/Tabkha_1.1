@@ -48,7 +48,7 @@ namespace Tabkha_1._1
             else
             {
                 string email = globalvariables.global_email;
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                using (SqlConnection conn = Connection.Instance.GetConnection())
                 {
                     try
                     {

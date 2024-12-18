@@ -57,7 +57,7 @@ namespace Tabkha_1._1
                 ORDER BY 
                     orders.CreatedAt DESC;";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", Session.Id);
@@ -416,7 +416,7 @@ namespace Tabkha_1._1
             // استعلام لاسترجاع آخر طلب بناءً على ID المستخدم
             string query = "SELECT TOP 1 OrderStatus FROM Orders WHERE UserID = @UserID ORDER BY OrderID DESC";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);

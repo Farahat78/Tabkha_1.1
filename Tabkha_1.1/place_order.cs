@@ -77,7 +77,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT c.[DishID], c.[Quantity], c.[Price], c.[DishPic], c.[Weight], m.[DishName] FROM [tabkha1].[dbo].[Cart] c JOIN [tabkha1].[dbo].[Menu] m ON c.DishID = m.MenuID WHERE c.UserID = @UserID";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", Session.Id); // تمرير UserID في الاستعلام
@@ -206,7 +206,7 @@ namespace Tabkha_1._1
         {
             string query = "DELETE FROM [tabkha1].[dbo].[Cart] WHERE DishID = @DishID AND UserID = @UserID";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@DishID", dishID);
@@ -260,7 +260,7 @@ namespace Tabkha_1._1
             // إضافة الطلب إلى جدول Orders
             string insertOrderQuery = "INSERT INTO [tabkha1].[dbo].[Orders] (UserID, TotalPrice, OrderStatus) OUTPUT INSERTED.OrderID VALUES (@UserID, @TotalPrice, @OrderStatus)";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(insertOrderQuery, connection);
                 command.Parameters.AddWithValue("@UserID", userId);

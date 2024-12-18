@@ -23,7 +23,7 @@ namespace Tabkha_1._1
 
             string query = $"SELECT [MenuID],[ChefID],[DishName],[Description],[Price],[DishPic],[Quantity],[Weight],[Ingredients],[Category],[PrepTime]FROM [tabkha1].[dbo].[Menu] where MenuID={MenuID}";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@menuid", MenuID);
@@ -129,7 +129,7 @@ namespace Tabkha_1._1
             string description = "";
             string dishname = "";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 conn.Open();
 
@@ -169,7 +169,7 @@ namespace Tabkha_1._1
             int chefid = ChefID;
             if (txt_addcomment.Text != "" && guna2RatingStar1.Value!=0)
             {
-                SqlConnection con = new SqlConnection(Connection.connectionString);
+                SqlConnection con = Connection.Instance.GetConnection();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into [dbo].[Reviews] (UserID,ChefID,Rating,Comment) values(@userid,@chefid,@rating,@comment)", con);
                 cmd.Parameters.AddWithValue("@userid", userid);
@@ -212,7 +212,7 @@ namespace Tabkha_1._1
 
             if (num_quantity.Value != 0 && wheight != "")
             {
-                using (SqlConnection con = new SqlConnection(Connection.connectionString))
+                using (SqlConnection con = Connection.Instance.GetConnection())
                 {
                     con.Open();
 
@@ -265,7 +265,7 @@ namespace Tabkha_1._1
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(Connection.connectionString))
+                using (SqlConnection con = Connection.Instance.GetConnection())
                 {
                     con.Open();
 
@@ -304,7 +304,7 @@ namespace Tabkha_1._1
             // 1. اتصال بقاعدة البيانات
             string query = "SELECT  Users.Fname AS fname,  Reviews.Comment AS comment, Reviews.Rating AS rating FROM [tabkha1].[dbo].[Reviews] AS Reviews JOIN  [tabkha1].[dbo].[Users] AS Users ON  Reviews.UserID = Users.UserID WHERE  Reviews.ChefID = @ChefID;";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", ChefID);

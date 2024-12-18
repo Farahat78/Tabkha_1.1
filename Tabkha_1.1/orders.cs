@@ -115,7 +115,7 @@ namespace Tabkha_1._1
         users.Fname, users.Lname, users.Phone, users.Address, orders.OrderID, Orders.TotalPrice;
     ";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ChefID", Session.Id);
@@ -241,7 +241,7 @@ namespace Tabkha_1._1
         Orders.OrderID = @OrderID;
 ";
 
-            using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+            using (SqlConnection connection = Connection.Instance.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@OrderID", orderId);
@@ -306,7 +306,7 @@ namespace Tabkha_1._1
                             WHERE OrderID = @OrderID;
                         ";
                    
-                    using (SqlConnection connection = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection connection = Connection.Instance.GetConnection())
                     {
                         SqlCommand command = new SqlCommand(updateQuery, connection);
                         command.Parameters.AddWithValue("@OrderID", orderid);

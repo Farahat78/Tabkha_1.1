@@ -25,7 +25,7 @@ namespace Tabkha_1._1
                       ,[Phone] AS [Phone Number]
                       ,[Rname] AS [Restaurant Name]
                   FROM [tabkha1].[dbo].[Chefs]";
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
                 DataTable dataTable = new DataTable();
@@ -44,7 +44,7 @@ namespace Tabkha_1._1
             using (var form = new AddEditChef())
             {
                 form.change_add();
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                using (SqlConnection conn = Connection.Instance.GetConnection())
                 {
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -87,7 +87,7 @@ namespace Tabkha_1._1
                     form.Phone = row.Cells["Phone Number"].Value.ToString();
                     form.Email = row.Cells["Email"].Value.ToString();
 
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         if (form.ShowDialog() == DialogResult.OK)
                         {
@@ -131,7 +131,7 @@ namespace Tabkha_1._1
 
                 if (result == DialogResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+                    using (SqlConnection conn = Connection.Instance.GetConnection())
                     {
                         int rowIndex = dgv_chefs.SelectedCells[0].RowIndex;
                         DataGridViewRow row = dgv_chefs.Rows[rowIndex];
@@ -216,7 +216,7 @@ namespace Tabkha_1._1
         WHERE [Fname] LIKE @Search OR [Lname] LIKE @Search 
               OR ([Fname] + ' ' + [Lname]) LIKE @Search";
 
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString))
+            using (SqlConnection conn = Connection.Instance.GetConnection())
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
