@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Design Patterns\Strategy\AdminDataStrategy.cs" />
+    <Compile Include="Class\Design Patterns\Strategy\AdminDataStrategy.cs" />
     <Compile Include="AdminForms\AddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,10 +84,10 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design Patterns\Singleton\Connection.cs" />
-    <Compile Include="Design Patterns\Strategy\IUserDataStrategy.cs" />
-    <Compile Include="Design Patterns\Proxy\IPageNavigator.cs" />
-    <Compile Include="Design Patterns\Proxy\PageNavigatorProxy.cs" />
+    <Compile Include="Class\Design Patterns\Singleton\Connection.cs" />
+    <Compile Include="Class\Design Patterns\Strategy\IUserDataStrategy.cs" />
+    <Compile Include="Class\Design Patterns\Proxy\IPageNavigator.cs" />
+    <Compile Include="Class\Design Patterns\Proxy\PageNavigatorProxy.cs" />
     <Compile Include="ProfileForms\comments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,7 +171,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Design Patterns\Proxy\RealPageNavigator.cs" />
+    <Compile Include="Class\Design Patterns\Proxy\RealPageNavigator.cs" />
     <Compile Include="register.cs">
       <SubType>Form</SubType>
     </Compile>
