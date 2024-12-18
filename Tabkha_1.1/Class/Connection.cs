@@ -9,7 +9,6 @@ namespace Tabkha_1._1.Class
 {
     public class Connection
     {
-        public static string connectionString = "Data Source=HOSSAM;Initial Catalog=tabkha1;Integrated Security=True;Encrypt=False";
         private static Connection _instance; 
         private static readonly object _lock = new object(); 
         private SqlConnection _sqlConnection;
