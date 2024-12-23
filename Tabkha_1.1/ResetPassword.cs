@@ -55,20 +55,7 @@ namespace Tabkha_1._1
                         {
                             conn.Open();
                         }
-
-                        string query = "";
-                        if(Session.Role == "Admins")
-                        {
-                            query = "update Admins set Password=@password where Email=@email";
-                        }
-                        if (Session.Role == "Chefs")
-                        {
-                            query = "update Chefs set Password=@password where Email=@email";
-                        }
-                        if (Session.Role == "Users")
-                        {
-                            query = "update Users set Password=@password where Email=@email";
-                        }
+                        string query = "update Users set Password=@password where Email=@email";
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
 
