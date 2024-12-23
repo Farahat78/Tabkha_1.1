@@ -41,10 +41,9 @@ namespace Tabkha_1._1
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            string pass = customTextBox1.Text;
-            string confirm_pass = customTextBox2.Text;
+            string pass = txt_password.Text;
 
-            if (pass != confirm_pass) { MessageBox.Show("Password and confirm password do not match , please try again"); }
+            if (pass != txt_confirmPassword.Text) { MessageBox.Show("Password and confirm password do not match , please try again"); }
             else
             {
                 string email = globalvariables.global_email;
@@ -57,14 +56,24 @@ namespace Tabkha_1._1
                             conn.Open();
                         }
 
-
-                        string query = "update  customers set customer_password=@password, customer_confirmpassword=@confirmpassword where customer_email=@email";
+                        string query = "";
+                        if(Session.Role == "Admins")
+                        {
+                            query = "update Admins set Password=@password where Email=@email";
+                        }
+                        if (Session.Role == "Chefs")
+                        {
+                            query = "update Chefs set Password=@password where Email=@email";
+                        }
+                        if (Session.Role == "Users")
+                        {
+                            query = "update Users set Password=@password where Email=@email";
+                        }
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
 
 
                             cmd.Parameters.AddWithValue("@password", pass);
-                            cmd.Parameters.AddWithValue("@confirmpassword", confirm_pass);
                             cmd.Parameters.AddWithValue("@email", email);
 
                             int rowaffected = Convert.ToInt32(cmd.ExecuteScalar());
@@ -79,23 +88,115 @@ namespace Tabkha_1._1
                                 login login = new login();
                                 login.Show();
                                 this.Hide();
-
                             }
-
-
                         }
-
-
-
                     }
                     catch (Exception ex) { MessageBox.Show("errorrrrrr: " + ex.Message); }
                 }
             }
+        }
+        private bool isPasswordVisible = false;
 
-
+        private void TogglePasswordVisibility()
+        {
+            if (isPasswordVisible)
+            {
+                // Hide the password
+                txt_password.PasswordChar = '\u2022';
+                txt_confirmPassword.PasswordChar = '\u2022';
+                btn_eye.Image = Properties.Resources.eye__1_;
+                button1.Image = Properties.Resources.eye__1_;// Replace with 'eye closed' icon
+                isPasswordVisible = false;
+            }
+            else
+            {
+                // Show the password
+                txt_password.PasswordChar = '\0';
+                txt_confirmPassword.PasswordChar = '\0';
+                btn_eye.Image = Properties.Resources.eye;
+                button1.Image = Properties.Resources.eye;// Replace with 'eye open' icon
+                isPasswordVisible = true;
+            }
         }
 
+        private void btn_eye_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
+        private string placeholderText1 = "Confirm password"; // Set your placeholder text
+        private Color placeholderColor = Color.Gray;  // Light gray for placeholder
+        private Color textColor = Color.Black;
+        private string placeholderText = "Enter your password";
+
+        private void ResetPassword_Load(object sender, EventArgs e)
+        {
+            // Initialize placeholder on form load
+            txt_password.Text = placeholderText;
+            txt_confirmPassword.Text = placeholderText1;
+            txt_confirmPassword.ForeColor = placeholderColor;
+            txt_password.ForeColor = placeholderColor;
+            txt_password.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+            txt_confirmPassword.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+
+            // Disable masking to show placeholder text
+            txt_password.PasswordChar = '\0';
+            txt_confirmPassword.PasswordChar = '\0';
+        }
+
+        private void txt_password_Enter(object sender, EventArgs e)
+        {
+            if (txt_password.Text == placeholderText)
+            {
+                txt_password.Text = "";
+                txt_password.ForeColor = textColor;
+
+                // Ensure PasswordChar works only when the placeholder is gone
+                txt_password.PasswordChar = isPasswordVisible ? '\0' : '\u2022';
+            }
+        }
+
+        private void txt_password_Leave(object sender, EventArgs e)
+        {
+            // Restore placeholder if the textbox is empty
+            if (string.IsNullOrWhiteSpace(txt_password.Text))
+            {
+                txt_password.Text = placeholderText;
+                txt_password.ForeColor = placeholderColor;
+
+                // Disable masking to show placeholder clearly
+                txt_password.PasswordChar = '\0';
+            }
+        }
+
+        private void txt_confirmPassword_Enter(object sender, EventArgs e)
+        {
+            if (txt_confirmPassword.Text == placeholderText1)
+            {
+                txt_confirmPassword.Text = "";
+                txt_confirmPassword.ForeColor = textColor;
+
+                // Ensure PasswordChar works only when the placeholder is gone
+                txt_confirmPassword.PasswordChar = isPasswordVisible ? '\0' : '\u2022';
+            }
+        }
+
+        private void txt_confirmPassword_Leave(object sender, EventArgs e)
+        {
+            // Restore placeholder if the textbox is empty
+            if (string.IsNullOrWhiteSpace(txt_confirmPassword.Text))
+            {
+                txt_confirmPassword.Text = placeholderText1;
+                txt_confirmPassword.ForeColor = placeholderColor;
+
+                // Disable masking to show placeholder clearly
+                txt_confirmPassword.PasswordChar = '\0';
+            }
+        }
     }
 }
 
